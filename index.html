@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RivalsGuide – Marvel Rivals Hero Guides, Tier List & AI Strategy</title>
+<meta name="description" content="The ultimate Marvel Rivals guide site. Hero abilities, tier list, combo tutorials, and AI-powered strategy advice for every hero.">
+<meta name="keywords" content="Marvel Rivals, hero guide, tier list, combos, strategy, Spider-Man, Iron Man, Thor">
+<style>
+  :root {
+    --red:#e63946; --gold:#ffd60a; --dark:#0a0a0f; --dark2:#12121a;
+    --dark3:#1a1a2e; --card:#16213e; --text:#e0e0e0; --muted:#888;
+    --border:rgba(230,57,70,0.3);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--dark);color:var(--text);font-family:'Segoe UI',sans-serif;overflow-x:hidden}
+
+  nav{position:fixed;top:0;width:100%;z-index:999;background:rgba(10,10,15,0.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);padding:0 40px;display:flex;align-items:center;justify-content:space-between;height:64px}
+  .nav-logo{font-size:1.3rem;font-weight:900;color:var(--red);letter-spacing:1px;text-decoration:none}
+  .nav-logo span{color:var(--gold)}
+  .nav-links{display:flex;gap:32px;list-style:none}
+  .nav-links a{color:var(--muted);text-decoration:none;font-size:0.9rem;transition:color 0.2s}
+  .nav-links a:hover{color:var(--red)}
+
+  #home{min-height:100vh;background:radial-gradient(ellipse at 20% 50%,rgba(230,57,70,0.15) 0%,transparent 60%),radial-gradient(ellipse at 80% 20%,rgba(255,214,10,0.08) 0%,transparent 50%),var(--dark);display:flex;align-items:center;justify-content:center;text-align:center;padding:80px 20px 40px;position:relative;overflow:hidden}
+  #home::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none'%3E%3Cg fill='%23e63946' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")}
+  .hero-badge{display:inline-block;background:rgba(230,57,70,0.15);border:1px solid var(--border);color:var(--red);font-size:0.8rem;padding:4px 16px;border-radius:20px;margin-bottom:24px;letter-spacing:2px;text-transform:uppercase}
+  .hero-title{font-size:clamp(2.5rem,7vw,5rem);font-weight:900;line-height:1.1;margin-bottom:16px;text-shadow:0 0 40px rgba(230,57,70,0.4)}
+  .hero-title .accent{color:var(--red)}
+  .hero-title .gold{color:var(--gold)}
+  .hero-sub{font-size:1.1rem;color:var(--muted);margin-bottom:40px;max-width:520px;margin-left:auto;margin-right:auto}
+  .hero-buttons{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+  .btn-primary{background:var(--red);color:#fff;padding:14px 32px;border-radius:4px;text-decoration:none;font-weight:700;font-size:1rem;transition:all 0.2s;box-shadow:0 0 20px rgba(230,57,70,0.4)}
+  .btn-primary:hover{background:#ff4757;box-shadow:0 0 30px rgba(230,57,70,0.7);transform:translateY(-2px)}
+  .btn-secondary{background:transparent;color:var(--text);padding:14px 32px;border-radius:4px;text-decoration:none;font-weight:700;font-size:1rem;border:1px solid rgba(255,255,255,0.2);transition:all 0.2s}
+  .btn-secondary:hover{border-color:var(--red);color:var(--red);transform:translateY(-2px)}
+  .hero-stats{display:flex;gap:48px;justify-content:center;margin-top:64px;flex-wrap:wrap}
+  .stat{text-align:center}
+  .stat-num{font-size:2rem;font-weight:900;color:var(--red);display:block}
+  .stat-label{font-size:0.8rem;color:var(--muted);text-transform:uppercase;letter-spacing:1px}
+
+  .divider{height:1px;background:linear-gradient(90deg,transparent,var(--border),transparent);margin:0 40px}
+  .section-header{text-align:center;margin-bottom:48px}
+  .section-tag{color:var(--red);font-size:0.8rem;text-transform:uppercase;letter-spacing:3px;display:block;margin-bottom:12px}
+  .section-title{font-size:clamp(1.8rem,4vw,2.5rem);font-weight:900}
+  .section-title span{color:var(--red)}
+  .section-desc{color:var(--muted);margin-top:12px;font-size:0.95rem}
+
+  #heroes{background:var(--dark2);padding:80px 40px;max-width:100%}
+  #heroes .inner,#tierlist .inner,#combos .inner,#ai .inner,#community .inner{max-width:1200px;margin:0 auto}
+  .role-filter{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:40px}
+  .filter-btn{background:transparent;border:1px solid rgba(255,255,255,0.15);color:var(--muted);padding:8px 20px;border-radius:20px;cursor:pointer;font-size:0.85rem;transition:all 0.2s}
+  .filter-btn:hover,.filter-btn.active{border-color:var(--red);color:var(--red);background:rgba(230,57,70,0.1)}
+  .heroes-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:16px}
+  .hero-card{background:var(--card);border:1px solid rgba(255,255,255,0.05);border-radius:8px;padding:20px 16px;text-align:center;cursor:pointer;transition:all 0.25s;position:relative;overflow:hidden}
+  .hero-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--red);transform:scaleX(0);transition:transform 0.25s}
+  .hero-card:hover{border-color:var(--border);transform:translateY(-4px)}
+  .hero-card:hover::before{transform:scaleX(1)}
+  .hero-emoji{font-size:2.5rem;display:block;margin-bottom:10px}
+  .hero-name{font-size:0.9rem;font-weight:700;margin-bottom:4px}
+  .role-tag{display:inline-block;font-size:0.7rem;padding:2px 8px;border-radius:10px;margin-top:6px;font-weight:600}
+  .role-tank{background:rgba(59,130,246,0.2);color:#60a5fa}
+  .role-dps{background:rgba(230,57,70,0.2);color:#f87171}
+  .role-support{background:rgba(34,197,94,0.2);color:#4ade80}
+
+  #tierlist{background:var(--dark3);padding:80px 40px;max-width:100%}
+  .tier-row{display:flex;align-items:stretch;margin-bottom:12px;border-radius:8px;overflow:hidden;border:1px solid rgba(255,255,255,0.05)}
+  .tier-label{width:64px;min-width:64px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;font-weight:900}
+  .tier-s .tier-label{background:#ff4757}
+  .tier-a .tier-label{background:#ff6b35}
+  .tier-b .tier-label{background:#ffd60a;color:#000}
+  .tier-c .tier-label{background:#4a90d9}
+  .tier-heroes{display:flex;flex-wrap:wrap;gap:8px;padding:12px 16px;flex:1;background:rgba(255,255,255,0.02);align-items:center}
+  .tier-hero-chip{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.1);padding:6px 14px;border-radius:20px;font-size:0.85rem;font-weight:600;display:flex;align-items:center;gap:6px;cursor:pointer;transition:all 0.2s}
+  .tier-hero-chip:hover{border-color:var(--red);color:var(--red)}
+
+  #combos{background:var(--dark2);padding:80px 40px;max-width:100%}
+  .combo-select{background:var(--card);border:1px solid var(--border);color:var(--text);padding:12px 20px;border-radius:4px;font-size:1rem;cursor:pointer;width:100%;max-width:400px;appearance:none;margin-bottom:32px}
+  .combo-display{background:var(--card);border:1px solid rgba(255,255,255,0.05);border-radius:8px;padding:32px}
+  .combo-hero-name{font-size:1.5rem;font-weight:900;color:var(--red);margin-bottom:24px;display:flex;align-items:center;gap:12px}
+  .combo-steps{list-style:none}
+  .combo-step{display:flex;align-items:flex-start;gap:16px;padding:16px 0;border-bottom:1px solid rgba(255,255,255,0.05)}
+  .combo-step:last-child{border-bottom:none}
+  .step-num{width:32px;height:32px;min-width:32px;background:var(--red);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:0.9rem}
+  .step-content{flex:1}
+  .step-title{font-weight:700;margin-bottom:4px}
+  .step-desc{color:var(--muted);font-size:0.9rem;line-height:1.5}
+  .key-badge{display:inline-block;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);padding:2px 10px;border-radius:4px;font-size:0.8rem;font-family:monospace;margin:0 2px}
+
+  #ai{background:var(--dark);padding:80px 40px;max-width:100%}
+  .ai-box{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:40px;box-shadow:0 0 40px rgba(230,57,70,0.1)}
+  .ai-select,.ai-textarea{width:100%;background:var(--dark2);border:1px solid rgba(255,255,255,0.1);color:var(--text);border-radius:6px;padding:14px 16px;font-size:1rem;margin-bottom:16px;font-family:inherit;transition:border-color 0.2s}
+  .ai-select:focus,.ai-textarea:focus{outline:none;border-color:var(--red)}
+  .ai-textarea{resize:vertical;min-height:120px}
+  .ai-btn{width:100%;background:var(--red);color:#fff;border:none;padding:16px;border-radius:6px;font-size:1.05rem;font-weight:700;cursor:pointer;transition:all 0.2s;box-shadow:0 0 20px rgba(230,57,70,0.3)}
+  .ai-btn:hover:not(:disabled){background:#ff4757;box-shadow:0 0 30px rgba(230,57,70,0.6)}
+  .ai-btn:disabled{opacity:0.6;cursor:not-allowed}
+  .ai-result{margin-top:24px;background:var(--dark2);border:1px solid rgba(255,255,255,0.05);border-radius:8px;padding:24px;line-height:1.8;font-size:0.95rem;display:none}
+  .ai-result.show{display:block}
+  .ai-result-header{font-size:0.8rem;color:var(--red);text-transform:uppercase;letter-spacing:2px;margin-bottom:12px;font-weight:700}
+  .loading-dots::after{content:'';animation:dots 1.2s infinite}
+  @keyframes dots{0%,20%{content:'.'}40%{content:'..'}60%,100%{content:'...'}}
+
+  #community{background:var(--dark3);padding:80px 40px;max-width:100%}
+  .comment-form{background:var(--card);border:1px solid rgba(255,255,255,0.05);border-radius:8px;padding:28px;margin-bottom:32px}
+  .comment-inputs{display:flex;gap:12px;margin-bottom:12px;flex-wrap:wrap}
+  .comment-input{background:var(--dark2);border:1px solid rgba(255,255,255,0.1);color:var(--text);padding:12px 16px;border-radius:6px;font-size:0.95rem;flex:1;min-width:150px;transition:border-color 0.2s}
+  .comment-input:focus{outline:none;border-color:var(--red)}
+  .comment-textarea{width:100%;background:var(--dark2);border:1px solid rgba(255,255,255,0.1);color:var(--text);padding:12px 16px;border-radius:6px;font-size:0.95rem;resize:vertical;min-height:100px;font-family:inherit;margin-bottom:12px;transition:border-color 0.2s}
+  .comment-textarea:focus{outline:none;border-color:var(--red)}
+  .comment-submit{background:var(--red);color:#fff;border:none;padding:12px 28px;border-radius:6px;font-weight:700;cursor:pointer;transition:all 0.2s}
+  .comment-submit:hover{background:#ff4757}
+  .comments-list{display:flex;flex-direction:column;gap:16px}
+  .comment-card{background:var(--card);border:1px solid rgba(255,255,255,0.05);border-radius:8px;padding:20px 24px;transition:border-color 0.2s}
+  .comment-card:hover{border-color:var(--border)}
+  .comment-meta{display:flex;align-items:center;gap:12px;margin-bottom:10px}
+  .comment-avatar{width:36px;height:36px;background:var(--red);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:0.9rem}
+  .comment-author{font-weight:700;font-size:0.95rem}
+  .comment-time{color:var(--muted);font-size:0.8rem;margin-left:auto}
+  .comment-text{color:var(--text);line-height:1.6;font-size:0.95rem}
+  .comment-likes{margin-top:12px}
+  .like-btn{background:transparent;border:1px solid rgba(255,255,255,0.1);color:var(--muted);padding:4px 12px;border-radius:20px;cursor:pointer;font-size:0.8rem;transition:all 0.2s}
+  .like-btn:hover{border-color:var(--red);color:var(--red)}
+  .like-btn.liked{border-color:var(--red);color:var(--red);background:rgba(230,57,70,0.1)}
+
+  .modal-overlay{position:fixed;inset:0;z-index:1000;background:rgba(0,0,0,0.85);backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center;padding:20px;opacity:0;pointer-events:none;transition:opacity 0.25s}
+  .modal-overlay.show{opacity:1;pointer-events:all}
+  .modal{background:var(--card);border:1px solid var(--border);border-radius:12px;width:100%;max-width:620px;max-height:85vh;overflow-y:auto;transform:translateY(20px);transition:transform 0.25s}
+  .modal-overlay.show .modal{transform:translateY(0)}
+  .modal-header{padding:28px 28px 20px;display:flex;align-items:center;gap:16px;border-bottom:1px solid rgba(255,255,255,0.05)}
+  .modal-hero-emoji{font-size:3rem}
+  .modal-hero-info{flex:1}
+  .modal-hero-name{font-size:1.6rem;font-weight:900}
+  .modal-close{width:36px;height:36px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:50%;color:var(--muted);font-size:1.1rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all 0.2s;flex-shrink:0}
+  .modal-close:hover{background:var(--red);color:#fff;border-color:var(--red)}
+  .modal-body{padding:24px 28px 28px}
+  .modal-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:24px}
+  .modal-stat{background:var(--dark2);border-radius:8px;padding:12px;text-align:center}
+  .modal-stat-val{font-size:1.1rem;font-weight:900;color:var(--red)}
+  .modal-stat-key{font-size:0.75rem;color:var(--muted);margin-top:2px}
+  .modal-section-title{font-size:0.75rem;text-transform:uppercase;letter-spacing:2px;color:var(--red);margin-bottom:12px;font-weight:700;margin-top:20px}
+  .skills-list{display:flex;flex-direction:column;gap:10px;margin-bottom:8px}
+  .skill-item{background:var(--dark2);border:1px solid rgba(255,255,255,0.05);border-radius:8px;padding:14px 16px;display:flex;gap:14px;align-items:flex-start;transition:border-color 0.2s}
+  .skill-item:hover{border-color:var(--border)}
+  .skill-key{background:var(--red);color:#fff;padding:3px 10px;border-radius:4px;font-size:0.75rem;font-weight:700;font-family:monospace;white-space:nowrap;flex-shrink:0;margin-top:2px}
+  .skill-key.ult{background:var(--gold);color:#000}
+  .skill-info{flex:1}
+  .skill-name{font-weight:700;font-size:0.95rem;margin-bottom:4px}
+  .skill-desc{color:var(--muted);font-size:0.85rem;line-height:1.5}
+  .skill-tip{margin-top:6px;font-size:0.8rem;color:var(--gold)}
+  .counters-wrap{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:8px}
+  .counter-box{background:var(--dark2);border-radius:8px;padding:14px}
+  .counter-box-title{font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px}
+  .counter-box.good .counter-box-title{color:#4ade80}
+  .counter-box.bad .counter-box-title{color:#f87171}
+  .counter-chip{display:inline-block;font-size:0.8rem;padding:3px 10px;border-radius:12px;margin:3px 3px 0 0}
+  .counter-box.good .counter-chip{background:rgba(74,222,128,0.1);color:#4ade80}
+  .counter-box.bad .counter-chip{background:rgba(248,113,113,0.1);color:#f87171}
+  .modal-footer{display:flex;gap:12px;padding-top:16px;border-top:1px solid rgba(255,255,255,0.05);margin-top:16px}
+  .modal-btn{flex:1;padding:12px;border-radius:6px;font-weight:700;font-size:0.9rem;cursor:pointer;transition:all 0.2s;border:none;text-align:center}
+  .modal-btn-primary{background:var(--red);color:#fff}
+  .modal-btn-primary:hover{background:#ff4757}
+  .modal-btn-secondary{background:transparent;color:var(--text);border:1px solid rgba(255,255,255,0.15)!important}
+  .modal-btn-secondary:hover{border-color:var(--red)!important;color:var(--red)}
+
+  footer{background:var(--dark2);border-top:1px solid var(--border);padding:40px;text-align:center;color:var(--muted);font-size:0.85rem}
+  .footer-logo{font-size:1.2rem;font-weight:900;color:var(--red);margin-bottom:8px}
+
+  ::-webkit-scrollbar{width:6px}
+  ::-webkit-scrollbar-track{background:var(--dark)}
+  ::-webkit-scrollbar-thumb{background:var(--red);border-radius:3px}
+
+  @media(max-width:768px){
+    nav{padding:0 20px}
+    .nav-links{display:none}
+    #heroes,#tierlist,#combos,#ai,#community{padding:60px 20px}
+    .ai-box{padding:24px}
+    .counters-wrap{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="#home">RIVALS<span>GUIDE</span></a>
+  <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#heroes">Heroes</a></li>
+    <li><a href="#tierlist">Tier List</a></li>
+    <li><a href="#combos">Combos</a></li>
+    <li><a href="#ai">AI Guide</a></li>
+    <li><a href="#community">Community</a></li>
+  </ul>
+</nav>
+
+<div id="home">
+  <div>
+    <div class="hero-badge">⚔ Marvel Rivals Strategy Hub</div>
+    <h1 class="hero-title">Master Every<br><span class="accent">Marvel Hero</span><br>with <span class="gold">AI Strategy</span></h1>
+    <p class="hero-sub">Hero guides · Tier list · Combo tutorials · AI-powered strategy — all in one place.</p>
+    <div class="hero-buttons">
+      <a href="#heroes" class="btn-primary">Browse Heroes</a>
+      <a href="#ai" class="btn-secondary">Ask AI Guide</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><span class="stat-num">33+</span><span class="stat-label">Heroes</span></div>
+      <div class="stat"><span class="stat-num">3</span><span class="stat-label">Roles</span></div>
+      <div class="stat"><span class="stat-num">AI</span><span class="stat-label">Powered</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<div id="heroes">
+  <div class="inner">
+    <div class="section-header">
+      <span class="section-tag">Hero Roster</span>
+      <h2 class="section-title">Hero <span>Directory</span></h2>
+      <p class="section-desc">Click any hero card to view abilities, counters &amp; strategy tips</p>
+    </div>
+    <div class="role-filter">
+      <button class="filter-btn active" onclick="filterHeroes('all',this)">All</button>
+      <button class="filter-btn" onclick="filterHeroes('Tank',this)">🛡 Tank</button>
+      <button class="filter-btn" onclick="filterHeroes('DPS',this)">⚔ DPS</button>
+      <button class="filter-btn" onclick="filterHeroes('Support',this)">💚 Support</button>
+    </div>
+    <div class="heroes-grid" id="heroGrid"></div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<div id="tierlist">
+  <div class="inner">
+    <div class="section-header">
+      <span class="section-tag">Current Meta</span>
+      <h2 class="section-title">Hero <span>Tier List</span></h2>
+      <p class="section-desc">Ranked by overall strength in the current patch — click any hero for details</p>
+    </div>
+    <div id="tierListContainer"></div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<div id="combos">
+  <div class="inner">
+    <div class="section-header">
+      <span class="section-tag">Combo Guide</span>
+      <h2 class="section-title">Combo <span>Tutorials</span></h2>
+      <p class="section-desc">Step-by-step ability combos and mechanical tips for each hero</p>
+    </div>
+    <select class="combo-select" id="comboSelect" onchange="showCombo()">
+      <option value="">— Select a Hero —</option>
+    </select>
+    <div class="combo-display" id="comboDisplay">
+      <p style="color:var(--muted);text-align:center;padding:20px 0">Select a hero to view their combo guide</p>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<div id="ai">
+  <div class="inner">
+    <div class="section-header">
+      <span class="section-tag">AI Assistant</span>
+      <h2 class="section-title">AI <span>Strategy Guide</span></h2>
+      <p class="section-desc">Pick a hero, ask anything — get instant personalized strategy advice</p>
+    </div>
+    <div class="ai-box">
+      <select class="ai-select" id="aiHeroSelect">
+        <option value="">— Select a Hero —</option>
+      </select>
+      <textarea class="ai-textarea" id="aiQuestion" placeholder="e.g. How do I counter tanks? What's the best combo opener? Who hard counters this hero?"></textarea>
+      <button class="ai-btn" id="aiBtn" onclick="askAI()">⚡ Get AI Strategy</button>
+      <div class="ai-result" id="aiResult">
+        <div class="ai-result-header">🤖 AI Strategy Advice</div>
+        <div id="aiResultText"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<div id="community">
+  <div class="inner">
+    <div class="section-header">
+      <span class="section-tag">Community</span>
+      <h2 class="section-title">Player <span>Discussion</span></h2>
+      <p class="section-desc">Share tips, combos, and match experiences with other players</p>
+    </div>
+    <div class="comment-form">
+      <div class="comment-inputs">
+        <input class="comment-input" id="commentName" placeholder="Your username" maxlength="20">
+        <input class="comment-input" id="commentHero" placeholder="Hero (optional)" maxlength="20">
+      </div>
+      <textarea class="comment-textarea" id="commentText" placeholder="Share your tips, combo discoveries, or match experiences..." maxlength="300"></textarea>
+      <button class="comment-submit" onclick="submitComment()">Post Comment</button>
+    </div>
+    <div class="comments-list" id="commentsList"></div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-logo">RIVALS GUIDE</div>
+  <p>Unofficial fan site · Built by players, for players · Marvel Rivals is owned by NetEase &amp; Marvel Entertainment</p>
+</footer>
+
+<div class="modal-overlay" id="heroModal" onclick="closeModalOutside(event)">
+  <div class="modal">
+    <div class="modal-header">
+      <div class="modal-hero-emoji" id="mEmoji"></div>
+      <div class="modal-hero-info">
+        <div class="modal-hero-name" id="mName"></div>
+        <div id="mRole"></div>
+      </div>
+      <button class="modal-close" onclick="closeModal()">✕</button>
+    </div>
+    <div class="modal-body">
+      <div class="modal-stats" id="mStats"></div>
+      <div class="modal-section-title">⚡ Abilities</div>
+      <div class="skills-list" id="mSkills"></div>
+      <div class="modal-section-title">⚔ Matchups</div>
+      <div class="counters-wrap" id="mCounters"></div>
+      <div class="modal-footer" id="mFooter"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+const heroes=[
+  {name:'Spider-Man',emoji:'🕷',role:'DPS'},
+  {name:'Iron Man',emoji:'🤖',role:'DPS'},
+  {name:'Captain America',emoji:'🛡',role:'Tank'},
+  {name:'Thor',emoji:'⚡',role:'DPS'},
+  {name:'Hulk',emoji:'💚',role:'Tank'},
+  {name:'Black Widow',emoji:'🕸',role:'DPS'},
+  {name:'Hawkeye',emoji:'🏹',role:'DPS'},
+  {name:'Doctor Strange',emoji:'🔮',role:'Support'},
+  {name:'Winter Soldier',emoji:'🦾',role:'DPS'},
+  {name:'Scarlet Witch',emoji:'🔴',role:'DPS'},
+  {name:'Loki',emoji:'🐍',role:'Support'},
+  {name:'Thanos',emoji:'💜',role:'Tank'},
+  {name:'Star-Lord',emoji:'🎵',role:'DPS'},
+  {name:'Groot',emoji:'🌿',role:'Tank'},
+  {name:'Rocket Raccoon',emoji:'🦝',role:'Support'},
+  {name:'Namor',emoji:'💧',role:'DPS'},
+  {name:'Moon Knight',emoji:'🌙',role:'DPS'},
+  {name:'Hela',emoji:'⚔',role:'DPS'},
+  {name:'Peni Parker',emoji:'🧊',role:'Tank'},
+  {name:'Mantis',emoji:'🌸',role:'Support'},
+];
+
+const tierData={
+  S:['Thanos','Scarlet Witch','Hela','Loki'],
+  A:['Spider-Man','Iron Man','Thor','Moon Knight','Namor'],
+  B:['Captain America','Hulk','Doctor Strange','Winter Soldier','Mantis','Star-Lord'],
+  C:['Black Widow','Hawkeye','Groot','Rocket Raccoon','Peni Parker'],
+};
+
+const heroDetails={
+  'Spider-Man':{
+    stats:{hp:'250',speed:'Very Fast',difficulty:'★★★★'},
+    skills:[
+      {key:'LMB',name:'Melee Combo',desc:'3-hit melee chain. The third hit knocks back enemies and has a small AoE splash.',tip:'The 3rd hit can interrupt enemy ability casts'},
+      {key:'Shift',name:'Web Swing',desc:'High-speed dash toward target direction. Can pass over obstacles. Core mobility tool.',tip:'Combine with a jump to massively extend travel distance'},
+      {key:'E',name:'Web Bind',desc:'Fires a web that roots the target for 1.5s, creating a damage window. 8s cooldown.',tip:'Prioritize rooting high-threat DPS enemies'},
+      {key:'RMB',name:'Web Throw',desc:'Wraps a nearby enemy in webs and hurls them, dealing AoE damage on impact.',tip:'Most effective at point-blank range'},
+      {key:'Q',name:'Ultimate: Spider-Sense',desc:'Enters heightened state: +50% move speed, +30% damage for 8s. All cooldowns refresh faster.',tip:'Release when the enemy team is disorganized for maximum value'},
+    ],
+    counters:{good:['Hawkeye','Rocket Raccoon','Mantis'],bad:['Thanos','Hulk','Captain America']},
+  },
+  'Iron Man':{
+    stats:{hp:'300',speed:'Fast',difficulty:'★★★'},
+    skills:[
+      {key:'LMB',name:'Repulsor Beam',desc:'Continuous energy blasts. Damage increases at closer range. Primary sustained damage source.',tip:'Mid-range is the sweet spot for consistent DPS'},
+      {key:'RMB',name:'Charged Unibeam',desc:'Hold to charge a high-damage energy blast. Full charge triggers an AoE explosion.',tip:'Extremely effective against tanks and grouped enemies'},
+      {key:'Shift',name:'Jet Flight',desc:'Enters flight mode with free altitude control. Aerial attacks gain a bonus damage multiplier.',tip:'Always maintain height advantage — avoid melee heroes closing in'},
+      {key:'E',name:'Tracking Missiles',desc:'Launches 6 homing missiles that auto-lock onto the nearest target. Can split across multiple enemies.',tip:'Great for finishing off low-HP targets or securing kills'},
+      {key:'Q',name:'Ultimate: Overcharge',desc:'Activates enhanced armor for 12s: all stats boosted and immunity to crowd control.',tip:'Pop at the start of a teamfight to maximize uptime'},
+    ],
+    counters:{good:['Groot','Captain America','Peni Parker'],bad:['Black Widow','Moon Knight','Hawkeye']},
+  },
+  'Captain America':{
+    stats:{hp:'650',speed:'Medium',difficulty:'★★'},
+    skills:[
+      {key:'LMB',name:'Shield Strike',desc:'4-hit melee chain. The final hit has a splash radius that can hit enemies behind you.',tip:'The 4th hit splash can catch flanking enemies'},
+      {key:'RMB',name:'Shield Throw',desc:'Throws the shield to ricochet between up to 3 targets. Can interrupt enemy abilities. 6s cooldown.',tip:'Save this to interrupt high-value ultimates'},
+      {key:'Shift',name:'Freedom Charge',desc:'Charges forward and slams into enemies, dealing knockback and a 0.8s stun. Best engage tool.',tip:'Follow up immediately with your ultimate for maximum disruption'},
+      {key:'E',name:'Block & Counter',desc:'Hold to block all frontal damage for 2s. Successfully blocking triggers a counter-attack for 2x damage.',tip:'Pre-empt enemy ultimates to completely negate them'},
+      {key:'Q',name:'Ultimate: Liberty Shield',desc:'Becomes invincible for 3s and grants a shield to nearby allies equal to 30% of your max HP.',tip:'Use when a key ally is being focused to keep them alive'},
+    ],
+    counters:{good:['Spider-Man','Winter Soldier','Star-Lord'],bad:['Scarlet Witch','Thanos','Hela']},
+  },
+  'Thanos':{
+    stats:{hp:'800',speed:'Medium',difficulty:'★★★★'},
+    skills:[
+      {key:'LMB',name:'Infinity Gauntlet',desc:'Powerful melee strikes. Each hit has a chance to trigger a random Infinity Stone effect.',tip:'Stay in melee range and keep attacking to proc stone effects'},
+      {key:'Shift',name:'Space Jump',desc:'Uses the Space Stone to instantly teleport to a target location, passing through walls. 10s cooldown.',tip:'Use to dive the backline or escape encirclement'},
+      {key:'E',name:'Mind Control',desc:'Briefly takes control of one enemy, forcing them to attack their own team for 2s. 15s cooldown.',tip:'Prioritize controlling the enemy carry or healer'},
+      {key:'RMB',name:'Reality Warp',desc:'Creates a gravity anomaly at target location, pulling in nearby enemies and dealing sustained damage.',tip:'Combo with ally AoE abilities for massive value'},
+      {key:'Q',name:'Ultimate: The Snap',desc:'Deals massive damage to all enemies in sight. Enemies below 30% HP are instantly eliminated. 90s cooldown.',tip:'Wait for multiple enemies to be low before snapping'},
+    ],
+    counters:{good:['Spider-Man','Iron Man','Star-Lord','Hawkeye'],bad:['Doctor Strange','Loki']},
+  },
+  'Scarlet Witch':{
+    stats:{hp:'280',speed:'Medium',difficulty:'★★★★★'},
+    skills:[
+      {key:'LMB',name:'Chaos Bolt',desc:'Fires homing magic projectiles. Hits apply Chaos debuff, reducing target move speed by 20% for 3s.',tip:'Consistently harass enemies to stack Chaos debuffs'},
+      {key:'Shift',name:'Chaos Step',desc:'Quick dash in any direction, leaving behind a Chaos Phantom that draws enemy fire. 8s cooldown.',tip:'Use to dodge ultimates or reposition for a better angle'},
+      {key:'E',name:'Reality Rewrite',desc:'Creates a Chaos Field at target location. Enemies inside have ability cooldowns increased by 50% for 5s.',tip:'Deploy before enemy ultimates are ready to delay them further'},
+      {key:'RMB',name:'Mind Erosion',desc:'Applies Fear to a target, preventing ability use and causing random movement for 2s.',tip:'Always Fear the enemy carry first'},
+      {key:'Q',name:'Ultimate: Chaos Eruption',desc:'Unleashes a massive AoE chaos burst dealing huge damage and applying random debuffs. Area persists for 8s.',tip:'Cast into a grouped enemy team to single-handedly swing a teamfight'},
+    ],
+    counters:{good:['Thanos','Hulk','Groot'],bad:['Loki','Doctor Strange']},
+  },
+  'Thor':{
+    stats:{hp:'400',speed:'Fast',difficulty:'★★★'},
+    skills:[
+      {key:'LMB',name:'Mjolnir Combo',desc:'3-hit melee chain. The 2nd hit releases a small lightning AoE splash.',tip:'Stay in melee range to maximize damage output'},
+      {key:'Shift',name:'Thunder Charge',desc:'Charges forward with Mjolnir, stunning the target for 0.5s on hit. 8s cooldown.',tip:'Use to chase fleeing enemies or close distance quickly'},
+      {key:'E',name:'Lightning Strike',desc:'Calls down lightning on a target area, hitting multiple enemies simultaneously. 10s cooldown.',tip:'Best used when enemies are grouped for massive AoE damage'},
+      {key:'RMB',name:'Hammer Throw',desc:'Hurls Mjolnir at a target; it bounces back, hitting multiple enemies on both paths.',tip:'Most effective in narrow corridors where it hits enemies twice'},
+      {key:'Q',name:'Ultimate: Wrath of Thunder',desc:'Summons a massive lightning storm for 10s, continuously damaging all enemies in range. Thor gains flight.',tip:'Position behind the enemy backline to cut off their retreat'},
+    ],
+    counters:{good:['Iron Man','Black Widow','Rocket Raccoon'],bad:['Thanos','Peni Parker']},
+  },
+};
+
+const comboData={
+  'Spider-Man':{emoji:'🕷',steps:[
+    {title:'Engage',key:'Shift',desc:'Use Web Swing to close the gap quickly while staying unpredictable.'},
+    {title:'Root',key:'E',desc:'Immediately fire Web Bind to root the target and open your damage window.'},
+    {title:'Melee Chain',key:'LMB ×3',desc:'Land the full 3-hit combo. The 3rd hit knocks back — reposition if needed.'},
+    {title:'Aerial Follow-up',key:'Space+LMB',desc:'Jump and aerial attack to continue pressure. Use web to pull them back in.'},
+    {title:'Finish',key:'Q',desc:'Pop Spider-Sense ultimate when the target is low to secure the kill.'},
+  ]},
+  'Iron Man':{emoji:'🤖',steps:[
+    {title:'Gain Height',key:'Shift',desc:'Immediately take to the air to establish height advantage.'},
+    {title:'Charged Shot',key:'RMB (hold)',desc:'Charge and release the Unibeam for massive single-target damage.'},
+    {title:'Missile Salvo',key:'E',desc:'Follow up with Tracking Missiles to hit multiple targets or finish weakened enemies.'},
+    {title:'Sustained Fire',key:'LMB ×2+RMB',desc:'Two quick repulsor shots into a charged blast for a burst combo.'},
+    {title:'Overcharge',key:'Q',desc:'Activate Overcharge at the start of a fight to maximize enhanced armor uptime.'},
+  ]},
+  'Captain America':{emoji:'🛡',steps:[
+    {title:'Engage',key:'Shift',desc:'Lead with Freedom Charge to stun the priority target and signal your team.'},
+    {title:'Interrupt',key:'RMB',desc:'Immediately throw your shield to interrupt any abilities the enemy tries to cast.'},
+    {title:'Melee Chain',key:'LMB ×4',desc:'Land the full 4-hit combo. Angle the final hit toward grouped enemies.'},
+    {title:'Block Window',key:'E (hold)',desc:'If the enemy retaliates, hold Block to absorb damage and trigger the counter-attack.'},
+    {title:'Liberty Shield',key:'Q',desc:'Pop your ultimate when a key ally is being focused to turn the fight.'},
+  ]},
+};
+
+// ── INIT ──
+function init(){renderHeroes('all');renderTierList();populateSelects();renderDefaultComments()}
+
+// ── HEROES ──
+function renderHeroes(filter){
+  const grid=document.getElementById('heroGrid');
+  const list=filter==='all'?heroes:heroes.filter(h=>h.role===filter);
+  grid.innerHTML=list.map(h=>`
+    <div class="hero-card" onclick="openModal('${h.name.replace(/'/g,"\\'")}')">
+      <span class="hero-emoji">${h.emoji}</span>
+      <div class="hero-name">${h.name}</div>
+      <span class="role-tag role-${h.role==='Tank'?'tank':h.role==='DPS'?'dps':'support'}">${h.role}</span>
+    </div>`).join('');
+}
+function filterHeroes(role,btn){
+  document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');renderHeroes(role);
+}
+
+// ── MODAL ──
+function openModal(name){
+  const h=heroes.find(x=>x.name===name);
+  const d=heroDetails[name];
+  document.getElementById('mEmoji').textContent=h.emoji;
+  document.getElementById('mName').textContent=h.name;
+  document.getElementById('mRole').innerHTML=`<span class="role-tag role-${h.role==='Tank'?'tank':h.role==='DPS'?'dps':'support'}">${h.role}</span>`;
+  if(d){
+    document.getElementById('mStats').innerHTML=`
+      <div class="modal-stat"><div class="modal-stat-val">${d.stats.hp}</div><div class="modal-stat-key">💗 HP</div></div>
+      <div class="modal-stat"><div class="modal-stat-val">${d.stats.speed}</div><div class="modal-stat-key">💨 Speed</div></div>
+      <div class="modal-stat"><div class="modal-stat-val">${d.stats.difficulty}</div><div class="modal-stat-key">🎮 Difficulty</div></div>`;
+    document.getElementById('mSkills').innerHTML=d.skills.map(s=>`
+      <div class="skill-item">
+        <span class="skill-key ${s.key==='Q'?'ult':''}">${s.key}</span>
+        <div class="skill-info">
+          <div class="skill-name">${s.name}</div>
+          <div class="skill-desc">${s.desc}</div>
+          ${s.tip?`<div class="skill-tip">💡 ${s.tip}</div>`:''}
+        </div>
+      </div>`).join('');
+    document.getElementById('mCounters').innerHTML=`
+      <div class="counter-box good">
+        <div class="counter-box-title">✅ Strong Against</div>
+        ${d.counters.good.map(n=>`<span class="counter-chip">${n}</span>`).join('')}
+      </div>
+      <div class="counter-box bad">
+        <div class="counter-box-title">❌ Weak Against</div>
+        ${d.counters.bad.map(n=>`<span class="counter-chip">${n}</span>`).join('')}
+      </div>`;
+  }else{
+    document.getElementById('mStats').innerHTML='';
+    document.getElementById('mSkills').innerHTML=`<p style="color:var(--muted);text-align:center;padding:16px">Detailed data coming soon — use AI Guide for instant advice 👇</p>`;
+    document.getElementById('mCounters').innerHTML='';
+  }
+  document.getElementById('mFooter').innerHTML=`
+    <button class="modal-btn modal-btn-secondary" onclick="goToCombo('${name.replace(/'/g,"\\'")}')">📖 View Combos</button>
+    <button class="modal-btn modal-btn-primary" onclick="goToAI('${name.replace(/'/g,"\\'")}')">⚡ Ask AI Guide</button>`;
+  document.getElementById('heroModal').classList.add('show');
+  document.body.style.overflow='hidden';
+}
+function closeModal(){document.getElementById('heroModal').classList.remove('show');document.body.style.overflow='';}
+function closeModalOutside(e){if(e.target===document.getElementById('heroModal'))closeModal();}
+function goToAI(name){closeModal();document.getElementById('aiHeroSelect').value=name;setTimeout(()=>document.getElementById('ai').scrollIntoView({behavior:'smooth'}),200);}
+function goToCombo(name){closeModal();document.getElementById('comboSelect').value=name;showCombo();setTimeout(()=>document.getElementById('combos').scrollIntoView({behavior:'smooth'}),200);}
+
+// ── TIER LIST ──
+function renderTierList(){
+  document.getElementById('tierListContainer').innerHTML=['S','A','B','C'].map(tier=>`
+    <div class="tier-row tier-${tier.toLowerCase()}">
+      <div class="tier-label">${tier}</div>
+      <div class="tier-heroes">
+        ${tierData[tier].map(name=>{
+          const h=heroes.find(x=>x.name===name);
+          return `<div class="tier-hero-chip" onclick="openModal('${name.replace(/'/g,"\\'")}')">
+            ${h?h.emoji:'⭐'} ${name}</div>`;
+        }).join('')}
+      </div>
+    </div>`).join('');
+}
+
+// ── SELECTS ──
+function populateSelects(){
+  const a=document.getElementById('aiHeroSelect');
+  const c=document.getElementById('comboSelect');
+  heroes.forEach(h=>{a.innerHTML+=`<option value="${h.name}">${h.emoji} ${h.name}</option>`;});
+  Object.keys(comboData).forEach(name=>{
+    const h=heroes.find(x=>x.name===name);
+    c.innerHTML+=`<option value="${name}">${h?h.emoji:''} ${name}</option>`;
+  });
+}
+
+// ── COMBO ──
+function showCombo(){
+  const val=document.getElementById('comboSelect').value;
+  const display=document.getElementById('comboDisplay');
+  if(!val||!comboData[val]){display.innerHTML='<p style="color:var(--muted);text-align:center;padding:20px 0">Select a hero to view their combo guide</p>';return;}
+  const data=comboData[val];
+  display.innerHTML=`
+    <div class="combo-hero-name">${data.emoji} ${val} — Combo Guide</div>
+    <ul class="combo-steps">
+      ${data.steps.map((s,i)=>`
+        <li class="combo-step">
+          <div class="step-num">${i+1}</div>
+          <div class="step-content">
+            <div class="step-title">${s.title} <span class="key-badge">${s.key}</span></div>
+            <div class="step-desc">${s.desc}</div>
+          </div>
+        </li>`).join('')}
+    </ul>`;
+}
+
+// ── AI ──
+async function askAI(){
+  const hero=document.getElementById('aiHeroSelect').value;
+  const question=document.getElementById('aiQuestion').value.trim();
+  const btn=document.getElementById('aiBtn');
+  const result=document.getElementById('aiResult');
+  const resultText=document.getElementById('aiResultText');
+  if(!hero){alert('Please select a hero first!');return;}
+  if(!question){alert('Please enter your question!');return;}
+  btn.disabled=true;btn.textContent='⏳ Thinking...';
+  result.classList.add('show');
+  resultText.innerHTML='<span class="loading-dots">Generating strategy</span>';
+  try{
+    const res=await fetch('/.netlify/functions/guide',{
+      method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({hero,question}),
+    });
+    const data=await res.json();
+    resultText.innerHTML=data.answer?data.answer.replace(/\n/g,'<br>'):'⚠ Error: '+(data.error||'Unknown error');
+  }catch(e){
+    resultText.innerHTML='⚠ Request failed. Please check your connection and try again.';
+  }
+  btn.disabled=false;btn.textContent='⚡ Get AI Strategy';
+}
+
+// ── COMMUNITY ──
+let comments=[];
+function renderDefaultComments(){
+  comments=[
+    {name:'xXSpiderMain',hero:'Spider-Man',text:"Spider-Man's web swing mobility is insane. Combo it with the E root and you can delete squishies before they react. Highly recommend for aggressive players.",time:'2h ago',likes:24,liked:false},
+    {name:'MarvelFanatic',hero:'Thanos',text:"Thanos is absolutely broken this patch. His Mind Control into The Snap is a guaranteed teamfight win if you time it right. S-tier no question.",time:'5h ago',likes:18,liked:false},
+    {name:'IronManMain',hero:'Iron Man',text:"Iron Man tip: never land. The moment you touch the ground you're dead. Stay airborne, use charged shots on tanks, and save missiles for cleanup.",time:'Yesterday',likes:31,liked:false},
+  ];
+  renderComments();
+}
+function renderComments(){
+  document.getElementById('commentsList').innerHTML=comments.map((c,i)=>`
+    <div class="comment-card">
+      <div class="comment-meta">
+        <div class="comment-avatar">${c.name[0].toUpperCase()}</div>
+        <div>
+          <div class="comment-author">${c.name}${c.hero?` <span style="color:var(--red);font-size:0.8rem">· ${c.hero}</span>`:''}</div>
+        </div>
+        <div class="comment-time">${c.time}</div>
+      </div>
+      <div class="comment-text">${c.text}</div>
+      <div class="comment-likes">
+        <button class="like-btn ${c.liked?'liked':''}" onclick="toggleLike(${i})">👍 ${c.likes}</button>
+      </div>
+    </div>`).join('');
+}
+function toggleLike(i){
+  comments[i].liked?(comments[i].likes--,comments[i].liked=false):(comments[i].likes++,comments[i].liked=true);
+  renderComments();
+}
+function submitComment(){
+  const name=document.getElementById('commentName').value.trim();
+  const hero=document.getElementById('commentHero').value.trim();
+  const text=document.getElementById('commentText').value.trim();
+  if(!name){alert('Please enter a username!');return;}
+  if(!text){alert('Please enter your comment!');return;}
+  comments.unshift({name,hero,text,time:'Just now',likes:0,liked:false});
+  renderComments();
+  document.getElementById('commentName').value='';
+  document.getElementById('commentHero').value='';
+  document.getElementById('commentText').value='';
+}
+
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal();});
+init();
+</script>
+</body>
+</html>
