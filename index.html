@@ -3,11 +3,346 @@
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-D4EJPR83TH"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  const heroes=[
+  {name:'Spider-Man',emoji:'🕷',role:'DPS'},
+  {name:'Iron Man',emoji:'🤖',role:'DPS'},
+  {name:'Captain America',emoji:'🛡',role:'Tank'},
+  {name:'Thor',emoji:'⚡',role:'DPS'},
+  {name:'Hulk',emoji:'💚',role:'Tank'},
+  {name:'Black Widow',emoji:'🕸',role:'DPS'},
+  {name:'Hawkeye',emoji:'🏹',role:'DPS'},
+  {name:'Doctor Strange',emoji:'🔮',role:'Support'},
+  {name:'Winter Soldier',emoji:'🦾',role:'DPS'},
+  {name:'Scarlet Witch',emoji:'🔴',role:'DPS'},
+  {name:'Loki',emoji:'🐍',role:'Support'},
+  {name:'Thanos',emoji:'💜',role:'Tank'},
+  {name:'Star-Lord',emoji:'🎵',role:'DPS'},
+  {name:'Groot',emoji:'🌿',role:'Tank'},
+  {name:'Rocket Raccoon',emoji:'🦝',role:'Support'},
+  {name:'Namor',emoji:'💧',role:'DPS'},
+  {name:'Moon Knight',emoji:'🌙',role:'DPS'},
+  {name:'Hela',emoji:'⚔',role:'DPS'},
+  {name:'Peni Parker',emoji:'🧊',role:'Tank'},
+  {name:'Mantis',emoji:'🌸',role:'Support'},
+];
 
-  gtag('config', 'G-D4EJPR83TH');
+const tierData={
+  S:['Thanos','Scarlet Witch','Hela','Loki'],
+  A:['Spider-Man','Iron Man','Thor','Moon Knight','Namor'],
+  B:['Captain America','Hulk','Doctor Strange','Winter Soldier','Mantis','Star-Lord'],
+  C:['Black Widow','Hawkeye','Groot','Rocket Raccoon','Peni Parker'],
+};
+
+const heroDetails={
+  'Spider-Man':{
+    stats:{hp:'250',speed:'Very Fast',difficulty:'★★★★'},
+    skills:[
+      {key:'LMB',name:'Melee Combo',desc:'3-hit melee chain. The third hit knocks back enemies and has a small AoE splash.',tip:'The 3rd hit can interrupt enemy ability casts'},
+      {key:'Shift',name:'Web Swing',desc:'High-speed dash toward target direction. Can pass over obstacles. Core mobility tool.',tip:'Combine with a jump to massively extend travel distance'},
+      {key:'E',name:'Web Bind',desc:'Fires a web that roots the target for 1.5s, creating a damage window. 8s cooldown.',tip:'Prioritize rooting high-threat DPS enemies'},
+      {key:'RMB',name:'Web Throw',desc:'Wraps a nearby enemy in webs and hurls them, dealing AoE damage on impact.',tip:'Most effective at point-blank range'},
+      {key:'Q',name:'Ultimate: Spider-Sense',desc:'Enters heightened state: +50% move speed, +30% damage for 8s. All cooldowns refresh faster.',tip:'Release when the enemy team is disorganized for maximum value'},
+    ],
+    counters:{good:['Hawkeye','Rocket Raccoon','Mantis'],bad:['Thanos','Hulk','Captain America']},
+  },
+  'Iron Man':{
+    stats:{hp:'300',speed:'Fast',difficulty:'★★★'},
+    skills:[
+      {key:'LMB',name:'Repulsor Beam',desc:'Continuous energy blasts. Damage increases at closer range.',tip:'Mid-range is the sweet spot for consistent DPS'},
+      {key:'RMB',name:'Charged Unibeam',desc:'Hold to charge a high-damage energy blast. Full charge triggers an AoE explosion.',tip:'Extremely effective against tanks and grouped enemies'},
+      {key:'Shift',name:'Jet Flight',desc:'Enters flight mode with free altitude control. Aerial attacks gain a bonus damage multiplier.',tip:'Always maintain height advantage'},
+      {key:'E',name:'Tracking Missiles',desc:'Launches 6 homing missiles that auto-lock onto the nearest target.',tip:'Great for finishing off low-HP targets'},
+      {key:'Q',name:'Ultimate: Overcharge',desc:'Activates enhanced armor for 12s: all stats boosted and immunity to crowd control.',tip:'Pop at the start of a teamfight to maximize uptime'},
+    ],
+    counters:{good:['Groot','Captain America','Peni Parker'],bad:['Black Widow','Moon Knight','Hawkeye']},
+  },
+  'Captain America':{
+    stats:{hp:'650',speed:'Medium',difficulty:'★★'},
+    skills:[
+      {key:'LMB',name:'Shield Strike',desc:'4-hit melee chain. The final hit has a splash radius.',tip:'The 4th hit splash can catch flanking enemies'},
+      {key:'RMB',name:'Shield Throw',desc:'Throws the shield to ricochet between up to 3 targets.',tip:'Save this to interrupt high-value ultimates'},
+      {key:'Shift',name:'Freedom Charge',desc:'Charges forward and slams into enemies, dealing knockback and a 0.8s stun.',tip:'Follow up immediately with your ultimate'},
+      {key:'E',name:'Block & Counter',desc:'Hold to block all frontal damage for 2s. Successfully blocking triggers a counter-attack.',tip:'Pre-empt enemy ultimates to completely negate them'},
+      {key:'Q',name:'Ultimate: Liberty Shield',desc:'Becomes invincible for 3s and grants a shield to nearby allies.',tip:'Use when a key ally is being focused'},
+    ],
+    counters:{good:['Spider-Man','Winter Soldier','Star-Lord'],bad:['Scarlet Witch','Thanos','Hela']},
+  },
+  'Thanos':{
+    stats:{hp:'800',speed:'Medium',difficulty:'★★★★'},
+    skills:[
+      {key:'LMB',name:'Infinity Gauntlet',desc:'Powerful melee strikes. Each hit has a chance to trigger a random Infinity Stone effect.',tip:'Stay in melee range to proc stone effects'},
+      {key:'Shift',name:'Space Jump',desc:'Uses the Space Stone to instantly teleport to a target location, passing through walls.',tip:'Use to dive the backline or escape encirclement'},
+      {key:'E',name:'Mind Control',desc:'Briefly takes control of one enemy, forcing them to attack their own team for 2s.',tip:'Prioritize controlling the enemy carry or healer'},
+      {key:'RMB',name:'Reality Warp',desc:'Creates a gravity anomaly at target location, pulling in nearby enemies.',tip:'Combo with ally AoE abilities for massive value'},
+      {key:'Q',name:'Ultimate: The Snap',desc:'Deals massive damage to all enemies in sight. Enemies below 30% HP are instantly eliminated.',tip:'Wait for multiple enemies to be low before snapping'},
+    ],
+    counters:{good:['Spider-Man','Iron Man','Star-Lord','Hawkeye'],bad:['Doctor Strange','Loki']},
+  },
+  'Scarlet Witch':{
+    stats:{hp:'280',speed:'Medium',difficulty:'★★★★★'},
+    skills:[
+      {key:'LMB',name:'Chaos Bolt',desc:'Fires homing magic projectiles. Hits apply Chaos debuff, reducing target move speed by 20%.',tip:'Consistently harass enemies to stack Chaos debuffs'},
+      {key:'Shift',name:'Chaos Step',desc:'Quick dash in any direction, leaving behind a Chaos Phantom that draws enemy fire.',tip:'Use to dodge ultimates or reposition'},
+      {key:'E',name:'Reality Rewrite',desc:'Creates a Chaos Field. Enemies inside have ability cooldowns increased by 50% for 5s.',tip:'Deploy before enemy ultimates are ready'},
+      {key:'RMB',name:'Mind Erosion',desc:'Applies Fear to a target, preventing ability use for 2s.',tip:'Always Fear the enemy carry first'},
+      {key:'Q',name:'Ultimate: Chaos Eruption',desc:'Unleashes a massive AoE chaos burst. Area persists for 8s.',tip:'Cast into a grouped enemy team'},
+    ],
+    counters:{good:['Thanos','Hulk','Groot'],bad:['Loki','Doctor Strange']},
+  },
+  'Thor':{
+    stats:{hp:'400',speed:'Fast',difficulty:'★★★'},
+    skills:[
+      {key:'LMB',name:'Mjolnir Combo',desc:'3-hit melee chain. The 2nd hit releases a small lightning AoE splash.',tip:'Stay in melee range to maximize damage output'},
+      {key:'Shift',name:'Thunder Charge',desc:'Charges forward with Mjolnir, stunning the target for 0.5s on hit.',tip:'Use to chase fleeing enemies or close distance quickly'},
+      {key:'E',name:'Lightning Strike',desc:'Calls down lightning on a target area, hitting multiple enemies simultaneously.',tip:'Best used when enemies are grouped'},
+      {key:'RMB',name:'Hammer Throw',desc:'Hurls Mjolnir at a target; it bounces back, hitting multiple enemies on both paths.',tip:'Most effective in narrow corridors'},
+      {key:'Q',name:'Ultimate: Wrath of Thunder',desc:'Summons a massive lightning storm for 10s. Thor gains flight.',tip:'Position behind the enemy backline'},
+    ],
+    counters:{good:['Iron Man','Black Widow','Rocket Raccoon'],bad:['Thanos','Peni Parker']},
+  },
+};
+
+const comboData={
+  'Spider-Man':{emoji:'🕷',steps:[
+    {title:'Engage',key:'Shift',desc:'Use Web Swing to close the gap quickly while staying unpredictable.'},
+    {title:'Root',key:'E',desc:'Immediately fire Web Bind to root the target and open your damage window.'},
+    {title:'Melee Chain',key:'LMB ×3',desc:'Land the full 3-hit combo. The 3rd hit knocks back — reposition if needed.'},
+    {title:'Aerial Follow-up',key:'Space+LMB',desc:'Jump and aerial attack to continue pressure.'},
+    {title:'Finish',key:'Q',desc:'Pop Spider-Sense ultimate when the target is low to secure the kill.'},
+  ]},
+  'Iron Man':{emoji:'🤖',steps:[
+    {title:'Gain Height',key:'Shift',desc:'Immediately take to the air to establish height advantage.'},
+    {title:'Charged Shot',key:'RMB (hold)',desc:'Charge and release the Unibeam for massive single-target damage.'},
+    {title:'Missile Salvo',key:'E',desc:'Follow up with Tracking Missiles to hit multiple targets.'},
+    {title:'Sustained Fire',key:'LMB ×2+RMB',desc:'Two quick repulsor shots into a charged blast for a burst combo.'},
+    {title:'Overcharge',key:'Q',desc:'Activate Overcharge at the start of a fight to maximize uptime.'},
+  ]},
+  'Captain America':{emoji:'🛡',steps:[
+    {title:'Engage',key:'Shift',desc:'Lead with Freedom Charge to stun the priority target.'},
+    {title:'Interrupt',key:'RMB',desc:'Immediately throw your shield to interrupt any abilities.'},
+    {title:'Melee Chain',key:'LMB ×4',desc:'Land the full 4-hit combo. Angle the final hit toward grouped enemies.'},
+    {title:'Block Window',key:'E (hold)',desc:'If the enemy retaliates, hold Block to absorb damage and counter.'},
+    {title:'Liberty Shield',key:'Q',desc:'Pop your ultimate when a key ally is being focused.'},
+  ]},
+};
+
+// ── HERO LINK MAP ──
+function getHeroLink(name){
+  const pages={
+    'Spider-Man':'/spider-man.html',
+    'Iron Man':'/iron-man.html',
+    'Hulk':'/hulk.html',
+    'Doctor Strange':'/doctor-strange.html',
+    'Thor':'/thor.html',
+    'Hela':'/hela.html',
+    'Black Widow':'/black-widow.html',
+    'Loki':'/loki.html',
+    'Scarlet Witch':'/scarlet-witch.html',
+    'Magneto':'/magneto.html',
+  };
+  return pages[name]||null;
+}
+
+// ── RENDER HEROES ──
+function renderHeroes(filter){
+  const grid=document.getElementById('heroGrid');
+  const list=filter==='all'?heroes:heroes.filter(h=>h.role===filter);
+  grid.innerHTML=list.map(h=>{
+    const link=getHeroLink(h.name);
+    const clickAction=link
+      ?`window.location.href='${link}'`
+      :`openModal('${h.name.replace(/'/g,"\\'")}')`;
+    return `
+    <div class="hero-card" onclick="${clickAction}">
+      <span class="hero-emoji">${h.emoji}</span>
+      <div class="hero-name">${h.name}</div>
+      <span class="role-tag role-${h.role==='Tank'?'tank':h.role==='DPS'?'dps':'support'}">${h.role}</span>
+      ${link?`<div style="font-size:0.7rem;color:var(--gold);margin-top:6px">📄 Full Guide</div>`:''}
+    </div>`;
+  }).join('');
+}
+
+function filterHeroes(role,btn){
+  document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  renderHeroes(role);
+}
+
+// ── MODAL ──
+function openModal(name){
+  const h=heroes.find(x=>x.name===name);
+  const d=heroDetails[name];
+  document.getElementById('mEmoji').textContent=h.emoji;
+  document.getElementById('mName').textContent=h.name;
+  document.getElementById('mRole').innerHTML=`<span class="role-tag role-${h.role==='Tank'?'tank':h.role==='DPS'?'dps':'support'}">${h.role}</span>`;
+  if(d){
+    document.getElementById('mStats').innerHTML=`
+      <div class="modal-stat"><div class="modal-stat-val">${d.stats.hp}</div><div class="modal-stat-key">💗 HP</div></div>
+      <div class="modal-stat"><div class="modal-stat-val">${d.stats.speed}</div><div class="modal-stat-key">💨 Speed</div></div>
+      <div class="modal-stat"><div class="modal-stat-val">${d.stats.difficulty}</div><div class="modal-stat-key">🎮 Difficulty</div></div>`;
+    document.getElementById('mSkills').innerHTML=d.skills.map(s=>`
+      <div class="skill-item">
+        <span class="skill-key ${s.key==='Q'?'ult':''}">${s.key}</span>
+        <div class="skill-info">
+          <div class="skill-name">${s.name}</div>
+          <div class="skill-desc">${s.desc}</div>
+          ${s.tip?`<div class="skill-tip">💡 ${s.tip}</div>`:''}
+        </div>
+      </div>`).join('');
+    document.getElementById('mCounters').innerHTML=`
+      <div class="counter-box good">
+        <div class="counter-box-title">✅ Strong Against</div>
+        ${d.counters.good.map(n=>`<span class="counter-chip">${n}</span>`).join('')}
+      </div>
+      <div class="counter-box bad">
+        <div class="counter-box-title">❌ Weak Against</div>
+        ${d.counters.bad.map(n=>`<span class="counter-chip">${n}</span>`).join('')}
+      </div>`;
+  }else{
+    document.getElementById('mStats').innerHTML='';
+    document.getElementById('mSkills').innerHTML=`<p style="color:var(--muted);text-align:center;padding:16px">Detailed data coming soon — use AI Guide for instant advice 👇</p>`;
+    document.getElementById('mCounters').innerHTML='';
+  }
+  document.getElementById('mFooter').innerHTML=`
+    <button class="modal-btn modal-btn-secondary" onclick="goToCombo('${name.replace(/'/g,"\\'")}')">📖 View Combos</button>
+    <button class="modal-btn modal-btn-primary" onclick="goToAI('${name.replace(/'/g,"\\'")}')">⚡ Ask AI Guide</button>`;
+  document.getElementById('heroModal').classList.add('show');
+  document.body.style.overflow='hidden';
+}
+function closeModal(){document.getElementById('heroModal').classList.remove('show');document.body.style.overflow='';}
+function closeModalOutside(e){if(e.target===document.getElementById('heroModal'))closeModal();}
+function goToAI(name){closeModal();document.getElementById('aiHeroSelect').value=name;setTimeout(()=>document.getElementById('ai').scrollIntoView({behavior:'smooth'}),200);}
+function goToCombo(name){closeModal();document.getElementById('comboSelect').value=name;showCombo();setTimeout(()=>document.getElementById('combos').scrollIntoView({behavior:'smooth'}),200);}
+
+// ── TIER LIST ──
+function renderTierList(){
+  document.getElementById('tierListContainer').innerHTML=['S','A','B','C'].map(tier=>`
+    <div class="tier-row tier-${tier.toLowerCase()}">
+      <div class="tier-label">${tier}</div>
+      <div class="tier-heroes">
+        ${tierData[tier].map(name=>{
+          const h=heroes.find(x=>x.name===name);
+          return `<div class="tier-hero-chip" onclick="openModal('${name.replace(/'/g,"\\'")}')">
+            ${h?h.emoji:'⭐'} ${name}</div>`;
+        }).join('')}
+      </div>
+    </div>`).join('');
+}
+
+// ── SELECTS ──
+function populateSelects(){
+  const a=document.getElementById('aiHeroSelect');
+  const c=document.getElementById('comboSelect');
+  heroes.forEach(h=>{
+    a.innerHTML+=`<option value="${h.name}">${h.emoji} ${h.name}</option>`;
+  });
+  Object.keys(comboData).forEach(name=>{
+    const h=heroes.find(x=>x.name===name);
+    c.innerHTML+=`<option value="${name}">${h?h.emoji:''} ${name}</option>`;
+  });
+}
+
+// ── COMBO ──
+function showCombo(){
+  const val=document.getElementById('comboSelect').value;
+  const display=document.getElementById('comboDisplay');
+  if(!val||!comboData[val]){
+    display.innerHTML='<p style="color:var(--muted);text-align:center;padding:20px 0">Select a hero to view their combo guide</p>';
+    return;
+  }
+  const data=comboData[val];
+  display.innerHTML=`
+    <div class="combo-hero-name">${data.emoji} ${val} — Combo Guide</div>
+    <ul class="combo-steps">
+      ${data.steps.map((s,i)=>`
+        <li class="combo-step">
+          <div class="step-num">${i+1}</div>
+          <div class="step-content">
+            <div class="step-title">${s.title} <span class="key-badge">${s.key}</span></div>
+            <div class="step-desc">${s.desc}</div>
+          </div>
+        </li>`).join('')}
+    </ul>`;
+}
+
+// ── AI ──
+async function askAI(){
+  const hero=document.getElementById('aiHeroSelect').value;
+  const question=document.getElementById('aiQuestion').value.trim();
+  const btn=document.getElementById('aiBtn');
+  const result=document.getElementById('aiResult');
+  const resultText=document.getElementById('aiResultText');
+  if(!hero){alert('Please select a hero first!');return;}
+  if(!question){alert('Please enter your question!');return;}
+  btn.disabled=true;btn.textContent='⏳ Thinking...';
+  result.classList.add('show');
+  resultText.innerHTML='<span class="loading-dots">Generating strategy</span>';
+  try{
+    const res=await fetch('/.netlify/functions/guide',{
+      method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({hero,question}),
+    });
+    const data=await res.json();
+    resultText.innerHTML=data.answer?data.answer.replace(/\n/g,'<br>'):'⚠ Error: '+(data.error||'Unknown error');
+  }catch(e){
+    resultText.innerHTML='⚠ Request failed. Please check your connection and try again.';
+  }
+  btn.disabled=false;btn.textContent='⚡ Get AI Strategy';
+}
+
+// ── COMMUNITY ──
+let comments=[];
+function renderDefaultComments(){
+  comments=[
+    {name:'xXSpiderMain',hero:'Spider-Man',text:"Spider-Man's web swing mobility is insane. Combo it with the E root and you can delete squishies before they react.",time:'2h ago',likes:24,liked:false},
+    {name:'MarvelFanatic',hero:'Thanos',text:"Thanos is absolutely broken this patch. His Mind Control into The Snap is a guaranteed teamfight win if you time it right.",time:'5h ago',likes:18,liked:false},
+    {name:'IronManMain',hero:'Iron Man',text:"Iron Man tip: never land. The moment you touch the ground you're dead. Stay airborne, use charged shots on tanks.",time:'Yesterday',likes:31,liked:false},
+  ];
+  renderComments();
+}
+function renderComments(){
+  document.getElementById('commentsList').innerHTML=comments.map((c,i)=>`
+    <div class="comment-card">
+      <div class="comment-meta">
+        <div class="comment-avatar">${c.name[0].toUpperCase()}</div>
+        <div>
+          <div class="comment-author">${c.name}${c.hero?` <span style="color:var(--red);font-size:0.8rem">· ${c.hero}</span>`:''}</div>
+        </div>
+        <div class="comment-time">${c.time}</div>
+      </div>
+      <div class="comment-text">${c.text}</div>
+      <div class="comment-likes">
+        <button class="like-btn ${c.liked?'liked':''}" onclick="toggleLike(${i})">👍 ${c.likes}</button>
+      </div>
+    </div>`).join('');
+}
+function toggleLike(i){
+  comments[i].liked?(comments[i].likes--,comments[i].liked=false):(comments[i].likes++,comments[i].liked=true);
+  renderComments();
+}
+function submitComment(){
+  const name=document.getElementById('commentName').value.trim();
+  const hero=document.getElementById('commentHero').value.trim();
+  const text=document.getElementById('commentText').value.trim();
+  if(!name){alert('Please enter a username!');return;}
+  if(!text){alert('Please enter your comment!');return;}
+  comments.unshift({name,hero,text,time:'Just now',likes:0,liked:false});
+  renderComments();
+  document.getElementById('commentName').value='';
+  document.getElementById('commentHero').value='';
+  document.getElementById('commentText').value='';
+}
+
+// ── INIT ──
+function init(){
+  renderHeroes('all');
+  renderTierList();
+  populateSelects();
+  renderDefaultComments();
+}
+
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal();});
+init();
 </script>
   <head>
 <meta name="google-site-verification" content="QDQr0575t8tsoZ3z2EeTpnhvjf-ezluC9bmPEYuL4Rs" />
