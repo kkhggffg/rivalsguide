@@ -343,6 +343,12 @@ function init(){
 
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal();});
 init();
+window.addEventListener('pageshow', function(e){
+  if(e.persisted){
+    init();
+  }
+});
+
 </script>
   <head>
 <meta name="google-site-verification" content="QDQr0575t8tsoZ3z2EeTpnhvjf-ezluC9bmPEYuL4Rs" />
