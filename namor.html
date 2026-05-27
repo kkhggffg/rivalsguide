@@ -25,6 +25,8 @@
   .tip-box h3{color:#38bdf8;margin-bottom:6px}
   .counter-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px}
   .counter-card{background:#0d1b2e;border-radius:8px;padding:12px;text-align:center;border:1px solid #1e293b}
+  .counter-card .emoji{font-size:2rem}
+  .counter-card .name{font-size:0.85rem;font-weight:600;margin-top:6px}
   .stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
   .stat-box{background:#0d1b2e;border-radius:8px;padding:16px;text-align:center}
   .stat-box .val{font-size:1.8rem;font-weight:700;color:var(--gold)}
@@ -37,16 +39,14 @@
   <a href="/index.html">🛡️ RivalsGuide</a>
   <span style="color:#64748b">/ Namor</span>
 </header>
-
 <div class="hero-banner">
   <div class="hero-emoji">💧</div>
   <h1>Namor</h1>
   <span class="role-tag">⚔️ DPS</span>
   <p style="color:#94a3b8;margin-top:12px;max-width:600px;margin-left:auto;margin-right:auto">
-    King of Atlantis. Namor is a zone-control DPS who summons sea creatures to dominate areas and punish enemies who cluster together. [[1]](#__1)
+    King of Atlantis. Namor is a zone-control DPS who summons sea creatures to dominate areas and punish enemies who cluster together.
   </p>
 </div>
-
 <div class="container">
   <div class="section">
     <h2>📊 Base Stats</h2>
@@ -56,63 +56,102 @@
       <div class="stat-box"><div class="val">Medium</div><div class="label">Difficulty</div></div>
     </div>
   </div>
-
   <div class="section">
     <h2>⚡ Abilities</h2>
     <div class="ability">
       <h3>🌊 Trident Surge (Primary)</h3>
-      <p>Fires a burst of water energy from his trident. Consistent medium-range damage with good projectile speed.</p>
+      <p>Fires a burst of water energy from his trident. Consistent medium-range damage with good projectile speed — use to poke enemies out of position.</p>
     </div>
     <div class="ability">
       <h3>🦈 Aquatic Summon (Shift)</h3>
-      <p>Summons a sea creature turret that attacks nearby enemies. Place these on flanks and choke points to control space. [[1]](#__1)</p>
+      <p>Summons a sea creature turret that attacks nearby enemies automatically. Place these on flanks and choke points to control space and force enemies to deal with them.</p>
     </div>
     <div class="ability">
       <h3>💨 Atlantean Flight (E)</h3>
-      <p>Briefly takes flight, gaining mobility and a better angle. Use to escape flankers or reposition turrets.</p>
+      <p>Briefly takes flight, gaining mobility and a better angle on enemies. Use to escape flankers or reposition your turrets to better coverage spots.</p>
     </div>
     <div class="ability">
       <h3>🌊 Tidal Wave (Ultimate)</h3>
-      <p>Unleashes a massive wave that deals huge damage and pushes enemies back. Devastating on payload maps and choke points.</p>
+      <p>Unleashes a massive wave that deals huge damage and pushes enemies back. Devastating on payload maps and choke points — coordinate with your team to follow up the knockback.</p>
     </div>
   </div>
-
   <div class="section">
     <h2>💡 Pro Tips</h2>
     <div class="tip-box">
       <h3>🦈 Turret Placement is Everything</h3>
-      <p>Place Aquatic Summons on high ground or behind cover. Well-placed turrets force enemies to deal with them or take constant chip damage. [[1]](#__1)</p>
+      <p>Place Aquatic Summons on high ground or behind cover where enemies cannot easily destroy them. Well-placed turrets force enemies to deal with them or take constant chip damage throughout the fight.</p>
     </div>
     <div class="tip-box">
-      <h3>🎯 Counter Him: Stay Mobile</h3>
-      <p>Psylocke is the best flanker against Namor — she has excellent poke range and doesn't need to expose herself to his turrets. [[3]](#__3)</p>
+      <h3>🌊 Ultimate on Choke Points</h3>
+      <p>Tidal Wave is best used when enemies are funneled through a doorway or narrow corridor. The knockback sends them flying and opens them up for your team's follow-up damage.</p>
     </div>
     <div class="tip-box">
-      <h3>🌊 Ultimate on Chokes</h3>
-      <p>Tidal Wave is best used when enemies are funneled through a doorway or narrow corridor. Coordinate with your team to follow up the knockback. [[2]](#__2)</p>
+      <h3>📍 Set Up Before the Fight</h3>
+      <p>Rotate early and place turrets before enemies arrive. A fully set-up Namor with three turrets on the objective is extremely difficult to push into without taking heavy damage.</p>
+    </div>
+    <div class="tip-box">
+      <h3>✈️ Use Flight to Escape Flankers</h3>
+      <p>Atlantean Flight is your panic button when a Spider-Man or Star-Lord dives you. Use it immediately to gain height and distance, then let your turrets deal with them.</p>
     </div>
   </div>
-
   <div class="section">
     <h2>⚔️ Counters Namor</h2>
     <div class="counter-grid">
       <div class="counter-card"><div class="emoji">🎵</div><div class="name">Star-Lord</div><p style="font-size:0.75rem;color:#94a3b8;margin-top:4px">High mobility avoids turrets</p></div>
-      <div class="counter-card"><div class="emoji">🕷️</div><div class="name">Spider-Man</div><p style="font-size:0.75rem;color:#94a3b8;margin-top:4px">Swings past turrets, dives him</p></div>
-      <div class="counter-card"><div class="emoji">🏹</div><div class="name">Hawkeye</div><p style="font-size:0.75rem;color:#94a3b8;margin-top:4px">Destroys turrets from long range</p></div>
+      <div class="counter-card"><div class="emoji">🕷️</div><div class="name">Spider-Man</div><p style="font-size:0.75rem;color:#94a3b8;margin-top:4px">Swings past turrets, dives him directly</p></div>
+      <div class="counter-card"><div class="emoji">🏹</div><div class="name">Hawkeye</div><p style="font-size:0.75rem;color:#94a3b8;margin-top:4px">Destroys turrets from long range safely</p></div>
+      <div class="counter-card"><div class="emoji">🕸️</div><div class="name">Black Widow</div><p style="font-size:0.75rem;color:#94a3b8;margin-top:4px">Snipes him and clears turrets at distance</p></div>
     </div>
-    <p style="font-size:0.8rem;color:#64748b;margin-top:12px">Source: [[1]](#__1), [[3]](#__3)</p>
   </div>
-
   <div class="section">
     <h2>🤝 Best Team Synergies</h2>
     <div class="counter-grid">
       <div class="counter-card"><div class="emoji">🔮</div><div class="name">Doctor Strange</div><p style="font-size:0.75rem;color:#94a3b8;margin-top:4px">Portals enemies into turret zones</p></div>
-      <div class="counter-card"><div class="emoji">💚</div><div class="name">Groot</div><p style="font-size:0.75rem;color:#94a3b8;margin-top:4px">Walls force enemies into turret range</p></div>
+      <div class="counter-card"><div class="emoji">🌿</div><div class="name">Groot</div><p style="font-size:0.75rem;color:#94a3b8;margin-top:4px">Walls force enemies into turret range</p></div>
       <div class="counter-card"><div class="emoji">🌸</div><div class="name">Mantis</div><p style="font-size:0.75rem;color:#94a3b8;margin-top:4px">Healing sustains his frontline presence</p></div>
+      <div class="counter-card"><div class="emoji">🛡️</div><div class="name">Captain America</div><p style="font-size:0.75rem;color:#94a3b8;margin-top:4px">Stuns enemies into turret range</p></div>
     </div>
   </div>
+  <div class="section">
+    <h2>📋 Playstyle Summary</h2>
+    <table style="width:100%;border-collapse:collapse;font-size:0.9rem">
+      <thead>
+        <tr style="border-bottom:1px solid #1e293b">
+          <th style="text-align:left;padding:10px;color:#94a3b8">Aspect</th>
+          <th style="text-align:left;padding:10px;color:#94a3b8">Rating</th>
+          <th style="text-align:left;padding:10px;color:#94a3b8">Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom:1px solid #0f172a">
+          <td style="padding:10px">Zone Control</td>
+          <td style="padding:10px;color:#4ade80">⭐⭐⭐⭐⭐</td>
+          <td style="padding:10px;color:#94a3b8">Turrets dominate enclosed spaces</td>
+        </tr>
+        <tr style="border-bottom:1px solid #0f172a">
+          <td style="padding:10px">Setup Required</td>
+          <td style="padding:10px;color:#f87171">⭐⭐⭐⭐⭐</td>
+          <td style="padding:10px;color:#94a3b8">Weak before turrets are placed</td>
+        </tr>
+        <tr style="border-bottom:1px solid #0f172a">
+          <td style="padding:10px">Mobility</td>
+          <td style="padding:10px;color:#fbbf24">⭐⭐⭐</td>
+          <td style="padding:10px;color:#94a3b8">Flight helps but limited duration</td>
+        </tr>
+        <tr style="border-bottom:1px solid #0f172a">
+          <td style="padding:10px">Ultimate Power</td>
+          <td style="padding:10px;color:#4ade80">⭐⭐⭐⭐</td>
+          <td style="padding:10px;color:#94a3b8">Tidal Wave is map-dependent but strong</td>
+        </tr>
+        <tr>
+          <td style="padding:10px">Difficulty</td>
+          <td style="padding:10px;color:#fbbf24">⭐⭐⭐</td>
+          <td style="padding:10px;color:#94a3b8">Medium — turret placement takes practice</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>
-
 <footer>
   <p>© 2025 RivalsGuide.site — Fan site, not affiliated with Marvel or NetEase Games.</p>
 </footer>
