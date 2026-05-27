@@ -1,25 +1,23 @@
-export default {
-  async fetch(request, env) {
+import { getAssetFromKV } from '@cloudflare/kv-asset-handler';
 
-    // 允许跨域
+export default {
+  async fetch(request, env, ctx) {
     const corsHeaders = {
       'Access-Control-Allow-Origin': '*',
       'Access-Control-Allow-Methods': 'POST, OPTIONS',
       'Access-Control-Allow-Headers': 'Content-Type',
     };
 
-    if (request.method === 'OPTIONS') {
-      return new Response(null, { headers: corsHeaders });
-    }
-
     const url = new URL(request.url);
 
-    // AI 接口路由
+    // AI 接口
     if (url.pathname === '/guide' && request.method === 'POST') {
+      if (request.method === 'OPTIONS') {
+        return new Response(null, { headers: corsHeaders });
+      }
       try {
         const { hero, question } = await request.json();
-
-        const prompt = `You are a Marvel Rivals expert coach. The player is asking about the hero "${hero}". Their question: "${question}". Give a concise, practical strategy answer in 3-5 sentences. Be specific and helpful.`;
+        const prompt = `You are a Marvel Rivals expert coach. The player is asking about the hero "${hero}". Their question: "${question}". Give a concise, practical strategy answer in 3-5 sentences.`;
 
         const res = await fetch('https://api.groq.com/openai/v1/chat/completions', {
           method: 'POST',
@@ -49,7 +47,11 @@ export default {
       }
     }
 
-    // 其他路由返回 404
-    return new Response('Not found', { status: 404 });
+    // 静态文件正常返回
+    try {
+      return await getAssetFromKV({ request, waitUntil: ctx.waitUntil.bind(ctx) }, { ASSET_NAMESPACE: env.__STATIC_CONTENT, ASSET_MANIFEST: env.__STATIC_CONTENT_MANIFEST });
+    } catch (e) {
+      return new Response('Not found', { status: 404 });
+    }
   }
 };
