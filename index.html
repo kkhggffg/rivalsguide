@@ -669,7 +669,12 @@ function submitComment(){
 }
 
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal();});
-init();
+
+window.addEventListener('pageshow',function(e){
+  document.getElementById('aiHeroSelect').innerHTML='<option value="">— Select a Hero —</option>';
+  document.getElementById('comboSelect').innerHTML='<option value="">— Select a Hero —</option>';
+  init();
+});
 </script>
 <footer style="
   background: #0d0d18;
