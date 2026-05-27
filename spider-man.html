@@ -9,237 +9,460 @@
   <meta property="og:description" content="Master Spider-Man in Marvel Rivals with our in-depth guide covering abilities, combos, counters, and team comps.">
   <meta property="og:url" content="https://rivalsguide.site/spider-man.html">
   <meta property="og:type" content="article">
-
-  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-D4EJPR83TH"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-D4EJPR83TH');
-  </script>
-
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-D4EJPR83TH');</script>
   <style>
-    :root {
-      --red:#e63946; --gold:#ffd60a; --dark:#0a0a0f; --dark2:#12121a;
-      --dark3:#1a1a2e; --card:#16213e; --text:#e0e0e0; --muted:#888;
-      --border:rgba(230,57,70,0.3); --green:#4ade80; --blue:#60a5fa;
-    }
+    :root{--red:#e63946;--gold:#ffd60a;--dark:#0a0a0f;--dark2:#12121a;--dark3:#1a1a2e;--card:#16213e;--text:#e0e0e0;--muted:#888;--border:rgba(230,57,70,0.3);--green:#4ade80;--blue:#60a5fa}
     *{margin:0;padding:0;box-sizing:border-box}
     html{scroll-behavior:smooth}
     body{background:var(--dark);color:var(--text);font-family:'Segoe UI',sans-serif;overflow-x:hidden}
-
-    /* ── NAV ── */
-    nav{position:fixed;top:0;width:100%;z-index:999;background:rgba(10,10,15,0.95);
-      backdrop-filter:blur(10px);border-bottom:1px solid var(--border);
-      padding:0 40px;display:flex;align-items:center;justify-content:space-between;height:64px}
+    nav{position:fixed;top:0;width:100%;z-index:999;background:rgba(10,10,15,0.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);padding:0 40px;display:flex;align-items:center;justify-content:space-between;height:64px}
     .nav-logo{font-size:1.3rem;font-weight:900;color:var(--red);letter-spacing:1px;text-decoration:none}
     .nav-logo span{color:var(--gold)}
-    .nav-back{color:var(--muted);text-decoration:none;font-size:0.9rem;
-      display:flex;align-items:center;gap:8px;transition:color 0.2s}
+    .nav-back{color:var(--muted);text-decoration:none;font-size:0.9rem;display:flex;align-items:center;gap:8px;transition:color 0.2s}
     .nav-back:hover{color:var(--red)}
-
-    /* ── HERO BANNER ── */
-    .hero-banner{min-height:340px;background:
-      radial-gradient(ellipse at 30% 50%,rgba(230,57,70,0.2) 0%,transparent 60%),
-      radial-gradient(ellipse at 80% 30%,rgba(255,214,10,0.06) 0%,transparent 50%),
-      var(--dark);
-      display:flex;align-items:center;padding:100px 40px 60px;position:relative;overflow:hidden}
-    .hero-banner::before{content:'🕷';position:absolute;right:80px;top:50%;
-      transform:translateY(-50%);font-size:12rem;opacity:0.06;pointer-events:none}
+    .hero-banner{min-height:340px;background:radial-gradient(ellipse at 30% 50%,rgba(230,57,70,0.2) 0%,transparent 60%),radial-gradient(ellipse at 80% 30%,rgba(255,214,10,0.06) 0%,transparent 50%),var(--dark);display:flex;align-items:center;padding:100px 40px 60px;position:relative;overflow:hidden}
+    .hero-banner::before{content:'🕷';position:absolute;right:80px;top:50%;transform:translateY(-50%);font-size:12rem;opacity:0.06;pointer-events:none}
     .banner-inner{max-width:1200px;margin:0 auto;width:100%}
     .breadcrumb{font-size:0.8rem;color:var(--muted);margin-bottom:16px}
     .breadcrumb a{color:var(--muted);text-decoration:none}
     .breadcrumb a:hover{color:var(--red)}
     .breadcrumb span{margin:0 8px}
-    .banner-role{display:inline-block;background:rgba(230,57,70,0.15);border:1px solid var(--border);
-      color:var(--red);font-size:0.75rem;padding:3px 14px;border-radius:20px;
-      margin-bottom:16px;letter-spacing:2px;text-transform:uppercase}
-    .banner-title{font-size:clamp(2.5rem,6vw,4.5rem);font-weight:900;line-height:1.1;
-      margin-bottom:12px;text-shadow:0 0 40px rgba(230,57,70,0.3)}
+    .banner-role{display:inline-block;background:rgba(230,57,70,0.15);border:1px solid var(--border);color:var(--red);font-size:0.75rem;padding:3px 14px;border-radius:20px;margin-bottom:16px;letter-spacing:2px;text-transform:uppercase}
+    .banner-title{font-size:clamp(2.5rem,6vw,4.5rem);font-weight:900;line-height:1.1;margin-bottom:12px;text-shadow:0 0 40px rgba(230,57,70,0.3)}
     .banner-title .accent{color:var(--red)}
     .banner-sub{color:var(--muted);font-size:1rem;max-width:560px;line-height:1.6;margin-bottom:28px}
     .banner-tags{display:flex;gap:10px;flex-wrap:wrap}
-    .tag{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);
-      padding:5px 14px;border-radius:20px;font-size:0.8rem;color:var(--muted)}
+    .tag{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);padding:5px 14px;border-radius:20px;font-size:0.8rem;color:var(--muted)}
     .tag.red{border-color:var(--border);color:var(--red);background:rgba(230,57,70,0.08)}
     .tag.gold{border-color:rgba(255,214,10,0.3);color:var(--gold);background:rgba(255,214,10,0.06)}
-
-    /* ── LAYOUT ── */
-    .page-body{max-width:1200px;margin:0 auto;padding:60px 40px 80px;display:grid;
-      grid-template-columns:1fr 320px;gap:40px;align-items:start}
+    .page-body{max-width:1200px;margin:0 auto;padding:60px 40px 80px;display:grid;grid-template-columns:1fr 320px;gap:40px;align-items:start}
     .main-col{display:flex;flex-direction:column;gap:48px}
     .side-col{display:flex;flex-direction:column;gap:24px;position:sticky;top:84px}
-
-    /* ── SECTION ── */
-    .section{background:var(--card);border:1px solid rgba(255,255,255,0.05);
-      border-radius:12px;padding:32px;transition:border-color 0.2s}
+    .section{background:var(--card);border:1px solid rgba(255,255,255,0.05);border-radius:12px;padding:32px;transition:border-color 0.2s}
     .section:hover{border-color:var(--border)}
-    .section-label{font-size:0.72rem;text-transform:uppercase;letter-spacing:3px;
-      color:var(--red);margin-bottom:8px;font-weight:700}
+    .section-label{font-size:0.72rem;text-transform:uppercase;letter-spacing:3px;color:var(--red);margin-bottom:8px;font-weight:700}
     h2{font-size:1.5rem;font-weight:900;margin-bottom:20px;line-height:1.2}
     h2 span{color:var(--red)}
     h3{font-size:1rem;font-weight:700;margin-bottom:8px;color:var(--text)}
     p{color:var(--muted);line-height:1.7;font-size:0.93rem}
-
-    /* ── STATS CARD ── */
     .stats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:24px}
-    .stat-box{background:var(--dark2);border-radius:8px;padding:16px;text-align:center;
-      border:1px solid rgba(255,255,255,0.04)}
+    .stat-box{background:var(--dark2);border-radius:8px;padding:16px;text-align:center;border:1px solid rgba(255,255,255,0.04)}
     .stat-val{font-size:1.4rem;font-weight:900;color:var(--red);display:block}
-    .stat-key{font-size:0.72rem;color:var(--muted);text-transform:uppercase;
-      letter-spacing:1px;margin-top:4px;display:block}
-    .difficulty-bar{display:flex;gap:4px;justify-content:center;margin-top:6px}
-    .diff-dot{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,0.1)}
-    .diff-dot.filled{background:var(--red)}
+    .stat-key{font-size:0.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-top:4px;display:block}
     .stat-desc{color:var(--muted);font-size:0.88rem;line-height:1.6}
-
-    /* ── ABILITIES ── */
     .ability-list{display:flex;flex-direction:column;gap:16px}
-    .ability-item{background:var(--dark2);border:1px solid rgba(255,255,255,0.05);
-      border-radius:10px;padding:20px;display:flex;gap:16px;
-      transition:border-color 0.2s;align-items:flex-start}
+    .ability-item{background:var(--dark2);border:1px solid rgba(255,255,255,0.05);border-radius:10px;padding:20px;display:flex;gap:16px;transition:border-color 0.2s;align-items:flex-start}
     .ability-item:hover{border-color:var(--border)}
-    .ability-key{background:var(--red);color:#fff;padding:4px 12px;border-radius:5px;
-      font-size:0.78rem;font-weight:700;font-family:monospace;white-space:nowrap;
-      flex-shrink:0;margin-top:2px;min-width:52px;text-align:center}
+    .ability-key{background:var(--red);color:#fff;padding:4px 12px;border-radius:5px;font-size:0.78rem;font-weight:700;font-family:monospace;white-space:nowrap;flex-shrink:0;margin-top:2px;min-width:52px;text-align:center}
     .ability-key.ult{background:var(--gold);color:#000}
-    .ability-key.passive{background:rgba(96,165,250,0.2);color:var(--blue);
-      border:1px solid rgba(96,165,250,0.3)}
+    .ability-key.passive{background:rgba(96,165,250,0.2);color:var(--blue);border:1px solid rgba(96,165,250,0.3)}
     .ability-body{flex:1}
     .ability-name{font-weight:700;font-size:1rem;margin-bottom:6px}
     .ability-desc{color:var(--muted);font-size:0.88rem;line-height:1.65;margin-bottom:8px}
-    .ability-stats{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:8px}
-    .ability-stat-chip{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);
-      padding:2px 10px;border-radius:12px;font-size:0.75rem;color:var(--text)}
-    .ability-stat-chip .label{color:var(--muted);margin-right:4px}
-    .ability-tip{font-size:0.82rem;color:var(--gold);padding:8px 12px;
-      background:rgba(255,214,10,0.06);border-radius:6px;border-left:2px solid var(--gold)}
-
-    /* ── COUNTERS ── */
+    .ability-tip{font-size:0.82rem;color:var(--gold);padding:8px 12px;background:rgba(255,214,10,0.06);border-radius:6px;border-left:2px solid var(--gold)}
     .counter-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
     .counter-col{background:var(--dark2);border-radius:10px;padding:20px}
-    .counter-col-title{font-size:0.78rem;font-weight:700;text-transform:uppercase;
-      letter-spacing:1px;margin-bottom:14px}
+    .counter-col-title{font-size:0.78rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:14px}
     .counter-col.good .counter-col-title{color:var(--green)}
     .counter-col.bad .counter-col-title{color:#f87171}
-    .counter-entry{display:flex;align-items:flex-start;gap:10px;
-      padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.04)}
+    .counter-entry{display:flex;align-items:flex-start;gap:10px;padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.04)}
     .counter-entry:last-child{border-bottom:none;padding-bottom:0}
     .counter-emoji{font-size:1.3rem;flex-shrink:0;margin-top:1px}
     .counter-name{font-weight:700;font-size:0.88rem;margin-bottom:2px}
     .counter-reason{font-size:0.78rem;color:var(--muted);line-height:1.5}
-
-    /* ── TEAM COMP ── */
     .comp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-    .comp-card{background:var(--dark2);border-radius:10px;padding:16px;
-      border:1px solid rgba(255,255,255,0.04);transition:border-color 0.2s}
+    .comp-card{background:var(--dark2);border-radius:10px;padding:16px;border:1px solid rgba(255,255,255,0.04);transition:border-color 0.2s}
     .comp-card:hover{border-color:var(--border)}
-    .comp-role{font-size:0.72rem;text-transform:uppercase;letter-spacing:1px;
-      font-weight:700;margin-bottom:10px}
+    .comp-role{font-size:0.72rem;text-transform:uppercase;letter-spacing:1px;font-weight:700;margin-bottom:10px}
     .comp-role.tank{color:var(--blue)}
     .comp-role.support{color:var(--green)}
     .comp-role.dps{color:var(--red)}
-    .comp-hero{display:flex;align-items:center;gap:8px;
-      padding:6px 0;border-bottom:1px solid rgba(255,255,255,0.04)}
+    .comp-hero{display:flex;align-items:center;gap:8px;padding:6px 0;border-bottom:1px solid rgba(255,255,255,0.04)}
     .comp-hero:last-child{border-bottom:none}
     .comp-hero-emoji{font-size:1.1rem}
-    .comp-hero-info{flex:1}
     .comp-hero-name{font-size:0.85rem;font-weight:700}
     .comp-hero-reason{font-size:0.75rem;color:var(--muted)}
-
-    /* ── COMBO ── */
     .combo-steps{list-style:none;display:flex;flex-direction:column;gap:0}
-    .combo-step{display:flex;gap:16px;padding:16px 0;
-      border-bottom:1px solid rgba(255,255,255,0.04);align-items:flex-start}
+    .combo-step{display:flex;gap:16px;padding:16px 0;border-bottom:1px solid rgba(255,255,255,0.04);align-items:flex-start}
     .combo-step:last-child{border-bottom:none}
-    .step-num{width:32px;height:32px;min-width:32px;background:var(--red);
-      border-radius:50%;display:flex;align-items:center;justify-content:center;
-      font-weight:900;font-size:0.88rem;flex-shrink:0}
+    .step-num{width:32px;height:32px;min-width:32px;background:var(--red);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:0.88rem;flex-shrink:0}
     .step-body{flex:1}
-    .step-title{font-weight:700;font-size:0.95rem;margin-bottom:4px;
-      display:flex;align-items:center;gap:8px;flex-wrap:wrap}
-    .key-badge{background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.18);
-      padding:1px 9px;border-radius:4px;font-size:0.75rem;font-family:monospace}
+    .step-title{font-weight:700;font-size:0.95rem;margin-bottom:4px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+    .key-badge{background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.18);padding:1px 9px;border-radius:4px;font-size:0.75rem;font-family:monospace}
     .step-desc{color:var(--muted);font-size:0.88rem;line-height:1.6}
-    .combo-note{background:rgba(230,57,70,0.07);border:1px solid var(--border);
-      border-radius:8px;padding:14px 16px;margin-top:16px;
-      font-size:0.85rem;color:var(--text);line-height:1.6}
+    .combo-note{background:rgba(230,57,70,0.07);border:1px solid var(--border);border-radius:8px;padding:14px 16px;margin-top:16px;font-size:0.85rem;color:var(--text);line-height:1.6}
     .combo-note strong{color:var(--red)}
-
-    /* ── FAQ ── */
     .faq-list{display:flex;flex-direction:column;gap:0}
     .faq-item{border-bottom:1px solid rgba(255,255,255,0.05)}
     .faq-item:last-child{border-bottom:none}
-    .faq-q{width:100%;background:transparent;border:none;color:var(--text);
-      text-align:left;padding:18px 0;font-size:0.95rem;font-weight:700;
-      cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px}
+    .faq-q{width:100%;background:transparent;border:none;color:var(--text);text-align:left;padding:18px 0;font-size:0.95rem;font-weight:700;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px}
     .faq-q:hover{color:var(--red)}
     .faq-arrow{color:var(--muted);font-size:0.8rem;transition:transform 0.2s;flex-shrink:0}
     .faq-item.open .faq-arrow{transform:rotate(180deg)}
     .faq-a{max-height:0;overflow:hidden;transition:max-height 0.3s ease}
     .faq-item.open .faq-a{max-height:200px}
     .faq-a p{padding-bottom:16px;font-size:0.88rem}
-
-    /* ── SIDEBAR ── */
-    .side-card{background:var(--card);border:1px solid rgba(255,255,255,0.05);
-      border-radius:12px;padding:24px}
-    .side-card-title{font-size:0.72rem;text-transform:uppercase;letter-spacing:2px;
-      color:var(--red);font-weight:700;margin-bottom:16px}
-    .quick-tip{display:flex;gap:10px;padding:10px 0;
-      border-bottom:1px solid rgba(255,255,255,0.04);align-items:flex-start}
+    .side-card{background:var(--card);border:1px solid rgba(255,255,255,0.05);border-radius:12px;padding:24px}
+    .side-card-title{font-size:0.72rem;text-transform:uppercase;letter-spacing:2px;color:var(--red);font-weight:700;margin-bottom:16px}
+    .quick-tip{display:flex;gap:10px;padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.04);align-items:flex-start}
     .quick-tip:last-child{border-bottom:none}
     .tip-icon{font-size:1.1rem;flex-shrink:0;margin-top:1px}
     .tip-text{font-size:0.82rem;color:var(--muted);line-height:1.5}
-    .tier-badge{display:inline-flex;align-items:center;justify-content:center;
-      width:56px;height:56px;border-radius:12px;font-size:2rem;font-weight:900;
-      margin-bottom:12px}
+    .tier-badge{display:inline-flex;align-items:center;justify-content:center;width:56px;height:56px;border-radius:12px;font-size:2rem;font-weight:900;margin-bottom:12px}
     .tier-s{background:#ff4757}
-    .tier-a{background:#ff6b35}
-    .tier-b{background:#ffd60a;color:#000}
-    .patch-note{font-size:0.8rem;color:var(--muted);line-height:1.6}
-    .patch-note strong{color:var(--text)}
-    .ai-btn-side{width:100%;background:var(--red);color:#fff;border:none;
-      padding:13px;border-radius:8px;font-size:0.9rem;font-weight:700;
-      cursor:pointer;transition:all 0.2s;text-decoration:none;display:block;text-align:center}
-    .ai-btn-side:hover{background:#ff4757;box-shadow:0 0 20px rgba(230,57,70,0.4)}
-
-    /* ── FOOTER ── */
-    footer{background:var(--dark2);border-top:1px solid var(--border);
-      padding:40px;text-align:center;color:var(--muted);font-size:0.85rem}
+    footer{background:var(--dark2);border-top:1px solid var(--border);padding:40px;text-align:center;color:var(--muted);font-size:0.85rem}
     .footer-logo{font-size:1.2rem;font-weight:900;color:var(--red);margin-bottom:8px}
-
-    /* ── SCROLLBAR ── */
     ::-webkit-scrollbar{width:6px}
     ::-webkit-scrollbar-track{background:var(--dark)}
     ::-webkit-scrollbar-thumb{background:var(--red);border-radius:3px}
-
-    /* ── RESPONSIVE ── */
-    @media(max-width:900px){
-      .page-body{grid-template-columns:1fr;padding:40px 20px 60px}
-      .side-col{position:static}
-      .counter-grid{grid-template-columns:1fr}
-      .comp-grid{grid-template-columns:1fr 1fr}
-      .hero-banner{padding:90px 20px 48px}
-      nav{padding:0 20px}
-    }
-    @media(max-width:560px){
-      .stats-grid{grid-template-columns:repeat(2,1fr)}
-      .comp-grid{grid-template-columns:1fr}
-    }
+    @media(max-width:900px){.page-body{grid-template-columns:1fr;padding:40px 20px 60px}.side-col{position:static}.counter-grid{grid-template-columns:1fr}.comp-grid{grid-template-columns:1fr 1fr}.hero-banner{padding:90px 20px 48px}nav{padding:0 20px}}
+    @media(max-width:560px){.stats-grid{grid-template-columns:repeat(2,1fr)}.comp-grid{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
 
-<!-- ── NAV ── -->
 <nav>
   <a class="nav-logo" href="/">RIVALS<span>GUIDE</span></a>
   <a class="nav-back" href="/">← Back to Home</a>
 </nav>
 
-<!-- ── HERO BANNER ── -->
 <div class="hero-banner">
   <div class="banner-inner">
     <div class="breadcrumb">
       <a href="/">Home</a><span>›</span>
-      
+      <a href="/">Heroes</a><span>›</span>
+      <span style="color:var(--text)">Spider-Man</span>
+    </div>
+    <div class="banner-role">DPS · Duelist</div>
+    <h1 class="banner-title"><span class="accent">Spider-Man</span><br>Complete Guide</h1>
+    <p class="banner-sub">Peter Parker — the web-slinging, wall-crawling menace of Marvel Rivals. High mobility, high skill ceiling, devastating in the right hands.</p>
+    <div class="banner-tags">
+      <span class="tag red">DPS</span>
+      <span class="tag gold">S-Tier</span>
+      <span class="tag">High Mobility</span>
+      <span class="tag">Hard to Master</span>
+      <span class="tag">Dive Assassin</span>
+    </div>
+  </div>
+</div>
+
+<div class="page-body">
+  <div class="main-col">
+
+    <!-- STATS -->
+    <div class="section">
+      <div class="section-label">Overview</div>
+      <h2>Base <span>Stats</span></h2>
+      <div class="stats-grid">
+        <div class="stat-box"><span class="stat-val">250</span><span class="stat-key">Health</span></div>
+        <div class="stat-box"><span class="stat-val">65</span><span class="stat-key">Damage/Hit</span></div>
+        <div class="stat-box"><span class="stat-val">S</span><span class="stat-key">Mobility</span></div>
+        <div class="stat-box"><span class="stat-val">High</span><span class="stat-key">Burst</span></div>
+        <div class="stat-box"><span class="stat-val">Low</span><span class="stat-key">Survivability</span></div>
+        <div class="stat-box"><span class="stat-val">★★★★★</span><span class="stat-key">Difficulty</span></div>
+      </div>
+      <p class="stat-desc">Spider-Man is a high-risk, high-reward dive assassin. His 250 HP is among the lowest in the roster, but his unmatched mobility lets him engage, burst, and disengage before enemies can react. Mastering his web movement is the key to unlocking his full potential.</p>
+    </div>
+
+    <!-- ABILITIES -->
+    <div class="section">
+      <div class="section-label">Kit Breakdown</div>
+      <h2>Abilities <span>&amp; Skills</span></h2>
+      <div class="ability-list">
+        <div class="ability-item">
+          <div class="ability-key passive">PASSIVE</div>
+          <div class="ability-body">
+            <div class="ability-name">Wall Crawl</div>
+            <div class="ability-desc">Spider-Man can cling to and traverse any wall or ceiling. This passive fundamentally changes how you approach every fight — always use vertical space.</div>
+            <div class="ability-tip">💡 Use ceilings to approach enemies from unexpected angles. Most players never look up.</div>
+          </div>
+        </div>
+        <div class="ability-item">
+          <div class="ability-key">LMB</div>
+          <div class="ability-body">
+            <div class="ability-name">Web Shot</div>
+            <div class="ability-desc">Fires a web projectile dealing 65 damage. Fast projectile speed with moderate range. Your primary damage tool in extended fights.</div>
+            <div class="ability-tip">💡 Aim for the head — headshots significantly increase damage output.</div>
+          </div>
+        </div>
+        <div class="ability-item">
+          <div class="ability-key">RMB</div>
+          <div class="ability-body">
+            <div class="ability-name">Web Pull</div>
+            <div class="ability-desc">Fires a web that pulls the target toward Spider-Man. Can interrupt enemy abilities mid-animation. One of the most powerful tools in his kit.</div>
+            <div class="ability-tip">💡 Pull Iron Man out of the sky mid-Unibeam charge to cancel his burst entirely.</div>
+          </div>
+        </div>
+        <div class="ability-item">
+          <div class="ability-key">SHIFT</div>
+          <div class="ability-body">
+            <div class="ability-name">Web Swing</div>
+            <div class="ability-desc">Launches a web to a surface and swings toward it at high speed. Primary mobility tool. Can chain multiple swings for near-infinite traversal.</div>
+            <div class="ability-tip">💡 Aim at ceilings for maximum swing arc and speed. Low swings are slower and more predictable.</div>
+          </div>
+        </div>
+        <div class="ability-item">
+          <div class="ability-key">E</div>
+          <div class="ability-body">
+            <div class="ability-name">Web Cocoon</div>
+            <div class="ability-desc">Wraps a target in webbing, immobilizing them for 1.5 seconds. Hard CC — sets up kills instantly. Short range, requires close proximity.</div>
+            <div class="ability-tip">💡 Use this immediately after landing from a Web Swing dive. The immobilize window is your burst window.</div>
+          </div>
+        </div>
+        <div class="ability-item">
+          <div class="ability-key ult">Q — ULT</div>
+          <div class="ability-body">
+            <div class="ability-name">Amazing Spider-Man</div>
+            <div class="ability-desc">Spider-Man enters an enhanced state with increased damage, faster web swing speed, and reduced ability cooldowns. Lasts 8 seconds. Transforms him into an unkillable assassin during its duration.</div>
+            <div class="ability-tip">💡 Save it for when enemy supports are isolated or when you need to clean up a teamfight. Don't waste it on full-HP tanks.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- COUNTERS -->
+    <div class="section">
+      <div class="section-label">Matchup Analysis</div>
+      <h2>Counters <span>&amp; Matchups</span></h2>
+      <div class="counter-grid">
+        <div class="counter-col good">
+          <div class="counter-col-title">✅ Spider-Man Counters</div>
+          <div class="counter-entry">
+            <div class="counter-emoji">🥇</div>
+            <div>
+              <div class="counter-name">Iron Man</div>
+              <div class="counter-reason">Web Pull cancels Unibeam mid-charge. Spider-Man can reach aerial Iron Man easily.</div>
+            </div>
+          </div>
+          <div class="counter-entry">
+            <div class="counter-emoji">🧙</div>
+            <div>
+              <div class="counter-name">Doctor Strange</div>
+              <div class="counter-reason">Web Cocoon hard-counters his shield timing. Immobilize him before he can react.</div>
+            </div>
+          </div>
+          <div class="counter-entry">
+            <div class="counter-emoji">🟢</div>
+            <div>
+              <div class="counter-name">Supports (General)</div>
+              <div class="counter-reason">Spider-Man's dive is designed to eliminate isolated supports before they can react.</div>
+            </div>
+          </div>
+        </div>
+        <div class="counter-col bad">
+          <div class="counter-col-title">❌ Hard Counters Spider-Man</div>
+          <div class="counter-entry">
+            <div class="counter-emoji">⚡</div>
+            <div>
+              <div class="counter-name">Thor</div>
+              <div class="counter-reason">Lightning Strike zones Spider-Man's landing spots. Storm Dash punishes his close-range commitment.</div>
+            </div>
+          </div>
+          <div class="counter-entry">
+            <div class="counter-emoji">🔴</div>
+            <div>
+              <div class="counter-name">Scarlet Witch</div>
+              <div class="counter-reason">AoE chaos magic punishes Spider-Man's need to stay close. Hard to dodge at melee range.</div>
+            </div>
+          </div>
+          <div class="counter-entry">
+            <div class="counter-emoji">🧲</div>
+            <div>
+              <div class="counter-name">Magneto</div>
+              <div class="counter-reason">Can intercept web projectiles and disrupt swing paths with magnetic fields.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TEAM COMP -->
+    <div class="section">
+      <div class="section-label">Team Strategy</div>
+      <h2>Best Team <span>Compositions</span></h2>
+      <div class="comp-grid">
+        <div class="comp-card">
+          <div class="comp-role tank">Tank</div>
+          <div class="comp-hero">
+            <div class="comp-hero-emoji">🥇</div>
+            <div class="comp-hero-info">
+              <div class="comp-hero-name">Hulk</div>
+              <div class="comp-hero-reason">Draws all aggro while Spider-Man dives the backline freely</div>
+            </div>
+          </div>
+          <div class="comp-hero">
+            <div class="comp-hero-emoji">🧙</div>
+            <div class="comp-hero-info">
+              <div class="comp-hero-name">Doctor Strange</div>
+              <div class="comp-hero-reason">Portal lets Spider-Man reposition instantly after a dive</div>
+            </div>
+          </div>
+        </div>
+        <div class="comp-card">
+          <div class="comp-role support">Support</div>
+          <div class="comp-hero">
+            <div class="comp-hero-emoji">🃏</div>
+            <div class="comp-hero-info">
+              <div class="comp-hero-name">Loki</div>
+              <div class="comp-hero-reason">Clone distractions buy Spider-Man time to escape after a dive</div>
+            </div>
+          </div>
+          <div class="comp-hero">
+            <div class="comp-hero-emoji">🔮</div>
+            <div class="comp-hero-info">
+              <div class="comp-hero-name">Scarlet Witch</div>
+              <div class="comp-hero-reason">AoE follow-up on targets Spider-Man immobilizes with Web Cocoon</div>
+            </div>
+          </div>
+        </div>
+        <div class="comp-card">
+          <div class="comp-role dps">DPS Partner</div>
+          <div class="comp-hero">
+            <div class="comp-hero-emoji">🥇</div>
+            <div class="comp-hero-info">
+              <div class="comp-hero-name">Iron Man</div>
+              <div class="comp-hero-reason">Spider-Man dives in, Iron Man cleans up from range</div>
+            </div>
+          </div>
+          <div class="comp-hero">
+            <div class="comp-hero-emoji">💀</div>
+            <div class="comp-hero-info">
+              <div class="comp-hero-name">Hela</div>
+              <div class="comp-hero-reason">Long-range pressure forces enemies to cluster — easy Web Cocoon targets</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- COMBOS -->
+    <div class="section">
+      <div class="section-label">Advanced Techniques</div>
+      <h2>Combo <span>Guide</span></h2>
+      <h3 style="margin-bottom:16px;color:var(--gold)">Standard Dive Combo</h3>
+      <ul class="combo-steps">
+        <li class="combo-step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <div class="step-title">Approach from above <span class="key-badge">SHIFT</span></div>
+            <div class="step-desc">Use Web Swing to gain height and approach from ceiling angle. Never dive straight in from ground level.</div>
+          </div>
+        </li>
+        <li class="combo-step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <div class="step-title">Web Pull to close gap <span class="key-badge">RMB</span></div>
+            <div class="step-desc">Pull the target toward you to cancel any ability they're casting and close the final distance instantly.</div>
+          </div>
+        </li>
+        <li class="combo-step">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <div class="step-title">Web Cocoon immediately <span class="key-badge">E</span></div>
+            <div class="step-desc">Immobilize the target the moment they're in range. This is your kill window — don't delay.</div>
+          </div>
+        </li>
+        <li class="combo-step">
+          <div class="step-num">4</div>
+          <div class="step-body">
+            <div class="step-title">Burst with Web Shots <span class="key-badge">LMB</span></div>
+            <div class="step-desc">Unload Web Shots during the 1.5s immobilize window. Aim for headshots. Most supports die here.</div>
+          </div>
+        </li>
+        <li class="combo-step">
+          <div class="step-num">5</div>
+          <div class="step-body">
+            <div class="step-title">Escape immediately <span class="key-badge">SHIFT</span></div>
+            <div class="step-desc">Don't overstay. The moment the target is down or the cocoon breaks, Web Swing out to safety.</div>
+          </div>
+        </li>
+      </ul>
+      <div class="combo-note"><strong>Pro tip:</strong> The entire combo should take under 2 seconds. If you're spending more than 3 seconds in the backline, you're overcommitting and will die.</div>
+
+      <h3 style="margin:28px 0 16px;color:var(--gold)">Ultimate Combo</h3>
+      <ul class="combo-steps">
+        <li class="combo-step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <div class="step-title">Identify isolated support or low-HP target</div>
+            <div class="step-desc">Don't activate the ultimate into a full team — find a 1v1 opportunity first.</div>
+          </div>
+        </li>
+        <li class="combo-step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <div class="step-title">Activate Amazing Spider-Man <span class="key-badge">Q</span></div>
+            <div class="step-desc">Pop the ultimate before engaging so the enhanced state is active during your dive.</div>
+          </div>
+        </li>
+        <li class="combo-step">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <div class="step-title">Chain kills with reduced cooldowns</div>
+            <div class="step-desc">Web Cocoon resets faster during the ultimate. Chain dive → kill → dive on the next target within the 8-second window.</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <!-- FAQ -->
+    <div class="section">
+      <div class="section-label">Common Questions</div>
+      <h2>FAQ</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">Is Spider-Man good for beginners? <span class="faq-arrow">▼</span></button>
+          <div class="faq-a"><p>No — Spider-Man has one of the highest skill ceilings in the game. His low HP means mistakes are punished hard. Start with Hulk or Iron Man to learn the game, then graduate to Spider-Man.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">When should I use Web Pull vs Web Cocoon? <span class="faq-arrow">▼</span></button>
+          <div class="faq-a"><p>Web Pull is for closing distance and interrupting abilities. Web Cocoon is your kill setup. Use Pull first to get in range, then Cocoon to lock them down for the burst.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">How do I survive as Spider-Man? <span class="faq-arrow">▼</span></button>
+          <div class="faq-a"><p>Never stay on the ground. Always be swinging or on a wall. The moment you stop moving, you're a 250 HP target that dies in 2 seconds. Mobility is your defense.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">What's the best target to dive? <span class="faq-arrow">▼</span></button>
+          <div class="faq-a"><p>Isolated supports are your primary target. Doctor Strange and Iron Man are also excellent targets since Spider-Man hard-counters both. Avoid diving Hulk, Thor, or Scarlet Witch.</p></div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- end main-col -->
+
+  <!-- SIDEBAR -->
+  <div class="side-col">
+    <div class="side-card">
+      <div class="side-card-title">Tier Rating</div>
+      <div class="tier-badge tier-s">S</div>
+      <p style="font-size:0.85rem;color:var(--muted);line-height:1.6">Spider-Man is S-Tier in the current meta. His ability to instantly delete supports makes him a priority pick in high-level play.</p>
+    </div>
+    <div class="side-card">
+      <div class="side-card-title">Quick Tips</div>
+      <div class="quick-tip"><div class="tip-icon">🕷</div><div class="tip-text">Always approach from above — ceiling angles are nearly impossible to track.</div></div>
+      <div class="quick-tip"><div class="tip-icon">⚡</div><div class="tip-text">Web Pull cancels Iron Man's Unibeam. Use it the moment you see him charging.</div></div>
+      <div class="quick-tip"><div class="tip-icon">🎯</div><div class="tip-text">Your combo window is 1.5 seconds. Practice hitting 3+ Web Shots during Cocoon in training mode.</div></div>
+      <div class="quick-tip"><div class="tip-icon">🏃</div><div class="tip-text">If you miss Web Cocoon, disengage immediately. Never fight at close range without CC.</div></div>
+      <div class="quick-tip"><div class="tip-icon">🔋</div><div class="tip-text">Save Ultimate for isolated targets or clutch 1v1 moments — not for teamfights.</div></div>
+    </div>
+    <a class="ai-btn-side" href="/">← Back to All Heroes</a>
+  </div>
+
+</div><!-- end page-body -->
+
+<footer>
+  <div class="footer-logo">RIVALS<span style="color:var(--gold)">GUIDE</span></div>
+  <p>Fan-made guide site · Not affiliated with Marvel or NetEase Games</p>
+  <p style="margin-top:8px">© 2025 RivalsGuide.site · All rights reserved</p>
+</footer>
+
+<script>
+  function toggleFaq(btn){
+    const item=btn.closest('.faq-item');
+    item.classList.toggle('open');
+  }
+</script>
+</body>
+</html>
