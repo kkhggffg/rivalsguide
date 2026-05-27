@@ -477,27 +477,19 @@ function init(){renderHeroes('all');renderTierList();populateSelects();renderDef
 function getHeroLink(name){
   const pages={
     'Spider-Man':'/spider-man.html',
+    'Iron Man':'/iron-man.html',
+    'Hulk':'/hulk.html',
+    'Doctor Strange':'/doctor-strange.html',
+    'Thor':'/thor.html',
+    'Hela':'/hela.html',
+    'Black Widow':'/black-widow.html',
+    'Loki':'/loki.html',
+    'Scarlet Witch':'/scarlet-witch.html',
+    'Magneto':'/magneto.html',
   };
   return pages[name]||null;
 }
 
-function renderHeroes(filter){
-  const grid=document.getElementById('heroGrid');
-  const list=filter==='all'?heroes:heroes.filter(h=>h.role===filter);
-  grid.innerHTML=list.map(h=>{
-    const link=getHeroLink(h.name);
-    const clickAction=link
-      ?`window.location.href='${link}'`
-      :`openModal('${h.name.replace(/'/g,"\\'")}')`;
-    return `
-    <div class="hero-card" onclick="${clickAction}">
-      <span class="hero-emoji">${h.emoji}</span>
-      <div class="hero-name">${h.name}</div>
-      <span class="role-tag role-${h.role==='Tank'?'tank':h.role==='DPS'?'dps':'support'}">${h.role}</span>
-      ${link?`<div style="font-size:0.7rem;color:var(--gold);margin-top:6px">📄 Full Guide</div>`:''}
-    </div>`;
-  }).join('');
-}
   
 function filterHeroes(role,btn){
   document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
