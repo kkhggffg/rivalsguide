@@ -1,132 +1,751 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Hawkeye Guide – Marvel Rivals | RivalsGuide</title>
-<meta name="description" content="Complete Hawkeye guide for Marvel Rivals. Stats, abilities, counters, team comps, and combos for Clint Barton."/>
-<link rel="canonical" href="https://rivalsguide.site/hawkeye.html"/>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-D4EJPR83TH"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-D4EJPR83TH');</script>
-<style>
-  :root{--red:#e63946;--gold:#ffd60a;--dark:#0d0d0d;--dark2:#111;--card:#1a1a1a;--border:rgba(255,255,255,0.12);--muted:#888;--text:#f0f0f0}
-  *{margin:0;padding:0;box-sizing:border-box}
-  body{background:var(--dark);color:var(--text);font-family:'Segoe UI',sans-serif;line-height:1.7}
-  a{color:var(--red);text-decoration:none} a:hover{text-decoration:underline}
-  header{background:var(--dark2);border-bottom:1px solid var(--border);padding:16px 40px}
-  header .back{color:var(--muted);font-size:0.9rem} header .back:hover{color:var(--text)}
-  .hero-banner{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);padding:60px 40px;text-align:center;border-bottom:2px solid var(--red)}
-  .hero-banner .emoji{font-size:5rem;display:block;margin-bottom:16px}
-  .hero-banner h1{font-size:2.8rem;font-weight:900;letter-spacing:2px;text-transform:uppercase}
-  .hero-banner .subtitle{color:var(--muted);font-size:1rem;margin-top:8px}
-  .tag{display:inline-block;padding:4px 14px;border-radius:20px;font-size:0.8rem;font-weight:700;margin:4px}
-  .tag-dps{background:rgba(230,57,70,0.2);color:#f87171;border:1px solid rgba(230,57,70,0.3)}
-  .tag-tier{background:rgba(255,214,10,0.2);color:var(--gold);border:1px solid rgba(255,214,10,0.3)}
-  .container{max-width:900px;margin:0 auto;padding:40px}
-  .section{margin-bottom:48px}
-  .section h2{font-size:1.4rem;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:var(--red);border-left:4px solid var(--red);padding-left:12px;margin-bottom:20px}
-  .section h3{font-size:1rem;font-weight:700;color:var(--gold);margin:16px 0 8px}
-  .stats-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px}
-  .stat-card{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:16px;text-align:center}
-  .stat-card .val{font-size:1.6rem;font-weight:900;color:var(--gold)}
-  .stat-card .label{font-size:0.75rem;color:var(--muted);margin-top:4px}
-  .ability-list{display:flex;flex-direction:column;gap:12px}
-  .ability{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:16px}
-  .ability .name{font-weight:700;color:var(--gold);margin-bottom:6px}
-  .ability .key{display:inline-block;background:rgba(255,255,255,0.1);border-radius:4px;padding:1px 8px;font-size:0.75rem;margin-right:8px;font-family:monospace}
-  table{width:100%;border-collapse:collapse;font-size:0.9rem}
-  th{background:rgba(230,57,70,0.15);color:var(--red);padding:10px 14px;text-align:left;font-size:0.8rem;text-transform:uppercase;letter-spacing:0.5px}
-  td{padding:10px 14px;border-bottom:1px solid rgba(255,255,255,0.05)}
-  tr:hover td{background:rgba(255,255,255,0.03)}
-  .combo-step{display:flex;align-items:flex-start;gap:12px;margin-bottom:12px}
-  .step-num{background:var(--red);color:#fff;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.8rem;font-weight:700;flex-shrink:0;margin-top:2px}
-  .faq-item{border-bottom:1px solid var(--border);padding:16px 0}
-  .faq-item .q{font-weight:700;color:var(--gold);margin-bottom:6px}
-  footer{background:var(--dark2);border-top:1px solid var(--border);padding:24px 40px;text-align:center;color:var(--muted);font-size:0.85rem}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hawkeye Guide – Abilities, Combos & Counters | RivalsGuide</title>
+  <meta name="description" content="Complete Hawkeye guide for Marvel Rivals. Master Piercing Arrow charge timing, off-angle positioning, Crescent Slash combos, and LoS control to dominate as the only true one-shot sniper.">
+  <meta property="og:title" content="Hawkeye Guide – Marvel Rivals | RivalsGuide">
+  <meta property="og:description" content="Master Hawkeye in Marvel Rivals — the only hero who can one-shot every Strategist and Duelist in the game. Full ability breakdown, combo guide, counters, and team compositions.">
+  <meta property="og:url" content="https://rivalsguide.site/hawkeye.html">
+  <meta property="og:type" content="article">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-D4EJPR83TH"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-D4EJPR83TH');</script>
+  <style>
+    :root{
+      --purple:#7c3aed;--violet:#a78bfa;--lavender:#c4b5fd;
+      --dark:#0a0a0f;--dark2:#12121a;--card:#0d0a1a;
+      --text:#e0e0e0;--muted:#888;
+      --border:rgba(124,58,237,0.35);
+      --gold:#ffd60a;--blue:#60a5fa;--red:#f87171;--green:#4ade80;
+      --hawk:#c4b5fd;
+    }
+    *{margin:0;padding:0;box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{background:var(--dark);color:var(--text);font-family:'Segoe UI',sans-serif;overflow-x:hidden}
+
+    nav{position:fixed;top:0;width:100%;z-index:999;background:rgba(10,10,15,0.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);padding:0 40px;display:flex;align-items:center;justify-content:space-between;height:64px}
+    .nav-logo{font-size:1.3rem;font-weight:900;color:#f87171;letter-spacing:1px;text-decoration:none}
+    .nav-logo span{color:var(--gold)}
+    .nav-back{color:var(--muted);text-decoration:none;font-size:0.9rem;display:flex;align-items:center;gap:8px;transition:color 0.2s}
+    .nav-back:hover{color:var(--violet)}
+
+    .hero-banner{
+      min-height:380px;
+      background:
+        radial-gradient(ellipse at 20% 55%,rgba(124,58,237,0.22) 0%,transparent 55%),
+        radial-gradient(ellipse at 75% 25%,rgba(167,139,250,0.08) 0%,transparent 50%),
+        radial-gradient(ellipse at 55% 85%,rgba(124,58,237,0.05) 0%,transparent 40%),
+        var(--dark);
+      display:flex;align-items:center;padding:100px 40px 60px;position:relative;overflow:hidden
+    }
+    .hero-banner::before{content:'🏹';position:absolute;right:80px;top:50%;transform:translateY(-50%);font-size:12rem;opacity:0.06;pointer-events:none}
+    .banner-inner{max-width:1200px;margin:0 auto;width:100%}
+    .breadcrumb{font-size:0.8rem;color:var(--muted);margin-bottom:16px}
+    .breadcrumb a{color:var(--muted);text-decoration:none}
+    .breadcrumb a:hover{color:var(--violet)}
+    .breadcrumb span{margin:0 8px}
+    .banner-role{display:inline-block;background:rgba(124,58,237,0.15);border:1px solid var(--border);color:var(--violet);font-size:0.75rem;padding:3px 14px;border-radius:20px;margin-bottom:16px;letter-spacing:2px;text-transform:uppercase}
+    .banner-title{font-size:clamp(2.5rem,6vw,4.5rem);font-weight:900;line-height:1.1;margin-bottom:12px;text-shadow:0 0 40px rgba(124,58,237,0.4)}
+    .banner-title .accent{color:var(--violet)}
+    .banner-sub{color:var(--muted);font-size:1rem;max-width:580px;line-height:1.6;margin-bottom:12px}
+    .banner-hook{color:var(--text);font-size:1rem;max-width:580px;line-height:1.6;margin-bottom:28px;font-style:italic;border-left:3px solid var(--violet);padding-left:14px}
+    .banner-tags{display:flex;gap:10px;flex-wrap:wrap}
+    .tag{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);padding:5px 14px;border-radius:20px;font-size:0.8rem;color:var(--muted)}
+    .tag.purple{border-color:var(--border);color:var(--violet);background:rgba(124,58,237,0.1)}
+    .tag.gold{border-color:rgba(255,214,10,0.3);color:var(--gold);background:rgba(255,214,10,0.06)}
+    .tag.blue{border-color:rgba(96,165,250,0.3);color:var(--blue);background:rgba(96,165,250,0.06)}
+    .tag.green{border-color:rgba(74,222,128,0.3);color:var(--green);background:rgba(74,222,128,0.06)}
+    .tag.red{border-color:rgba(248,113,113,0.3);color:var(--red);background:rgba(248,113,113,0.06)}
+
+    .page-body{max-width:1200px;margin:0 auto;padding:60px 40px 80px;display:grid;grid-template-columns:1fr 320px;gap:40px;align-items:start}
+    .main-col{display:flex;flex-direction:column;gap:48px}
+    .side-col{display:flex;flex-direction:column;gap:24px;position:sticky;top:84px}
+    .section{background:var(--card);border:1px solid rgba(255,255,255,0.05);border-radius:12px;padding:32px;transition:border-color 0.2s}
+    .section:hover{border-color:var(--border)}
+    .section-label{font-size:0.72rem;text-transform:uppercase;letter-spacing:3px;color:var(--violet);margin-bottom:8px;font-weight:700}
+    h2{font-size:1.5rem;font-weight:900;margin-bottom:20px;line-height:1.2}
+    h2 span{color:var(--violet)}
+    h3{font-size:1rem;font-weight:700;margin-bottom:8px;color:var(--text)}
+    p{color:var(--muted);line-height:1.7;font-size:0.93rem}
+
+    .stats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:24px}
+    .stat-box{background:var(--dark2);border-radius:8px;padding:16px;text-align:center;border:1px solid rgba(255,255,255,0.04)}
+    .stat-val{font-size:1.4rem;font-weight:900;color:var(--violet);display:block}
+    .stat-key{font-size:0.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-top:4px;display:block}
+    .stat-desc{color:var(--muted);font-size:0.88rem;line-height:1.6}
+
+    .verdict-box{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:20px}
+    .verdict-item{background:var(--dark2);border-radius:8px;padding:14px 16px;border-left:3px solid var(--violet)}
+    .verdict-item.bad{border-left-color:#f87171}
+    .verdict-label{font-size:0.72rem;text-transform:uppercase;letter-spacing:1px;font-weight:700;margin-bottom:6px;color:var(--violet)}
+    .verdict-item.bad .verdict-label{color:#f87171}
+    .verdict-text{font-size:0.82rem;color:var(--muted);line-height:1.5}
+
+    .season-note{background:rgba(167,139,250,0.05);border:1px solid rgba(167,139,250,0.18);border-radius:8px;padding:12px 16px;margin-bottom:20px;font-size:0.82rem;color:var(--muted);display:flex;align-items:flex-start;gap:10px}
+    .season-note strong{color:var(--violet)}
+    .season-note.gold-note{background:rgba(255,214,10,0.05);border-color:rgba(255,214,10,0.2)}
+    .season-note.gold-note strong{color:var(--gold)}
+
+    .ability-list{display:flex;flex-direction:column;gap:16px}
+    .ability-item{background:var(--dark2);border:1px solid rgba(255,255,255,0.05);border-radius:10px;padding:20px;display:flex;gap:16px;transition:border-color 0.2s;align-items:flex-start}
+    .ability-item:hover{border-color:rgba(167,139,250,0.3)}
+    .ability-key{background:var(--purple);color:#fff;padding:4px 12px;border-radius:5px;font-size:0.78rem;font-weight:700;font-family:monospace;white-space:nowrap;flex-shrink:0;margin-top:2px;min-width:52px;text-align:center}
+    .ability-key.ult{background:linear-gradient(135deg,#5b21b6,#b45309);color:#fff}
+    .ability-key.passive{background:rgba(196,181,253,0.12);color:var(--hawk);border:1px solid rgba(196,181,253,0.3)}
+    .ability-key.melee{background:rgba(96,165,250,0.15);color:var(--blue);border:1px solid rgba(96,165,250,0.3)}
+    .ability-body{flex:1}
+    .ability-name{font-weight:700;font-size:1rem;margin-bottom:6px}
+    .ability-desc{color:var(--muted);font-size:0.88rem;line-height:1.65;margin-bottom:8px}
+    .ability-tip{font-size:0.82rem;color:var(--violet);padding:8px 12px;background:rgba(167,139,250,0.06);border-radius:6px;border-left:2px solid var(--violet)}
+    .ability-stats{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:10px}
+    .ability-stat-chip{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);padding:2px 10px;border-radius:4px;font-size:0.75rem;color:var(--muted);font-family:monospace}
+    .ability-stat-chip span{color:var(--text);font-weight:700}
+
+    .charge-box{background:rgba(255,214,10,0.05);border:1px solid rgba(255,214,10,0.2);border-radius:8px;padding:14px 16px;margin-top:12px;font-size:0.83rem;color:var(--muted);line-height:1.6}
+    .charge-box strong{color:var(--gold)}
+    .ult-box{background:rgba(167,139,250,0.05);border:1px solid rgba(167,139,250,0.2);border-radius:8px;padding:14px 16px;margin-top:12px;font-size:0.83rem;color:var(--muted);line-height:1.6}
+    .ult-box strong{color:var(--violet)}
+
+    .counter-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .counter-col{background:var(--dark2);border-radius:10px;padding:20px}
+    .counter-col-title{font-size:0.78rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:14px}
+    .counter-col.good .counter-col-title{color:var(--violet)}
+    .counter-col.bad .counter-col-title{color:#f87171}
+    .counter-entry{display:flex;align-items:flex-start;gap:10px;padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.04)}
+    .counter-entry:last-child{border-bottom:none;padding-bottom:0}
+    .counter-emoji{font-size:1.3rem;flex-shrink:0;margin-top:1px}
+    .counter-name{font-weight:700;font-size:0.88rem;margin-bottom:2px}
+    .counter-reason{font-size:0.78rem;color:var(--muted);line-height:1.5}
+
+    .comp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .comp-card{background:var(--dark2);border-radius:10px;padding:16px;border:1px solid rgba(255,255,255,0.04);transition:border-color 0.2s;display:flex;flex-direction:column}
+    .comp-card:hover{border-color:var(--border)}
+    .comp-role{font-size:0.72rem;text-transform:uppercase;letter-spacing:1px;font-weight:700;margin-bottom:10px}
+    .comp-role.tank{color:var(--green)}
+    .comp-role.support{color:var(--blue)}
+    .comp-role.dps{color:var(--violet)}
+    .comp-hero{display:flex;align-items:flex-start;gap:8px;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04)}
+    .comp-hero:last-of-type{border-bottom:none}
+    .comp-hero-emoji{font-size:1.1rem;flex-shrink:0;margin-top:1px}
+    .comp-hero-name{font-size:0.85rem;font-weight:700}
+    .comp-hero-reason{font-size:0.75rem;color:var(--muted);line-height:1.4;margin-top:2px}
+    .comp-synergy{margin-top:12px;padding:10px 12px;background:rgba(255,255,255,0.03);border-radius:6px;border-left:2px solid var(--violet);font-size:0.78rem;color:var(--muted);line-height:1.5}
+    .comp-synergy.support{border-left-color:var(--blue)}
+    .comp-synergy.dps{border-left-color:var(--gold)}
+
+    .difficulty-table{width:100%;border-collapse:collapse;margin:20px 0 8px}
+    .difficulty-table th{font-size:0.75rem;text-transform:uppercase;letter-spacing:1px;color:var(--muted);font-weight:700;padding:8px 12px;text-align:left;border-bottom:1px solid rgba(255,255,255,0.08)}
+    .difficulty-table td{padding:10px 12px;font-size:0.85rem;border-bottom:1px solid rgba(255,255,255,0.04);vertical-align:middle}
+    .difficulty-table tr:last-child td{border-bottom:none}
+    .difficulty-table tr:hover td{background:rgba(255,255,255,0.02)}
+    .diff-badge{display:inline-block;padding:2px 10px;border-radius:20px;font-size:0.75rem;font-weight:700}
+    .diff-easy{background:rgba(74,222,128,0.12);color:var(--green)}
+    .diff-med{background:rgba(255,214,10,0.12);color:var(--gold)}
+    .diff-hard{background:rgba(248,113,113,0.12);color:var(--red)}
+    .diff-expert{background:rgba(167,139,250,0.12);color:var(--violet)}
+
+    .combo-steps{list-style:none;display:flex;flex-direction:column;gap:0}
+    .combo-step{display:flex;gap:16px;padding:16px 0;border-bottom:1px solid rgba(255,255,255,0.04);align-items:flex-start}
+    .combo-step:last-child{border-bottom:none}
+    .step-num{width:32px;height:32px;min-width:32px;background:var(--purple);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:0.88rem;flex-shrink:0}
+    .step-body{flex:1}
+    .step-title{font-weight:700;font-size:0.95rem;margin-bottom:4px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+    .key-badge{background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.18);padding:1px 9px;border-radius:4px;font-size:0.75rem;font-family:monospace}
+    .time-badge{background:rgba(167,139,250,0.1);border:1px solid rgba(167,139,250,0.25);color:var(--violet);padding:1px 9px;border-radius:4px;font-size:0.72rem;font-family:monospace}
+    .step-desc{color:var(--muted);font-size:0.88rem;line-height:1.6}
+    .combo-note{background:rgba(167,139,250,0.05);border:1px solid rgba(167,139,250,0.2);border-radius:8px;padding:14px 16px;margin-top:16px;font-size:0.85rem;color:var(--text);line-height:1.6}
+    .combo-note strong{color:var(--violet)}
+    .combo-section-divider{height:1px;background:rgba(255,255,255,0.06);margin:28px 0}
+
+    .faq-list{display:flex;flex-direction:column;gap:0}
+    .faq-item{border-bottom:1px solid rgba(255,255,255,0.05)}
+    .faq-item:last-child{border-bottom:none}
+    .faq-q{width:100%;background:transparent;border:none;color:var(--text);text-align:left;padding:18px 0;font-size:0.95rem;font-weight:700;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px}
+    .faq-q:hover{color:var(--violet)}
+    .faq-arrow{color:var(--muted);font-size:0.8rem;transition:transform 0.2s;flex-shrink:0}
+    .faq-item.open .faq-arrow{transform:rotate(180deg)}
+    .faq-a{max-height:0;overflow:hidden;transition:max-height 0.35s ease}
+    .faq-item.open .faq-a{max-height:320px}
+    .faq-a p{padding-bottom:16px;font-size:0.88rem}
+
+    .side-card{background:var(--card);border:1px solid rgba(255,255,255,0.05);border-radius:12px;padding:24px}
+    .side-card-title{font-size:0.72rem;text-transform:uppercase;letter-spacing:2px;color:var(--violet);font-weight:700;margin-bottom:16px}
+    .quick-tip{display:flex;gap:10px;padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.04);align-items:flex-start}
+    .quick-tip:last-child{border-bottom:none}
+    .tip-icon{font-size:1.1rem;flex-shrink:0;margin-top:1px}
+    .tip-text{font-size:0.82rem;color:var(--muted);line-height:1.5}
+    .tier-badge{display:inline-flex;align-items:center;justify-content:center;width:56px;height:56px;border-radius:12px;font-size:2rem;font-weight:900;margin-bottom:12px}
+    .tier-b{background:linear-gradient(135deg,#4c1d95,#5b21b6)}
+    .ai-btn-side{display:block;text-align:center;padding:12px;background:rgba(167,139,250,0.06);border:1px solid rgba(167,139,250,0.2);border-radius:8px;color:var(--muted);text-decoration:none;font-size:0.85rem;transition:all 0.2s}
+    .ai-btn-side:hover{background:rgba(167,139,250,0.12);color:var(--text)}
+
+    footer{background:var(--dark2);border-top:1px solid var(--border);padding:40px;text-align:center;color:var(--muted);font-size:0.85rem}
+    .footer-logo{font-size:1.2rem;font-weight:900;color:#f87171;margin-bottom:8px}
+    ::-webkit-scrollbar{width:6px}
+    ::-webkit-scrollbar-track{background:var(--dark)}
+    ::-webkit-scrollbar-thumb{background:var(--violet);border-radius:3px}
+
+    @media(max-width:900px){.page-body{grid-template-columns:1fr;padding:40px 20px 60px}.side-col{position:static}.counter-grid{grid-template-columns:1fr}.comp-grid{grid-template-columns:1fr 1fr}.hero-banner{padding:90px 20px 48px}nav{padding:0 20px}.verdict-box{grid-template-columns:1fr}}
+    @media(max-width:560px){.stats-grid{grid-template-columns:repeat(2,1fr)}.comp-grid{grid-template-columns:1fr}}
+  </style>
 </head>
 <body>
-<header><a class="back" href="/">← Back to RivalsGuide</a></header>
+
+<nav>
+  <a class="nav-logo" href="/">RIVALS<span>GUIDE</span></a>
+  <a class="nav-back" href="/">← Back to Home</a>
+</nav>
+
+<!-- BANNER -->
 <div class="hero-banner">
-  <span class="emoji">🏹</span>
-  <h1>Hawkeye</h1>
-  <p class="subtitle">Clint Barton · The World's Greatest Marksman</p>
-  <div style="margin-top:12px">
-    <span class="tag tag-dps">DPS</span>
-    <span class="tag tag-tier">B-Tier</span>
-  </div>
-</div>
-<div class="container">
-  <div class="section">
-    <h2>📊 Base Stats</h2>
-    <div class="stats-grid">
-      <div class="stat-card"><div class="val">225</div><div class="label">Health</div></div>
-      <div class="stat-card"><div class="val">90</div><div class="label">Damage (charged)</div></div>
-      <div class="stat-card"><div class="val">50m</div><div class="label">Range</div></div>
-      <div class="stat-card"><div class="val">Medium</div><div class="label">Mobility</div></div>
-      <div class="stat-card"><div class="val">Very High</div><div class="label">Burst Potential</div></div>
+  <div class="banner-inner">
+    <div class="breadcrumb">
+      <a href="/">Home</a><span>›</span>
+      <a href="/">Heroes</a><span>›</span>
+      <span style="color:var(--text)">Hawkeye</span>
+    </div>
+    <div class="banner-role">Duelist · Sniper</div>
+    <h1 class="banner-title"><span class="accent">Hawkeye</span><br>Complete Guide</h1>
+    <p class="banner-sub">Clint Barton — the only hero in Marvel Rivals who can one-shot every Strategist and Duelist in the game (except Wolverine and Mister Fantastic). Where he lacks superpowers, he makes up for in pure lethality and unmatched LoS control.</p>
+    <p class="banner-hook">A great Hawkeye player is either carrying or throwing — there's no middle ground. Land your headshots and you single-handedly force the entire enemy team to play around your sightlines. Miss them and you're a liability. The archer who wins teamfights with a single arrow. [[0]](#__0) [[2]](#__2)</p>
+    <div class="banner-tags">
+      <span class="tag purple">Duelist</span>
+      <span class="tag" style="border-color:rgba(167,139,250,0.3);color:var(--violet);background:rgba(124,58,237,0.1)">B-Tier</span>
+      <span class="tag purple">True One-Shot</span>
+      <span class="tag">Infinite Ammo</span>
+      <span class="tag blue">LoS Control</span>
+      <span class="tag gold">Prediction-Based</span>
     </div>
   </div>
-  <div class="section">
-    <h2>⚡ Abilities</h2>
-    <div class="ability-list">
-      <div class="ability"><div class="name"><span class="key">LMB</span>Quick Shot</div><p>Fires a rapid arrow with low charge time. Consistent poke damage at any range. Low cooldown.</p></div>
-      <div class="ability"><div class="name"><span class="key">RMB</span>Charged Arrow</div><p>Hold to fully charge a devastating single arrow. Full charge deals massive damage and can one-shot squishy targets.</p></div>
-      <div class="ability"><div class="name"><span class="key">SHIFT</span>Trick Arrow</div><p>Fires a special arrow that explodes on impact, applying a slow to all enemies in the blast radius for 2s.</p></div>
-      <div class="ability"><div class="name"><span class="key">E</span>Grapple Line</div><p>Fires a grapple to quickly reposition to high ground or escape danger. Essential mobility tool.</p></div>
-      <div class="ability"><div class="name"><span class="key">Q</span>Rain of Arrows (Ultimate)</div><p>Fires a volley of arrows in a wide arc, raining down on a large area for sustained AoE damage over 4s.</p></div>
-    </div>
-  </div>
-  <div class="section">
-    <h2>🔴 Counters & Matchups</h2>
-    <h3>Hard Counters (Avoid These)</h3>
-    <table>
-      <thead><tr><th>Hero</th><th>Why It's Dangerous</th></tr></thead>
-      <tbody>
-        <tr><td>Spider-Man</td><td>Web pull closes distance instantly, negating Hawkeye's range advantage</td></tr>
-        <tr><td>Winter Soldier</td><td>High mobility dive punishes Hawkeye's low HP pool</td></tr>
-        <tr><td>Loki</td><td>Clone decoys waste Hawkeye's charged shots</td></tr>
-      </tbody>
-    </table>
-    <h3 style="margin-top:20px">Soft Counters (Manageable)</h3>
-    <table>
-      <thead><tr><th>Hero</th><th>How to Handle</th></tr></thead>
-      <tbody>
-        <tr><td>Thor</td><td>Use Trick Arrow slow to keep him at distance, then burst with charged shots</td></tr>
-        <tr><td>Captain America</td><td>His shield throw can be dodged — bait it out before committing</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <div class="section">
-    <h2>🤝 Best Team Compositions</h2>
-    <table>
-      <thead><tr><th>Role</th><th>Recommended Hero</th><th>Reason</th></tr></thead>
-      <tbody>
-        <tr><td>Tank</td><td>Captain America</td><td>Creates frontline pressure so Hawkeye can freely snipe from the backline</td></tr>
-        <tr><td>Support</td><td>Mantis</td><td>Healing keeps Hawkeye alive; her CC combos with Trick Arrow slow</td></tr>
-        <tr><td>DPS Partner</td><td>Scarlet Witch</td><td>Her Fear locks targets in place for Hawkeye to land charged shots</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <div class="section">
-    <h2>🎯 Combo Guide</h2>
-    <h3>Standard Snipe Combo</h3>
-    <div class="combo-step"><div class="step-num">1</div><div>Use <strong>Grapple Line</strong> to reach high ground for a safe sniping angle</div></div>
-    <div class="combo-step"><div class="step-num">2</div><div>Open with <strong>Trick Arrow</strong> to slow the target in place</div></div>
-    <div class="combo-step"><div class="step-num">3</div><div>Immediately follow with a fully <strong>Charged Arrow</strong> for maximum burst</div></div>
-    <div class="combo-step"><div class="step-num">4</div><div>Finish with <strong>Quick Shot</strong> spam to clean up remaining HP</div></div>
-    <h3>Ultimate Combo</h3>
-    <div class="combo-step"><div class="step-num">1</div><div>Wait for enemies to group on an objective or choke point</div></div>
-    <div class="combo-step"><div class="step-num">2</div><div>Fire <strong>Trick Arrow</strong> into the group to slow them all</div></div>
-    <div class="combo-step"><div class="step-num">3</div><div>Activate <strong>Rain of Arrows</strong> directly on the slowed cluster for maximum hits</div></div>
-  </div>
-  <div class="section">
-    <h2>❓ FAQ</h2>
-    <div class="faq-item"><div class="q">Is Hawkeye hard to play?</div><p>Moderate — his kit is simple but landing charged shots requires good aim and positioning discipline.</p></div>
-    <div class="faq-item"><div class="q">When should I use Charged Arrow vs Quick Shot?</div><p>Use Charged Arrow on isolated or slowed targets. Quick Shot is for poke and finishing low-HP enemies.</p></div>
-    <div class="faq-item"><div class="q">How do I survive dive assassins?</div><p>Always keep Grapple Line ready. The moment a diver closes in, grapple to high ground and reset the fight.</p></div>
-  </div>
 </div>
-<footer>© 2025 RivalsGuide.site · Fan-made guide · Not affiliated with Marvel or NetEase</footer>
+
+<div class="page-body">
+  <div class="main-col">
+
+    <!-- OVERVIEW -->
+    <div class="section">
+      <div class="section-label">Overview</div>
+      <h2>Base <span>Stats</span></h2>
+
+      <div class="season-note">
+        🏹 <span><strong>Season 7.5 Note (May 2026):</strong> Hawkeye sits at <strong>B-Tier</strong> — a solid pick who rewards mechanical skill. He's the only hero who can one-shot every Strategist and Duelist without needing a damage boost, making him uniquely self-sufficient compared to Black Widow. His LoS control forces entire teams to reroute, which is a passive team benefit no other sniper provides. </span>
+      </div>
+
+      <div class="stats-grid">
+        <div class="stat-box"><span class="stat-val">250</span><span class="stat-key">Base HP</span></div>
+        <div class="stat-box"><span class="stat-val">28–70</span><span class="stat-key">Arrow DMG</span></div>
+        <div class="stat-box"><span class="stat-val">0.9s</span><span class="stat-key">Full Charge</span></div>
+        <div class="stat-box"><span class="stat-val">∞</span><span class="stat-key">Ammo</span></div>
+        <div class="stat-box"><span class="stat-val">120–180</span><span class="stat-key">m/s Speed</span></div>
+        <div class="stat-box"><span class="stat-val">★★★★☆</span><span class="stat-key">Difficulty</span></div>
+      </div>
+
+      <p class="stat-desc">Hawkeye has 250 HP — same as most supports — making him fragile. His Piercing Arrow scales from 28 damage (uncharged) to 70 damage (fully charged at 0.9s), with critical hits on top. He has infinite ammo, meaning sustained pressure is always available. The key distinction from Black Widow: Hawkeye can one-shot every Strategist and Duelist in the game without any damage boost — he is the only hero with this property. His projectile speed also scales with charge: 120 m/s uncharged to 180 m/s at full charge. </p>
+
+      <div class="verdict-box">
+        <div class="verdict-item">
+          <div class="verdict-label">✅ Strengths</div>
+          <div class="verdict-text">Only hero who can one-shot every Strategist and Duelist without a boost · Infinite ammo — never stops applying pressure · LoS control forces enemies to reroute or use defensive resources · Off-angle shots bypass shields and barriers · Prediction-based — rewards game sense over pure aim </div>
+        </div>
+        <div class="verdict-item bad">
+          <div class="verdict-label">❌ Weaknesses</div>
+          <div class="verdict-text">Slow rate of fire — missed shots leave long damage gaps · Weak against high-mobility flankers · Slow projectile speed requires leading shots · Only defensive tools are double jump and Crescent Slash · 250 HP — dies to any diver combo</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABILITIES -->
+    <div class="section">
+      <div class="section-label">Kit Breakdown</div>
+      <h2>Abilities <span>&amp; Skills</span></h2>
+      <div class="ability-list">
+
+        <!-- PIERCING ARROW -->
+        <div class="ability-item">
+          <div class="ability-key">LMB</div>
+          <div class="ability-body">
+            <div class="ability-name">Piercing Arrow (Primary Fire)</div>
+            <div class="ability-stats">
+              <div class="ability-stat-chip">Min DMG: <span>28</span></div>
+              <div class="ability-stat-chip">Max DMG: <span>70</span></div>
+              <div class="ability-stat-chip">Full charge: <span>0.9s</span></div>
+              <div class="ability-stat-chip">Min speed: <span>120 m/s</span></div>
+              <div class="ability-stat-chip">Max speed: <span>180 m/s</span></div>
+              <div class="ability-stat-chip">Ammo: <span>Infinite</span></div>
+              <div class="ability-stat-chip">Crit: <span>Yes</span></div>
+              <div class="ability-stat-chip">Move penalty: <span>-20% while charging</span></div>
+            </div>
+            <div class="ability-desc">Hawkeye's primary weapon — a charged bow shot that scales from 28 damage (instant release) to 70 damage (0.9s full charge). Both damage and projectile speed scale with charge time. Critical hits are possible, making fully-charged headshots the one-shot threshold for Strategists and Duelists. The -20% movement penalty while charging means you must time your peek carefully — charge behind cover, peek to fire. </div>
+            <div class="ability-tip">💡 Always position on off-angles — targets who don't see you aren't actively dodging, making them far easier to headshot. Watch for movement-locking abilities (Spider-Man's web swing, dive abilities) — the moment an enemy locks into a trajectory, they cannot dodge your arrow. </div>
+            <div class="charge-box">
+              <strong>⚡ Charge Timing Guide:</strong> 0.0–0.7s = below minimum charge (28 dmg, too weak for kills) · 0.7s = minimum viable shot (enough for body-shot pressure) · 0.9s = full charge (70 dmg + crit = one-shot on Strategists/Duelists) · Always aim for full charge before peeking. The 0.9s window is short enough to charge behind cover without exposing yourself. 
+            </div>
+          </div>
+        </div>
+
+        <!-- CRESCENT SLASH -->
+        <div class="ability-item">
+          <div class="ability-key melee">RMB</div>
+          <div class="ability-body">
+            <div class="ability-name">Crescent Slash (Melee)</div>
+            <div class="ability-stats">
+              <div class="ability-stat-chip">Type: <span>Melee AoE</span></div>
+              <div class="ability-stat-chip">Range: <span>Close range arc</span></div>
+              <div class="ability-stat-chip">Use: <span>Anti-diver / finisher</span></div>
+            </div>
+            <div class="ability-desc">Hawkeye swings his bow in a melee arc, dealing damage to nearby enemies. This is his primary close-range defensive tool when divers close the gap. It can also be used as a finisher on low-HP targets who survive a headshot. The AoE arc means it can hit multiple enemies in a cluster, making it useful in tight corridors.</div>
+            <div class="ability-tip">💡 Use Crescent Slash the moment a diver reaches you — it creates distance and deals damage simultaneously. Follow immediately with a double jump to reposition. Never rely on it as your primary damage tool; it's a survival mechanic, not an opener. </div>
+          </div>
+        </div>
+
+        <!-- DOUBLE JUMP -->
+        <div class="ability-item">
+          <div class="ability-key passive">SPACE ×2</div>
+          <div class="ability-body">
+            <div class="ability-name">Double Jump</div>
+            <div class="ability-stats">
+              <div class="ability-stat-chip">Type: <span>Mobility / Repositioning</span></div>
+              <div class="ability-stat-chip">Use: <span>High ground access + escape</span></div>
+            </div>
+            <div class="ability-desc">Hawkeye can double jump to reach elevated positions and reposition quickly. This is his primary mobility tool — use it to access high ground for better sightlines and to escape divers who close the gap. Combined with Crescent Slash, the double jump creates a brief window to escape close-range threats. </div>
+            <div class="ability-tip">💡 Always establish high-ground positions before the fight starts — use double jump during the approach phase, not reactively. Once a diver is on you, double jump + Crescent Slash buys time but rarely saves you. Prevention (positioning) beats reaction. </div>
+          </div>
+        </div>
+
+        <!-- BLAST ARROW -->
+        <div class="ability-item">
+          <div class="ability-key">E</div>
+          <div class="ability-body">
+            <div class="ability-name">Blast Arrow</div>
+            <div class="ability-stats">
+              <div class="ability-stat-chip">Type: <span>AoE explosive arrow</span></div>
+              <div class="ability-stat-chip">Use: <span>Chokepoint control + poke</span></div>
+              <div class="ability-stat-chip">Cooldown: <span>~8s</span></div>
+            </div>
+            <div class="ability-desc">Hawkeye fires an explosive arrow that detonates on impact, dealing AoE damage. Best used in chokepoints and hallways where enemies are funneling through — the AoE punishes grouped enemies and forces them to spread out, disrupting their push. Also useful for finishing off low-HP targets hiding behind cover, as the explosion radius reaches around corners. </div>
+            <div class="ability-tip">💡 Abuse chokepoints and hallways with Blast Arrow — when enemies are forced to funnel through a single path, fire Blast Arrows at the entrance before they arrive. The AoE damage stacks up quickly and forces them to either take damage or slow their advance. </div>
+          </div>
+        </div>
+
+        <!-- ULT -->
+        <div class="ability-item">
+          <div class="ability-key ult">Q — ULT</div>
+          <div class="ability-body">
+            <div class="ability-name">Hunter's Sight (Trick Shot Ult)</div>
+            <div class="ability-stats">
+              <div class="ability-stat-chip">Effect: <span>Marks targets + enhanced arrows</span></div>
+              <div class="ability-stat-chip">Counter: <span>Terrain / Vanguard cover / Strategist ult</span></div>
+              <div class="ability-stat-chip">Best use: <span>Teamfight opener or finisher</span></div>
+            </div>
+            <div class="ability-desc">Hawkeye activates Hunter's Sight, marking visible enemies and firing enhanced arrows with increased damage and tracking. The ult is strongest when enemies are grouped in the open — it can wipe an entire backline if they have no cover. Countered by terrain, Vanguard body-blocking, and Strategist defensive ults. The community consensus: use it as a teamfight opener when enemies are pushing through a chokepoint, or as a finisher when multiple enemies are low HP. </div>
+            <div class="ult-box">
+              <strong>🎯 Ult Counter-Play:</strong> When Hawkeye ults, stay behind terrain, your Vanguard, or out of his LoS entirely — unless your team is using a Strategist's defensive ult to counter. The ult's tracking is only effective against exposed targets. Vanguards should body-block for their backline the moment they hear the ult activation. 
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- COUNTERS -->
+    <div class="section">
+      <div class="section-label">Matchup Analysis</div>
+      <h2>Counters <span>&amp; Matchups</span></h2>
+      <div class="counter-grid">
+        <div class="counter-col good">
+          <div class="counter-col-title">✅ Hawkeye Excels Against</div>
+          <div class="counter-entry">
+            <div class="counter-emoji">✨</div>
+            <div>
+              <div class="counter-name">All Strategists (250 HP)</div>
+              <div class="counter-reason">Hawkeye is the only hero who can one-shot every Strategist without a damage boost. A fully-charged headshot deletes any support who exposes themselves. </div>
+            </div>
+          </div>
+          <div class="counter-entry">
+            <div class="counter-emoji">🕷</div>
+            <div>
+              <div class="counter-name">Spider-Man (mid-swing)</div>
+              <div class="counter-reason">Spider-Man's web swing locks him into a predictable arc — the moment he commits to a swing, lead your shot to where he'll be. Movement-locked targets are free headshots.</div>
+            </div>
+          </div>
+          <div class="counter-entry">
+            <div class="counter-emoji">🧲</div>
+            <div>
+              <div class="counter-name">Magneto / Shield Tanks</div>
+              <div class="counter-reason">Off-angle positioning lets Hawkeye shoot past shields and barriers — his arrows bypass shields that face forward, forcing shield tanks to constantly reposition.</div>
+            </div>
+          </div>
+          <div class="counter-entry">
+            <div class="counter-emoji">🎯</div>
+            <div>
+              <div class="counter-name">Stationary / Grouped Enemies</div>
+              <div class="counter-reason">Blast Arrow punishes clustered enemies in chokepoints. Infinite ammo means sustained poke on stationary targets never stops. </div>
+            </div>
+          </div>
+        </div>
+        <div class="counter-col bad">
+          <div class="counter-col-title">❌ Hard Counters Hawkeye</div>
+          <div class="counter-entry">
+            <div class="counter-emoji">🐾</div>
+            <div>
+              <div class="counter-name">Black Panther / Iron Fist</div>
+              <div class="counter-reason">Fast melee divers close the gap before Hawkeye can land a full-charge shot. His slow rate of fire means one missed shot is often fatal against burst melee. </div>
+            </div>
+          </div>
+          <div class="counter-entry">
+            <div class="counter-emoji">💚</div>
+            <div>
+              <div class="counter-name">Hulk</div>
+              <div class="counter-reason">Hulk's Incredible Leap crashes into Hawkeye's position instantly. Even a full-charge headshot only deals 70 damage to an 800 HP tank — Hulk ignores Hawkeye's damage entirely. </div>
+            </div>
+          </div>
+          <div class="counter-entry">
+            <div class="counter-emoji">🌀</div>
+            <div>
+              <div class="counter-name">Psylocke / Magik</div>
+              <div class="counter-reason">High-mobility duelists with teleport abilities bypass Hawkeye's positioning entirely and kill him before he can react. </div>
+            </div>
+          </div>
+          <div class="counter-entry">
+            <div class="counter-emoji">🛡</div>
+            <div>
+              <div class="counter-name">Doctor Strange (Portal)</div>
+              <div class="counter-reason">Strange's portal ult can teleport the entire team past Hawkeye's sightlines, negating his LoS control advantage entirely. </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TEAM COMP -->
+    <div class="section">
+      <div class="section-label">Team Strategy</div>
+      <h2>Best Team <span>Compositions</span></h2>
+      <div class="comp-grid">
+        <div class="comp-card">
+          <div class="comp-role tank">Tank Partner</div>
+          <div class="comp-hero">
+            <div class="comp-hero-emoji">🧲</div>
+            <div>
+              <div class="comp-hero-name">Magneto</div>
+              <div class="comp-hero-reason">Magneto's shields protect Hawkeye from divers while his slow frontline presence keeps enemies at the range Hawkeye wants to fight at</div>
+            </div>
+          </div>
+          <div class="comp-hero">
+            <div class="comp-hero-emoji">🌿</div>
+            <div>
+              <div class="comp-hero-name">Groot</div>
+              <div class="comp-hero-reason">Groot's walls create chokepoints that funnel enemies into Hawkeye's Blast Arrow kill zones — one of the highest-synergy tank pairings</div>
+            </div>
+          </div>
+          <div class="comp-synergy">Groot + Hawkeye is a classic chokepoint control composition — Groot walls force enemies into narrow corridors, Hawkeye's Blast Arrows and Piercing Arrows punish them mercilessly. </div>
+        </div>
+        <div class="comp-card">
+          <div class="comp-role support">Support</div>
+          <div class="comp-hero">
+            <div class="comp-hero-emoji">✨</div>
+            <div>
+              <div class="comp-hero-name">Mantis</div>
+              <div class="comp-hero-reason">Damage boost pushes Hawkeye's already one-shot arrows into territory where even 300 HP duelists become one-shot targets — dramatically expands his kill list</div>
+            </div>
+          </div>
+          <div class="comp-hero">
+            <div class="comp-hero-emoji">🌙</div>
+            <div>
+              <div class="comp-hero-name">Luna Snow</div>
+              <div class="comp-hero-reason">Luna's healing keeps Hawkeye alive through poke damage and her ult can counter Hawkeye's ult if the enemy has one — mirror ult protection</div>
+            </div>
+          </div>
+          <div class="comp-synergy support">Mantis damage boost on Hawkeye is devastating — his already one-shot arrows become capable of killing higher-HP targets, and the boost has no downside since he's already self-sufficient. </div>
+        </div>
+        <div class="comp-card">
+          <div class="comp-role dps">DPS Partner</div>
+          <div class="comp-hero">
+            <div class="comp-hero-emoji">💀</div>
+            <div>
+              <div class="comp-hero-name">Hela</div>
+              <div class="comp-hero-reason">Hela and Hawkeye both control long sightlines — double sniper creates a kill zone that forces enemies to either take damage or completely abandon the objective</div>
+            </div>
+          </div>
+          <div class="comp-hero">
+            <div class="comp-hero-emoji">⭐</div>
+            <div>
+              <div class="comp-hero-name">Star-Lord</div>
+              <div class="comp-hero-reason">Star-Lord's mobility and close-range burst handles the divers that Hawkeye struggles against — perfect role split with no overlap</div>
+            </div>
+          </div>
+          <div class="comp-synergy dps">Hawkeye + Star-Lord covers all ranges: Hawkeye dominates long sightlines while Star-Lord handles close-range flankers. Enemies can't advance without taking headshots and can't dive without facing Star-Lord. </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- COMBOS -->
+    <div class="section">
+      <div class="section-label">Advanced Techniques</div>
+      <h2>Combo <span>Guide</span></h2>
+      <p style="margin-bottom:8px;font-size:0.88rem;">Hawkeye's combos revolve around <strong style="color:var(--text)">charge timing, off-angle positioning, and prediction</strong> — not reaction. The best Hawkeye players are always thinking one step ahead of enemy movement. </p>
+
+      <table class="difficulty-table">
+        <thead>
+          <tr><th>Combo</th><th>Difficulty</th><th>Best For</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="font-weight:700">Chokepoint Blast Arrow Loop</td>
+            <td><span class="diff-badge diff-easy">⭐ Easy</span></td>
+            <td style="color:var(--muted)">New Hawkeye players</td>
+          </tr>
+          <tr>
+            <td style="font-weight:700">Peek → Full Charge Headshot</td>
+            <td><span class="diff-badge diff-med">⭐⭐ Medium</span></td>
+            <td style="color:var(--muted)">Core kill pattern</td>
+          </tr>
+          <tr>
+            <td style="font-weight:700">Movement-Lock Prediction Shot</td>
+            <td><span class="diff-badge diff-hard">⭐⭐⭐ Hard</span></td>
+            <td style="color:var(--muted)">Anti-mobility tech</td>
+          </tr>
+          <tr>
+            <td style="font-weight:700">Ult Teamfight Wipe</td>
+            <td><span class="diff-badge diff-expert">⭐⭐⭐⭐ Expert</span></td>
+            <td style="color:var(--muted)">Coordinated ranked play</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="combo-section-divider"></div>
+      <h3 style="margin-bottom:16px;color:var(--violet)">Chokepoint Blast Arrow Loop</h3>
+      <ul class="combo-steps">
+        <li class="combo-step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <div class="step-title">Identify the enemy's primary advance route <span class="time-badge">Pre-fight</span></div>
+            <div class="step-desc">Every map has 1–2 chokepoints enemies must pass through. Position yourself with a clear sightline to that chokepoint before the fight starts. </div>
+          </div>
+        </li>
+        <li class="combo-step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <div class="step-title">Fire Blast Arrow at chokepoint entrance <span class="key-badge">E</span> <span class="time-badge">0.0s</span></div>
+            <div class="step-desc">As enemies approach, fire a Blast Arrow at the chokepoint entrance. The AoE punishes grouped enemies and forces them to spread out or slow their advance. </div>
+          </div>
+        </li>
+        <li class="combo-step">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <div class="step-title">Charge Piercing Arrow behind cover <span class="key-badge">LMB (hold)</span> <span class="time-badge">0.0–0.9s</span></div>
+            <div class="step-desc">While Blast Arrow is on cooldown, charge your Piercing Arrow behind cover. The -20% movement penalty doesn't matter if you're not moving. </div>
+          </div>
+        </li>
+        <li class="combo-step">
+          <div class="step-num">4</div>
+          <div class="step-body">
+            <div class="step-title">Peek and headshot the most exposed target <span class="key-badge">LMB (release)</span> <span class="time-badge">~1.0s</span></div>
+            <div class="step-desc">Peek from cover with a fully charged arrow and aim for the head of the most exposed enemy — ideally a support who stepped out to heal. Return to cover immediately after firing. </div>
+          </div>
+        </li>
+        <li class="combo-step">
+          <div class="step-num">5</div>
+          <div class="step-body">
+            <div class="step-title">Repeat — never stay in the same spot <span class="time-badge">Loop</span></div>
+            <div class="step-desc">Rotate to a new angle after 2–3 shots. Enemies will start focusing your position — unpredictability keeps you alive. </div>
+          </div>
+        </li>
+      </ul>
+      <div class="combo-note"><strong>Chokepoint principle:</strong> Hawkeye's infinite ammo means he never runs out of pressure. Enemies advancing through a chokepoint must either take Blast Arrow AoE damage, slow down and give your team time, or find a longer route that splits their team. All three outcomes benefit you. [[0]](#__0)</div>
+
+      <div class="combo-section-divider"></div>
+      <h3 style="margin-bottom:16px;color:var(--violet)">Peek → Full Charge Headshot</h3>
+      <p style="font-size:0.83rem;margin-bottom:16px;">Hawkeye's core kill pattern — charge behind cover, peek to fire, return to cover. The foundation of all high-level Hawkeye play.</p>
+      <ul class="combo-steps">
+        <li class="combo-step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <div class="step-title">Position on off-angle high ground <span class="time-badge">Pre-engage</span></div>
+            <div class="step-desc">Find a position that gives you a sightline to the enemy backline from an unexpected angle. Off-angles mean targets aren't actively dodging your shots — the single biggest factor in landing headshots. </div>
+          </div>
+        </li>
+        <li class="combo-step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <div class="step-title">Begin charging behind cover <span class="key-badge">LMB (hold)</span> <span class="time-badge">0.0–0.9s</span></div>
+            <div class="step-desc">Start charging your arrow while still behind cover. The full charge takes 0.9 seconds — time this so you're ready to fire the instant you peek. </div>
+          </div>
+        </li>
+        <li class="combo-step">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <div class="step-title">Peek, aim head, release <span class="key-badge">LMB (release)</span> <span class="time-badge">~0.9s</span></div>
+            <div class="step-desc">Step out from cover with a fully charged arrow already ready. Aim for the head and release. The entire peek window should be under 0.5 seconds — charge behind cover, peek to shoot, return immediately. </div>
+          </div>
+        </li>
+        <li class="combo-step">
+          <div class="step-num">4</div>
+          <div class="step-body">
+            <div class="step-title">Return to cover and begin next charge <span class="time-badge">Immediate</span></div>
+            <div class="step-desc">Don't admire your shot — return to cover and start charging the next arrow immediately. The rhythm is: charge → peek → fire → cover → charge. </div>
+          </div>
+        </li>
+      </ul>
+      <div class="combo-note"><strong>The pace principle (Reddit community tip):</strong> "Pace yourself and keep a nice, steady and slow pace. Stressing and being rigid is your enemy. Hawkeye is not about reaction, it's about prediction." — The best Hawkeye players are calm, methodical, and always one step ahead of enemy movement. </div>
+
+      <div class="combo-section-divider"></div>
+      <h3 style="margin-bottom:4px;color:var(--violet)">Movement-Lock Prediction Shot <span class="diff-badge diff-hard" style="font-size:0.72rem;vertical-align:middle">Hard</span></h3>
+      <p style="font-size:0.83rem;margin-bottom:16px;">Hawkeye's highest-skill technique — shooting targets during movement-locking abilities when they cannot dodge. </p>
+      <ul class="combo-steps">
+        <li class="combo-step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <div class="step-title">Learn each hero's movement-locking abilities <span class="time-badge">Knowledge</span></div>
+            <div class="step-desc">Every hero has at least one ability that locks them into a fixed trajectory: Spider-Man's web swing, dive abilities, leap attacks, and charge moves. During these animations, the target cannot change direction. </div>
+          </div>
+        </li>
+        <li class="combo-step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <div class="step-title">Watch for the ability animation start <span class="time-badge">Reactive</span></div>
+            <div class="step-desc">The moment you see a target begin a movement-locking ability, start charging your arrow. You have the full animation duration to charge and aim. </div>
+          </div>
+        </li>
+        <li class="combo-step">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <div class="step-title">Lead your shot to their destination <span class="key-badge">LMB (release)</span></div>
+            <div class="step-desc">Aim where the target will be at the end of their movement, not where they are now. Hawkeye's arrows have travel time — lead the shot by the distance they'll cover during flight. </div>
+          </div>
+        </li>
+        <li class="combo-step">
+          <div class="step-num">4</div>
+          <div class="step-body">
+            <div class="step-title">Spider-Man example: aim at web-swing landing spot</div>
+            <div class="step-desc">When Spider-Man uses Get Over Here or Amazing Combo, he locks into a swing arc. Aim at the point where he'll land — fire a full-charge arrow there and he'll walk into it. </div>
+          </div>
+        </li>
+      </ul>
+      <div class="combo-note"><strong>Why this works:</strong> Most players try to track moving targets in real time — this is extremely difficult with Hawkeye's slow projectile speed. Prediction shooting removes the tracking challenge entirely: you're aiming at a fixed point, not a moving one. Master the movement patterns of the 5–6 most common heroes and this becomes second nature. </div>
+    </div>
+
+    <!-- FAQ -->
+    <div class="section">
+      <div class="section-label">Common Questions</div>
+      <h2>FAQ</h2>
+      <div class="faq-list">
+
+        <div class="faq-item open">
+          <button class="faq-q" onclick="toggleFaq(this)">How is Hawkeye different from Black Widow? <span class="faq-arrow">▼</span></button>
+          <div class="faq-a"><p>The key difference: Hawkeye can one-shot every Strategist and Duelist without any damage boost. Black Widow cannot one-shot anyone without Mantis. Hawkeye is also projectile-based (travel time, arc) while Black Widow is hitscan (instant). Hawkeye has infinite ammo and better sustained pressure; Black Widow has zero falloff and a melee kit. Hawkeye is B-Tier; Black Widow is D-Tier. For most players, Hawkeye is the better pick. </p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">How long should I charge my arrows? <span class="faq-arrow">▼</span></button>
+          <div class="faq-a"><p>Always aim for a full 0.9-second charge before firing. Anything below 0.7 seconds is below minimum charge and deals only 28 damage — not enough to kill anyone. The full 0.9s charge gives you 70 damage plus critical hit potential, which is the one-shot threshold for Strategists and Duelists. Charge behind cover so the 0.9s window doesn't expose you. </p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">What are off-angles and why do they matter? <span class="faq-arrow">▼</span></button>
+          <div class="faq-a"><p>An off-angle is any position that gives you a sightline to the enemy that they don't expect — typically from the side or behind their shields. Off-angles matter because targets who don't see you aren't actively dodging your arrows, making headshots dramatically easier. They also split the enemy team's focus: they must address both your frontline and your off-angle simultaneously. Always look for off-angles before the fight starts, not during it. </p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">How do I deal with divers as Hawkeye? <span class="faq-arrow">▼</span></button>
+          <div class="faq-a"><p>Divers are Hawkeye's hardest counter. The counter-play: (1) position near your tanks so they can peel; (2) use Crescent Slash + double jump to create distance when a diver reaches you; (3) ping the diver immediately so your team responds; (4) most importantly — prevent the dive by positioning in spots that are hard to reach. High ground with limited approach routes is your best defense. </p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">When should I use my ult? <span class="faq-arrow">▼</span></button>
+          <div class="faq-a"><p>Use Hunter's Sight in two situations: (1) as a teamfight opener when 3+ enemies are pushing through a chokepoint in the open — the enhanced arrows can wipe an entire backline; (2) as a finisher when multiple enemies are low HP and hiding behind cover. Never use it when enemies have terrain cover or when their Vanguard is body-blocking — the ult's tracking is only effective against exposed targets. </p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this          )">How do I improve my prediction shots? <span class="faq-arrow">▼</span></button>
+          <div class="faq-a"><p>Start by learning the 5 most common movement-locking abilities: Spider-Man's web swing, Black Panther's dash, Iron Fist's leap, Captain America's shield throw, and Hulk's Incredible Leap. In practice, spend 10 minutes in a custom game just watching these animations and firing arrows at the landing spots — not at the heroes themselves. Once you can consistently hit stationary targets at the landing point, start doing it in real matches. The community consensus: prediction shooting is a learnable skill, not a talent.   </p></div>
+        </div>
+
+      </div>
+    </div><!-- end faq section -->
+
+  </div><!-- end main-col -->
+
+  <!-- SIDEBAR -->
+  <div class="side-col">
+
+    <div class="side-card">
+      <div class="side-card-title">Tier Rating</div>
+      <div class="tier-badge tier-b">B</div>
+      <p style="font-size:0.85rem;color:var(--muted);line-height:1.6">Hawkeye sits at <strong style="color:var(--text)">B-Tier</strong> in Season 7.5 (May 2026). He's the only hero who can one-shot every Strategist and Duelist without a damage boost — a unique self-sufficient property that no other sniper has. Strong in the right hands, but punishing when you miss.  </p>
+    </div>
+
+    <div class="side-card">
+      <div class="side-card-title">Quick Tips</div>
+      <div class="quick-tip">
+        <div class="tip-icon">📐</div>
+        <div class="tip-text"><strong style="color:var(--text)">Always use off-angles.</strong> Targets who don't see you aren't dodging. The single biggest factor in landing headshots is positioning, not aim.</div>
+      </div>
+      <div class="quick-tip">
+        <div class="tip-icon">⏱</div>
+        <div class="tip-text">Charge to <strong style="color:var(--text)">0.9 seconds</strong> before every shot. Below 0.7s is wasted — 28 damage kills nobody. Full charge = one-shot potential.</div>
+      </div>
+      <div class="quick-tip">
+        <div class="tip-icon">🧱</div>
+        <div class="tip-text">Charge <strong style="color:var(--text)">behind cover</strong>, peek to fire, return immediately. The peek window should be under 0.5 seconds. Never stand in the open while charging.</div>
+      </div>
+      <div class="quick-tip">
+        <div class="tip-icon">🌿</div>
+        <div class="tip-text"><strong style="color:var(--text)">Groot + Hawkeye</strong> is the best chokepoint combo in the game. Groot walls funnel enemies directly into your Blast Arrow kill zones.</div>
+      </div>
+      <div class="quick-tip">
+        <div class="tip-icon">🔮</div>
+        <div class="tip-text">Watch for <strong style="color:var(--text)">movement-locking abilities</strong> — Spider-Man's web swing, dive attacks, charge moves. The moment they commit, aim at their landing spot.</div>
+      </div>
+      <div class="quick-tip">
+        <div class="tip-icon">💥</div>
+        <div class="tip-text">Abuse <strong style="color:var(--text)">chokepoints with Blast Arrow</strong> on cooldown. Enemies funneling through a single path take AoE damage whether they advance or retreat.</div>
+      </div>
+      <div class="quick-tip">
+        <div class="tip-icon">🧘</div>
+        <div class="tip-text"><strong style="color:var(--text)">Stay calm and slow your pace.</strong> Hawkeye is about prediction, not reaction. Stress and rigidity are your enemies — methodical play wins games.</div>
+      </div>
+    </div>
+
+    <div class="side-card">
+      <div class="side-card-title">One-Shot Reference</div>
+      <div class="quick-tip">
+        <div class="tip-icon">💀</div>
+        <div class="tip-text"><strong style="color:var(--text)">All Strategists (250 HP)</strong> — one-shot with full-charge headshot. No boost needed. Priority targets every fight.</div>
+      </div>
+      <div class="quick-tip">
+        <div class="tip-icon">⚔️</div>
+        <div class="tip-text"><strong style="color:var(--text)">All 250 HP Duelists</strong> — one-shot with full-charge headshot. Exceptions: Wolverine and Mister Fantastic have damage reduction mechanics.</div>
+      </div>
+      <div class="quick-tip">
+        <div class="tip-icon">✨</div>
+        <div class="tip-text"><strong style="color:var(--text)">With Mantis boost</strong> — one-shot range expands to higher-HP duelists. Dramatically increases kill list size.</div>
+      </div>
+      <div class="quick-tip">
+        <div class="tip-icon">🛡</div>
+        <div class="tip-text"><strong style="color:var(--text)">Cannot one-shot:</strong> Vanguards (800+ HP), Wolverine, Mister Fantastic. Focus damage on tanks only to chunk HP, not for kills.</div>
+      </div>
+    </div>
+
+    <a class="ai-btn-side" href="/">← Back to All Heroes</a>
+
+  </div><!-- end side-col -->
+
+</div><!-- end page-body -->
+
+<footer>
+  <div class="footer-logo">RIVALS<span style="color:var(--gold)">GUIDE</span></div>
+  <p>Fan-made guide site · Not affiliated with Marvel or NetEase Games</p>
+  <p style="margin-top:8px">© 2025 RivalsGuide.site · All rights reserved</p>
+</footer>
+
+<script>
+  function toggleFaq(btn){
+    const item = btn.closest('.faq-item');
+    item.classList.toggle('open');
+  }
+</script>
 </body>
 </html>
+
