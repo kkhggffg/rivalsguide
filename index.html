@@ -213,7 +213,7 @@
       <a href="#ai" class="btn-secondary">Ask AI Guide</a>
     </div>
     <div class="hero-stats">
-      <div class="stat"><span class="stat-num">33+</span><span class="stat-label">Heroes</span></div>
+      <div class="stat"><span class="stat-num">32+</span><span class="stat-label">Heroes</span></div>
       <div class="stat"><span class="stat-num">3</span><span class="stat-label">Roles</span></div>
       <div class="stat"><span class="stat-num">AI</span><span class="stat-label">Powered</span></div>
     </div>
@@ -353,7 +353,6 @@ const heroes=[
   {name:'Winter Soldier',emoji:'🦾',role:'DPS'},
   {name:'Scarlet Witch',emoji:'🔴',role:'DPS'},
   {name:'Loki',emoji:'🐍',role:'Support'},
-  {name:'Thanos',emoji:'💜',role:'Tank'},
   {name:'Star-Lord',emoji:'🎵',role:'DPS'},
   {name:'Groot',emoji:'🌿',role:'Tank'},
   {name:'Rocket Raccoon',emoji:'🦝',role:'Support'},
@@ -365,7 +364,7 @@ const heroes=[
 ];
 
 const tierData={
-  S:['Thanos','Scarlet Witch','Hela','Loki'],
+  S:['Scarlet Witch','Hela','Loki'],
   A:['Spider-Man','Iron Man','Thor','Moon Knight','Namor'],
   B:['Captain America','Hulk','Doctor Strange','Winter Soldier','Mantis','Star-Lord'],
   C:['Black Widow','Hawkeye','Groot','Rocket Raccoon','Peni Parker'],
@@ -405,17 +404,7 @@ const heroDetails={
     ],
     counters:{good:['Spider-Man','Winter Soldier','Star-Lord'],bad:['Scarlet Witch','Thanos','Hela']},
   },
-  'Thanos':{
-    stats:{hp:'800',speed:'Medium',difficulty:'★★★★'},
-    skills:[
-      {key:'LMB',name:'Infinity Gauntlet',desc:'Powerful melee strikes. Each hit has a chance to trigger a random Infinity Stone effect.',tip:'Stay in melee range and keep attacking to proc stone effects'},
-      {key:'Shift',name:'Space Jump',desc:'Uses the Space Stone to instantly teleport to a target location, passing through walls. 10s cooldown.',tip:'Use to dive the backline or escape encirclement'},
-      {key:'E',name:'Mind Control',desc:'Briefly takes control of one enemy, forcing them to attack their own team for 2s. 15s cooldown.',tip:'Prioritize controlling the enemy carry or healer'},
-      {key:'RMB',name:'Reality Warp',desc:'Creates a gravity anomaly at target location, pulling in nearby enemies and dealing sustained damage.',tip:'Combo with ally AoE abilities for massive value'},
-      {key:'Q',name:'Ultimate: The Snap',desc:'Deals massive damage to all enemies in sight. Enemies below 30% HP are instantly eliminated. 90s cooldown.',tip:'Wait for multiple enemies to be low before snapping'},
-    ],
-    counters:{good:['Spider-Man','Iron Man','Star-Lord','Hawkeye'],bad:['Doctor Strange','Loki']},
-  },
+
   'Scarlet Witch':{
     stats:{hp:'280',speed:'Medium',difficulty:'★★★★★'},
     skills:[
@@ -481,7 +470,6 @@ function getHeroLink(name){
     'Winter Soldier':'/winter-soldier.html',
     'Scarlet Witch':'/scarlet-witch.html',
     'Loki':'/loki.html',
-    'Thanos':'/thanos.html',
     'Star-Lord':'/star-lord.html',
     'Groot':'/groot.html',
     'Rocket Raccoon':'/rocket-raccoon.html',
