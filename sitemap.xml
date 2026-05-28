@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://rivalsguide.site/</loc>
-    <lastmod>2026-05-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
+  <url><loc>https://rivalsguide.site/</loc><priority>1.0</priority></url>
+  <url><loc>https://rivalsguide.site/star-lord.html</loc><priority>0.8</priority></url>
+  <url><loc>https://rivalsguide.site/namor.html</loc><priority>0.8</priority></url>
+  <url><loc>https://rivalsguide.site/moon-knight.html</loc><priority>0.8</priority></url>
+  <url><loc>https://rivalsguide.site/hela.html</loc><priority>0.8</priority></url>
+  <url><loc>https://rivalsguide.site/peni-parker.html</loc><priority>0.8</priority></url>
+  <url><loc>https://rivalsguide.site/mantis.html</loc><priority>0.8</priority></div></url>
 </urlset>
+
