@@ -623,42 +623,103 @@ async function askAI(){
 }
 
 // ── COMMUNITY ──
-let comments=[];
+const PAGE_SIZE = 5;
+let visibleCount = PAGE_SIZE;
+
+const defaultComments = [
+  {name:'xXSpiderMain',hero:'Spider-Man',text:"Spider-Man's web swing mobility is insane. Combo it with the E root and you can delete squishies before they react. Highly recommend for aggressive players.",time:'2h ago',likes:24,liked:false},
+  {name:'IronManMain',hero:'Iron Man',text:"Iron Man tip: never land. The moment you touch the ground you're dead. Stay airborne, use charged shots on tanks, and save missiles for cleanup.",time:'5h ago',likes:31,liked:false},
+  {name:'HelaMain',hero:'Hela',text:"Hela is S-tier for a reason. Her headshot damage with Mantis boost is literally a one-tap on any 250HP hero. If you're not running this combo you're leaving free kills on the table.",time:'8h ago',likes:41,liked:false},
+  {name:'TankDiff',hero:'Peni Parker',text:"Peni Parker is so slept on. Layer your mines at different heights — floor, wall, ceiling. AoE clears the floor mine but misses the wall ones every time. Easy 240 damage combo.",time:'12h ago',likes:19,liked:false},
+  {name:'MoonKnightGod',hero:'Moon Knight',text:"Moon Knight bounce damage on grouped enemies is disgusting. Get Mantis damage boost before you ult and you can wipe an entire team in one cast. Best ult in the game.",time:'Yesterday',likes:37,liked:false},
+  {name:'GardiansComp',hero:'Mantis',text:"Mantis + Rocket Raccoon dual support is the best support duo in the game. Rocket covers healing while Mantis focuses on damage boost rotations. Your carry will love you.",time:'Yesterday',likes:28,liked:false},
+  {name:'DiveMaster',hero:'Spider-Man',text:"Against Peni Parker: just go aerial or pick Moon Knight. Her mines only trigger on ground contact. Flying heroes are completely immune to her entire kit lol.",time:'2 days ago',likes:22,liked:false},
+  {name:'StrategistPro',hero:'Doctor Strange',text:"Doctor Strange portal play is so underrated. You can portal your entire team behind the enemy backline in 2 seconds. Most enemies don't even react before it's too late.",time:'2 days ago',likes:15,liked:false},
+  {name:'RocketMain',hero:'Rocket Raccoon',text:"Rocket tip: always prioritize your Duelist carry for damage boost, not the tanks. A boosted Hela or Moon Knight generates way more value than a boosted Vanguard.",time:'3 days ago',likes:33,liked:false},
+  {name:'NightOwl99',hero:'Moon Knight',text:"Moon Knight crescent dart bounce in tight corridors is a free teamfight win. Find a hallway, pop ult, watch the entire enemy team melt. Objective maps are his best friend.",time:'3 days ago',likes:26,liked:false},
+];
+
+let comments = [];
+
+function loadComments(){
+  try{
+    const saved = localStorage.getItem('rg_comments');
+    const user = saved ? JSON.parse(saved) : [];
+    comments = [...user, ...defaultComments];
+  }catch(e){
+    comments = [...defaultComments];
+  }
+}
+
+function saveUserComment(c){
+  try{
+    const saved = localStorage.getItem('rg_comments');
+    const user = saved ? JSON.parse(saved) : [];
+    user.unshift(c);
+    localStorage.setItem('rg_comments', JSON.stringify(user.slice(0,50)));
+  }catch(e){}
+}
+
 function renderDefaultComments(){
-  comments=[
-    {name:'xXSpiderMain',hero:'Spider-Man',text:"Spider-Man's web swing mobility is insane. Combo it with the E root and you can delete squishies before they react. Highly recommend for aggressive players.",time:'2h ago',likes:24,liked:false},
-    {name:'MarvelFanatic',hero:'Thanos',text:"Thanos is absolutely broken this patch. His Mind Control into The Snap is a guaranteed teamfight win if you time it right. S-tier no question.",time:'5h ago',likes:18,liked:false},
-    {name:'IronManMain',hero:'Iron Man',text:"Iron Man tip: never land. The moment you touch the ground you're dead. Stay airborne, use charged shots on tanks, and save missiles for cleanup.",time:'Yesterday',likes:31,liked:false},
-  ];
+  loadComments();
+  visibleCount = PAGE_SIZE;
   renderComments();
 }
+
 function renderComments(){
-  document.getElementById('commentsList').innerHTML=comments.map((c,i)=>`
-    <div class="comment-card">
-      <div class="comment-meta">
-        <div class="comment-avatar">${c.name[0].toUpperCase()}</div>
-        <div>
-          <div class="comment-author">${c.name}${c.hero?` <span style="color:var(--red);font-size:0.8rem">· ${c.hero}</span>`:''}</div>
+  const slice = comments.slice(0, visibleCount);
+  const hasMore = visibleCount < comments.length;
+  document.getElementById('commentsList').innerHTML =
+    slice.map((c,i) => `
+      <div class="comment-card">
+        <div class="comment-meta">
+          <div class="comment-avatar">${c.name[0].toUpperCase()}</div>
+          <div>
+            <div class="comment-author">${c.name}${c.hero?` <span style="color:var(--red);font-size:0.8rem">· ${c.hero}</span>`:''}</div>
+          </div>
+          <div class="comment-time">${c.time}</div>
         </div>
-        <div class="comment-time">${c.time}</div>
-      </div>
-      <div class="comment-text">${c.text}</div>
-      <div class="comment-likes">
-        <button class="like-btn ${c.liked?'liked':''}" onclick="toggleLike(${i})">👍 ${c.likes}</button>
-      </div>
-    </div>`).join('');
+        <div class="comment-text">${c.text}</div>
+        <div class="comment-likes">
+          <button class="like-btn ${c.liked?'liked':''}" onclick="toggleLike(${i})">👍 ${c.likes}</button>
+        </div>
+      </div>`).join('') +
+    (hasMore
+      ? `<div style="text-align:center;margin-top:16px">
+           <button onclick="loadMore()"
+             style="background:transparent;border:1px solid rgba(255,255,255,0.15);color:var(--muted);padding:10px 32px;border-radius:20px;cursor:pointer;font-size:0.9rem;transition:all 0.2s"
+             onmouseover="this.style.borderColor='var(--red)';this.style.color='var(--red)'"
+             onmouseout="this.style.borderColor='rgba(255,255,255,0.15)';this.style.color='var(--muted)'">
+             Load More &nbsp;·&nbsp; ${comments.length - visibleCount} remaining
+           </button>
+         </div>`
+      : `<div style="text-align:center;margin-top:16px;color:var(--muted);font-size:0.8rem;padding:8px 0">
+           — You've reached the end —
+         </div>`);
 }
-function toggleLike(i){
-  comments[i].liked?(comments[i].likes--,comments[i].liked=false):(comments[i].likes++,comments[i].liked=true);
+
+function loadMore(){
+  visibleCount += PAGE_SIZE;
   renderComments();
 }
+
+function toggleLike(i){
+  comments[i].liked
+    ? (comments[i].likes--, comments[i].liked=false)
+    : (comments[i].likes++, comments[i].liked=true);
+  renderComments();
+}
+
 function submitComment(){
-  const name=document.getElementById('commentName').value.trim();
-  const hero=document.getElementById('commentHero').value.trim();
-  const text=document.getElementById('commentText').value.trim();
+  const name = document.getElementById('commentName').value.trim();
+  const hero = document.getElementById('commentHero').value.trim();
+  const text = document.getElementById('commentText').value.trim();
   if(!name){alert('Please enter a username!');return;}
   if(!text){alert('Please enter your comment!');return;}
-  comments.unshift({name,hero,text,time:'Just now',likes:0,liked:false});
+  const c = {name,hero,text,time:'Just now',likes:0,liked:false};
+  saveUserComment(c);
+  comments.unshift(c);
+  visibleCount = Math.max(visibleCount, 1);
   renderComments();
   document.getElementById('commentName').value='';
   document.getElementById('commentHero').value='';
@@ -672,6 +733,7 @@ window.addEventListener('pageshow',function(e){
   document.getElementById('comboSelect').innerHTML='<option value="">— Select a Hero —</option>';
   init();
 });
+
 </script>
 <footer style="
   background: #0d0d18;
