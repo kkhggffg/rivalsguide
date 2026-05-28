@@ -1,1209 +1,700 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Doctor Strange Guide | Marvel Rivals Hero Guide</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doctor Strange Guide – Abilities, Combos & Counters | RivalsGuide</title>
+  <meta name="description" content="Complete Doctor Strange guide for Marvel Rivals. Learn his abilities, Dark Magic mechanic, portal strategies, counters, and pro tips to master the Sorcerer Supreme.">
+  <meta property="og:title" content="Doctor Strange Guide – Marvel Rivals | RivalsGuide">
+  <meta property="og:description" content="Master Doctor Strange in Marvel Rivals with our in-depth guide covering abilities, combos, counters, and team comps.">
+  <meta property="og:url" content="https://rivalsguide.site/doctor-strange.html">
+  <meta property="og:type" content="article">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-D4EJPR83TH"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-D4EJPR83TH');</script>
   <style>
-    :root {
-      --gold: #f0c040;
-      --purple: #7b2fff;
-      --purple-dark: #3a0080;
-      --purple-glow: #a855f7;
-      --bg-dark: #0a0a12;
-      --bg-card: #12121e;
-      --bg-card2: #1a1a2e;
-      --text-main: #e8e8f0;
-      --text-muted: #8888aa;
-      --border: #2a2a40;
-      --green: #4ade80;
-      --red: #f87171;
-      --blue: #60a5fa;
-      --orange: #fb923c;
-    }
-
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-
-    body {
-      font-family: 'Inter', sans-serif;
-      background: var(--bg-dark);
-      color: var(--text-main);
-      line-height: 1.6;
-    }
-
-    a { color: var(--purple-glow); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-
-    /* ── NAV ── */
-    .site-nav {
-      background: rgba(10,10,18,0.95);
-      border-bottom: 1px solid var(--border);
-      padding: 0 24px;
-      display: flex;
-      align-items: center;
-      gap: 32px;
-      height: 56px;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      backdrop-filter: blur(8px);
-    }
-    .site-nav .logo {
-      font-family: 'Rajdhani', sans-serif;
-      font-size: 1.3rem;
-      font-weight: 700;
-      color: var(--gold);
-      letter-spacing: 1px;
-    }
-    .site-nav a {
-      font-size: 0.85rem;
-      color: var(--text-muted);
-      transition: color 0.2s;
-    }
-    .site-nav a:hover { color: var(--text-main); text-decoration: none; }
-
-    /* ── HERO BANNER ── */
-    .hero-banner {
-      position: relative;
-      min-height: 420px;
-      display: flex;
-      align-items: flex-end;
-      overflow: hidden;
-      background: linear-gradient(135deg, #0d0020 0%, #1a003a 40%, #0a0a12 100%);
-    }
-    .hero-banner::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background:
-        radial-gradient(ellipse 60% 80% at 70% 50%, rgba(123,47,255,0.25) 0%, transparent 70%),
-        radial-gradient(ellipse 40% 60% at 30% 60%, rgba(168,85,247,0.15) 0%, transparent 60%);
-    }
-    .hero-banner-art {
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      height: 100%;
-      max-width: 55%;
-      object-fit: contain;
-      object-position: bottom right;
-      opacity: 0.92;
-      filter: drop-shadow(0 0 40px rgba(123,47,255,0.6));
-    }
-    .hero-banner-content {
-      position: relative;
-      z-index: 2;
-      padding: 48px 40px;
-      max-width: 560px;
-    }
-    .hero-role-tag {
-      display: inline-block;
-      background: rgba(123,47,255,0.3);
-      border: 1px solid var(--purple-glow);
-      color: var(--purple-glow);
-      font-size: 0.72rem;
-      font-weight: 700;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      padding: 3px 12px;
-      border-radius: 2px;
-      margin-bottom: 12px;
-    }
-    .hero-name {
-      font-family: 'Rajdhani', sans-serif;
-      font-size: clamp(2.4rem, 6vw, 4rem);
-      font-weight: 700;
-      line-height: 1;
-      color: #fff;
-      text-shadow: 0 0 30px rgba(168,85,247,0.8);
-      margin-bottom: 6px;
-    }
-    .hero-subtitle {
-      font-size: 0.95rem;
-      color: var(--purple-glow);
-      letter-spacing: 1px;
-      margin-bottom: 16px;
-    }
-    .hero-desc {
-      font-size: 0.9rem;
-      color: var(--text-muted);
-      max-width: 420px;
-      line-height: 1.7;
-      margin-bottom: 24px;
-    }
-    .hero-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-bottom: 28px;
-    }
-    .hero-tag {
-      background: rgba(255,255,255,0.06);
-      border: 1px solid var(--border);
-      color: var(--text-muted);
-      font-size: 0.78rem;
-      padding: 4px 12px;
-      border-radius: 20px;
-    }
-    .tier-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      background: rgba(240,192,64,0.12);
-      border: 1px solid var(--gold);
-      border-radius: 6px;
-      padding: 8px 18px;
-    }
-    .tier-badge .tier-letter {
-      font-family: 'Rajdhani', sans-serif;
-      font-size: 2rem;
-      font-weight: 700;
-      color: var(--gold);
-      line-height: 1;
-    }
-    .tier-badge .tier-info { font-size: 0.78rem; color: var(--text-muted); }
-    .tier-badge .tier-info strong { color: var(--gold); display: block; font-size: 0.85rem; }
-
-    /* ── LAYOUT ── */
-    .page-body {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 40px 24px;
-      display: grid;
-      grid-template-columns: 1fr 300px;
-      gap: 32px;
-    }
-    .main-col { min-width: 0; }
-
-    /* ── SECTION TITLE ── */
-    .section-title {
-      font-family: 'Rajdhani', sans-serif;
-      font-size: 1.3rem;
-      font-weight: 700;
-      letter-spacing: 1px;
-      color: var(--text-main);
-      border-left: 3px solid var(--purple);
-      padding-left: 12px;
-      margin-bottom: 20px;
-      text-transform: uppercase;
-    }
-
-    /* ── CARD ── */
-    .card {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 24px;
-      margin-bottom: 28px;
-    }
-
-    /* ── STATS GRID ── */
-    .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-      gap: 12px;
-      margin-bottom: 24px;
-    }
-    .stat-box {
-      background: var(--bg-card2);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 14px 16px;
-      text-align: center;
-    }
-    .stat-box .stat-val {
-      font-family: 'Rajdhani', sans-serif;
-      font-size: 1.6rem;
-      font-weight: 700;
-      color: var(--purple-glow);
-      line-height: 1;
-    }
-    .stat-box .stat-label {
-      font-size: 0.72rem;
-      color: var(--text-muted);
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-top: 4px;
-    }
-
-    /* ── VERDICT ── */
-    .verdict-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-    }
-    .verdict-box {
-      background: var(--bg-card2);
-      border-radius: 8px;
-      padding: 16px;
-    }
-    .verdict-box h4 {
-      font-size: 0.8rem;
-      font-weight: 700;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      margin-bottom: 10px;
-    }
-    .verdict-box.pros h4 { color: var(--green); }
-    .verdict-box.cons h4 { color: var(--red); }
-    .verdict-box ul { list-style: none; }
-    .verdict-box ul li {
-      font-size: 0.85rem;
-      color: var(--text-muted);
-      padding: 5px 0;
-      border-bottom: 1px solid var(--border);
-      display: flex;
-      align-items: flex-start;
-      gap: 8px;
-    }
-    .verdict-box ul li:last-child { border-bottom: none; }
-    .verdict-box.pros ul li::before { content: '✓'; color: var(--green); font-weight: 700; flex-shrink: 0; }
-    .verdict-box.cons ul li::before { content: '✗'; color: var(--red); font-weight: 700; flex-shrink: 0; }
-
-    /* ── ABILITY CARD ── */
-    .ability-list { display: flex; flex-direction: column; gap: 16px; }
-    .ability-card {
-      background: var(--bg-card2);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      overflow: hidden;
-      transition: border-color 0.2s;
-    }
-    .ability-card:hover { border-color: var(--purple-glow); }
-    .ability-header {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      padding: 14px 18px;
-      background: rgba(123,47,255,0.08);
-      border-bottom: 1px solid var(--border);
-    }
-    .ability-icon {
-      width: 44px;
-      height: 44px;
-      border-radius: 8px;
-      background: linear-gradient(135deg, var(--purple-dark), var(--purple));
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.3rem;
-      flex-shrink: 0;
-    }
-    .ability-meta { flex: 1; }
-    .ability-name {
-      font-family: 'Rajdhani', sans-serif;
-      font-size: 1rem;
-      font-weight: 700;
-      color: #fff;
-      letter-spacing: 0.5px;
-    }
-    .ability-key {
-      font-size: 0.72rem;
-      color: var(--purple-glow);
-      letter-spacing: 1px;
-    }
-    .ability-type-tag {
-      font-size: 0.7rem;
-      background: rgba(123,47,255,0.2);
-      border: 1px solid var(--purple);
-      color: var(--purple-glow);
-      padding: 2px 8px;
-      border-radius: 3px;
-      white-space: nowrap;
-    }
-    .ability-body { padding: 16px 18px; }
-    .ability-desc {
-      font-size: 0.88rem;
-      color: var(--text-muted);
-      line-height: 1.7;
-      margin-bottom: 12px;
-    }
-    .ability-stats-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-bottom: 12px;
-    }
-    .ability-stat-chip {
-      background: rgba(255,255,255,0.05);
-      border: 1px solid var(--border);
-      border-radius: 4px;
-      padding: 4px 10px;
-      font-size: 0.75rem;
-      color: var(--text-muted);
-    }
-    .ability-stat-chip span { color: var(--gold); font-weight: 700; }
-    .ability-tips { list-style: none; }
-    .ability-tips li {
-      font-size: 0.83rem;
-      color: var(--text-muted);
-      padding: 5px 0 5px 18px;
-      position: relative;
-      border-bottom: 1px solid rgba(255,255,255,0.04);
-    }
-    .ability-tips li:last-child { border-bottom: none; }
-    .ability-tips li::before {
-      content: '▸';
-      position: absolute;
-      left: 0;
-      color: var(--purple-glow);
-    }
-    .passive-badge {
-      background: rgba(240,192,64,0.15);
-      border: 1px solid var(--gold);
-      color: var(--gold);
-    }
-    .ult-badge {
-      background: rgba(251,146,60,0.15);
-      border: 1px solid var(--orange);
-      color: var(--orange);
-    }
-    .teamup-badge {
-      background: rgba(96,165,250,0.15);
-      border: 1px solid var(--blue);
-      color: var(--blue);
-    }
-
-    /* ── DARK MAGIC BAR ── */
-    .dark-magic-bar {
-      background: var(--bg-card2);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 16px 18px;
-      margin-bottom: 16px;
-    }
-    .dark-magic-bar h4 {
-      font-size: 0.8rem;
-      font-weight: 700;
-      color: var(--purple-glow);
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      margin-bottom: 10px;
-    }
-    .dm-track {
-      height: 10px;
-      background: rgba(255,255,255,0.06);
-      border-radius: 5px;
-      overflow: hidden;
-      margin-bottom: 8px;
-    }
-    .dm-fill {
-      height: 100%;
-      border-radius: 5px;
-      background: linear-gradient(90deg, var(--purple), var(--purple-glow), #ff6fff);
-      width: 100%;
-      animation: dmPulse 2s ease-in-out infinite alternate;
-    }
-    @keyframes dmPulse {
-      from { opacity: 0.7; }
-      to { opacity: 1; filter: brightness(1.3); }
-    }
-    .dm-labels {
-      display: flex;
-      justify-content: space-between;
-      font-size: 0.72rem;
-      color: var(--text-muted);
-    }
-    .dm-labels span:last-child { color: var(--red); }
-
-    /* ── COUNTERS ── */
-    .matchup-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-    }
-    .matchup-box {
-      background: var(--bg-card2);
-      border-radius: 8px;
-      padding: 16px;
-    }
-    .matchup-box h4 {
-      font-size: 0.78rem;
-      font-weight: 700;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      margin-bottom: 12px;
-      padding-bottom: 8px;
-      border-bottom: 1px solid var(--border);
-    }
-    .matchup-box.threats h4 { color: var(--red); }
-    .matchup-box.synergy h4 { color: var(--green); }
-    .matchup-hero {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      padding: 7px 0;
-      border-bottom: 1px solid rgba(255,255,255,0.04);
-    }
-    .matchup-hero:last-child { border-bottom: none; }
-    .matchup-hero-icon {
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1rem;
-      flex-shrink: 0;
-    }
-    .threats .matchup-hero-icon { background: rgba(248,113,113,0.15); border: 1px solid var(--red); }
-    .synergy .matchup-hero-icon { background: rgba(74,222,128,0.15); border: 1px solid var(--green); }
-    .matchup-hero-info { flex: 1; }
-    .matchup-hero-name { font-size: 0.85rem; font-weight: 700; color: var(--text-main); }
-    .matchup-hero-reason { font-size: 0.75rem; color: var(--text-muted); }
-
-    /* ── SOURCES ── */
-    .sources-note {
-      font-size: 0.75rem;
-      color: var(--text-muted);
-      border-top: 1px solid var(--border);
-      padding-top: 12px;
-      margin-top: 12px;
-    }
-    .sources-note a { color: var(--purple-glow); font-size: 0.75rem; }
-
-    /* ── COMBO STEP ── */
-    .combo-step {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-    .combo-step-num {
-      width: 22px;
-      height: 22px;
-      border-radius: 50%;
-      background: var(--purple);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.7rem;
-      font-weight: 700;
-      flex-shrink: 0;
-    }
-    .combo-step-num.final { background: var(--orange); }
-
-    /* ── SIDEBAR RATING DOTS ── */
-    .rating-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 0.8rem;
-      margin-bottom: 6px;
-    }
-    .rating-row span { color: var(--text-muted); }
-    .dots { display: flex; gap: 3px; }
-    .dot {
-      width: 10px;
-      height: 10px;
-      border-radius: 2px;
-    }
-    .dot.on { background: var(--purple-glow); }
-    .dot.off { background: var(--border); }
-
-    /* ── TEAMUP PILL ── */
-    .teamup-pill {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      background: rgba(96,165,250,0.08);
-      border: 1px solid rgba(96,165,250,0.2);
-      border-radius: 6px;
-      padding: 8px 10px;
-      margin-bottom: 8px;
-    }
-    .teamup-pill:last-child { margin-bottom: 0; }
-    .teamup-pill-name { font-size: 0.82rem; font-weight: 700; color: var(--text-main); }
-    .teamup-pill-sub { font-size: 0.72rem; color: var(--text-muted); }
-
-    /* ── RESPONSIVE ── */
-    @media (max-width: 900px) {
-      .page-body { grid-template-columns: 1fr; }
-      .verdict-grid { grid-template-columns: 1fr; }
-      .matchup-grid { grid-template-columns: 1fr; }
-    }
-    @media (max-width: 600px) {
-      .hero-banner-content { padding: 32px 20px; }
-      .hero-banner-art { opacity: 0.3; max-width: 100%; }
-      .stats-grid { grid-template-columns: repeat(2, 1fr); }
-    }
+    :root{--purple:#7b2fff;--purple-glow:#a855f7;--gold:#ffd60a;--dark:#0a0a0f;--dark2:#12121a;--dark3:#1a1a2e;--card:#16213e;--text:#e0e0e0;--muted:#888;--border:rgba(123,47,255,0.35);--green:#4ade80;--blue:#60a5fa;--red:#f87171;--orange:#fb923c}
+    *{margin:0;padding:0;box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{background:var(--dark);color:var(--text);font-family:'Segoe UI',sans-serif;overflow-x:hidden}
+    nav{position:fixed;top:0;width:100%;z-index:999;background:rgba(10,10,15,0.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);padding:0 40px;display:flex;align-items:center;justify-content:space-between;height:64px}
+    .nav-logo{font-size:1.3rem;font-weight:900;color:var(--purple-glow);letter-spacing:1px;text-decoration:none}
+    .nav-logo span{color:var(--gold)}
+    .nav-back{color:var(--muted);text-decoration:none;font-size:0.9rem;display:flex;align-items:center;gap:8px;transition:color 0.2s}
+    .nav-back:hover{color:var(--purple-glow)}
+    .hero-banner{min-height:380px;background:radial-gradient(ellipse at 30% 50%,rgba(123,47,255,0.22) 0%,transparent 60%),radial-gradient(ellipse at 80% 30%,rgba(168,85,247,0.1) 0%,transparent 50%),var(--dark);display:flex;align-items:center;padding:100px 40px 60px;position:relative;overflow:hidden}
+    .hero-banner::before{content:'🔮';position:absolute;right:80px;top:50%;transform:translateY(-50%);font-size:12rem;opacity:0.06;pointer-events:none}
+    .banner-inner{max-width:1200px;margin:0 auto;width:100%}
+    .breadcrumb{font-size:0.8rem;color:var(--muted);margin-bottom:16px}
+    .breadcrumb a{color:var(--muted);text-decoration:none}
+    .breadcrumb a:hover{color:var(--purple-glow)}
+    .breadcrumb span{margin:0 8px}
+    .banner-role{display:inline-block;background:rgba(123,47,255,0.15);border:1px solid var(--border);color:var(--purple-glow);font-size:0.75rem;padding:3px 14px;border-radius:20px;margin-bottom:16px;letter-spacing:2px;text-transform:uppercase}
+    .banner-title{font-size:clamp(2.5rem,6vw,4.5rem);font-weight:900;line-height:1.1;margin-bottom:12px;text-shadow:0 0 40px rgba(123,47,255,0.4)}
+    .banner-title .accent{color:var(--purple-glow)}
+    .banner-sub{color:var(--muted);font-size:1rem;max-width:560px;line-height:1.6;margin-bottom:12px}
+    .banner-hook{color:var(--text);font-size:1rem;max-width:560px;line-height:1.6;margin-bottom:28px;font-style:italic;border-left:3px solid var(--purple-glow);padding-left:14px}
+    .banner-tags{display:flex;gap:10px;flex-wrap:wrap}
+    .tag{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);padding:5px 14px;border-radius:20px;font-size:0.8rem;color:var(--muted)}
+    .tag.purple{border-color:var(--border);color:var(--purple-glow);background:rgba(123,47,255,0.08)}
+    .tag.gold{border-color:rgba(255,214,10,0.3);color:var(--gold);background:rgba(255,214,10,0.06)}
+    .page-body{max-width:1200px;margin:0 auto;padding:60px 40px 80px;display:grid;grid-template-columns:1fr 320px;gap:40px;align-items:start}
+    .main-col{display:flex;flex-direction:column;gap:48px}
+    .side-col{display:flex;flex-direction:column;gap:24px;position:sticky;top:84px}
+    .section{background:var(--card);border:1px solid rgba(255,255,255,0.05);border-radius:12px;padding:32px;transition:border-color 0.2s}
+    .section:hover{border-color:var(--border)}
+    .section-label{font-size:0.72rem;text-transform:uppercase;letter-spacing:3px;color:var(--purple-glow);margin-bottom:8px;font-weight:700}
+    h2{font-size:1.5rem;font-weight:900;margin-bottom:20px;line-height:1.2}
+    h2 span{color:var(--purple-glow)}
+    h3{font-size:1rem;font-weight:700;margin-bottom:8px;color:var(--text)}
+    p{color:var(--muted);line-height:1.7;font-size:0.93rem}
+    .stats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:24px}
+    .stat-box{background:var(--dark2);border-radius:8px;padding:16px;text-align:center;border:1px solid rgba(255,255,255,0.04)}
+    .stat-val{font-size:1.4rem;font-weight:900;color:var(--purple-glow);display:block}
+    .stat-key{font-size:0.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-top:4px;display:block}
+    .stat-desc{color:var(--muted);font-size:0.88rem;line-height:1.6}
+    /* DARK MAGIC BAR */
+    .dm-bar-wrap{background:var(--dark2);border:1px solid rgba(255,255,255,0.05);border-radius:10px;padding:18px 20px;margin-bottom:24px}
+    .dm-bar-label{font-size:0.75rem;text-transform:uppercase;letter-spacing:2px;color:var(--purple-glow);font-weight:700;margin-bottom:10px}
+    .dm-track{height:10px;background:rgba(255,255,255,0.06);border-radius:5px;overflow:hidden;margin-bottom:8px}
+    .dm-fill{height:100%;border-radius:5px;background:linear-gradient(90deg,var(--purple),var(--purple-glow),#ff6fff);animation:dmPulse 2s ease-in-out infinite alternate}
+    @keyframes dmPulse{from{opacity:0.7}to{opacity:1;filter:brightness(1.3)}}
+    .dm-labels{display:flex;justify-content:space-between;font-size:0.72rem;color:var(--muted)}
+    .dm-labels span:last-child{color:var(--red)}
+    /* ABILITIES */
+    .ability-list{display:flex;flex-direction:column;gap:16px}
+    .ability-item{background:var(--dark2);border:1px solid rgba(255,255,255,0.05);border-radius:10px;padding:20px;display:flex;gap:16px;transition:border-color 0.2s;align-items:flex-start}
+    .ability-item:hover{border-color:var(--border)}
+    .ability-key{background:var(--purple);color:#fff;padding:4px 12px;border-radius:5px;font-size:0.78rem;font-weight:700;font-family:monospace;white-space:nowrap;flex-shrink:0;margin-top:2px;min-width:52px;text-align:center}
+    .ability-key.ult{background:var(--gold);color:#000}
+    .ability-key.passive{background:rgba(168,85,247,0.2);color:var(--purple-glow);border:1px solid rgba(168,85,247,0.35)}
+    .ability-key.teamup{background:rgba(96,165,250,0.2);color:var(--blue);border:1px solid rgba(96,165,250,0.3)}
+    .ability-body{flex:1}
+    .ability-name{font-weight:700;font-size:1rem;margin-bottom:6px}
+    .ability-desc{color:var(--muted);font-size:0.88rem;line-height:1.65;margin-bottom:8px}
+    .ability-tip{font-size:0.82rem;color:var(--gold);padding:8px 12px;background:rgba(255,214,10,0.06);border-radius:6px;border-left:2px solid var(--gold)}
+    .ability-stats{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:8px}
+    .ability-stat-chip{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);border-radius:4px;padding:3px 9px;font-size:0.74rem;color:var(--muted)}
+    .ability-stat-chip b{color:var(--gold)}
+    /* COUNTERS */
+    .counter-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .counter-col{background:var(--dark2);border-radius:10px;padding:20px}
+    .counter-col-title{font-size:0.78rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:14px}
+    .counter-col.good .counter-col-title{color:var(--green)}
+    .counter-col.bad .counter-col-title{color:var(--red)}
+    .counter-entry{display:flex;align-items:flex-start;gap:10px;padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.04)}
+    .counter-entry:last-child{border-bottom:none;padding-bottom:0}
+    .counter-emoji{font-size:1.3rem;flex-shrink:0;margin-top:1px}
+    .counter-name{font-weight:700;font-size:0.88rem;margin-bottom:2px}
+    .counter-reason{font-size:0.78rem;color:var(--muted);line-height:1.5}
+    /* TEAM COMP */
+    .comp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .comp-card{background:var(--dark2);border-radius:10px;padding:16px;border:1px solid rgba(255,255,255,0.04);transition:border-color 0.2s;display:flex;flex-direction:column}
+    .comp-card:hover{border-color:var(--border)}
+    .comp-role{font-size:0.72rem;text-transform:uppercase;letter-spacing:1px;font-weight:700;margin-bottom:10px}
+    .comp-role.tank{color:var(--blue)}
+    .comp-role.support{color:var(--green)}
+    .comp-role.dps{color:var(--purple-glow)}
+    .comp-hero{display:flex;align-items:flex-start;gap:8px;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04)}
+    .comp-hero:last-of-type{border-bottom:none}
+    .comp-hero-emoji{font-size:1.1rem;flex-shrink:0;margin-top:1px}
+    .comp-hero-name{font-size:0.85rem;font-weight:700}
+    .comp-hero-reason{font-size:0.75rem;color:var(--muted);line-height:1.4;margin-top:2px}
+    .comp-synergy{margin-top:12px;padding:10px 12px;background:rgba(255,255,255,0.03);border-radius:6px;border-left:2px solid var(--blue);font-size:0.78rem;color:var(--muted);line-height:1.5}
+    .comp-synergy.support{border-left-color:var(--green)}
+    .comp-synergy.dps{border-left-color:var(--purple-glow)}
+    /* COMBOS */
+    .difficulty-table{width:100%;border-collapse:collapse;margin:20px 0 8px}
+    .difficulty-table th{font-size:0.75rem;text-transform:uppercase;letter-spacing:1px;color:var(--muted);font-weight:700;padding:8px 12px;text-align:left;border-bottom:1px solid rgba(255,255,255,0.08)}
+    .difficulty-table td{padding:10px 12px;font-size:0.85rem;border-bottom:1px solid rgba(255,255,255,0.04);vertical-align:middle}
+    .difficulty-table tr:last-child td{border-bottom:none}
+    .difficulty-table tr:hover td{background:rgba(255,255,255,0.02)}
+    .diff-badge{display:inline-block;padding:2px 10px;border-radius:20px;font-size:0.75rem;font-weight:700}
+    .diff-med{background:rgba(255,214,10,0.12);color:var(--gold)}
+    .diff-hard{background:rgba(251,146,60,0.12);color:var(--orange)}
+    .diff-expert{background:rgba(96,165,250,0.12);color:var(--blue)}
+    .combo-steps{list-style:none;display:flex;flex-direction:column;gap:0}
+    .combo-step{display:flex;gap:16px;padding:16px 0;border-bottom:1px solid rgba(255,255,255,0.04);align-items:flex-start}
+    .combo-step:last-child{border-bottom:none}
+    .step-num{width:32px;height:32px;min-width:32px;background:var(--purple);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:0.88rem;flex-shrink:0}
+    .step-body{flex:1}
+    .step-title{font-weight:700;font-size:0.95rem;margin-bottom:4px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+    .key-badge{background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.18);padding:1px 9px;border-radius:4px;font-size:0.75rem;font-family:monospace}
+    .time-badge{background:rgba(74,222,128,0.1);border:1px solid rgba(74,222,128,0.25);color:var(--green);padding:1px 9px;border-radius:4px;font-size:0.72rem;font-family:monospace}
+    .step-desc{color:var(--muted);font-size:0.88rem;line-height:1.6}
+    .combo-note{background:rgba(123,47,255,0.07);border:1px solid var(--border);border-radius:8px;padding:14px 16px;margin-top:16px;font-size:0.85rem;color:var(--text);line-height:1.6}
+    .combo-note strong{color:var(--purple-glow)}
+    .combo-section-divider{height:1px;background:rgba(255,255,255,0.06);margin:28px 0}
+    /* FAQ */
+    .faq-list{display:flex;flex-direction:column;gap:0}
+    .faq-item{border-bottom:1px solid rgba(255,255,255,0.05)}
+    .faq-item:last-child{border-bottom:none}
+    .faq-q{width:100%;background:transparent;border:none;color:var(--text);text-align:left;padding:18px 0;font-size:0.95rem;font-weight:700;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px}
+    .faq-q:hover{color:var(--purple-glow)}
+    .faq-arrow{color:var(--muted);font-size:0.8rem;transition:transform 0.2s;flex-shrink:0}
+    .faq-item.open .faq-arrow{transform:rotate(180deg)}
+    .faq-a{max-height:0;overflow:hidden;transition:max-height 0.35s ease}
+    .faq-item.open .faq-a{max-height:300px}
+    .faq-a p{padding-bottom:16px;font-size:0.88rem}
+    /* SIDEBAR */
+    .side-card{background:var(--card);border:1px solid rgba(255,255,255,0.05);border-radius:12px;padding:24px}
+    .side-card-title{font-size:0.72rem;text-transform:uppercase;letter-spacing:2px;color:var(--purple-glow);font-weight:700;margin-bottom:16px}
+    .quick-tip{display:flex;gap:10px;padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.04);align-items:flex-start}
+    .quick-tip:last-child{border-bottom:none}
+    .tip-icon{font-size:1.1rem;flex-shrink:0;margin-top:1px}
+    .tip-text{font-size:0.82rem;color:var(--muted);line-height:1.5}
+    .tier-badge{display:inline-flex;align-items:center;justify-content:center;width:56px;height:56px;border-radius:12px;font-size:2rem;font-weight:900;margin-bottom:12px}
+    .tier-a{background:linear-gradient(135deg,var(--purple),var(--purple-glow));color:#fff}
+    .rating-row{display:flex;justify-content:space-between;align-items:center;font-size:0.8rem;margin-bottom:8px}
+    .rating-row span{color:var(--muted)}
+    .dots{display:flex;gap:3px}
+    .dot{width:10px;height:10px;border-radius:2px}
+    .dot.on{background:var(--purple-glow)}
+    .dot.off{background:rgba(255,255,255,0.08)}
+    .teamup-pill{display:flex;align-items:center;gap:8px;background:rgba(96,165,250,0.06);border:1px solid rgba(96,165,250,0.18);border-radius:6px;padding:8px 10px;margin-bottom:8px}
+    .teamup-pill:last-child{margin-bottom:0}
+    .teamup-pill-name{font-size:0.82rem;font-weight:700;color:var(--text)}
+    .teamup-pill-sub{font-size:0.72rem;color:var(--muted)}
+    .ai-btn-side{display:block;text-align:center;padding:12px;background:rgba(123,47,255,0.08);border:1px solid var(--border);border-radius:8px;color:var(--muted);text-decoration:none;font-size:0.85rem;transition:all 0.2s}
+    .ai-btn-side:hover{background:rgba(123,47,255,0.18);color:var(--text)}
+    footer{background:var(--dark2);border-top:1px solid var(--border);padding:40px;text-align:center;color:var(--muted);font-size:0.85rem}
+    .footer-logo{font-size:1.2rem;font-weight:900;color:var(--purple-glow);margin-bottom:8px}
+    ::-webkit-scrollbar{width:6px}
+    ::-webkit-scrollbar-track{background:var(--dark)}
+    ::-webkit-scrollbar-thumb{background:var(--purple);border-radius:3px}
+    @media(max-width:900px){.page-body{grid-template-columns:1fr;padding:40px 20px 60px}.side-col{position:static}.counter-grid{grid-template-columns:1fr}.comp-grid{grid-template-columns:1fr 1fr}.hero-banner{padding:90px 20px 48px}nav{padding:0 20px}}
+    @media(max-width:560px){.stats-grid{grid-template-columns:repeat(2,1fr)}.comp-grid{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
 
-<!-- NAV -->
-<nav class="site-nav">
-  <div class="logo">⚡ RIVALS GUIDE</div>
-  <a href="/index.html">Home</a>
-  <a href="/heroes.html">Heroes</a>
-  <a href="/tier-list.html">Tier List</a>
-  <a href="/patch-notes.html">Patch Notes</a>
+<nav>
+  <a class="nav-logo" href="/">RIVALS<span>GUIDE</span></a>
+  <a class="nav-back" href="/">← Back to Home</a>
 </nav>
 
-<!-- HERO BANNER -->
-<section class="hero-banner">
-  <div class="hero-banner-content">
-    <div class="hero-role-tag">⚔ Vanguard</div>
-    <h1 class="hero-name">Doctor Strange</h1>
-    <div class="hero-subtitle">Sorcerer Supreme</div>
-    <p class="hero-desc">
-      The first hero added to Marvel Rivals' roster. Doctor Strange commands the frontline
-      with his massive shield, game-changing portals, and a fight-winning ultimate that
-      rips enemy souls from their bodies. Master his Dark Magic mechanic and you'll
-      dictate where every team fight happens.
-    </p>
-    <div class="hero-tags">
-      <span class="hero-tag">🛡 Shield Control</span>
-      <span class="hero-tag">🌀 Portal</span>
-      <span class="hero-tag">💜 Dark Magic</span>
-      <span class="hero-tag">🔮 Crowd Control Ult</span>
-      <span class="hero-tag">✈ Flight</span>
+<div class="hero-banner">
+  <div class="banner-inner">
+    <div class="breadcrumb">
+      <a href="/">Home</a><span>›</span>
+      <a href="/">Heroes</a><span>›</span>
+      <span style="color:var(--text)">Doctor Strange</span>
     </div>
-    <div class="tier-badge">
-      <div class="tier-letter">A</div>
-      <div class="tier-info">
-        <strong>A Tier — Highly Recommended</strong>
-        Exceptional team fight value, high skill ceiling
-      </div>
+    <div class="banner-role">Vanguard · Tank</div>
+    <h1 class="banner-title"><span class="accent">Doctor Strange</span><br>Complete Guide</h1>
+    <p class="banner-sub">Stephen Strange — the Sorcerer Supreme who bends space, shields his team from devastation, and rips enemy souls from their bodies with a single ultimate.</p>
+    <p class="banner-hook">If you want to dictate where every team fight happens and hold the power to flip a losing round in 3 seconds — Doctor Strange is your answer.</p>
+    <div class="banner-tags">
+      <span class="tag purple">Vanguard</span>
+      <span class="tag gold">A-Tier</span>
+      <span class="tag">Shield Control</span>
+      <span class="tag">Portal Utility</span>
+      <span class="tag">Fight-Winning Ult</span>
     </div>
   </div>
-  <img
-    class="hero-banner-art"
-    src="https://marvelrivals.fandom.com/wiki/Special:FilePath/Doctor_Strange_Portrait.png"
-    alt="Doctor Strange"
-    onerror="this.style.display='none'"
-  />
-</section>
+</div>
 
-<!-- PAGE BODY -->
 <div class="page-body">
-<main class="main-col">
+  <div class="main-col">
 
-  <!-- STATS -->
-  <section class="card" id="stats">
-    <h2 class="section-title">Base Stats</h2>
-    <div class="stats-grid">
-      <div class="stat-box">
-        <div class="stat-val">650</div>
-        <div class="stat-label">Max HP</div>
+    <!-- STATS -->
+    <div class="section">
+      <div class="section-label">Overview</div>
+      <h2>Base <span>Stats</span></h2>
+      <div class="stats-grid">
+        <div class="stat-box"><span class="stat-val">650</span><span class="stat-key">Health</span></div>
+        <div class="stat-box"><span class="stat-val">16</span><span class="stat-key">Damage/Shot</span></div>
+        <div class="stat-box"><span class="stat-val">60 m/s</span><span class="stat-key">Proj. Speed</span></div>
+        <div class="stat-box"><span class="stat-val">5.56</span><span class="stat-key">Fire Rate</span></div>
+        <div class="stat-box"><span class="stat-val">20s</span><span class="stat-key">Portal Duration</span></div>
+        <div class="stat-box"><span class="stat-val">★★★☆☆</span><span class="stat-key">Difficulty</span></div>
       </div>
-      <div class="stat-box">
-        <div class="stat-val">16</div>
-        <div class="stat-label">Dagger Damage</div>
+
+      <!-- DARK MAGIC BAR -->
+      <div class="dm-bar-wrap">
+        <div class="dm-bar-label">💜 Dark Magic Mechanic</div>
+        <div class="dm-track"><div class="dm-fill"></div></div>
+        <div class="dm-labels">
+          <span>0 — Normal state</span>
+          <span>100 — Not released within 3s → Anti-Heal Curse</span>
+        </div>
       </div>
-      <div class="stat-box">
-        <div class="stat-val">60 m/s</div>
-        <div class="stat-label">Projectile Speed</div>
-      </div>
-      <div class="stat-box">
-        <div class="stat-val">5.56</div>
-        <div class="stat-label">Fire Rate (rps)</div>
-      </div>
-      <div class="stat-box">
-        <div class="stat-val">10</div>
-        <div class="stat-label">Magazine Size</div>
-      </div>
-      <div class="stat-box">
-        <div class="stat-val">20s</div>
-        <div class="stat-label">Portal Duration</div>
-      </div>
+
+      <p class="stat-desc">Doctor Strange is the first hero added to Marvel Rivals and one of the most tactically deep Vanguards in the roster. His massive shield controls entire sightlines, his portals rewrite team positioning in an instant, and his ultimate can stun every enemy in a 20-meter radius. The key to unlocking his full potential is mastering the Dark Magic mechanic — build stacks fast, release at the right moment, and never let the Anti-Heal curse trigger on you.</p>
     </div>
 
-    <!-- DARK MAGIC BAR -->
-    <div class="dark-magic-bar">
-      <h4>💜 Dark Magic Mechanic</h4>
-      <div class="dm-track"><div class="dm-fill"></div></div>
-      <div class="dm-labels">
-        <span>0 — Normal</span>
-        <span>100 — Not released within 3s → Anti-Heal Curse</span>
-      </div>
-    </div>
+    <!-- ABILITIES -->
+    <div class="section">
+      <div class="section-label">Kit Breakdown</div>
+      <h2>Abilities <span>&amp; Skills</span></h2>
+      <div class="ability-list">
 
-    <!-- VERDICT -->
-    <div class="verdict-grid">
-      <div class="verdict-box pros">
-        <h4>✦ Strengths</h4>
-        <ul>
-          <li>Massive shield blocks most enemy ultimates</li>
-          <li>Portals can instantly reposition the entire team</li>
-          <li>Eye of Agamotto can single-handedly win a fight</li>
-          <li>Balanced offense and defense, adapts to any comp</li>
-          <li>Excels on defensive objective points</li>
-        </ul>
-      </div>
-      <div class="verdict-box cons">
-        <h4>✦ Weaknesses</h4>
-        <ul>
-          <li>Poor mobility — Cloak of Levitation has a long cooldown</li>
-          <li>Melee heroes bypass the shield and hit him directly</li>
-          <li>Portal is cancelled instantly if hit during cast</li>
-          <li>Heavily team-reliant — shield alone won't win games</li>
-          <li>Mismanaging Dark Magic triggers self Anti-Heal</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="sources-note">
-      Data sourced from:
-      <a href="https://marvelrivals.fandom.com/wiki/Doctor_Strange" target="_blank">Marvel Rivals Fandom Wiki</a>,
-      <a href="https://mobalytics.gg/marvel-rivals/dr-strange-guide" target="_blank">Mobalytics</a>,
-      <a href="https://hardcoregamer.com/marvel-rivals-doctor-strange-guide/" target="_blank">Hardcore Gamer</a>
-    </div>
-  </section>
-
-  <!-- ABILITIES -->
-  <section class="card" id="abilities">
-    <h2 class="section-title">Abilities</h2>
-    <div class="ability-list">
-
-      <!-- PASSIVE -->
-      <div class="ability-card">
-        <div class="ability-header">
-          <div class="ability-icon">💜</div>
-          <div class="ability-meta">
+        <div class="ability-item">
+          <div class="ability-key passive">PASSIVE</div>
+          <div class="ability-body">
             <div class="ability-name">Price of Magic</div>
-            <div class="ability-key">PASSIVE</div>
+            <div class="ability-desc">Every hit from primary fire or melee builds Dark Magic stacks up to 100. Reaching the cap and failing to release within 3 seconds triggers Anti-Heal — preventing all healing. Stacks decay naturally when you stop dealing damage.</div>
+            <div class="ability-stats">
+              <span class="ability-stat-chip">Dagger hit: <b>+3.5</b> stacks</span>
+              <span class="ability-stat-chip">Melee hit: <b>+10</b> stacks</span>
+              <span class="ability-stat-chip">Cap: <b>100</b> stacks</span>
+            </div>
+            <div class="ability-tip">💡 Melee gives nearly 3× more Dark Magic per hit than daggers. Weaving melee between shots is the fastest way to charge Maelstrom of Madness.</div>
           </div>
-          <span class="ability-type-tag passive-badge">Passive</span>
         </div>
-        <div class="ability-body">
-          <p class="ability-desc">
-            Each hit from primary fire or melee builds Dark Magic stacks (max 100).
-            If you reach 100 and don't release within 3 seconds, you're afflicted with
-            <strong style="color:var(--red)">Anti-Heal</strong> — preventing all healing for a few seconds.
-            Dark Magic decays naturally when you stop dealing damage.
-          </p>
-          <div class="ability-stats-row">
-            <div class="ability-stat-chip">Dagger hit +<span>3.5</span> Dark Magic</div>
-            <div class="ability-stat-chip">Melee hit +<span>10</span> Dark Magic</div>
-            <div class="ability-stat-chip">Cap <span>100</span> stacks</div>
-            <div class="ability-stat-chip">Penalty <span>Anti-Heal</span></div>
-          </div>
-          <ul class="ability-tips">
-            <li>Weaving melee between shots builds Dark Magic much faster than primary fire alone</li>
-            <li>Once decay starts, you can't regain stacks until fully released or zeroed out</li>
-            <li>Watch the glowing purple cape symbol — brighter means closer to 100</li>
-          </ul>
-        </div>
-      </div>
 
-      <!-- PRIMARY -->
-      <div class="ability-card">
-        <div class="ability-header">
-          <div class="ability-icon">🗡</div>
-          <div class="ability-meta">
+        <div class="ability-item">
+          <div class="ability-key">LMB</div>
+          <div class="ability-body">
             <div class="ability-name">Daggers of Denak</div>
-            <div class="ability-key">PRIMARY FIRE · Left Click / R2</div>
+            <div class="ability-desc">Fires five-round delayed-hit projectiles forward. Slow fire rate with a 0.03s gap between every two rounds — but that gap is your window to weave in melee or shield to cancel end-lag and boost DPS. Effective against airborne targets; struggles in close-range brawls.</div>
+            <div class="ability-stats">
+              <span class="ability-stat-chip">Damage: <b>16/shot</b></span>
+              <span class="ability-stat-chip">Magazine: <b>10 shots</b></span>
+              <span class="ability-stat-chip">Speed: <b>60 m/s</b></span>
+              <span class="ability-stat-chip">Falloff: <b>starts at 10m</b></span>
+            </div>
+            <div class="ability-tip">💡 Raise Shield of the Seraphim during reload to cancel ~1/3 of the reload animation. This adds up significantly over a full match.</div>
           </div>
-          <span class="ability-type-tag">Primary</span>
         </div>
-        <div class="ability-body">
-          <p class="ability-desc">
-            Fires magical daggers forward as delayed-hit projectiles. Slow fire rate
-            but can be weaved with melee to cancel end-lag and boost DPS.
-            Effective against airborne targets like Iron Man, but struggles in close-range
-            brawls against melee heroes.
-          </p>
-          <div class="ability-stats-row">
-            <div class="ability-stat-chip">Damage <span>16/shot</span></div>
-            <div class="ability-stat-chip">Magazine <span>10 shots</span></div>
-            <div class="ability-stat-chip">Fire Rate <span>5.56 rps</span></div>
-            <div class="ability-stat-chip">Speed <span>60 m/s</span></div>
-            <div class="ability-stat-chip">Falloff starts <span>10m</span></div>
-            <div class="ability-stat-chip">Max falloff <span>80% @ 20m</span></div>
-          </div>
-          <ul class="ability-tips">
-            <li>0.03s gap between every two rounds — plenty of time to weave in melee or shield</li>
-            <li>Use Shield of the Seraphim to cancel the reload animation, saving ~1/3 of reload time</li>
-            <li>Alternating primary fire and melee is the core DPS technique for Strange</li>
-          </ul>
-        </div>
-      </div>
 
-      <!-- SHIELD -->
-      <div class="ability-card">
-        <div class="ability-header">
-          <div class="ability-icon">🛡</div>
-          <div class="ability-meta">
+        <div class="ability-item">
+          <div class="ability-key">RMB</div>
+          <div class="ability-body">
             <div class="ability-name">Shield of the Seraphim</div>
-            <div class="ability-key">SECONDARY FIRE · Right Click / L2</div>
+            <div class="ability-desc">Projects a large radial shield in front of Strange with its own health pool, absorbing all incoming projectiles. Movement speed is reduced while active. Can be used simultaneously while flying. This is Strange's most defining ability — it controls where the entire team fights.</div>
+            <div class="ability-tip">💡 The shield blocks projectile ultimates like Hela's and Iron Man's — but melee attacks punch straight through. If Wolverine or Hulk dives you, fly away immediately.</div>
           </div>
-          <span class="ability-type-tag">Defense</span>
         </div>
-        <div class="ability-body">
-          <p class="ability-desc">
-            Projects a large radial shield in front of Strange with its own health pool,
-            absorbing all incoming projectiles. Movement speed is reduced while active,
-            but it can be used simultaneously while flying.
-            This is Strange's most defining ability — it dictates the entire team's positioning.
-          </p>
-          <ul class="ability-tips">
-            <li>Blocks projectile ultimates like Hela's Goddess of Death and Iron Man's ult</li>
-            <li>Cannot block melee attacks — Wolverine, Hulk, and Iron Fist punch straight through</li>
-            <li>Play passively near cover when shield HP is low; push aggressively when it's full</li>
-            <li>Cancel the primary fire reload with shield to save ~1/3 of reload time</li>
-            <li>Holding shield while flying gives both height advantage and projectile protection</li>
-          </ul>
-        </div>
-      </div>
 
-      <!-- MAELSTROM -->
-      <div class="ability-card">
-        <div class="ability-header">
-          <div class="ability-icon">🌀</div>
-          <div class="ability-meta">
+        <div class="ability-item">
+          <div class="ability-key">R1 / RB</div>
+          <div class="ability-body">
             <div class="ability-name">Maelstrom of Madness</div>
-            <div class="ability-key">ABILITY 1 · Right Click / R1</div>
+            <div class="ability-desc">Releases all accumulated Dark Magic as a melee-range AoE burst. Damage scales at 1.2 per stack — meaning a full 100-stack release deals 120 damage to everything around you. Also clears your stacks to prevent the Anti-Heal curse.</div>
+            <div class="ability-stats">
+              <span class="ability-stat-chip">Formula: <b>stacks × 1.2</b></span>
+              <span class="ability-stat-chip">Max damage: <b>120</b></span>
+              <span class="ability-stat-chip">Type: <b>melee-range AoE</b></span>
+            </div>
+            <div class="ability-tip">💡 Always release as close to 100 stacks as possible. Teaming with Hulk triggers Gamma Maelstrom, significantly boosting this ability's damage output.</div>
           </div>
-          <span class="ability-type-tag">Burst</span>
         </div>
-        <div class="ability-body">
-          <p class="ability-desc">
-            Releases all accumulated Dark Magic as an AoE burst around Strange.
-            Damage scales directly with current Dark Magic stacks at
-            <strong style="color:var(--gold)">1.2 damage per stack</strong>,
-            dealing up to <strong style="color:var(--gold)">120 damage</strong> at full charge.
-            Also clears Dark Magic to prevent the Anti-Heal curse.
-          </p>
-          <div class="ability-stats-row">
-            <div class="ability-stat-chip">Formula <span>Stacks × 1.2</span></div>
-            <div class="ability-stat-chip">Max Damage <span>120</span></div>
-            <div class="ability-stat-chip">Type <span>Melee-range AoE</span></div>
-          </div>
-          <ul class="ability-tips">
-            <li>Always release as close to 100 stacks as possible to maximize damage</li>
-            <li>Requires melee range — use your shield to close the gap safely</li>
-            <li>Teaming with Hulk triggers Gamma Maelstrom, significantly boosting this ability's damage</li>
-            <li>Can be used defensively just to dump stacks and avoid the Anti-Heal penalty</li>
-          </ul>
-        </div>
-      </div>
 
-      <!-- PORTAL -->
-      <div class="ability-card">
-        <div class="ability-header">
-          <div class="ability-icon">🌐</div>
-          <div class="ability-meta">
+        <div class="ability-item">
+          <div class="ability-key">E / Y</div>
+          <div class="ability-body">
             <div class="ability-name">Pentagram of Farallah</div>
-            <div class="ability-key">ABILITY 2 · Triangle / Y</div>
+            <div class="ability-desc">Opens two portals anywhere on the map, lasting 20 seconds. Both allies and enemies can pass through, and all projectiles — including ultimates — travel through the portals. The first portal's position can be repositioned before placing the second.</div>
+            <div class="ability-stats">
+              <span class="ability-stat-chip">Duration: <b>20s</b></span>
+              <span class="ability-stat-chip">Cooldown: <b>Very long</b></span>
+              <span class="ability-stat-chip">Projectiles: <b>pass through</b></span>
+            </div>
+            <div class="ability-tip">💡 Any hit during the cast instantly cancels it and triggers the full cooldown. Always cast from safety. Best use: teleport your whole team from spawn to the objective at round start.</div>
           </div>
-          <span class="ability-type-tag">Tactical</span>
         </div>
-        <div class="ability-body">
-          <p class="ability-desc">
-            Opens two portals anywhere on the map, lasting 20 seconds.
-            Both allies and enemies can pass through, and all projectiles — including ultimates —
-            travel through the portals. The first portal's position can be repositioned
-            before placing the second, offering massive tactical flexibility.
-          </p>
-          <div class="ability-stats-row">
-            <div class="ability-stat-chip">Duration <span>20s</span></div>
-            <div class="ability-stat-chip">Cooldown <span>Very Long</span></div>
-            <div class="ability-stat-chip">Projectiles <span>Pass Through</span></div>
-          </div>
-          <ul class="ability-tips">
-            <li>Any hit during the cast instantly cancels it and triggers the full cooldown — cast from safety</li>
-            <li>Casting mid-air causes Strange to hover until the second portal is placed</li>
-            <li>Projectiles can only pass through once per cast — no bouncing tricks</li>
-            <li>Best use: teleport your team from spawn to the objective, or flank behind the enemy backline</li>
-            <li>Practice portal placement in the Practice Range — every second of execution time matters</li>
-          </ul>
-        </div>
-      </div>
 
-      <!-- CLOAK -->
-      <div class="ability-card">
-        <div class="ability-header">
-          <div class="ability-icon">✈</div>
-          <div class="ability-meta">
+        <div class="ability-item">
+          <div class="ability-key">SHIFT / L1</div>
+          <div class="ability-body">
             <div class="ability-name">Cloak of Levitation</div>
-            <div class="ability-key">MOVEMENT · Shift / L1</div>
+            <div class="ability-desc">Strange takes flight, allowing aerial attacks or escapes. The cast has a notable wind-up during which Strange is fully exposed to all attacks. Flight speed is not fast enough to reliably escape aggressive melee divers.</div>
+            <div class="ability-tip">💡 Use it to escape Hulk and Wolverine dives, fly over Groot's walls, or dodge Jeff the Land Shark's swallow ultimate. Flying + shield simultaneously gives both height and projectile defense.</div>
           </div>
-          <span class="ability-type-tag">Mobility</span>
         </div>
-        <div class="ability-body">
-          <p class="ability-desc">
-            Strange takes flight, allowing aerial attacks or escapes from danger.
-            The cast has a notable wind-up during which Strange is fully exposed.
-            Flight speed is not fast enough to reliably escape aggressive melee divers.
-          </p>
-          <ul class="ability-tips">
-            <li>Immediately fly when Hulk or Wolverine dive you — you cannot win that ground fight</li>
-            <li>Use to fly over terrain obstacles like Groot's walls</li>
-            <li>Escape Jeff the Land Shark's swallow ultimate by going airborne</li>
-            <li>Flying + shield simultaneously gives both height advantage and projectile defense</li>
-            <li>Drop from high ground or flank angles before using your ultimate for maximum surprise</li>
-          </ul>
-        </div>
-      </div>
 
-      <!-- ULTIMATE -->
-      <div class="ability-card">
-        <div class="ability-header">
-          <div class="ability-icon">👁</div>
-          <div class="ability-meta">
+        <div class="ability-item">
+          <div class="ability-key ult">Q — ULT</div>
+          <div class="ability-body">
             <div class="ability-name">Eye of Agamotto</div>
-            <div class="ability-key">ULTIMATE · Q / Both Sticks</div>
+            <div class="ability-desc">Releases a shockwave in a 20-meter diameter around Strange, ripping the souls of all enemies within range from their bodies for 3 seconds. All damage dealt to the projected souls is reflected back to their physical bodies. Even in a losing fight, one well-placed ult can instantly flip the round.</div>
+            <div class="ability-stats">
+              <span class="ability-stat-chip">Range: <b>20m diameter</b></span>
+              <span class="ability-stat-chip">Stun: <b>3 seconds</b></span>
+              <span class="ability-stat-chip">Soul damage: <b>100% reflected</b></span>
+            </div>
+            <div class="ability-tip">💡 Dive from high ground or flank angles to reduce the chance of enemies dodging out of range. Your team must follow up immediately — the 3-second window is everything.</div>
           </div>
-          <span class="ability-type-tag ult-badge">Ultimate</span>
         </div>
-        <div class="ability-body">
-          <p class="ability-desc">
-            Releases a shockwave in a <strong style="color:var(--orange)">20-meter diameter</strong> around Strange,
-            ripping the souls of all enemies within range from their bodies for
-            <strong style="color:var(--orange)">3 seconds</strong>.
-            All damage dealt to the projected souls is reflected back to their physical bodies.
-            Even in a losing fight, one well-placed ult can instantly flip the round.
-          </p>
-          <div class="ability-stats-row">
-            <div class="ability-stat-chip">Range <span>20m diameter</span></div>
-            <div class="ability-stat-chip">Stun Duration <span>3 seconds</span></div>
-            <div class="ability-stat-chip">Soul Damage <span>100% reflected</span></div>
-          </div>
-          <ul class="ability-tips">
-            <li>Use when enemies are grouped — the more souls caught, the higher the value</li>
-            <li>Dive from high ground or flanks to reduce the chance of enemies dodging out of range</li>
-            <li>If Strange is walking past your tanks, he's likely looking for an ult angle — spread out</li>
-            <li>Your team must follow up immediately — the 3-second window is everything</li>
-            <li>Weaving primary fire and melee charges the ult meter faster</li>
-          </ul>
-        </div>
-      </div>
 
-      <!-- TEAM-UP -->
-      <div class="ability-card">
-        <div class="ability-header">
-          <div class="ability-icon">🤝</div>
-          <div class="ability-meta">
-            <div class="ability-name">Gamma Maelstrom</div>
-            <div class="ability-key">TEAM-UP · With Hulk</div>
-          </div>
-          <span class="ability-type-tag teamup-badge">Team-Up</span>
-        </div>
-        <div class="ability-body">
-          <p class="ability-desc">
-            When teamed with Hulk, Doctor Strange receives excess Gamma energy,
-            significantly boosting the damage of <strong>Maelstrom of Madness</strong>.
-            Strange also has team-up synergies with Scarlet Witch and Magik.
-          </p>
-          <ul class="ability-tips">
-            <li>Hulk + Strange is a classic high-pressure dive composition</li>
-            <li>Scarlet Witch and Magik synergies enhance magical crowd control potential</li>
-          </ul>
-        </div>
-      </div>
-
-    </div><!-- /ability-list -->
-
-    <div class="sources-note">
-      Ability data sourced from:
-      <a href="https://marvelrivals.fandom.com/wiki/Doctor_Strange" target="_blank">Marvel Rivals Fandom Wiki</a>,
-      <a href="https://mobalytics.gg/marvel-rivals/dr-strange-guide" target="_blank">Mobalytics</a>,
-      <a href="https://hardcoregamer.com/marvel-rivals-doctor-strange-guide/" target="_blank">Hardcore Gamer</a>
-    </div>
-  </section>
-
-  <!-- COUNTERS -->
-  <section class="card" id="counters">
-    <h2 class="section-title">Counters & Synergy</h2>
-    <div class="matchup-grid">
-
-      <div class="matchup-box threats">
-        <h4>⚠ Counters Doctor Strange</h4>
-        <div class="matchup-hero">
-          <div class="matchup-hero-icon">🐺</div>
-          <div class="matchup-hero-info">
-            <div class="matchup-hero-name">Wolverine</div>
-            <div class="matchup-hero-reason">Melee bypasses shield; high mobility makes escape difficult</div>
+        <div class="ability-item">
+          <div class="ability-key teamup">TEAM-UP</div>
+          <div class="ability-body">
+            <div class="ability-name">Gamma Maelstrom — with Hulk</div>
+            <div class="ability-desc">When teamed with Hulk, Doctor Strange receives excess Gamma energy, significantly boosting the damage of Maelstrom of Madness. Strange also has team-up synergies with Scarlet Witch and Magik that enhance magical crowd control potential.</div>
+            <div class="ability-tip">💡 Hulk + Strange is a classic high-pressure dive composition — Hulk draws all frontline aggro while Strange flanks and unloads Maelstrom from the side.</div>
           </div>
         </div>
-        <div class="matchup-hero">
-          <div class="matchup-hero-icon">💚</div>
-          <div class="matchup-hero-info">
-            <div class="matchup-hero-name">Hulk</div>
-            <div class="matchup-hero-reason">Melee smashes through shield; leap closes distance instantly</div>
-          </div>
-        </div>
-        <div class="matchup-hero">
-          <div class="matchup-hero-icon">🕷</div>
-          <div class="matchup-hero-info">
-            <div class="matchup-hero-name">Spider-Man</div>
-            <div class="matchup-hero-reason">High-mobility melee; shield is useless, hard to track</div>
-          </div>
-        </div>
-        <div class="matchup-hero">
-          <div class="matchup-hero-icon">👊</div>
-          <div class="matchup-hero-info">
-            <div class="matchup-hero-name">Iron Fist</div>
-            <div class="matchup-hero-reason">Extreme melee burst; shield provides zero protection</div>
-          </div>
-        </div>
-      </div>
 
-      <div class="matchup-box synergy">
-        <h4>✦ Best Synergies</h4>
-        <div class="matchup-hero">
-          <div class="matchup-hero-icon">💚</div>
-          <div class="matchup-hero-info">
-            <div class="matchup-hero-name">Hulk</div>
-            <div class="matchup-hero-reason">Gamma Maelstrom team-up boosts Maelstrom of Madness damage</div>
-          </div>
-        </div>
-        <div class="matchup-hero">
-          <div class="matchup-hero-icon">🌸</div>
-          <div class="matchup-hero-info">
-            <div class="matchup-hero-name">Mantis</div>
-            <div class="matchup-hero-reason">Damage amp makes Maelstrom burst even more threatening</div>
-          </div>
-        </div>
-        <div class="matchup-hero">
-          <div class="matchup-hero-icon">🔴</div>
-          <div class="matchup-hero-info">
-            <div class="matchup-hero-name">Scarlet Witch</div>
-            <div class="matchup-hero-reason">Magic team-up; double crowd control locks down enemies</div>
-          </div>
-        </div>
-        <div class="matchup-hero">
-          <div class="matchup-hero-icon">⚡</div>
-          <div class="matchup-hero-info">
-            <div class="matchup-hero-name">Thor</div>
-            <div class="matchup-hero-reason">Shield covers Thor's charge; ult combo wipes entire teams</div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-    <div class="sources-note">
-      Matchup analysis sourced from:
-      <a href="https://mobalytics.gg/marvel-rivals/dr-strange-guide" target="_blank">Mobalytics</a>,
-      <a href="https://hardcoregamer.com/marvel-rivals-doctor-strange-guide/" target="_blank">Hardcore Gamer</a>
-    </div>
-  </section>
-
-</main>
-<!-- SIDEBAR -->
-<aside>
-  <div class="card" style="position:sticky;top:72px;">
-    <h2 class="section-title" style="font-size:1rem;">Quick Nav</h2>
-    <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;margin-bottom:20px;">
-      <li><a href="#stats" style="font-size:0.85rem;color:var(--text-muted);">📊 Base Stats</a></li>
-      <li><a href="#abilities" style="font-size:0.85rem;color:var(--text-muted);">⚡ Abilities</a></li>
-      <li><a href="#combos" style="font-size:0.85rem;color:var(--text-muted);">🔥 Combos</a></li>
-      <li><a href="#strategy" style="font-size:0.85rem;color:var(--text-muted);">🧠 Strategy</a></li>
-      <li><a href="#counters" style="font-size:0.85rem;color:var(--text-muted);">⚔ Counters</a></li>
-    </ul>
-
-    <!-- DIFFICULTY -->
-    <div style="padding-top:16px;border-top:1px solid var(--border);margin-bottom:16px;">
-      <div style="font-size:0.72rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:10px;">Difficulty</div>
-      <div style="display:flex;gap:6px;align-items:center;">
-        <div style="width:12px;height:12px;border-radius:50%;background:var(--orange);"></div>
-        <div style="width:12px;height:12px;border-radius:50%;background:var(--orange);"></div>
-        <div style="width:12px;height:12px;border-radius:50%;background:var(--orange);"></div>
-        <div style="width:12px;height:12px;border-radius:50%;background:var(--border);"></div>
-        <div style="width:12px;height:12px;border-radius:50%;background:var(--border);"></div>
-        <span style="font-size:0.8rem;color:var(--text-muted);margin-left:6px;">Medium-Hard</span>
       </div>
     </div>
 
-    <!-- RATINGS -->
-    <div style="padding-top:16px;border-top:1px solid var(--border);margin-bottom:16px;">
-      <div style="font-size:0.72rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:10px;">Role Ratings</div>
-      <div class="rating-row">
-        <span>Shield Control</span>
-        <div class="dots">
-          <div class="dot on"></div><div class="dot on"></div>
-          <div class="dot on"></div><div class="dot on"></div>
-          <div class="dot off"></div>
+    <!-- COUNTERS -->
+    <div class="section">
+      <div class="section-label">Matchup Analysis</div>
+      <h2>Counters <span>&amp; Matchups</span></h2>
+      <div class="counter-grid">
+        <div class="counter-col good">
+          <div class="counter-col-title">✅ Doctor Strange Counters</div>
+          <div class="counter-entry">
+            <div class="counter-emoji">🥇</div>
+            <div>
+              <div class="counter-name">Iron Man</div>
+              <div class="counter-reason">Shield blocks his Unibeam entirely. Strange can hold ground and deny Iron Man's entire kit.</div>
+            </div>
+          </div>
+          <div class="counter-entry">
+            <div class="counter-emoji">💀</div>
+            <div>
+              <div class="counter-name">Hela</div>
+              <div class="counter-reason">Shield absorbs Goddess of Death projectiles. Strange completely nullifies her poke damage.</div>
+            </div>
+          </div>
+          <div class="counter-entry">
+            <div class="counter-emoji">🐿</div>
+            <div>
+              <div class="counter-name">Squirrel Girl</div>
+              <div class="counter-reason">Shield blocks her projectile ultimate. Strange hard-counters most ranged DPS heroes.</div>
+            </div>
+          </div>
+          <div class="counter-entry">
+            <div class="counter-emoji">🟢</div>
+            <div>
+              <div class="counter-name">Ranged DPS (General)</div>
+              <div class="counter-reason">Any hero relying on projectiles is severely limited by Strange's shield presence.</div>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="rating-row">
-        <span>Team Fight CC</span>
-        <div class="dots">
-          <div class="dot on"></div><div class="dot on"></div>
-          <div class="dot on"></div><div class="dot on"></div>
-          <div class="dot on"></div>
-        </div>
-      </div>
-      <div class="rating-row">
-        <span>Mobility</span>
-        <div class="dots">
-          <div class="dot on"></div><div class="dot on"></div>
-          <div class="dot off"></div><div class="dot off"></div>
-          <div class="dot off"></div>
-        </div>
-      </div>
-      <div class="rating-row">
-        <span>Single Target DMG</span>
-        <div class="dots">
-          <div class="dot on"></div><div class="dot on"></div>
-          <div class="dot on"></div><div class="dot off"></div>
-          <div class="dot off"></div>
+        <div class="counter-col bad">
+          <div class="counter-col-title">❌ Hard Counters Doctor Strange</div>
+          <div class="counter-entry">
+            <div class="counter-emoji">🐺</div>
+            <div>
+              <div class="counter-name">Wolverine</div>
+              <div class="counter-reason">Melee bypasses shield entirely. High mobility makes escaping nearly impossible.</div>
+            </div>
+          </div>
+          <div class="counter-entry">
+            <div class="counter-emoji">💚</div>
+            <div>
+              <div class="counter-name">Hulk</div>
+              <div class="counter-reason">Melee smashes through shield. Leap closes distance instantly — fly away immediately.</div>
+            </div>
+          </div>
+          <div class="counter-entry">
+            <div class="counter-emoji">🕷</div>
+            <div>
+              <div class="counter-name">Spider-Man</div>
+              <div class="counter-reason">High-mobility melee diver. Web Cocoon hard-counters Strange's shield timing.</div>
+            </div>
+          </div>
+          <div class="counter-entry">
+            <div class="counter-emoji">👊</div>
+            <div>
+              <div class="counter-name">Iron Fist</div>
+              <div class="counter-reason">Extreme melee burst — shield provides zero protection against him.</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
 
-    <!-- TEAM-UPS -->
-    <div style="padding-top:16px;border-top:1px solid var(--border);">
-      <div style="font-size:0.72rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:10px;">Team-Up Heroes</div>
+    <!-- TEAM COMP -->
+    <div class="section">
+      <div class="section-label">Team Strategy</div>
+      <h2>Best Team <span>Compositions</span></h2>
+      <div class="comp-grid">
+        <div class="comp-card">
+          <div class="comp-role tank">Co-Tank</div>
+          <div class="comp-hero">
+            <div class="comp-hero-emoji">💚</div>
+            <div>
+              <div class="comp-hero-name">Hulk</div>
+              <div class="comp-hero-reason">Gamma Maelstrom team-up boosts Strange's burst damage significantly</div>
+            </div>
+          </div>
+          <div class="comp-hero">
+            <div class="comp-hero-emoji">⚡</div>
+            <div>
+              <div class="comp-hero-name">Thor</div>
+              <div class="comp-hero-reason">Strange's shield covers Thor's charge; ult combo wipes entire teams</div>
+            </div>
+          </div>
+          <div class="comp-synergy">Hulk absorbs frontline aggro while Strange's shield covers the flanks — enemies are forced to fight on two fronts simultaneously.</div>
+        </div>
+        <div class="comp-card">
+          <div class="comp-role support">Support</div>
+          <div class="comp-hero">
+            <div class="comp-hero-emoji">🌸</div>
+            <div>
+              <div class="comp-hero-name">Mantis</div>
+              <div class="comp-hero-reason">Damage amp makes Maelstrom burst far more threatening</div>
+            </div>
+          </div>
+          <div class="comp-hero">
+            <div class="comp-hero-emoji">🃏</div>
+            <div>
+              <div class="comp-hero-name">Loki</div>
+              <div class="comp-hero-reason">Clone distractions mask Strange's portal cast, preventing interruption</div>
+            </div>
+          </div>
+          <div class="comp-synergy support">Mantis's damage amp on a full 100-stack Maelstrom release creates one of the highest single-ability burst moments in the game.</div>
+        </div>
+        <div class="comp-card">
+          <div class="comp-role dps">DPS Partner</div>
+          <div class="comp-hero">
+            <div class="comp-hero-emoji">🔴</div>
+            <div>
+              <div class="comp-hero-name">Scarlet Witch</div>
+              <div class="comp-hero-reason">Magic team-up synergy; AoE follow-up on Eye of Agamotto stun</div>
+            </div>
+          </div>
+          <div class="comp-hero">
+            <div class="comp-hero-emoji">💀</div>
+            <div>
+              <div class="comp-hero-name">Hela</div>
+              <div class="comp-hero-reason">Long-range pressure forces enemies to cluster — perfect ult targets</div>
+            </div>
+          </div>
+          <div class="comp-synergy dps">Hela forces enemies to group behind cover, then Strange portals in and pops Eye of Agamotto — Scarlet Witch cleans up the stunned souls instantly.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- COMBOS -->
+    <div class="section">
+      <div class="section-label">Advanced Techniques</div>
+      <h2>Combo <span>Guide</span></h2>
+
+      <p style="margin-bottom:8px;font-size:0.88rem;">Choose your starting point based on your current skill level:</p>
+      <table class="difficulty-table">
+        <thead>
+          <tr>
+            <th>Combo</th>
+            <th>Difficulty</th>
+            <th>Best For</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="font-weight:700">Primary / Melee Weave</td>
+            <td><span class="diff-badge diff-med">⭐⭐ Medium</span></td>
+            <td style="color:var(--muted)">New Strange players</td>
+          </tr>
+          <tr>
+            <td style="font-weight:700">Shield Reload Cancel</td>
+            <td><span class="diff-badge diff-hard">⭐⭐⭐ Hard</span></td>
+            <td style="color:var(--muted)">Players with weave down</td>
+          </tr>
+          <tr>
+            <td style="font-weight:700">Portal Flank + Ult</td>
+            <td><span class="diff-badge diff-expert">⭐⭐⭐⭐⭐ Expert</span></td>
+            <td style="color:var(--muted)">High-rank / competitive play</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="combo-section-divider"></div>
+      <h3 style="margin-bottom:16px;color:var(--gold)">Primary / Melee Weave</h3>
+      <ul class="combo-steps">
+        <li class="combo-step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <div class="step-title">Fire primary <span class="key-badge">LMB</span> <span class="time-badge">0.0s</span></div>
+            <div class="step-desc">Fire one dagger. Don't wait for the end-lag animation to finish.</div>
+          </div>
+        </li>
+        <li class="combo-step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <div class="step-title">Immediately melee <span class="key-badge">MELEE</span> <span class="time-badge">~0.1s</span></div>
+            <div class="step-desc">The melee cancels the dagger's end-lag frame. You deal both hits faster than firing two daggers normally.</div>
+          </div>
+        </li>
+        <li class="combo-step">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <div class="step-title">Repeat the loop <span class="time-badge">ongoing</span></div>
+            <div class="step-desc">Each melee hit gives +10 Dark Magic vs +3.5 from daggers. Dark Magic charges to 100 in roughly half the time.</div>
+          </div>
+        </li>
+        <li class="combo-step">
+          <div class="step-num">4</div>
+          <div class="step-body">
+            <div class="step-title">Release Maelstrom at 100 stacks <span class="key-badge">R1</span></div>
+            <div class="step-desc">Full 120 AoE burst. Most squishies die here. Immediately resume the weave loop to recharge.</div>
+          </div>
+        </li>
+      </ul>
+      <div class="combo-note"><strong>Pro tip:</strong> This weave also charges your ultimate meter faster. Players who master this loop consistently out-damage Strange players who only use primary fire.</div>
+
+      <div class="combo-section-divider"></div>
+      <h3 style="margin-bottom:16px;color:var(--gold)">Shield Reload Cancel</h3>
+      <ul class="combo-steps">
+        <li class="combo-step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <div class="step-title">Deplete magazine <span class="key-badge">LMB</span></div>
+            <div class="step-desc">Fire until the reload animation begins.</div>
+          </div>
+        </li>
+        <li class="combo-step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <div class="step-title">Immediately raise shield <span class="key-badge">RMB</span> <span class="time-badge">~0.1s</span></div>
+            <div class="step-desc">Activating Shield of the Seraphim interrupts the reload animation mid-cycle.</div>
+          </div>
+        </li>
+        <li class="combo-step">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <div class="step-title">Lower shield — reload completes <span class="time-badge">~0.3s saved</span></div>
+            <div class="step-desc">The reload finishes roughly 1/3 faster than normal. Resume firing immediately.</div>
+          </div>
+        </li>
+      </ul>
+      <div class="combo-note"><strong>Why it matters:</strong> Over a full match this saves several seconds of dead time where Strange can't deal damage or build Dark Magic. Small edge, massive compounding advantage.</div>
+
+      <div class="combo-section-divider"></div>
+      <h3 style="margin-bottom:4px;color:var(--blue)">Portal Flank + Ult <span class="diff-badge diff-expert" style="font-size:0.72rem;vertical-align:middle">Expert</span></h3>
+      <p style="font-size:0.83rem;margin-bottom:16px;">Use Pentagram of Farallah to appear behind the enemy backline before popping Eye of Agamotto — making the stun nearly impossible to dodge.</p>
+      <ul class="combo-steps">
+        <li class="combo-step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <div class="step-title">Cast portal from a safe off-angle <span class="key-badge">E</span></div>
+            <div class="step-desc">Find cover before casting — any hit cancels the portal and triggers full cooldown. Take your time placing it correctly.</div>
+          </div>
+        </li>
+        <li class="combo-step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <div class="step-title">Place exit portal directly behind enemy backline</div>
+            <div class="step-desc">Aim for a spot where 3+ enemies are clustered. The portal exit should be within Eye of Agamotto's 20m diameter range.</div>
+          </div>
+        </li>
+        <li class="combo-step">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <div class="step-title">Step through — enemies are caught completely off guard</div>
+            <div class="step-desc">Enemies rarely expect Strange to appear behind them. They're facing the wrong direction.</div>
+          </div>
+        </li>
+        <li class="combo-step">
+          <div class="step-num">4</div>
+          <div class="step-body">
+            <div class="step-title">Immediately pop Eye of Agamotto <span class="key-badge">Q</span></div>
+            <div class="step-desc">Fire the ult the moment you step through. Enemies have zero time to spread out or react.</div>
+          </div>
+        </li>
+        <li class="combo-step">
+          <div class="step-num">5</div>
+          <div class="step-body">
+            <div class="step-title">Your team follows through the portal to clean up</div>
+            <div class="step-desc">The portal is still open. Your team pours through and unloads on the stunned souls. 3-second window — communicate before executing.</div>
+          </div>
+        </li>
+      </ul>
+      <div class="combo-note"><strong>Why it works:</strong> Enemies track Strange's position on the frontline and expect the ult to come from that direction. The portal breaks their spatial awareness entirely — they're pre-aiming the wrong angle when the shockwave hits.</div>
+    </div>
+
+    <!-- FAQ -->
+    <div class="section">
+      <div class="section-label">Common Questions</div>
+      <h2>FAQ</h2>
+      <div class="faq-list">
+        <div class="faq-item open">
+          <button class="faq-q" onclick="toggleFaq(this)">Is Doctor Strange good for beginners? <span class="faq-arrow">▼</span></button>
+          <div class="faq-a"><p>He's more beginner-friendly than Spider-Man but still has meaningful depth. His shield is intuitive and his ultimate is hard to waste. The Dark Magic mechanic is the main learning curve — new players often forget to release stacks and accidentally trigger Anti-Heal at the worst moments. Spend 10 minutes in the Practice Range learning the weave loop before your first ranked game.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">When should I use my portal? <span class="faq-arrow">▼</span></button>
+          <div class="faq-a"><p>The two best uses are: (1) teleporting your whole team from spawn to the objective at round start — this can win rounds before the enemy is even set up, and (2) flanking behind the enemy backline before your ultimate. Never use it reactively in the middle of a fight — the cast is too slow and you'll just get interrupted. Plan it 5–10 seconds in advance.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">How do I deal with melee divers as Strange? <span class="faq-arrow">▼</span></button>
+          <div class="faq-a"><p>Your shield does nothing against melee. The moment Wolverine, Hulk, or Spider-Man dives you, activate Cloak of Levitation immediately and fly away. Don't try to fight them at ground level — you will lose. If you're already in the air, they have a much harder time following up. Ask your team to peel for you if melee divers are a recurring problem.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">What's the best time to use Eye of Agamotto? <span class="faq-arrow">▼</span></button>
+          <div class="faq-a"><p>Use it when 3+ enemies are grouped and your team is ready to follow up. The worst use is popping it in the open from the front — enemies will simply walk out of range. The best use is the portal flank combo, or dropping from high ground onto a clustered backline. Always communicate with your team before using it — a stunned team that nobody follows up on is a wasted ultimate.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">Should I always hold my shield up? <span class="faq-arrow">▼</span></button>
+          <div class="faq-a"><p>No — holding shield permanently slows you down and prevents you from building Dark Magic. Treat your shield health as your aggression meter: high shield HP means push forward and be aggressive; low shield HP means fall back to cover and let it recover. Toggle it situationally to block specific abilities, not as a permanent wall.</p></div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- end main-col -->
+
+  <!-- SIDEBAR -->
+  <div class="side-col">
+    <div class="side-card">
+      <div class="side-card-title">Tier Rating</div>
+      <div class="tier-badge tier-a">A</div>
+      <p style="font-size:0.85rem;color:var(--muted);line-height:1.6">Doctor Strange is A-Tier in the current meta. His shield utility and fight-winning ultimate make him a priority Vanguard pick at all skill levels.</p>
+    </div>
+
+    <div class="side-card">
+      <div class="side-card-title">Role Ratings</div>
+      <div class="rating-row"><span>Shield Control</span><div class="dots"><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot off"></div></div></div>
+      <div class="rating-row"><span>Team Fight CC</span><div class="dots"><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div></div></div>
+      <div class="rating-row"><span>Mobility</span><div class="dots"><div class="dot on"></div><div class="dot on"></div><div class="dot off"></div><div class="dot off"></div><div class="dot off"></div></div></div>
+      <div class="rating-row"><span>Burst Damage</span><div class="dots"><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot off"></div><div class="dot off"></div></div></div>
+      <div class="rating-row"><span>Survivability</span><div class="dots"><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot off"></div></div></div>
+    </div>
+
+    <div class="side-card">
+      <div class="side-card-title">Team-Up Heroes</div>
       <div class="teamup-pill">
-        <span style="font-size:1.1rem;">💚</span>
+        <span style="font-size:1.1rem">💚</span>
         <div>
           <div class="teamup-pill-name">Hulk</div>
-          <div class="teamup-pill-sub">Gamma Maelstrom</div>
+          <div class="teamup-pill-sub">Gamma Maelstrom — boosts Maelstrom of Madness damage</div>
         </div>
       </div>
       <div class="teamup-pill">
-        <span style="font-size:1.1rem;">🔴</span>
+        <span style="font-size:1.1rem">🔴</span>
         <div>
           <div class="teamup-pill-name">Scarlet Witch</div>
-          <div class="teamup-pill-sub">Magic Synergy</div>
+          <div class="teamup-pill-sub">Magic synergy — enhanced crowd control</div>
         </div>
       </div>
       <div class="teamup-pill">
-        <span style="font-size:1.1rem;">⚔</span>
+        <span style="font-size:1.1rem">⚔</span>
         <div>
           <div class="teamup-pill-name">Magik</div>
-          <div class="teamup-pill-sub">Magic Synergy</div>
+          <div class="teamup-pill-sub">Magic synergy — enhanced crowd control</div>
         </div>
       </div>
     </div>
+
+    <div class="side-card">
+      <div class="side-card-title">Quick Tips</div>
+      <div class="quick-tip"><div class="tip-icon">🛡</div><div class="tip-text">Shield HP = aggression meter. Full shield means push; low shield means fall back to cover.</div></div>
+      <div class="quick-tip"><div class="tip-icon">💜</div><div class="tip-text">Weave melee between shots — it gives 3× more Dark Magic per hit than daggers alone.</div></div>
+      <div class="quick-tip"><div class="tip-icon">🌀</div><div class="tip-text">Plan your portal 10 seconds in advance. Never cast it reactively mid-fight.</div></div>
+      <div class="quick-tip"><div class="tip-icon">👁</div><div class="tip-text">Portal flank before your ult — enemies can't dodge what they don't see coming.</div></div>
+      <div class="quick-tip"><div class="tip-icon">✈</div><div class="tip-text">Melee diver on you? Fly immediately. Your shield does nothing against Wolverine or Hulk.</div></div>
+    </div>
+
+    <a class="ai-btn-side" href="/">← Back to All Heroes</a>
   </div>
-</aside>
-</div><!-- /page-body -->
 
-<!-- COMBOS & STRATEGY (full width) -->
-<div style="max-width:1200px;margin:0 auto;padding:0 24px 40px;">
+</div><!-- end page-body -->
 
-  <!-- COMBOS -->
-  <section class="card" id="combos">
-    <h2 class="section-title">🔥 Advanced Combos</h2>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:16px;">
+<footer>
+  <div class="footer-logo">RIVALS<span style="color:var(--gold)">GUIDE</span></div>
+  <p>Fan-made guide site · Not affiliated with Marvel or NetEase Games</p>
+  <p style="margin-top:8px">© 2025 RivalsGuide.site · All rights reserved</p>
+</footer>
 
-      <!-- COMBO 1 -->
-      <div style="background:var(--bg-card2);border:1px solid var(--border);border-radius:8px;overflow:hidden;">
-        <div style="background:rgba(74,222,128,0.08);border-bottom:1px solid var(--border);padding:12px 16px;display:flex;justify-content:space-between;align-items:center;">
-          <div style="font-family:'Rajdhani',sans-serif;font-size:1rem;font-weight:700;color:#fff;">Primary / Melee Weave</div>
-          <span style="font-size:0.7rem;background:rgba(74,222,128,0.15);border:1px solid var(--green);color:var(--green);padding:2px 8px;border-radius:3px;">Must Learn</span>
-        </div>
-        <div style="padding:16px;display:flex;flex-direction:column;gap:8px;">
-          <div class="combo-step">
-            <div class="combo-step-num">1</div>
-            <span style="font-size:0.85rem;color:var(--text-muted);">Fire primary (Left Click)</span>
-          </div>
-          <div class="combo-step">
-            <div class="combo-step-num">2</div>
-            <span style="font-size:0.85rem;color:var(--text-muted);">Immediately melee to cancel end-lag</span>
-          </div>
-          <div class="combo-step">
-            <div class="combo-step-num">3</div>
-            <span style="font-size:0.85rem;color:var(--text-muted);">Repeat loop — Dark Magic charges to 100 fast</span>
-          </div>
-          <div class="combo-step">
-            <div class="combo-step-num final">4</div>
-            <span style="font-size:0.85rem;color:var(--text-muted);">Release Maelstrom of Madness for full 120 burst</span>
-          </div>
-          <p style="font-size:0.78rem;color:var(--text-muted);background:rgba(123,47,255,0.08);border-left:2px solid var(--purple);padding:8px 10px;border-radius:0 4px 4px 0;margin-top:4px;">
-            💡 Melee gives +10 Dark Magic vs +3.5 from daggers. This weave is Strange's core DPS loop.
-          </p>
-        </div>
-      </div>
-
-      <!-- COMBO 2 -->
-      <div style="background:var(--bg-card2);border:1px solid var(--border);border-radius:8px;overflow:hidden;">
-        <div style="background:rgba(251,146,60,0.08);border-bottom:1px solid var(--border);padding:12px 16px;display:flex;justify-content:space-between;align-items:center;">
-          <div style="font-family:'Rajdhani',sans-serif;font-size:1rem;font-weight:700;color:#fff;">Shield Reload Cancel</div>
-          <span style="font-size:0.7rem;background:rgba(251,146,60,0.15);border:1px solid var(--orange);color:var(--orange);padding:2px 8px;border-radius:3px;">Intermediate</span>
-        </div>
-        <div style="padding:16px;display:flex;flex-direction:column;gap:8px;">
-          <div class="combo-step">
-            <div class="combo-step-num">1</div>
-            <span style="font-size:0.85rem;color:var(--text-muted);">Deplete magazine with primary fire</span>
-          </div>
-          <div class="combo-step">
-            <div class="combo-step-num">2</div>
-            <span style="font-size:0.85rem;color:var(--text-muted);">Immediately raise Shield of the Seraphim</span>
-          </div>
-          <div class="combo-step">
-            <div class="combo-step-num">3</div>
-            <span style="font-size:0.85rem;color:var(--text-muted);">Lower shield — reload is ~1/3 shorter</span>
-          </div>
-          <div class="combo-step">
-            <div class="combo-step-num final">4</div>
-            <span style="font-size:0.85rem;color:var(--text-muted);">Resume firing sooner than normal</span>
-          </div>
-          <p style="font-size:0.78rem;color:var(--text-muted);background:rgba(123,47,255,0.08);border-left:2px solid var(--purple);padding:8px 10px;border-radius:0 4px 4px 0;margin-top:4px;">
-            💡 Cuts reload time by roughly one-third. Adds up significantly over a full match.
-          </p>
-        </div>
-      </div>
-
-      <!-- COMBO 3 -->
-      <div style="background:var(--bg-card2);border:1px solid var(--border);border-radius:8px;overflow:hidden;">
-        <div style="background:rgba(168,85,247,0.08);border-bottom:1px solid var(--border);padding:12px 16px;display:flex;justify-content:space-between;align-items:center;">
-          <div style="font-family:'Rajdhani',sans-serif;font-size:1rem;font-weight:700;color:#fff;">Portal Flank + Ult</div>
-          <span style="font-size:0.7rem;background:rgba(168,85,247,0.15);border:1px solid var(--purple-glow);color:var(--purple-glow);padding:2px 8px;border-radius:3px;">Advanced</span>
-        </div>
-        <div style="padding:16px;display:flex;flex-direction:column;gap:8px;">
-          <div class="combo-step">
-            <div class="combo-step-num">1</div>
-            <span style="font-size:0.85rem;color:var(--text-muted);">Cast portal from a safe off-angle position</span>
-          </div>
-          <div class="combo-step">
-            <div class="combo-step-num">2</div>
-            <span style="font-size:0.85rem;color:var(--text-muted);">Place exit portal directly behind enemy backline</span>
-          </div>
-          <div class="combo-step">
-            <div class="combo-step-num">3</div>
-            <span style="font-size:0.85rem;color:var(--text-muted);">Step through — enemies are caught off guard</span>
-          </div>
-          <div class="combo-step">
-            <div class="combo-step-num final">4</div>
-            <span style="font-size:0.85rem;color:var(--text-muted);">Immediately pop Eye of Agamotto on clustered enemies</span>
-          </div>
-          <p style="font-size:0.78rem;color:var(--text-muted);background:rgba(123,47,255,0.08);border-left:2px solid var(--purple);padding:8px 10px;border-radius:0 4px 4px 0;margin-top:4px;">
-            💡 Enemies rarely expect Strange to appear behind them. The surprise angle makes the ult nearly impossible to dodge.
-          </p>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- STRATEGY -->
-  <section class="card" id="strategy">
-    <h2 class="section-title">🧠 Strategy Guide</h2>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;">
-
-      <div style="background:var(--bg-card2);border:1px solid var(--border);border-radius:8px;padding:18px;">
-        <div style="font-family:'Rajdhani',sans-serif;font-size:1rem;font-weight:700;color:var(--purple-glow);margin-bottom:10px;">🛡 Shield Management</div>
-        <ul style="list-style:none;display:flex;flex-direction:column;gap:7px;">
-          <li style="font-size:0.84rem;color:var(--text-muted);padding-left:14px;position:relative;">
-            <span style="position:absolute;left:0;color:var(--purple-glow);">▸</span>
-            Your shield health is your aggression meter — full shield means push forward, low shield means fall back
-          </li>
-          <li style="font-size:0.84rem;color:var(--text-muted);padding-left:14px;position:relative;">
-            <span style="position:absolute;left:0;color:var(--purple-glow);">▸</span>
-            Face the largest source of incoming damage — the shield only covers the front
-          </li>
-          <li style="font-size:0.84rem;color:var(--text-muted);padding-left:14px;position:relative;">
-            <span style="position:absolute;left:0;color:var(--purple-glow);">▸</span>
-            Raise shield proactively when you see enemy ult animations charging up
-          </li>
-          <li style="font-size:0.84rem;color:var(--text-muted);padding-left:14px;position:relative;">
-            <span style="position:absolute;left:0;color:var(--purple-glow);">▸</span>
-            Don't hold shield permanently — it slows you and you need to deal damage to charge Dark Magic
-          </li>
-        </ul>
-      </div>
-
-      <div style="background:var(--bg-card2);border:1px solid var(--border);border-radius:8px;padding:18px;">
-        <div style="font-family:'Rajdhani',sans-serif;font-size:1rem;font-weight:700;color:var(--gold);margin-bottom:10px;">🌀 Portal Usage</div>
-        <ul style="list-style:none;display:flex;flex-direction:column;gap:7px;">
-          <li style="font-size:0.84rem;color:var(--text-muted);padding-left:14px;position:relative;">
-            <span style="position:absolute;left:0;color:var(--gold);">▸</span>
-            Use at the start of rounds to teleport your whole team to the objective instantly
-          </li>
-          <li style="font-size:0.84rem;color:var(--text-muted);padding-left
+<script>
+  function toggleFaq(btn){
+    const item=btn.closest('.faq-item');
+    item.classList.toggle('open');
+  }
+</script>
+</body>
+</html>
