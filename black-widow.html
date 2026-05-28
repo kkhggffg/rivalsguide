@@ -1,159 +1,748 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Black Widow Guide – Marvel Rivals | RivalsGuide</title>
-<meta name="description" content="Complete Black Widow guide for Marvel Rivals. Abilities, sniper tips, counters, and pro strategies for the deadly DPS assassin."/>
-<link rel="canonical" href="https://www.rivalsguide.site/black-widow.html"/>
-<style>
-  :root{--gold:#ffd700;--bg:#0a0e1a;--card:#111827;--text:#e2e8f0}
-  *{margin:0;padding:0;box-sizing:border-box}
-  body{background:var(--bg);color:var(--text);font-family:'Segoe UI',sans-serif;line-height:1.6}
-  header{background:linear-gradient(135deg,#1a2a4a,#0d1b2e);padding:16px 24px;display:flex;align-items:center;gap:16px;border-bottom:2px solid var(--gold)}
-  header a{color:var(--gold);text-decoration:none;font-weight:700;font-size:1.2rem}
-  .hero-banner{background:linear-gradient(135deg,#1a0a2e 0%,#0d0b1e 100%);padding:48px 24px;text-align:center}
-  .hero-emoji{font-size:5rem;margin-bottom:16px}
-  .hero-banner h1{font-size:2.5rem;color:var(--gold);margin-bottom:8px}
-  .role-tag{display:inline-block;background:#7f1d1d;color:#fca5a5;padding:4px 16px;border-radius:20px;font-size:0.85rem;font-weight:700;margin:8px 4px}
-  .container{max-width:900px;margin:0 auto;padding:32px 24px}
-  .section{background:var(--card);border-radius:12px;padding:28px;margin-bottom:24px;border:1px solid #1e293b}
-  .section h2{color:var(--gold);font-size:1.4rem;margin-bottom:16px;border-bottom:1px solid #1e293b;padding-bottom:8px}
-  .ability{background:#0d1b2e;border-radius:8px;padding:16px;margin-bottom:12px;border-left:3px solid var(--gold)}
-  .ability h3{color:#93c5fd;margin-bottom:6px}
-  .tip-box{background:#1a0a0a;border:1px solid #dc2626;border-radius:8px;padding:16px;margin-bottom:12px}
-  .tip-box h3{color:#f87171;margin-bottom:6px}
-  .counter-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px}
-  .counter-card{background:#0d1b2e;border-radius:8px;padding:12px;text-align:center;border:1px solid #1e293b}
-  .counter-card .emoji{font-size:2rem}
-  .counter-card .name{font-size:0.85rem;font-weight:600;margin-top:6px}
-  .stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-  .stat-box{background:#0d1b2e;border-radius:8px;padding:16px;text-align:center}
-  .stat-box .val{font-size:1.8rem;font-weight:700;color:var(--gold)}
-  .stat-box .label{font-size:0.8rem;color:#94a3b8;margin-top:4px}
-  footer{text-align:center;padding:32px;color:#64748b;font-size:0.85rem;border-top:1px solid #1e293b}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Black Widow Guide – Abilities, Combos & Counters | RivalsGuide</title>
+  <meta name="description" content="Complete Black Widow guide for Marvel Rivals. Master Red Room Rifle headshots, Edge Dancer melee combos, damage boost synergies, and sniper positioning.">
+  <meta property="og:title" content="Black Widow Guide – Marvel Rivals | RivalsGuide">
+  <meta property="og:description" content="Master Black Widow in Marvel Rivals — the only sniper with a melee kit. Full ability breakdown, combo guide, counters, and team compositions.">
+  <meta property="og:url" content="https://rivalsguide.site/black-widow.html">
+  <meta property="og:type" content="article">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-D4EJPR83TH"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-D4EJPR83TH');</script>
+  <style>
+    :root{
+      --red:#e63946;--rose:#f87171;--crimson:#dc2626;
+      --dark:#0a0a0f;--dark2:#12121a;--card:#1a0a0a;
+      --text:#e0e0e0;--muted:#888;
+      --border:rgba(220,38,38,0.35);
+      --gold:#ffd60a;--blue:#60a5fa;--green:#4ade80;
+      --widow:#fca5a5;
+    }
+    *{margin:0;padding:0;box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{background:var(--dark);color:var(--text);font-family:'Segoe UI',sans-serif;overflow-x:hidden}
+
+    nav{position:fixed;top:0;width:100%;z-index:999;background:rgba(10,10,15,0.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);padding:0 40px;display:flex;align-items:center;justify-content:space-between;height:64px}
+    .nav-logo{font-size:1.3rem;font-weight:900;color:var(--red);letter-spacing:1px;text-decoration:none}
+    .nav-logo span{color:var(--gold)}
+    .nav-back{color:var(--muted);text-decoration:none;font-size:0.9rem;display:flex;align-items:center;gap:8px;transition:color 0.2s}
+    .nav-back:hover{color:var(--rose)}
+
+    .hero-banner{
+      min-height:380px;
+      background:
+        radial-gradient(ellipse at 20% 55%,rgba(220,38,38,0.22) 0%,transparent 55%),
+        radial-gradient(ellipse at 75% 25%,rgba(248,113,113,0.07) 0%,transparent 50%),
+        radial-gradient(ellipse at 55% 85%,rgba(220,38,38,0.05) 0%,transparent 40%),
+        var(--dark);
+      display:flex;align-items:center;padding:100px 40px 60px;position:relative;overflow:hidden
+    }
+    .hero-banner::before{content:'🕷';position:absolute;right:80px;top:50%;transform:translateY(-50%);font-size:12rem;opacity:0.06;pointer-events:none}
+    .banner-inner{max-width:1200px;margin:0 auto;width:100%}
+    .breadcrumb{font-size:0.8rem;color:var(--muted);margin-bottom:16px}
+    .breadcrumb a{color:var(--muted);text-decoration:none}
+    .breadcrumb a:hover{color:var(--rose)}
+    .breadcrumb span{margin:0 8px}
+    .banner-role{display:inline-block;background:rgba(220,38,38,0.15);border:1px solid var(--border);color:var(--rose);font-size:0.75rem;padding:3px 14px;border-radius:20px;margin-bottom:16px;letter-spacing:2px;text-transform:uppercase}
+    .banner-title{font-size:clamp(2.5rem,6vw,4.5rem);font-weight:900;line-height:1.1;margin-bottom:12px;text-shadow:0 0 40px rgba(220,38,38,0.4)}
+    .banner-title .accent{color:var(--rose)}
+    .banner-sub{color:var(--muted);font-size:1rem;max-width:580px;line-height:1.6;margin-bottom:12px}
+    .banner-hook{color:var(--text);font-size:1rem;max-width:580px;line-height:1.6;margin-bottom:28px;font-style:italic;border-left:3px solid var(--rose);padding-left:14px}
+    .banner-tags{display:flex;gap:10px;flex-wrap:wrap}
+    .tag{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);padding:5px 14px;border-radius:20px;font-size:0.8rem;color:var(--muted)}
+    .tag.red{border-color:var(--border);color:var(--rose);background:rgba(220,38,38,0.1)}
+    .tag.gold{border-color:rgba(255,214,10,0.3);color:var(--gold);background:rgba(255,214,10,0.06)}
+    .tag.blue{border-color:rgba(96,165,250,0.3);color:var(--blue);background:rgba(96,165,250,0.06)}
+    .tag.green{border-color:rgba(74,222,128,0.3);color:var(--green);background:rgba(74,222,128,0.06)}
+
+    .page-body{max-width:1200px;margin:0 auto;padding:60px 40px 80px;display:grid;grid-template-columns:1fr 320px;gap:40px;align-items:start}
+    .main-col{display:flex;flex-direction:column;gap:48px}
+    .side-col{display:flex;flex-direction:column;gap:24px;position:sticky;top:84px}
+    .section{background:var(--card);border:1px solid rgba(255,255,255,0.05);border-radius:12px;padding:32px;transition:border-color 0.2s}
+    .section:hover{border-color:var(--border)}
+    .section-label{font-size:0.72rem;text-transform:uppercase;letter-spacing:3px;color:var(--rose);margin-bottom:8px;font-weight:700}
+    h2{font-size:1.5rem;font-weight:900;margin-bottom:20px;line-height:1.2}
+    h2 span{color:var(--rose)}
+    h3{font-size:1rem;font-weight:700;margin-bottom:8px;color:var(--text)}
+    p{color:var(--muted);line-height:1.7;font-size:0.93rem}
+
+    .stats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:24px}
+    .stat-box{background:var(--dark2);border-radius:8px;padding:16px;text-align:center;border:1px solid rgba(255,255,255,0.04)}
+    .stat-val{font-size:1.4rem;font-weight:900;color:var(--rose);display:block}
+    .stat-key{font-size:0.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-top:4px;display:block}
+    .stat-desc{color:var(--muted);font-size:0.88rem;line-height:1.6}
+
+    .verdict-box{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:20px}
+    .verdict-item{background:var(--dark2);border-radius:8px;padding:14px 16px;border-left:3px solid var(--rose)}
+    .verdict-item.bad{border-left-color:#60a5fa}
+    .verdict-label{font-size:0.72rem;text-transform:uppercase;letter-spacing:1px;font-weight:700;margin-bottom:6px;color:var(--rose)}
+    .verdict-item.bad .verdict-label{color:#60a5fa}
+    .verdict-text{font-size:0.82rem;color:var(--muted);line-height:1.5}
+
+    .season-note{background:rgba(248,113,113,0.05);border:1px solid rgba(248,113,113,0.18);border-radius:8px;padding:12px 16px;margin-bottom:20px;font-size:0.82rem;color:var(--muted);display:flex;align-items:flex-start;gap:10px}
+    .season-note strong{color:var(--rose)}
+    .season-note.warn{background:rgba(255,214,10,0.05);border-color:rgba(255,214,10,0.2)}
+    .season-note.warn strong{color:var(--gold)}
+
+    .ability-list{display:flex;flex-direction:column;gap:16px}
+    .ability-item{background:var(--dark2);border:1px solid rgba(255,255,255,0.05);border-radius:10px;padding:20px;display:flex;gap:16px;transition:border-color 0.2s;align-items:flex-start}
+    .ability-item:hover{border-color:rgba(248,113,113,0.3)}
+    .ability-key{background:var(--crimson);color:#fff;padding:4px 12px;border-radius:5px;font-size:0.78rem;font-weight:700;font-family:monospace;white-space:nowrap;flex-shrink:0;margin-top:2px;min-width:52px;text-align:center}
+    .ability-key.ult{background:linear-gradient(135deg,#991b1b,#b45309);color:#fff}
+    .ability-key.passive{background:rgba(252,165,165,0.12);color:var(--widow);border:1px solid rgba(252,165,165,0.3)}
+    .ability-key.melee{background:rgba(96,165,250,0.15);color:var(--blue);border:1px solid rgba(96,165,250,0.3)}
+    .ability-body{flex:1}
+    .ability-name{font-weight:700;font-size:1rem;margin-bottom:6px}
+    .ability-desc{color:var(--muted);font-size:0.88rem;line-height:1.65;margin-bottom:8px}
+    .ability-tip{font-size:0.82rem;color:var(--rose);padding:8px 12px;background:rgba(248,113,113,0.06);border-radius:6px;border-left:2px solid var(--rose)}
+    .ability-stats{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:10px}
+    .ability-stat-chip{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);padding:2px 10px;border-radius:4px;font-size:0.75rem;color:var(--muted);font-family:monospace}
+    .ability-stat-chip span{color:var(--text);font-weight:700}
+
+    .dmg-boost-box{background:rgba(255,214,10,0.05);border:1px solid rgba(255,214,10,0.2);border-radius:8px;padding:14px 16px;margin-top:12px;font-size:0.83rem;color:var(--muted);line-height:1.6}
+    .dmg-boost-box strong{color:var(--gold)}
+
+    .ult-warn-box{background:rgba(96,165,250,0.05);border:1px solid rgba(96,165,250,0.2);border-radius:8px;padding:14px 16px;margin-top:12px;font-size:0.83rem;color:var(--muted);line-height:1.6}
+    .ult-warn-box strong{color:var(--blue)}
+
+    .counter-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .counter-col{background:var(--dark2);border-radius:10px;padding:20px}
+    .counter-col-title{font-size:0.78rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:14px}
+    .counter-col.good .counter-col-title{color:var(--rose)}
+    .counter-col.bad .counter-col-title{color:#60a5fa}
+    .counter-entry{display:flex;align-items:flex-start;gap:10px;padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.04)}
+    .counter-entry:last-child{border-bottom:none;padding-bottom:0}
+    .counter-emoji{font-size:1.3rem;flex-shrink:0;margin-top:1px}
+    .counter-name{font-weight:700;font-size:0.88rem;margin-bottom:2px}
+    .counter-reason{font-size:0.78rem;color:var(--muted);line-height:1.5}
+
+    .comp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .comp-card{background:var(--dark2);border-radius:10px;padding:16px;border:1px solid rgba(255,255,255,0.04);transition:border-color 0.2s;display:flex;flex-direction:column}
+    .comp-card:hover{border-color:var(--border)}
+    .comp-role{font-size:0.72rem;text-transform:uppercase;letter-spacing:1px;font-weight:700;margin-bottom:10px}
+    .comp-role.tank{color:var(--green)}
+    .comp-role.support{color:var(--blue)}
+    .comp-role.dps{color:var(--rose)}
+    .comp-hero{display:flex;align-items:flex-start;gap:8px;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04)}
+    .comp-hero:last-of-type{border-bottom:none}
+    .comp-hero-emoji{font-size:1.1rem;flex-shrink:0;margin-top:1px}
+    .comp-hero-name{font-size:0.85rem;font-weight:700}
+    .comp-hero-reason{font-size:0.75rem;color:var(--muted);line-height:1.4;margin-top:2px}
+    .comp-synergy{margin-top:12px;padding:10px 12px;background:rgba(255,255,255,0.03);border-radius:6px;border-left:2px solid var(--rose);font-size:0.78rem;color:var(--muted);line-height:1.5}
+    .comp-synergy.support{border-left-color:var(--blue)}
+    .comp-synergy.dps{border-left-color:var(--gold)}
+
+    .difficulty-table{width:100%;border-collapse:collapse;margin:20px 0 8px}
+    .difficulty-table th{font-size:0.75rem;text-transform:uppercase;letter-spacing:1px;color:var(--muted);font-weight:700;padding:8px 12px;text-align:left;border-bottom:1px solid rgba(255,255,255,0.08)}
+    .difficulty-table td{padding:10px 12px;font-size:0.85rem;border-bottom:1px solid rgba(255,255,255,0.04);vertical-align:middle}
+    .difficulty-table tr:last-child td{border-bottom:none}
+    .difficulty-table tr:hover td{background:rgba(255,255,255,0.02)}
+    .diff-badge{display:inline-block;padding:2px 10px;border-radius:20px;font-size:0.75rem;font-weight:700}
+    .diff-easy{background:rgba(74,222,128,0.12);color:var(--green)}
+    .diff-med{background:rgba(255,214,10,0.12);color:var(--gold)}
+    .diff-hard{background:rgba(230,57,70,0.12);color:var(--rose)}
+    .diff-expert{background:rgba(96,165,250,0.12);color:var(--blue)}
+
+    .combo-steps{list-style:none;display:flex;flex-direction:column;gap:0}
+    .combo-step{display:flex;gap:16px;padding:16px 0;border-bottom:1px solid rgba(255,255,255,0.04);align-items:flex-start}
+    .combo-step:last-child{border-bottom:none}
+    .step-num{width:32px;height:32px;min-width:32px;background:var(--crimson);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:0.88rem;flex-shrink:0}
+    .step-body{flex:1}
+    .step-title{font-weight:700;font-size:0.95rem;margin-bottom:4px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+    .key-badge{background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.18);padding:1px 9px;border-radius:4px;font-size:0.75rem;font-family:monospace}
+    .time-badge{background:rgba(248,113,113,0.1);border:1px solid rgba(248,113,113,0.25);color:var(--rose);padding:1px 9px;border-radius:4px;font-size:0.72rem;font-family:monospace}
+    .step-desc{color:var(--muted);font-size:0.88rem;line-height:1.6}
+    .combo-note{background:rgba(248,113,113,0.05);border:1px solid rgba(248,113,113,0.2);border-radius:8px;padding:14px 16px;margin-top:16px;font-size:0.85rem;color:var(--text);line-height:1.6}
+    .combo-note strong{color:var(--rose)}
+    .combo-section-divider{height:1px;background:rgba(255,255,255,0.06);margin:28px 0}
+
+    .faq-list{display:flex;flex-direction:column;gap:0}
+    .faq-item{border-bottom:1px solid rgba(255,255,255,0.05)}
+    .faq-item:last-child{border-bottom:none}
+    .faq-q{width:100%;background:transparent;border:none;color:var(--text);text-align:left;padding:18px 0;font-size:0.95rem;font-weight:700;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px}
+    .faq-q:hover{color:var(--rose)}
+    .faq-arrow{color:var(--muted);font-size:0.8rem;transition:transform 0.2s;flex-shrink:0}
+    .faq-item.open .faq-arrow{transform:rotate(180deg)}
+    .faq-a{max-height:0;overflow:hidden;transition:max-height 0.35s ease}
+    .faq-item.open .faq-a{max-height:320px}
+    .faq-a p{padding-bottom:16px;font-size:0.88rem}
+
+    .side-card{background:var(--card);border:1px solid rgba(255,255,255,0.05);border-radius:12px;padding:24px}
+    .side-card-title{font-size:0.72rem;text-transform:uppercase;letter-spacing:2px;color:var(--rose);font-weight:700;margin-bottom:16px}
+    .quick-tip{display:flex;gap:10px;padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.04);align-items:flex-start}
+    .quick-tip:last-child{border-bottom:none}
+    .tip-icon{font-size:1.1rem;flex-shrink:0;margin-top:1px}
+    .tip-text{font-size:0.82rem;color:var(--muted);line-height:1.5}
+    .tier-badge{display:inline-flex;align-items:center;justify-content:center;width:56px;height:56px;border-radius:12px;font-size:2rem;font-weight:900;margin-bottom:12px}
+    .tier-d{background:linear-gradient(135deg,#7f1d1d,#991b1b)}
+    .ai-btn-side{display:block;text-align:center;padding:12px;background:rgba(248,113,113,0.06);border:1px solid rgba(248,113,113,0.2);border-radius:8px;color:var(--muted);text-decoration:none;font-size:0.85rem;transition:all 0.2s}
+    .ai-btn-side:hover{background:rgba(248,113,113,0.12);color:var(--text)}
+
+    footer{background:var(--dark2);border-top:1px solid var(--border);padding:40px;text-align:center;color:var(--muted);font-size:0.85rem}
+    .footer-logo{font-size:1.2rem;font-weight:900;color:var(--red);margin-bottom:8px}
+    ::-webkit-scrollbar{width:6px}
+    ::-webkit-scrollbar-track{background:var(--dark)}
+    ::-webkit-scrollbar-thumb{background:var(--rose);border-radius:3px}
+
+    @media(max-width:900px){.page-body{grid-template-columns:1fr;padding:40px 20px 60px}.side-col{position:static}.counter-grid{grid-template-columns:1fr}.comp-grid{grid-template-columns:1fr 1fr}.hero-banner{padding:90px 20px 48px}nav{padding:0 20px}.verdict-box{grid-template-columns:1fr}}
+    @media(max-width:560px){.stats-grid{grid-template-columns:repeat(2,1fr)}.comp-grid{grid-template-columns:1fr}}
+  </style>
 </head>
 <body>
-<header>
-  <a href="/index.html">🛡️ RivalsGuide</a>
-  <span style="color:#64748b">/ Black Widow</span>
-</header>
+
+<nav>
+  <a class="nav-logo" href="/">RIVALS<span>GUIDE</span></a>
+  <a class="nav-back" href="/">← Back to Home</a>
+</nav>
+
 <div class="hero-banner">
-  <div class="hero-emoji">🕸️</div>
-  <h1>Black Widow</h1>
-  <span class="role-tag">⚔️ DPS</span>
-  <p style="color:#94a3b8;margin-top:12px;max-width:600px;margin-left:auto;margin-right:auto">
-    A nimble assassin and sniper who operates effectively at both close and long range. High skill ceiling with massive reward for precise aim.
-  </p>
-</div>
-<div class="container">
-  <div class="section">
-    <h2>📊 Base Stats</h2>
-    <div class="stat-grid">
-      <div class="stat-box"><div class="val">250</div><div class="label">Health</div></div>
-      <div class="stat-box"><div class="val">High</div><div class="label">Headshot Damage</div></div>
-      <div class="stat-box"><div class="val">Hard</div><div class="label">Difficulty</div></div>
+  <div class="banner-inner">
+    <div class="breadcrumb">
+      <a href="/">Home</a><span>›</span>
+      <a href="/">Heroes</a><span>›</span>
+      <span style="color:var(--text)">Black Widow</span>
     </div>
-  </div>
-  <div class="section">
-    <h2>⚡ Abilities</h2>
-    <div class="ability">
-      <h3>🎯 Widow's Bite Rifle (Primary)</h3>
-      <p>Precision sniper rifle with scope. Headshots deal massive damage. Switch between scoped and hip-fire modes for different engagement ranges.</p>
+    <div class="banner-role">Duelist · Sniper</div>
+    <h1 class="banner-title"><span class="accent">Black Widow</span><br>Complete Guide</h1>
+    <p class="banner-sub">Natasha Romanova — the only sniper in Marvel Rivals with a full melee kit. Armed with the Red Room Rifle and her electric batons, Black Widow demands elite mechanical skill and constant repositioning to reach her ceiling.</p>
+    <p class="banner-hook">If you want the highest mechanical expression of any sniper — a hero who can one-shot supports with a headshot when damage-boosted, then finish stragglers with a melee combo — Black Widow rewards dedicated players who master her positioning game. Just know: she's currently D-Tier without a Mantis pocket. [[0]](#__0) [[2]](#__2)</p>
+    <div class="banner-tags">
+      <span class="tag red">Duelist</span>
+      <span class="tag" style="border-color:rgba(230,57,70,0.3);color:#f87171;background:rgba(230,57,70,0.06)">D-Tier</span>
+      <span class="tag red">Sniper + Melee</span>
+      <span class="tag">No Damage Falloff</span>
+      <span class="tag blue">Boost-Dependent</span>
+      <span class="tag gold">Hardest Duelist</span>
     </div>
-    <div class="ability">
-      <h3>🕸️ Grapple Hook (Shift)</h3>
-      <p>Launches a grapple to quickly reposition. Essential for escaping danger and reaching high-ground sniping positions before enemies can react.</p>
-    </div>
-    <div class="ability">
-      <h3>⚡ Electric Baton (E)</h3>
-      <p>Close-range melee combo that deals significant damage. Allows her to switch between sniper and melee playstyles fluidly depending on the situation.</p>
-    </div>
-    <div class="ability">
-      <h3>🎯 Electro-Web (Ultimate)</h3>
-      <p>Fires a web that roots and damages enemies in an area. Great for locking down key targets or peeling for allies being dived.</p>
-    </div>
-  </div>
-  <div class="section">
-    <h2>💡 Pro Tips</h2>
-    <div class="tip-box">
-      <h3>🎯 Aim for Headshots Always</h3>
-      <p>Practice in the range daily with moving targets. Black Widow's value is almost entirely tied to headshot consistency — body shots deal too little damage to be effective.</p>
-    </div>
-    <div class="tip-box">
-      <h3>📍 High Ground Control</h3>
-      <p>Use Grapple Hook to claim elevated positions at the start of every fight. From high ground, you can snipe supports and DPS freely while being hard to reach.</p>
-    </div>
-    <div class="tip-box">
-      <h3>🔄 Melee Hybrid Playstyle</h3>
-      <p>Against flankers who get close, switch to Electric Baton mode immediately. She can deal surprising burst damage in melee range and catch enemies off guard.</p>
-    </div>
-    <div class="tip-box">
-      <h3>🎯 Ultimate on Supports</h3>
-      <p>Use Electro-Web to root the enemy support during a team fight. A rooted Mantis or Loki cannot escape and becomes an easy kill for your team.</p>
-    </div>
-  </div>
-  <div class="section">
-    <h2>⚔️ Counters Black Widow</h2>
-    <div class="counter-grid">
-      <div class="counter-card"><div class="emoji">🔮</div><div class="name">Doctor Strange</div><p style="font-size:0.75rem;color:#94a3b8;margin-top:4px">Casts spells from safe distance</p></div>
-      <div class="counter-card"><div class="emoji">🕷️</div><div class="name">Spider-Man</div><p style="font-size:0.75rem;color:#94a3b8;margin-top:4px">Dives her before she can react</p></div>
-      <div class="counter-card"><div class="emoji">🛡️</div><div class="name">Captain America</div><p style="font-size:0.75rem;color:#94a3b8;margin-top:4px">Shield blocks her shots directly</p></div>
-      <div class="counter-card"><div class="emoji">⚡</div><div class="name">Thor</div><p style="font-size:0.75rem;color:#94a3b8;margin-top:4px">Closes gap fast, survives her burst</p></div>
-    </div>
-  </div>
-  <div class="section">
-    <h2>🤝 Best Team Synergies</h2>
-    <div class="counter-grid">
-      <div class="counter-card"><div class="emoji">🌸</div><div class="name">Mantis</div><p style="font-size:0.75rem;color:#94a3b8;margin-top:4px">Healing keeps her alive at backline</p></div>
-      <div class="counter-card"><div class="emoji">💚</div><div class="name">Loki</div><p style="font-size:0.75rem;color:#94a3b8;margin-top:4px">Distractions let her snipe freely</p></div>
-      <div class="counter-card"><div class="emoji">🛡️</div><div class="name">Hulk</div><p style="font-size:0.75rem;color:#94a3b8;margin-top:4px">Tank draws attention away from her</p></div>
-      <div class="counter-card"><div class="emoji">🌿</div><div class="name">Groot</div><p style="font-size:0.75rem;color:#94a3b8;margin-top:4px">Walls block flankers reaching her</p></div>
-    </div>
-  </div>
-  <div class="section">
-    <h2>📋 Playstyle Summary</h2>
-    <table style="width:100%;border-collapse:collapse;font-size:0.9rem">
-      <thead>
-        <tr style="border-bottom:1px solid #1e293b">
-          <th style="text-align:left;padding:10px;color:#94a3b8">Aspect</th>
-          <th style="text-align:left;padding:10px;color:#94a3b8">Rating</th>
-          <th style="text-align:left;padding:10px;color:#94a3b8">Notes</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr style="border-bottom:1px solid #0f172a">
-          <td style="padding:10px">Burst Damage</td>
-          <td style="padding:10px;color:#4ade80">⭐⭐⭐⭐⭐</td>
-          <td style="padding:10px;color:#94a3b8">One-shot potential on headshots</td>
-        </tr>
-        <tr style="border-bottom:1px solid #0f172a">
-          <td style="padding:10px">Survivability</td>
-          <td style="padding:10px;color:#f87171">⭐⭐</td>
-          <td style="padding:10px;color:#94a3b8">Very low HP, dies fast if dived</td>
-        </tr>
-        <tr style="border-bottom:1px solid #0f172a">
-          <td style="padding:10px">Mobility</td>
-          <td style="padding:10px;color:#4ade80">⭐⭐⭐⭐</td>
-          <td style="padding:10px;color:#94a3b8">Grapple Hook is excellent escape</td>
-        </tr>
-        <tr style="border-bottom:1px solid #0f172a">
-          <td style="padding:10px">Utility</td>
-          <td style="padding:10px;color:#fbbf24">⭐⭐⭐</td>
-          <td style="padding:10px;color:#94a3b8">Root ultimate is situationally strong</td>
-        </tr>
-        <tr>
-          <td style="padding:10px">Difficulty</td>
-          <td style="padding:10px;color:#f87171">⭐⭐⭐⭐⭐</td>
-          <td style="padding:10px;color:#94a3b8">Hard — aim dependent hero</td>
-        </tr>
-      </tbody>
-    </table>
   </div>
 </div>
+
+<div class="page-body">
+  <div class="main-col">
+
+    <!-- OVERVIEW -->
+    <div class="section">
+      <div class="section-label">Overview</div>
+      <h2>Base <span>Stats</span></h2>
+
+      <div class="season-note warn">
+        ⚠️ <span><strong>Honest Tier Warning:</strong> Black Widow is currently <strong>D-Tier</strong> (PCGamesN Season 3 tier list) — top 1–2 worst heroes by both pick rate and win rate on PC and console. Her damage numbers prevent one-shots without a Mantis damage boost, and her ult is widely considered nearly useless. Play her for the challenge and enjoyment — not for ranked climbing. [[2]](#__2) [[3]](#__3)</span>
+      </div>
+
+      <div class="stats-grid">
+        <div class="stat-box"><span class="stat-val">250</span><span class="stat-key">Base HP</span></div>
+        <div class="stat-box"><span class="stat-val">120</span><span class="stat-key">Rifle DMG</span></div>
+        <div class="stat-box"><span class="stat-val">45</span><span class="stat-key">Baton DMG</span></div>
+        <div class="stat-box"><span class="stat-val">0</span><span class="stat-key">Falloff (scoped)</span></div>
+        <div class="stat-box"><span class="stat-val">0.83</span><span class="stat-key">Shots/sec</span></div>
+        <div class="stat-box"><span class="stat-val">★★★★★</span><span class="stat-key">Difficulty</span></div>
+      </div>
+
+      <p class="stat-desc">Black Widow has 250 HP — the same as most supports — making her extremely fragile. Her Red Room Rifle deals 120 damage per shot with zero falloff when scoped, meaning she's equally lethal at any range. The critical limitation: 120 damage doesn't one-shot any hero. She needs a Mantis damage boost to reach the 250+ threshold required to kill supports in a single headshot. Only 15 heroes in the entire roster can be one-shot by her even with a boost. [[0]](#__0) [[3]](#__3)</p>
+
+      <div class="verdict-box">
+        <div class="verdict-item">
+          <div class="verdict-label">✅ Strengths</div>
+          <div class="verdict-text">Zero damage falloff when scoped — consistent at any range · Only sniper with a full melee kit (Edge Dancer combo) · One-shot potential on 250 HP heroes with damage boost · Batons deal damage through shields (e.g. Dr. Strange) · Constant repositioning makes her hard to pin down [[0]](#__0)</div>
+        </div>
+        <div class="verdict-item bad">
+          <div class="verdict-label">❌ Weaknesses</div>
+          <div class="verdict-text">Cannot one-shot without Mantis damage boost · Only 15 heroes can be one-shot even with boost · 250 HP — dies to any diver in seconds · Ult is widely considered nearly useless · Worst pick rate and win rate in the game (Season 4 data) [[0]](#__0) [[3]](#__3)</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABILITIES -->
+    <div class="section">
+      <div class="section-label">Kit Breakdown</div>
+      <h2>Abilities <span>&amp; Skills</span></h2>
+      <div class="ability-list">
+
+        <div class="ability-item">
+          <div class="ability-key melee">LMB (Baton)</div>
+          <div class="ability-body">
+            <div class="ability-name">Widow's Bite Baton</div>
+            <div class="ability-stats">
+              <div class="ability-stat-chip">DMG: <span>45/strike</span></div>
+              <div class="ability-stat-chip">Rate: <span>2 strikes/sec</span></div>
+              <div class="ability-stat-chip">Range: <span>3m melee</span></div>
+              <div class="ability-stat-chip">Special: <span>Pierces shields</span></div>
+            </div>
+            <div class="ability-desc">Black Widow's electric baton melee attack dealing 45 damage per strike at 2 strikes per second. The critical special property: baton strikes deal damage through shields — meaning heroes like Dr. Strange cannot block them with their shield ability. This makes the baton a surprisingly effective tool against shielding tanks who jump on you. [[0]](#__0)</div>
+            <div class="ability-tip">💡 Swap to batons in three situations: (1) a shielding tank jumps on you — batons bypass their shield; (2) you're in close range and out of rifle ammo; (3) you're dueling a fast melee hero whose movement is hard to track with the rifle. [[0]](#__0)</div>
+          </div>
+        </div>
+
+        <div class="ability-item">
+          <div class="ability-key">LMB (Rifle)</div>
+          <div class="ability-body">
+            <div class="ability-name">Red Room Rifle</div>
+            <div class="ability-stats">
+              <div class="ability-stat-chip">DMG: <span>120/shot</span></div>
+              <div class="ability-stat-chip">Rate: <span>0.83 shots/sec</span></div>
+              <div class="ability-stat-chip">Mag: <span>15 rounds</span></div>
+              <div class="ability-stat-chip">ADS time: <span>0.3s</span></div>
+              <div class="ability-stat-chip">Falloff: <span>None (scoped)</span></div>
+              <div class="ability-stat-chip">Crit: <span>Yes</span></div>
+            </div>
+            <div class="ability-desc">Black Widow's primary weapon — a sniper rifle dealing 120 damage per shot with zero falloff when scoped. This is the only hitscan weapon in Marvel Rivals with no damage falloff, giving her a unique advantage at extreme ranges. Unscoped shots have falloff starting at 10m (down to 50% at 20m), so always scope for long-range engagements. The slow 0.83 shots/sec fire rate means every shot must count. [[0]](#__0)</div>
+            <div class="ability-tip">💡 At close range (under 10m), fire unscoped — falloff hasn't kicked in yet and you skip the 0.3s ADS time. Use scoped shots exclusively for medium-to-long range. Look for low-HP enemies — even a body shot at 120 damage finishes most supports below 130 HP. [[0]](#__0)</div>
+            <div class="dmg-boost-box">
+              <strong>⚡ Damage Boost Math:</strong> Without boost: 120 body / ~180 headshot — cannot one-shot any hero. With Mantis boost: headshots reach ~250+ damage — one-shots all 250 HP heroes. With Rocket Raccoon ult boost: can one-shot 300 HP heroes, but only for the ult window duration. Only 15 heroes total can be one-shot by Widow even with a standard damage boost. [[0]](#__0)
+            </div>
+          </div>
+        </div>
+
+        <div class="ability-item">
+          <div class="ability-key">SHIFT</div>
+          <div class="ability-body">
+            <div class="ability-name">Edge Dancer (Zip Kick)</div>
+            <div class="ability-stats">
+              <div class="ability-stat-chip">Type: <span>Gap closer + stun</span></div>
+              <div class="ability-stat-chip">Effect: <span>Brief stun on target</span></div>
+              <div class="ability-stat-chip">Follow-up: <span>Rifle shot window</span></div>
+            </div>
+            <div class="ability-desc">Black Widow zips to a target and delivers a kick that briefly stuns them. This is her primary mobility and melee combo initiator. The stun window after the kick is the key mechanic — the enemy cannot dodge during it, creating a guaranteed follow-up shot. This is also her escape tool when divers close the gap. [[0]](#__0) [[1]](#__1)</div>
+            <div class="ability-tip">💡 Always follow Edge Dancer's zip kick with an immediate rifle shot — the stun prevents the enemy from dodging, making it a near-guaranteed hit. This is the core of her kill combo: zip in → kick (stun) → headshot. [[0]](#__0)</div>
+          </div>
+        </div>
+
+        <div class="ability-item">
+          <div class="ability-key">E</div>
+          <div class="ability-body">
+            <div class="ability-name">Electro-Web / Grapple</div>
+            <div class="ability-stats">
+              <div class="ability-stat-chip">Type: <span>Utility / Mobility</span></div>
+              <div class="ability-stat-chip">Use: <span>Repositioning + escape</span></div>
+            </div>
+            <div class="ability-desc">Black Widow fires her grappling hook to quickly reposition or escape dangerous situations. This is her primary survival tool — when a diver closes the gap, grapple to high ground or cover immediately. Constant repositioning is the core of Black Widow's playstyle; staying in one spot is a death sentence. [[0]](#__0) [[1]](#__1)</div>
+            <div class="ability-tip">💡 Never stay in the same position for more than 2–3 shots. Black Widow's greatest defensive tool is unpredictability — the enemy team should never know where her next shot is coming from. Grapple after every kill to a new angle. [[0]](#__0)</div>
+          </div>
+        </div>
+
+        <div class="ability-item">
+          <div class="ability-key ult">Q — ULT</div>
+          <div class="ability-body">
+            <div class="ability-name">Widow's Hour (Sniper Ult)</div>
+            <div class="ability-stats">
+              <div class="ability-stat-chip">Effect: <span>Slows enemies</span></div>
+              <div class="ability-stat-chip">Fire: <span>Slow-moving projectile</span></div>
+              <div class="ability-stat-chip">Rating: <span>Nearly useless (community consensus)</span></div>
+            </div>
+            <div class="ability-desc">Black Widow charges up and fires a slow-moving projectile that slows enemies in an area. The community consensus and top Widow players agree: this ult is nearly useless in its current state. The charge-up animation telegraphs it clearly, the projectile is slow enough for enemies to dodge, and the camera switches to first-person awkwardly. Most top Widow players use it only as a follow-up to finish enemies that a headshot didn't kill. [[0]](#__0) [[3]](#__3)</div>
+            <div class="ult-warn-box">
+              <strong>⚠️ Best Ult Usage:</strong> The only reliable use for Widow's ult is to combo its slow with a teammate's AoE ult — e.g., slow a grouped cluster then have Namor drop his ult on them. Otherwise, use it purely as a finisher on low-HP targets that escaped your headshot. Do not use it as an opener. [[0]](#__0)
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- COUNTERS -->
+    <div class="section">
+      <div class="section-label">Matchup Analysis</div>
+      <h2>Counters <span>&amp; Matchups</span></h2>
+      <div class="counter-grid">
+        <div class="counter-col good">
+          <div class="counter-col-title">✅ Black Widow Excels Against</div>
+          <div class="counter-entry">
+            <div class="counter-emoji">💃</div>
+            <div>
+              <div class="counter-name">Cloak &amp; Dagger</div>
+              <div class="counter-reason">When damage-boosted, Widow can one-shot Cloak &amp; Dagger even during their ult — one of the most impactful plays she can make. [[0]](#__0)</div>
+            </div>
+          </div>
+          <div class="counter-entry">
+            <div class="counter-emoji">✨</div>
+            <div>
+              <div class="counter-name">Mantis / 250 HP Supports</div>
+              <div class="counter-reason">Any 250 HP support is a one-shot target with damage boost. Widow's zero-falloff rifle punishes supports who stand in open sightlines. [[0]](#__0)</div>
+            </div>
+          </div>
+          <div class="counter-entry">
+            <div class="counter-emoji">🛡</div>
+            <div>
+              <div class="counter-name">Dr. Strange (Shielding)</div>
+              <div class="counter-reason">Baton strikes pierce Strange's shield — swap to melee when he jumps on you and he loses his primary defense. [[0]](#__0)</div>
+            </div>
+          </div>
+          <div class="counter-entry">
+            <div class="counter-emoji">🎯</div>
+            <div>
+              <div class="counter-name">Stationary / Slow Targets</div>
+              <div class="counter-reason">Zero falloff + hitscan means any hero standing still at any range is a free headshot. Punish poor positioning mercilessly. [[0]](#__0)</div>
+            </div>
+          </div>
+        </div>
+        <div class="counter-col bad">
+          <div class="counter-col-title">❌ Hard Counters Black Widow</div>
+          <div class="counter-entry">
+            <div class="counter-emoji">🕷</div>
+            <div>
+              <div class="counter-name">Spider-Man</div>
+              <div class="counter-reason">Spider-Man's mobility lets him reach Widow's position in seconds. She has 250 HP — she dies to one Spider-Man combo. [[1]](#__1) [[2]](#__2)</div>
+            </div>
+          </div>
+          <div class="counter-entry">
+            <div class="counter-emoji">🐾</div>
+            <div>
+              <div class="counter-name">Black Panther / Iron Fist</div>
+              <div class="counter-reason">Fast melee divers close the gap before Widow can reposition. Their burst damage exceeds her 250 HP instantly. [[1]](#__1)</div>
+            </div>
+          </div>
+          <div class="counter-entry">
+            <div class="counter-emoji">💚</div>
+            <div>
+              <div class="counter-name">Hulk</div>
+              <div class="counter-reason">Hulk's Incredible Leap crashes into Widow's position faster than she can escape. His 800 HP absorbs her entire magazine. [[1]](#__1)</div>
+            </div>
+          </div>
+          <div class="counter-entry">
+            <div class="counter-emoji">🧲</div>
+            <div>
+              <div class="counter-name">Magneto</div>
+              <div class="counter-reason">Magneto's shields block Widow's rifle shots entirely and his magnetic pull disrupts her positioning game. [[1]](#__1)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TEAM COMP -->
+    <div class="section">
+      <div class="section-label">Team Strategy</div>
+      <h2>Best Team <span>Compositions</span></h2>
+      <div class="comp-grid">
+        <div class="comp-card">
+          <div class="comp-role tank">Tank Partner</div>
+          <div class="comp-hero">
+            <div class="comp-hero-emoji">🧲</div>
+            <div>
+              <div class="comp-hero-name">Magneto</div>
+              <div class="comp-hero-reason">Magneto's shields protect Widow from divers closing the gap — buys her the time she needs to reposition safely</div>
+            </div>
+          </div>
+          <div class="comp-hero">
+            <div class="comp-hero-emoji">👊</div>
+            <div>
+              <div class="comp-hero-name">Doctor Strange</div>
+              <div class="comp-hero-reason">Strange's portal ult can reposition the entire team, giving Widow new angles; his frontline presence keeps divers occupied</div>
+            </div>
+          </div>
+          <div class="comp-synergy">Widow needs tanks who can peel for her — not dive tanks. Magneto and Strange create a defensive shell that lets her snipe freely without being rushed. [[1]](#__1)</div>
+        </div>
+        <div class="comp-card">
+          <div class="comp-role support">Support (Critical)</div>
+          <div class="comp-hero">
+            <div class="comp-hero-emoji">✨</div>
+            <div>
+              <div class="comp-hero-name">Mantis ⭐ REQUIRED</div>
+              <div class="comp-hero-reason">Mantis damage boost is the single most important teammate for Black Widow — it's the difference between "can't one-shot anyone" and "one-shots all 250 HP heroes"</div>
+            </div>
+          </div>
+          <div class="comp-hero">
+            <div class="comp-hero-emoji">🦝</div>
+            <div>
+              <div class="comp-hero-name">Rocket Raccoon</div>
+              <div class="comp-hero-reason">Rocket's ult damage amp opens up one-shots on 300 HP heroes — a brief but devastating window that Widow must capitalize on immediately</div>
+            </div>
+          </div>
+          <div class="comp-synergy support">Mantis is not optional — she is mandatory. Without a damage boost, Black Widow cannot one-shot any hero in the game. Ask your Mantis to keep damage boost on you at all times. This is the most important team coordination for Widow. [[0]](#__0)</div>
+        </div>
+        <div class="comp-card">
+          <div class="comp-role dps">DPS Combo Partner</div>
+          <div class="comp-hero">
+            <div class="comp-hero-emoji">🌊</div>
+            <div>
+              <div class="comp-hero-name">Namor</div>
+              <div class="comp-hero-reason">Widow's ult slows a cluster of enemies → Namor drops his AoE ult on them for massive damage — the only reliable ult combo for Black Widow</div>
+            </div>
+          </div>
+          <div class="comp-hero">
+            <div class="comp-hero-emoji">⚡</div>
+            <div>
+              <div class="comp-hero-name">Storm</div>
+              <div class="comp-hero-reason">Storm's sustained AoE ult combined with Widow's slow creates a kill zone — enemies slowed by Widow can't escape Storm's damage</div>
+            </div>
+          </div>
+          <div class="comp-synergy dps">Widow's ult is only valuable as a setup tool for AoE ults. Namor + Widow ult combo is the highest-value play she can make with her ultimate — coordinate this in voice chat for maximum impact. [[0]](#__0)</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- COMBOS -->
+    <div class="section">
+      <div class="section-label">Advanced Techniques</div>
+      <h2>Combo <span>Guide</span></h2>
+
+      <p style="margin-bottom:8px;font-size:0.88rem;">Black Widow's combos revolve around the <strong style="color:var(--text)">Edge Dancer stun window</strong> for guaranteed rifle shots and the <strong style="color:var(--text)">constant repositioning</strong> that keeps enemies guessing her angle. [[0]](#__0)</p>
+
+      <table class="difficulty-table">
+        <thead>
+          <tr><th>Combo</th><th>Difficulty</th><th>Best For</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="font-weight:700">Long-Range Snipe Loop</td>
+            <td><span class="diff-badge diff-easy">⭐ Easy</span></td>
+            <td style="color:var(--muted)">New Widow players</td>
+          </tr>
+          <tr>
+            <td style="font-weight:700">Edge Dancer → Headshot</td>
+            <td><span class="diff-badge diff-med">⭐⭐ Medium</span></td>
+            <td style="color:var(--muted)">Core kill combo</td>
+          </tr>
+          <tr>
+            <td style="font-weight:700">Full Melee Baton Combo</td>
+            <td><span class="diff-badge diff-hard">⭐⭐⭐ Hard</span></td>
+            <td style="color:var(--muted)">Close-range ambush</td>
+          </tr>
+          <tr>
+            <td style="font-weight:700">Ult → Namor AoE Combo</td>
+            <td><span class="diff-badge diff-expert">⭐⭐⭐⭐ Expert</span></td>
+            <td style="color:var(--muted)">Coordinated teamfight</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="combo-section-divider"></div>
+      <h3 style="margin-bottom:16px;color:var(--rose)">Long-Range Snipe Loop</h3>
+      <ul class="combo-steps">
+        <li class="combo-step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <div class="step-title">Confirm Mantis damage boost is active <span class="time-badge">Pre-engage</span></div>
+            <div class="step-desc">Before engaging, confirm your Mantis has damage boost on you. Without it, your headshots won't one-shot 250 HP heroes and you're just a slow sniper with no kill pressure. [[0]](#__0)</div>
+          </div>
+        </li>
+        <li class="combo-step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <div class="step-title">Find a long sightline from high ground <span class="time-badge">0.0s</span></div>
+            <div class="step-desc">Position on high ground with a clear sightline to the enemy backline. Black Widow has zero falloff when scoped — the longer the range, the safer she is from divers. [[0]](#__0) [[1]](#__1)</div>
+          </div>
+        </li>
+        <li class="combo-step">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <div class="step-title">ADS and headshot priority target <span class="key-badge">RMB → LMB</span> <span class="time-badge">~0.3s ADS</span></div>
+            <div class="step-desc">Scope in (0.3s ADS time) and aim for the head of a 250 HP support. With Mantis boost, this is a one-shot kill. Prioritize isolated supports who aren't behind cover. [[0]](#__0)</div>
+          </div>
+        </li>
+        <li class="combo-step">
+          <div class="step-num">4</div>
+          <div class="step-body">
+            <div class="step-title">Immediately grapple to a new angle <span class="key-badge">E</span> <span class="time-badge">~0.5s after shot</span></div>
+            <div class="step-desc">The moment you fire, grapple to a new position. Don't wait to see if you got the kill — the enemy team is already looking for your location. Unpredictability is your defense. [[0]](#__0) [[1]](#__1)</div>
+          </div>
+        </li>
+        <li class="combo-step">
+          <div class="step-num">5</div>
+          <div class="step-body">
+            <div class="step-title">Repeat from new angle — never the same spot twice <span class="time-badge">Loop</span></div>
+            <div class="step-desc">Establish a rotation of 3–4 positions and cycle through them. Ping enemy locations to your team as you spot them from your elevated angles. [[0]](#__0) [[1]](#__1)</div>
+          </div>
+        </li>
+      </ul>
+      <div class="combo-note"><strong>Positioning principle:</strong> Black Widow's only defense is not being where the enemy expects her to be. Every shot reveals your position — grapple immediately after firing. The players who die on Widow are the ones who stay still admiring their shot. [[0]](#__0) [[1]](#__1)</div>
+
+      <div class="combo-section-divider"></div>
+      <h3 style="margin-bottom:16px;color:var(--rose)">Edge Dancer → Headshot Kill</h3>
+      <p style="font-size:0.83rem;margin-bottom:16px;">Widow's most reliable kill combo — the stun from Edge Dancer creates a guaranteed headshot window. [[0]](#__0)</p>
+      <ul class="combo-steps">
+        <li class="combo-step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <div class="step-title">Identify an isolated low-HP target <span class="time-badge">0.0s</span></div>
+            <div class="step-desc">Look for a support or DPS below 150 HP separated from their team. This combo works at any HP, but is most reliable as a finisher. [[0]](#__0)</div>
+          </div>
+        </li>
+        <li class="combo-step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <div class="step-title">Edge Dancer zip kick <span class="key-badge">SHIFT</span> <span class="time-badge">~0.2s</span></div>
+            <div class="step-desc">Zip to the target and deliver the kick. The brief stun activates immediately on landing — the enemy cannot move or dodge during this window. [[0]](#__0)</div>
+          </div>
+        </li>
+        <li class="combo-step">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <div class="step-title">Immediate headshot during stun window <span class="key-badge">LMB (Rifle)</span> <span class="time-badge">~0.3s</span></div>
+            <div class="step-desc">Fire your rifle shot the instant the kick lands. The stun prevents dodging — this is a near-guaranteed headshot. With Mantis boost, this kills any 250 HP hero instantly. [[0]](#__0)</div>
+          </div>
+        </li>
+        <li class="combo-step">
+          <div class="step-num">4</div>
+          <div class="step-body">
+            <div class="step-title">Follow up with baton strikes if not dead <span class="key-badge">LMB (Baton)</span> <span class="time-badge">~0.5s</span></div>
+            <div class="step-desc">If the headshot didn't kill (e.g. target had more HP or no boost), immediately swap to batons and finish with 2–3 strikes at 45 damage each. [[0]](#__0)</div>
+          </div>
+        </li>
+        <li class="combo-step">
+          <div class="step-num">5</div>
+          <div class="step-body">
+            <div class="step-title">Grapple out immediately <span class="key-badge">E</span> <span class="time-badge">~1.0s</span></div>
+            <div class="step-desc">The moment the target is dead (or if you missed), grapple to safety. You're now in melee range of the enemy team — staying is suicide. [[0]](#__0)</div>
+          </div>
+        </li>
+      </ul>
+      <div class="combo-note"><strong>Why the stun matters:</strong> Without Edge Dancer's stun, landing a headshot on a moving target at close range is extremely difficult. The stun turns a hard mechanical challenge into a straightforward point-blank shot. Always follow Edge Dancer with an immediate rifle shot — never waste the stun window. [[0]](#__0)</div>
+
+      <div class="combo-section-divider"></div>
+      <h3 style="margin-bottom:4px;color:var(--rose)">Ult → Namor AoE Combo <span class="diff-badge diff-expert" style="font-size:0.72rem;vertical-align:middle">Expert</span></h3>
+      <p style="font-size:0.83rem;margin-bottom:16px;">The only high-value use of Widow's ult — requires pre-game coordination with your Namor or Storm. [[0]](#__0)</p>
+      <ul class="combo-steps">
+        <li class="combo-step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <div class="step-title">Coordinate with Namor/Storm before the fight <span class="time-badge">Pre-teamfight</span></div>
+            <div class="step-desc">Tell your Namor or Storm to hold their ult. Widow's ult slow is only valuable as a setup — without a follow-up AoE, it's wasted. [[0]](#__0)</div>
+          </div>
+        </li>
+        <li class="combo-step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <div class="step-title">Wait for 3+ enemies to group on objective <span class="time-badge">Timing</span></div>
+            <div class="step-desc">Widow's ult slow is most valuable when it hits multiple enemies. Wait for a natural cluster — don't force it on a single target. [[0]](#__0)</div>
+          </div>
+        </li>
+        <li class="combo-step">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <div class="step-title">Fire Widow's Hour on the cluster <span class="key-badge">Q</span> <span class="time-badge">~0.5s charge</span></div>
+            <div class="step-desc">Charge up and fire the slow projectile at the grouped enemies. Call out "ult fired" to your Namor immediately. [[0]](#__0)</div>
+          </div>
+        </li>
+        <li class="combo-step">
+          <div class="step-num">4</div>
+          <div class="step-body">
+            <div class="step-title">Namor drops AoE ult on slowed cluster <span class="time-badge">Immediate follow-up</span></div>
+            <div class="step-desc">Slowed enemies cannot escape Namor's AoE ult. This combo can wipe an entire team in seconds — the slow removes their only counter-play (movement). [[0]](#__0)</div>
+          </div>
+        </li>
+      </ul>
+      <div class="combo-note"><strong>The only good Widow ult:</strong> Used alone, Widow's ult is nearly useless — the slow projectile is dodgeable and the camera switch is disorienting. Used as a setup for Namor or Storm's AoE ult, it becomes a teamfight-winning play. This coordination is what separates good Widow players from great ones. [[0]](#__0) [[3]](#__3)</div>
+    </div>
+
+    <!-- FAQ -->
+    <div class="section">
+      <div class="section-label">Common Questions</div>
+      <h2>FAQ</h2>
+      <div class="faq-list">
+
+        <div class="faq-item open">
+          <button class="faq-q" onclick="toggleFaq(this)">Is Black Widow worth playing in ranked? <span class="faq-arrow">▼</span></button>
+          <div class="faq-a"><p>Honestly — not for climbing. Black Widow is D-Tier in Season 3 with the worst pick rate and win rate in the game on both PC and console. She requires a Mantis pocket to reach one-shot thresholds, and even then only 15 heroes can be one-shot. If you enjoy sniper gameplay and want the challenge, she's rewarding to master — but don't pick her expecting easy wins. [[2]](#__2) [[3]](#__3)</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">Do I need Mantis to play Black Widow? <span class="faq-arrow">▼</span></button>
+          <div class="faq-a"><p>For one-shot potential: yes, Mantis is essentially mandatory. Without damage boost, your headshots deal ~180 damage — not enough to one-shot any hero. With Mantis boost, you reach 250+ and can one-shot all 250 HP heroes. Rocket Raccoon's ult amp opens up 300 HP one-shots but only for a brief window. Ask your support to prioritize keeping damage boost on you at all times. [[0]](#__0)</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">When should I swap to batons vs. rifle? <span class="faq-arrow">▼</span></button>
+          <div class="faq-a"><p>Swap to batons in three situations: (1) a shielding tank like Dr. Strange jumps on you — batons pierce his shield while the rifle cannot; (2) you're in close range and out of rifle ammo; (3) you're dueling a fast melee hero whose movement is hard to track with the slow rifle fire rate. In all other situations, keep the rifle out — it's your primary damage tool. [[0]](#__0)</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">How do I deal with divers as Black Widow? <span class="faq-arrow">▼</span></button>
+          <div class="faq-a"><p>Divers are Widow's hardest counter — Spider-Man, Black Panther, Iron Fist, and Hulk can all reach her position and kill her in seconds. The counter-play: (1) always have your grapple ready to escape; (2) use Edge Dancer to create distance; (3) position near your tanks so they can peel; (4) ping the diver immediately so your team can respond. If a diver reaches you, your only option is to escape — you cannot win a straight 1v1 against a dedicated diver. [[1]](#__1) [[2]](#__2)</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">What's the best use of Black Widow's ult? <span class="faq-arrow">▼</span></button>
+          <div class="faq-a"><p>The ult has two viable uses: (1) as a setup for a teammate's AoE ult — slow a cluster of enemies then have Namor or Storm drop their ult on them; (2) as a finisher on a low-HP target that escaped your headshot. Do NOT use it as an opener or a standalone play — the slow projectile is telegraphed, the camera switch is disorienting, and enemies have too much time to react. Most top Widow players consider it the weakest ult in the game. [[0]](#__0) [[3]](#__3)</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">How often should I reposition? <span class="faq-arrow">▼</span></button>
+          <div class="faq-a"><p>After every 2–3 shots at minimum — ideally after every kill. The moment you fire, your position is revealed. Staying still gives the enemy team time to send a diver or coordinate a counter. Establish a rotation of 3–4 high-ground positions and cycle through
+          them. Unpredictability is your only defense — Black Widow has 250 HP, the same as a support. A stationary Widow is a dead Widow.  </p></div>
+        </div>
+
+      </div>
+    </div><!-- end faq section -->
+
+  </div><!-- end main-col -->
+
+  <!-- SIDEBAR -->
+  <div class="side-col">
+
+    <div class="side-card">
+      <div class="side-card-title">Tier Rating</div>
+      <div class="tier-badge tier-d">D</div>
+      <p style="font-size:0.85rem;color:var(--muted);line-height:1.6">Black Widow sits at <strong style="color:var(--text)">D-Tier</strong> in Season 3 — the worst pick rate and win rate in the game on both PC and console. She requires a Mantis pocket to function, and even then only 15 heroes can be one-shot. Play her for mastery and enjoyment, not for ranked climbing.  </p>
+    </div>
+
+    <div class="side-card">
+      <div class="side-card-title">Quick Tips</div>
+      <div class="quick-tip">
+        <div class="tip-icon">✨</div>
+        <div class="tip-text"><strong style="color:var(--text)">Mantis boost is mandatory.</strong> Without it, you cannot one-shot anyone. Ask your support to keep damage boost on you at all times — it's the difference between useless and lethal.</div>
+      </div>
+      <div class="quick-tip">
+        <div class="tip-icon">🎯</div>
+        <div class="tip-text">Always follow <strong style="color:var(--text)">Edge Dancer</strong> with an immediate rifle shot — the stun window is brief. Never waste it by hesitating.</div>
+      </div>
+      <div class="quick-tip">
+        <div class="tip-icon">🪝</div>
+        <div class="tip-text">Grapple after <strong style="color:var(--text)">every shot</strong>. Staying still is a death sentence — your position is revealed the moment you fire.</div>
+      </div>
+      <div class="quick-tip">
+        <div class="tip-icon">⚡</div>
+        <div class="tip-text">Baton strikes <strong style="color:var(--text)">pierce shields</strong> — swap to melee when Dr. Strange or a shielding tank jumps on you. Their shield is useless against your batons.</div>
+      </div>
+      <div class="quick-tip">
+        <div class="tip-icon">🔭</div>
+        <div class="tip-text">Zero falloff when scoped — always ADS for medium and long range. Unscoped is only for targets under 10m where the falloff hasn't kicked in yet.</div>
+      </div>
+      <div class="quick-tip">
+        <div class="tip-icon">🌊</div>
+        <div class="tip-text">Widow's ult is only valuable as a <strong style="color:var(--text)">setup for Namor or Storm's AoE ult</strong>. Never use it as a standalone play.</div>
+      </div>
+      <div class="quick-tip">
+        <div class="tip-icon">🏃</div>
+        <div class="tip-text">If a diver reaches you, <strong style="color:var(--text)">escape — don't fight.</strong> You have 250 HP. Spider-Man, Black Panther, and Iron Fist kill you in one combo.</div>
+      </div>
+    </div>
+
+    <div class="side-card">
+      <div class="side-card-title">One-Shot Targets (With Mantis Boost)</div>
+      <div class="quick-tip">
+        <div class="tip-icon">💀</div>
+        <div class="tip-text"><strong style="color:var(--text)">250 HP heroes only</strong> — Mantis, Cloak &amp; Dagger, Loki, Luna Snow, and other 250 HP supports. Only ~15 heroes total qualify.</div>
+      </div>
+      <div class="quick-tip">
+        <div class="tip-icon">🚫</div>
+        <div class="tip-text"><strong style="color:var(--text)">Cannot one-shot:</strong> Any hero above 250 HP — tanks, high-HP duelists, and most Vanguards are immune to one-shots even with boost.</div>
+      </div>
+      <div class="quick-tip">
+        <div class="tip-icon">🦝</div>
+        <div class="tip-text"><strong style="color:var(--text)">Rocket Raccoon ult amp</strong> opens up 300 HP one-shots — but only for the duration of his ult. Capitalize on this window immediately.</div>
+      </div>
+    </div>
+
+    <a class="ai-btn-side" href="/">← Back to All Heroes</a>
+
+  </div><!-- end side-col -->
+
+</div><!-- end page-body -->
+
 <footer>
-  <p>© 2025 RivalsGuide.site — Fan site, not affiliated with Marvel or NetEase Games.</p>
+  <div class="footer-logo">RIVALS<span style="color:var(--gold)">GUIDE</span></div>
+  <p>Fan-made guide site · Not affiliated with Marvel or NetEase Games</p>
+  <p style="margin-top:8px">© 2025 RivalsGuide.site · All rights reserved</p>
 </footer>
+
+<script>
+  function toggleFaq(btn){
+    const item = btn.closest('.faq-item');
+    item.classList.toggle('open');
+  }
+</script>
 </body>
 </html>
