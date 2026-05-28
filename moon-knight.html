@@ -1,94 +1,723 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Moon Knight Guide – Marvel Rivals | RivalsGuide</title>
-<meta name="description" content="Complete Moon Knight guide for Marvel Rivals. Abilities, crescent dart bouncing tips, counters, and team synergies."/>
-<link rel="canonical" href="https://www.rivalsguide.site/moon-knight.html"/>
-<style>
-  :root{--gold:#ffd700;--bg:#0a0e1a;--card:#111827;--text:#e2e8f0}
-  *{margin:0;padding:0;box-sizing:border-box}
-  body{background:var(--bg);color:var(--text);font-family:'Segoe UI',sans-serif;line-height:1.6}
-  header{background:linear-gradient(135deg,#1a2a4a,#0d1b2e);padding:16px 24px;display:flex;align-items:center;gap:16px;border-bottom:2px solid var(--gold)}
-  header a{color:var(--gold);text-decoration:none;font-weight:700;font-size:1.2rem}
-  .hero-banner{background:linear-gradient(135deg,#1a1a2e 0%,#0d0d1e 100%);padding:48px 24px;text-align:center}
-  .hero-emoji{font-size:5rem;margin-bottom:16px}
-  .hero-banner h1{font-size:2.5rem;color:var(--gold);margin-bottom:8px}
-  .role-tag{display:inline-block;background:#7f1d1d;color:#fca5a5;padding:4px 16px;border-radius:20px;font-size:0.85rem;font-weight:700;margin:8px 4px}
-  .container{max-width:900px;margin:0 auto;padding:32px 24px}
-  .section{background:var(--card);border-radius:12px;padding:28px;margin-bottom:24px;border:1px solid #1e293b}
-  .section h2{color:var(--gold);font-size:1.4rem;margin-bottom:16px;border-bottom:1px solid #1e293b;padding-bottom:8px}
-  .ability{background:#0d1b2e;border-radius:8px;padding:16px;margin-bottom:12px;border-left:3px solid #a78bfa}
-  .ability h3{color:#c4b5fd;margin-bottom:6px}
-  .tip-box{background:#0f0a1a;border:1px solid #7c3aed;border-radius:8px;padding:16px;margin-bottom:12px}
-  .tip-box h3{color:#a78bfa;margin-bottom:6px}
-  .counter-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px}
-  .counter-card{background:#0d1b2e;border-radius:8px;padding:12px;text-align:center;border:1px solid #1e293b}
-  .counter-card .emoji{font-size:2rem}
-  .counter-card .name{font-size:0.85rem;font-weight:600;margin-top:6px}
-  .stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-  .stat-box{background:#0d1b2e;border-radius:8px;padding:16px;text-align:center}
-  .stat-box .val{font-size:1.8rem;font-weight:700;color:var(--gold)}
-  .stat-box .label{font-size:0.8rem;color:#94a3b8;margin-top:4px}
-  footer{text-align:center;padding:32px;color:#64748b;font-size:0.85rem;border-top:1px solid #1e293b}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moon Knight Guide – Abilities, Combos & Counters | RivalsGuide</title>
+  <meta name="description" content="Complete Moon Knight guide for Marvel Rivals. Learn his Ankh combos, bouncing projectiles, counters, and pro tips to master Marc Spector.">
+  <meta property="og:title" content="Moon Knight Guide – Marvel Rivals | RivalsGuide">
+  <meta property="og:description" content="Master Moon Knight in Marvel Rivals with our in-depth guide covering abilities, combos, counters, and team comps.">
+  <meta property="og:url" content="https://rivalsguide.site/moon-knight.html">
+  <meta property="og:type" content="article">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-D4EJPR83TH"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-D4EJPR83TH');</script>
+  <style>
+    :root{--orange:#fb923c;--amber:#f59e0b;--gold:#ffd60a;--dark:#0a0a0f;--dark2:#12121a;--dark3:#1a1a2e;--card:#16213e;--text:#e0e0e0;--muted:#888;--border:rgba(251,146,60,0.35);--green:#4ade80;--red:#f87171;--blue:#60a5fa;--purple:#a855f7;--silver:#c0c0c0;--accent:#c0c0c0;--accent2:#f59e0b}
+    *{margin:0;padding:0;box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{background:var(--dark);color:var(--text);font-family:'Segoe UI',sans-serif;overflow-x:hidden}
+    nav{position:fixed;top:0;width:100%;z-index:999;background:rgba(10,10,15,0.95);backdrop-filter:blur(10px);border-bottom:1px solid rgba(192,192,192,0.35);padding:0 40px;display:flex;align-items:center;justify-content:space-between;height:64px}
+    .nav-logo{font-size:1.3rem;font-weight:900;color:#fb923c;letter-spacing:1px;text-decoration:none}
+    .nav-logo span{color:var(--gold)}
+    .nav-back{color:var(--muted);text-decoration:none;font-size:0.9rem;display:flex;align-items:center;gap:8px;transition:color 0.2s}
+    .nav-back:hover{color:var(--silver)}
+    .hero-banner{min-height:380px;background:radial-gradient(ellipse at 30% 50%,rgba(192,192,192,0.15) 0%,transparent 60%),radial-gradient(ellipse at 80% 30%,rgba(255,214,10,0.08) 0%,transparent 50%),var(--dark);display:flex;align-items:center;padding:100px 40px 60px;position:relative;overflow:hidden}
+    .hero-banner::before{content:'🌙';position:absolute;right:80px;top:50%;transform:translateY(-50%);font-size:12rem;opacity:0.06;pointer-events:none}
+    .banner-inner{max-width:1200px;margin:0 auto;width:100%}
+    .breadcrumb{font-size:0.8rem;color:var(--muted);margin-bottom:16px}
+    .breadcrumb a{color:var(--muted);text-decoration:none}
+    .breadcrumb a:hover{color:var(--silver)}
+    .breadcrumb span{margin:0 8px}
+    .banner-role{display:inline-block;background:rgba(192,192,192,0.1);border:1px solid rgba(192,192,192,0.35);color:var(--silver);font-size:0.75rem;padding:3px 14px;border-radius:20px;margin-bottom:16px;letter-spacing:2px;text-transform:uppercase}
+    .banner-title{font-size:clamp(2.5rem,6vw,4.5rem);font-weight:900;line-height:1.1;margin-bottom:12px;text-shadow:0 0 40px rgba(192,192,192,0.25)}
+    .banner-title .accent{color:var(--silver)}
+    .banner-sub{color:var(--muted);font-size:1rem;max-width:560px;line-height:1.6;margin-bottom:12px}
+    .banner-hook{color:var(--text);font-size:1rem;max-width:560px;line-height:1.6;margin-bottom:28px;font-style:italic;border-left:3px solid var(--silver);padding-left:14px}
+    .banner-tags{display:flex;gap:10px;flex-wrap:wrap}
+    .tag{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);padding:5px 14px;border-radius:20px;font-size:0.8rem;color:var(--muted)}
+    .tag.silver{border-color:rgba(192,192,192,0.35);color:var(--silver);background:rgba(192,192,192,0.08)}
+    .tag.gold{border-color:rgba(255,214,10,0.3);color:var(--gold);background:rgba(255,214,10,0.06)}
+    .page-body{max-width:1200px;margin:0 auto;padding:60px 40px 80px;display:grid;grid-template-columns:1fr 320px;gap:40px;align-items:start}
+    .main-col{display:flex;flex-direction:column;gap:48px}
+    .side-col{display:flex;flex-direction:column;gap:24px;position:sticky;top:84px}
+    .section{background:var(--card);border:1px solid rgba(255,255,255,0.05);border-radius:12px;padding:32px;transition:border-color 0.2s}
+    .section:hover{border-color:rgba(192,192,192,0.35)}
+    .section-label{font-size:0.72rem;text-transform:uppercase;letter-spacing:3px;color:var(--silver);margin-bottom:8px;font-weight:700}
+    h2{font-size:1.5rem;font-weight:900;margin-bottom:20px;line-height:1.2}
+    h2 span{color:var(--silver)}
+    h3{font-size:1rem;font-weight:700;margin-bottom:8px;color:var(--text)}
+    p{color:var(--muted);line-height:1.7;font-size:0.93rem}
+    .stats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:24px}
+    .stat-box{background:var(--dark2);border-radius:8px;padding:16px;text-align:center;border:1px solid rgba(255,255,255,0.04)}
+    .stat-val{font-size:1.4rem;font-weight:900;color:var(--silver);display:block}
+    .stat-key{font-size:0.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-top:4px;display:block}
+    .stat-desc{color:var(--muted);font-size:0.88rem;line-height:1.6}
+    .sw-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:24px}
+    .sw-col{background:var(--dark2);border-radius:8px;padding:16px}
+    .sw-col-title{font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:12px}
+    .sw-col.str .sw-col-title{color:var(--green)}
+    .sw-col.wk .sw-col-title{color:var(--red)}
+    .sw-item{display:flex;align-items:flex-start;gap:8px;padding:6px 0;font-size:0.83rem;color:var(--muted);line-height:1.5;border-bottom:1px solid rgba(255,255,255,0.04)}
+    .sw-item:last-child{border-bottom:none}
+    .sw-icon{flex-shrink:0;margin-top:1px}
+    .ability-list{display:flex;flex-direction:column;gap:16px}
+    .ability-item{background:var(--dark2);border:1px solid rgba(255,255,255,0.05);border-radius:10px;padding:20px;display:flex;gap:16px;transition:border-color 0.2s;align-items:flex-start}
+    .ability-item:hover{border-color:rgba(192,192,192,0.35)}
+    .ability-key{background:var(--silver);color:#000;padding:4px 12px;border-radius:5px;font-size:0.78rem;font-weight:700;font-family:monospace;white-space:nowrap;flex-shrink:0;margin-top:2px;min-width:52px;text-align:center}
+    .ability-key.ult{background:var(--gold);color:#000}
+    .ability-key.passive{background:rgba(192,192,192,0.15);color:var(--silver);border:1px solid rgba(192,192,192,0.35)}
+    .ability-key.teamup{background:rgba(168,85,247,0.2);color:var(--purple);border:1px solid rgba(168,85,247,0.3)}
+    .ability-body{flex:1}
+    .ability-name{font-weight:700;font-size:1rem;margin-bottom:6px}
+    .ability-desc{color:var(--muted);font-size:0.88rem;line-height:1.65;margin-bottom:8px}
+    .ability-tip{font-size:0.82rem;color:var(--gold);padding:8px 12px;background:rgba(255,214,10,0.06);border-radius:6px;border-left:2px solid var(--gold)}
+    .ability-stats{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:8px}
+    .ability-stat-chip{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);border-radius:4px;padding:3px 9px;font-size:0.74rem;color:var(--muted)}
+    .ability-stat-chip b{color:var(--silver)}
+    .counter-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .counter-col{background:var(--dark2);border-radius:10px;padding:20px}
+    .counter-col-title{font-size:0.78rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:14px}
+    .counter-col.good .counter-col-title{color:var(--green)}
+    .counter-col.bad .counter-col-title{color:var(--red)}
+    .counter-entry{display:flex;align-items:flex-start;gap:10px;padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.04)}
+    .counter-entry:last-child{border-bottom:none;padding-bottom:0}
+    .counter-emoji{font-size:1.3rem;flex-shrink:0;margin-top:1px}
+    .counter-name{font-weight:700;font-size:0.88rem;margin-bottom:2px}
+    .counter-reason{font-size:0.78rem;color:var(--muted);line-height:1.5}
+    .comp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .comp-card{background:var(--dark2);border-radius:10px;padding:16px;border:1px solid rgba(255,255,255,0.04);transition:border-color 0.2s;display:flex;flex-direction:column}
+    .comp-card:hover{border-color:rgba(192,192,192,0.35)}
+    .comp-role{font-size:0.72rem;text-transform:uppercase;letter-spacing:1px;font-weight:700;margin-bottom:10px}
+    .comp-role.tank{color:var(--blue)}
+    .comp-role.support{color:var(--green)}
+    .comp-role.dps{color:#fb923c}
+    .comp-hero{display:flex;align-items:flex-start;gap:8px;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04)}
+    .comp-hero:last-of-type{border-bottom:none}
+    .comp-hero-emoji{font-size:1.1rem;flex-shrink:0;margin-top:1px}
+    .comp-hero-name{font-size:0.85rem;font-weight:700}
+    .comp-hero-reason{font-size:0.75rem;color:var(--muted);line-height:1.4;margin-top:2px}
+    .comp-synergy{margin-top:12px;padding:10px 12px;background:rgba(255,255,255,0.03);border-radius:6px;border-left:2px solid var(--silver);font-size:0.78rem;color:var(--muted);line-height:1.5}
+    .comp-synergy.support{border-left-color:var(--green)}
+    .comp-synergy.dps{border-left-color:#fb923c}
+    .difficulty-table{width:100%;border-collapse:collapse;margin:20px 0 8px}
+    .difficulty-table th{font-size:0.75rem;text-transform:uppercase;letter-spacing:1px;color:var(--muted);font-weight:700;padding:8px 12px;text-align:left;border-bottom:1px solid rgba(255,255,255,0.08)}
+    .difficulty-table td{padding:10px 12px;font-size:0.85rem;border-bottom:1px solid rgba(255,255,255,0.04);vertical-align:middle}
+    .difficulty-table tr:last-child td{border-bottom:none}
+    .difficulty-table tr:hover td{background:rgba(255,255,255,0.02)}
+    .diff-badge{display:inline-block;padding:2px 10px;border-radius:20px;font-size:0.75rem;font-weight:700}
+    .diff-easy{background:rgba(74,222,128,0.12);color:var(--green)}
+    .diff-med{background:rgba(255,214,10,0.12);color:var(--gold)}
+    .diff-hard{background:rgba(251,146,60,0.12);color:#fb923c}
+    .diff-expert{background:rgba(192,192,192,0.12);color:var(--silver)}
+    .combo-steps{list-style:none;display:flex;flex-direction:column;gap:0}
+    .combo-step{display:flex;gap:16px;padding:16px 0;border-bottom:1px solid rgba(255,255,255,0.04);align-items:flex-start}
+    .combo-step:last-child{border-bottom:none}
+    .step-num{width:32px;height:32px;min-width:32px;background:var(--silver);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:0.88rem;flex-shrink:0;color:#000}
+    .step-body{flex:1}
+    .step-title{font-weight:700;font-size:0.95rem;margin-bottom:4px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+    .key-badge{background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.18);padding:1px 9px;border-radius:4px;font-size:0.75rem;font-family:monospace}
+    .time-badge{background:rgba(74,222,128,0.1);border:1px solid rgba(74,222,128,0.25);color:var(--green);padding:1px 9px;border-radius:4px;font-size:0.72rem;font-family:monospace}
+    .step-desc{color:var(--muted);font-size:0.88rem;line-height:1.6}
+    .combo-note{background:rgba(192,192,192,0.05);border:1px solid rgba(192,192,192,0.25);border-radius:8px;padding:14px 16px;margin-top:16px;font-size:0.85rem;color:var(--text);line-height:1.6}
+    .combo-note strong{color:var(--silver)}
+    .combo-section-divider{height:1px;background:rgba(255,255,255,0.06);margin:28px 0}
+    .faq-list{display:flex;flex-direction:column;gap:0}
+    .faq-item{border-bottom:1px solid rgba(255,255,255,0.05)}
+    .faq-item:last-child{border-bottom:none}
+    .faq-q{width:100%;background:transparent;border:none;color:var(--text);text-align:left;padding:18px 0;font-size:0.95rem;font-weight:700;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px}
+    .faq-q:hover{color:var(--silver)}
+    .faq-arrow{color:var(--muted);font-size:0.8rem;transition:transform 0.2s;flex-shrink:0}
+    .faq-item.open .faq-arrow{transform:rotate(180deg)}
+    .faq-a{max-height:0;overflow:hidden;transition:max-height 0.35s ease}
+    .faq-item.open .faq-a{max-height:300px}
+    .faq-a p{padding-bottom:16px;font-size:0.88rem}
+    .side-card{background:var(--card);border:1px solid rgba(255,255,255,0.05);border-radius:12px;padding:24px}
+    .side-card-title{font-size:0.72rem;text-transform:uppercase;letter-spacing:2px;color:var(--silver);font-weight:700;margin-bottom:16px}
+    .quick-tip{display:flex;gap:10px;padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.04);align-items:flex-start}
+    .quick-tip:last-child{border-bottom:none}
+    .tip-icon{font-size:1.1rem;flex-shrink:0;margin-top:1px}
+    .tip-text{font-size:0.82rem;color:var(--muted);line-height:1.5}
+    .tier-badge{display:inline-flex;align-items:center;justify-content:center;width:56px;height:56px;border-radius:12px;font-size:2rem;font-weight:900;margin-bottom:12px}
+    .tier-b{background:linear-gradient(135deg,#c0c0c0,#888);color:#000}
+    .rating-row{display:flex;justify-content:space-between;align-items:center;font-size:0.8rem;margin-bottom:8px}
+    .rating-row span{color:var(--muted)}
+    .dots{display:flex;gap:3px}
+    .dot{width:10px;height:10px;border-radius:2px}
+    .dot.on{background:var(--silver)}
+    .dot.off{background:rgba(255,255,255,0.08)}
+    .teamup-pill{display:flex;align-items:center;gap:8px;background:rgba(192,192,192,0.05);border:1px solid rgba(192,192,192,0.18);border-radius:6px;padding:8px 10px;margin-bottom:8px}
+    .teamup-pill:last-child{margin-bottom:0}
+    .teamup-pill-name{font-size:0.82rem;font-weight:700;color:var(--text)}
+    .teamup-pill-sub{font-size:0.72rem;color:var(--muted)}
+    .ai-btn-side{display:block;text-align:center;padding:12px;background:rgba(192,192,192,0.05);border:1px solid rgba(192,192,192,0.25);border-radius:8px;color:var(--muted);text-decoration:none;font-size:0.85rem;transition:all 0.2s}
+    .ai-btn-side:hover{background:rgba(192,192,192,0.12);color:var(--text)}
+    footer{background:var(--dark2);border-top:1px solid rgba(251,146,60,0.35);padding:40px;text-align:center;color:var(--muted);font-size:0.85rem}
+    .footer-logo{font-size:1.2rem;font-weight:900;color:#fb923c;margin-bottom:8px}
+    ::-webkit-scrollbar{width:6px}
+    ::-webkit-scrollbar-track{background:var(--dark)}
+    ::-webkit-scrollbar-thumb{background:var(--silver);border-radius:3px}
+    @media(max-width:900px){.page-body{grid-template-columns:1fr;padding:40px 20px 60px}.side-col{position:static}.counter-grid{grid-template-columns:1fr}.comp-grid{grid-template-columns:1fr 1fr}.hero-banner{padding:90px 20px 48px}nav{padding:0 20px}.sw-grid{grid-template-columns:1fr}}
+    @media(max-width:560px){.stats-grid{grid-template-columns:repeat(2,1fr)}.comp-grid{grid-template-columns:1fr}}
+  </style>
 </head>
 <body>
-<header>
-  <a href="/index.html">🛡️ RivalsGuide</a>
-  <span style="color:#64748b">/ Moon Knight</span>
-</header>
+
+<nav>
+  <a class="nav-logo" href="/">RIVALS<span>GUIDE</span></a>
+  <a class="nav-back" href="/">← Back to Home</a>
+</nav>
+
 <div class="hero-banner">
-  <div class="hero-emoji">🌙</div>
-  <h1>Moon Knight</h1>
-  <span class="role-tag">⚔️ DPS</span>
-  <p style="color:#94a3b8;margin-top:12px;max-width:600px;margin-left:auto;margin-right:auto">
-    Avatar of Khonshu. Moon Knight is a unique DPS who excels at bouncing crescent darts off surfaces to hit enemies behind cover — a true skill-expression hero.
-  </p>
+  <div class="banner-inner">
+    <div class="breadcrumb">
+      <a href="/">Home</a><span>›</span>
+      <a href="/">Heroes</a><span>›</span>
+      <span style="color:var(--text)">Moon Knight</span>
+    </div>
+    <div class="banner-role">DPS · Duelist</div>
+    <h1 class="banner-title"><span class="accent">Moon Knight</span><br>Complete Guide</h1>
+    <p class="banner-sub">Marc Spector — the avatar of Khonshu who bounces crescent darts between grouped enemies, plants sacred Ankhs to amplify every projectile, and calls down the Hand of Khonshu to haunt entire teams with his ultimate.</p>
+    <p class="banner-hook">If you want a Duelist who charges his ultimate faster than anyone else, punishes grouped teams harder than any other mid-range hero, and can outright ignore enemy defensive ultimates with his own — Moon Knight is the apex predator of grouped compositions.</p>
+    <div class="banner-tags">
+      <span class="tag silver">DPS</span>
+      <span class="tag">B-Tier</span>
+      <span class="tag">Bouncing Projectiles</span>
+      <span class="tag">Ankh Combos</span>
+      <span class="tag">High Ground</span>
+    </div>
+  </div>
 </div>
-<div class="container">
-  <div class="section">
-    <h2>📊 Base Stats</h2>
-    <div class="stat-grid">
-      <div class="stat-box"><div class="val">275</div><div class="label">Health</div></div>
-      <div class="stat-box"><div class="val">Bounce</div><div class="label">Damage Type</div></div>
-      <div class="stat-box"><div class="val">Hard</div><div class="label">Difficulty</div></div>
+
+<div class="page-body">
+  <div class="main-col">
+
+    <!-- STATS -->
+    <div class="section">
+      <div class="section-label">Overview</div>
+      <h2>Base <span>Stats</span></h2>
+      <div class="stats-grid">
+        <div class="stat-box"><span class="stat-val">250</span><span class="stat-key">Health</span></div>
+        <div class="stat-box"><span class="stat-val">25×3</span><span class="stat-key">Dart Damage</span></div>
+        <div class="stat-box"><span class="stat-val">30</span><span class="stat-key">Primary Ammo</span></div>
+        <div class="stat-box"><span class="stat-val">80</span><span class="stat-key">Moon Blade Dmg</span></div>
+        <div class="stat-box"><span class="stat-val">52.2%</span><span class="stat-key">Win Rate</span></div>
+        <div class="stat-box"><span class="stat-val">★★★☆☆</span><span class="stat-key">Difficulty</span></div>
+      </div>
+
+      <div class="sw-grid">
+        <div class="sw-col str">
+          <div class="sw-col-title">✅ Strengths</div>
+          <div class="sw-item"><span class="sw-icon">⚡</span>Fastest ultimate charge in the Duelist roster — bouncing darts off grouped Vanguards generates ult meter faster than any other hero in the game</div>
+          <div class="sw-item"><span class="sw-icon">🌙</span>Hand of Khonshu deals damage so fast it out-damages Luna Snow's healing ult — one of the only ultimates that kills through defensive ults</div>
+          <div class="sw-item"><span class="sw-icon">🪝</span>Double jump, glide, and hookshot give him three independent repositioning tools — hardest Duelist to pin down on high ground</div>
+          <div class="sw-item"><span class="sw-icon">💥</span>Ancient Ankh amplifies every projectile that passes through it — grouped enemies near an Ankh take exponentially more damage per shot</div>
+        </div>
+        <div class="sw-col wk">
+          <div class="sw-col-title">⛔ Weaknesses</div>
+          <div class="sw-item"><span class="sw-icon">✈️</span>Weak against aerial enemies — Ankh must be placed on surfaces, offering zero help against flying heroes like Storm or Iron Man</div>
+          <div class="sw-item"><span class="sw-icon">📉</span>Extreme highs and lows — with Ankh active he's lethal; on the 12-second Ankh cooldown he's barely a threat to anyone</div>
+          <div class="sw-item"><span class="sw-icon">🐢</span>Slow projectile travel speed at 120–150m/s — high-mobility heroes can dodge his darts consistently at longer ranges</div>
+          <div class="sw-item"><span class="sw-icon">🎯</span>Requires good positioning setup — sneaking into backline position takes time where he contributes zero damage to his team</div>
+        </div>
+      </div>
+
+      <p class="stat-desc">Moon Knight sits at B-Tier with a strong 52.2% win rate and an exceptional 8.53 KDA — the highest of any Duelist in the roster. His skill expression is almost entirely about Ankh placement and target grouping: a Moon Knight who consistently places his Ankh out of enemy line of sight while maintaining bounce angles on grouped enemies will top damage charts every game. His ultimate is uniquely powerful because it deals damage faster than most healing ultimates can compensate. [[0]](#__0) [[1]](#__1)</p>
     </div>
-  </div>
-  <div class="section">
-    <h2>⚡ Abilities</h2>
-    <div class="ability">
-      <h3>🌙 Crescent Dart (Primary)</h3>
-      <p>Throws crescent-shaped projectiles that bounce off walls and surfaces. Mastering bounce angles is the core skill of Moon Knight — practice until it becomes instinct.</p>
+
+    <!-- ABILITIES -->
+    <div class="section">
+      <div class="section-label">Kit Breakdown</div>
+      <h2>Abilities <span>&amp; Skills</span></h2>
+      <div class="ability-list">
+
+        <div class="ability-item">
+          <div class="ability-key passive">PASSIVE</div>
+          <div class="ability-body">
+            <div class="ability-name">Night Glider</div>
+            <div class="ability-desc">Moon Knight can glide through the air by holding the jump button after a leap, extending his airtime significantly. Combined with his double jump (Rising Leap) and Moonlight Hook grapple, this passive gives him three independent vertical movement tools — making him one of the most mobile Duelists for reaching and maintaining high ground positions. [[0]](#__0)</div>
+            <div class="ability-tip">💡 Use the glide to extend your aerial hang time after a hookshot, letting you survey the battlefield and choose your landing spot. The combination of hookshot → double jump → glide can reach almost any elevated position on any map in the game.</div>
+          </div>
+        </div>
+
+        <div class="ability-item">
+          <div class="ability-key" style="background:var(--silver)">LMB</div>
+          <div class="ability-body">
+            <div class="ability-name">Crescent Dart</div>
+            <div class="ability-desc">Moon Knight fires three crescent darts simultaneously in a straight trajectory. Each dart deals 25 damage and can bounce between enemies and Ankhs within 7 meters, with up to 3 bounces per dart. Each bounce deals 20% less damage than the previous hit. The darts can critically hit, and every hit on an enemy generates ultimate charge — making Vanguards the ideal primary target for farming ult meter rapidly. [[0]](#__0)</div>
+            <div class="ability-stats">
+              <span class="ability-stat-chip">Damage: <b>25 per dart</b></span>
+              <span class="ability-stat-chip">Darts per shot: <b>3</b></span>
+              <span class="ability-stat-chip">Speed: <b>150m/s</b></span>
+              <span class="ability-stat-chip">Ammo: <b>30</b></span>
+              <span class="ability-stat-chip">Max bounces: <b>3</b></span>
+              <span class="ability-stat-chip">Bounce falloff: <b>-20% per bounce</b></span>
+            </div>
+            <div class="ability-tip">💡 Always target Vanguards with primary fire — their large bodies are easy to hit consistently, and every hit generates ult charge. Moon Knight should be the first player to have his ultimate in almost every fight when played correctly. Never try to snipe mobile targets at long range; stay in the 10–30m sweet spot. [[0]](#__0)</div>
+          </div>
+        </div>
+
+        <div class="ability-item">
+          <div class="ability-key" style="background:var(--silver)">RMB</div>
+          <div class="ability-body">
+            <div class="ability-name">Moon Blade</div>
+            <div class="ability-desc">Moon Knight launches a single Moon Blade projectile that deals 80 damage on hit and bounces between enemies and Ankhs within 7 meters (up to 3 bounces, -20% damage per bounce). Each hit also grants 25 bonus HP (up to 100 max), which decays at 20 HP/s after 3 seconds. This is his highest single-hit damage ability and his primary self-sustain tool. The bonus HP mechanic rewards aggressive play — landing Moon Blade hits consistently keeps him alive without supports. [[0]](#__0)</div>
+            <div class="ability-stats">
+              <span class="ability-stat-chip">Damage: <b>80</b></span>
+              <span class="ability-stat-chip">Bonus HP per hit: <b>25</b></span>
+              <span class="ability-stat-chip">Max bonus HP: <b>100</b></span>
+              <span class="ability-stat-chip">HP decay: <b>20/s after 3s</b></span>
+              <span class="ability-stat-chip">Cooldown: <b>6s</b></span>
+              <span class="ability-stat-chip">Max bounces: <b>3</b></span>
+            </div>
+            <div class="ability-tip">💡 Moon Blade is your execute tool AND your sustain tool simultaneously. Use it on grouped enemies near your Ankh to bounce-chain the 80 damage across multiple targets while stacking bonus HP from each hit. Against a single isolated target, save it for the kill shot below 80 HP. [[0]](#__0)</div>
+          </div>
+        </div>
+
+        <div class="ability-item">
+          <div class="ability-key" style="background:var(--silver)">E</div>
+          <div class="ability-body">
+            <div class="ability-name">Ancient Ankh</div>
+            <div class="ability-desc">Moon Knight places a sacred Ankh on any surface. The Ankh acts as a bounce node — all of Moon Knight's projectiles (Crescent Dart and Moon Blade) bounce off it and toward the nearest enemy, amplifying his damage output dramatically against grouped targets. The Ankh has its own HP pool and can be destroyed by enemies. When destroyed, it goes on a 12-second cooldown — the longest downtime of any ability in his kit. The Ankh is the single most important ability in his entire kit. [[0]](#__0) [[1]](#__1)</div>
+            <div class="ability-stats">
+              <span class="ability-stat-chip">Type: <b>Bounce node</b></span>
+              <span class="ability-stat-chip">Cooldown: <b>12s (on destroy)</b></span>
+              <span class="ability-stat-chip">Placement: <b>Any surface</b></span>
+            </div>
+            <div class="ability-tip">💡 Place the Ankh out of enemy line of sight but within bounce range of where enemies are standing — on a wall behind a corner, above a doorframe, or on a ceiling. If enemies can see the Ankh, they will destroy it immediately. An Ankh they can't see is an Ankh that keeps firing. [[0]](#__0)</div>
+          </div>
+        </div>
+
+        <div class="ability-item">
+          <div class="ability-key" style="background:var(--silver)">SHIFT</div>
+          <div class="ability-body">
+            <div class="ability-name">Moonlight Hook</div>
+            <div class="ability-desc">Moon Knight fires a grappling hook that pulls him toward the target surface or enemy at high speed. This is his primary tool for reaching elevated positions, escaping dives, and repositioning mid-fight. Unlike most grapple abilities, Moonlight Hook can target both surfaces and enemies — hitting an enemy directly with the hook deals damage and closes the gap instantly for a follow-up burst. [[0]](#__0)</div>
+            <div class="ability-stats">
+              <span class="ability-stat-chip">Type: <b>Grapple</b></span>
+              <span class="ability-stat-chip">Target: <b>Surface or enemy</b></span>
+              <span class="ability-stat-chip">Cooldown: <b>~8s</b></span>
+            </div>
+            <div class="ability-tip">💡 Use Moonlight Hook to reach wall and ceiling positions for Ankh placement that ground-level enemies can't easily reach or destroy. The best Ankh spots are always accessible only by hookshot — if you can walk to the Ankh placement, so can the enemy.</div>
+          </div>
+        </div>
+
+        <div class="ability-item">
+          <div class="ability-key ult">Q — ULT</div>
+          <div class="ability-body">
+            <div class="ability-name">Hand of Khonshu</div>
+            <div class="ability-desc">Moon Knight calls upon Khonshu to rain crescent projectiles down on a targeted area, dealing rapid damage to all enemies caught in the zone. After the Season 1 buffs, Hand of Khonshu deals damage so quickly that it out-damages Luna Snow's healing ultimate — meaning enemies cannot survive inside it even with defensive ults active. This makes it one of the only ultimates in the game that kills through enemy defensive abilities. The ult charges faster than any other Duelist's due to Crescent Dart's high bounce-hit ult generation. [[0]](#__0) [[1]](#__1)</div>
+            <div class="ability-stats">
+              <span class="ability-stat-chip">Type: <b>AoE zone</b></span>
+              <span class="ability-stat-chip">Damage speed: <b>Beats healing ults</b></span>
+              <span class="ability-stat-chip">Charge rate: <b>Fastest Duelist</b></span>
+            </div>
+            <div class="ability-tip">💡 Hand of Khonshu is most powerful when combined with a teammate stun or root to prevent enemies from walking out of the zone. Without CC, aware enemies can simply move out of the AoE. With CC, it's an unavoidable team wipe that even Luna Snow's ult cannot prevent. [[0]](#__0)</div>
+          </div>
+        </div>
+
+        <div class="ability-item">
+          <div class="ability-key teamup">TEAM-UP</div>
+          <div class="ability-body">
+            <div class="ability-name">Full Moon — with Scarlet Witch</div>
+            <div class="ability-desc">When paired with Scarlet Witch, Moon Knight gains access to the Full Moon team-up ability — enhancing his kit with additional chaos energy effects that amplify his projectile damage and Ankh interactions. This team-up synergizes with Moon Knight's bounce-chain playstyle by increasing the damage multiplier on each successive bounce hit. [[1]](#__1)</div>
+            <div class="ability-tip">💡 In a Moon Knight + Scarlet Witch composition, coordinate Scarlet Witch's Reality Erasure with Moon Knight's Hand of Khonshu — one ultimate forces enemies to scatter, the other punishes them for grouping. Together they cover both scenarios.</div>
+          </div>
+        </div>
+
+      </div>
     </div>
-    <div class="ability">
-      <h3>🦅 Cape Glide (Shift)</h3>
-      <p>Glides forward using his cape for repositioning. Use to reach elevated positions or escape flankers who dive your backline.</p>
+
+    <!-- COUNTERS -->
+    <div class="section">
+      <div class="section-label">Matchup Analysis</div>
+      <h2>Counters <span>&amp; Matchups</span></h2>
+      <div class="counter-grid">
+        <div class="counter-col good">
+          <div class="counter-col-title">✅ Moon Knight Counters</div>
+          <div class="counter-entry">
+            <div class="counter-emoji">🛡️</div>
+            <div>
+              <div class="counter-name">Grouped Vanguards</div>
+              <div class="counter-reason">Large hitboxes make Crescent Dart headshots trivial to land, charging ult faster than any other matchup. Bouncing darts off a Vanguard into nearby supports is his highest-value primary fire scenario. [[0]](#__0)</div>
+            </div>
+          </div>
+          <div class="counter-entry">
+            <div class="counter-emoji">❄️</div>
+            <div>
+              <div class="counter-name">Luna Snow (Defensive Ult)</div>
+              <div class="counter-reason">Hand of Khonshu's post-buff damage rate outpaces Luna Snow's healing ult — enemies inside her defensive ult still die to Moon Knight's ultimate. [[0]](#__0)</div>
+            </div>
+          </div>
+          <div class="counter-entry">
+            <div class="counter-emoji">🦑</div>
+            <div>
+              <div class="counter-name">Namor's Monstro Spawn</div>
+              <div class="counter-reason">Bouncing Moon Blade destroys both Namor turrets simultaneously with minimal effort — Moon Knight is Namor's hardest counter in the entire roster. [[1]](#__1)</div>
+            </div>
+          </div>
+          <div class="counter-entry">
+            <div class="counter-emoji">👥</div>
+            <div>
+              <div class="counter-name">Objective-Stacking Teams</div>
+              <div class="counter-reason">Teams that group tightly on objectives are punished hardest by Crescent Dart bounce chains — each dart can hit 3+ enemies per shot when they're within 7 meters of each other. [[0]](#__0)</div>
+            </div>
+          </div>
+        </div>
+        <div class="counter-col bad">
+          <div class="counter-col-title">❌ Hard Counters Moon Knight</div>
+          <div class="counter-entry">
+            <div class="counter-emoji">🌪️</div>
+            <div>
+              <div class="counter-name">Storm / Iron Man (Aerial)</div>
+              <div class="counter-reason">Ankh must be placed on surfaces — it provides zero bounce value against aerial heroes. Both primary and secondary fire are difficult to land on fast-moving fliers at range. [[0]](#__0)</div>
+            </div>
+          </div>
+          <div class="counter-entry">
+            <div class="counter-emoji">🥷</div>
+            <div>
+              <div class="counter-name">Psylocke</div>
+              <div class="counter-reason">Close-range burst combo kills Moon Knight before he can set up his Ankh. Her flanking playstyle directly counters his need for time to reach and establish high ground positions. [[1]](#__1)</div>
+            </div>
+          </div>
+          <div class="counter-entry">
+            <div class="counter-emoji">📏</div>
+            <div>
+              <div class="counter-name">Spread-Out Teams</div>
+              <div class="counter-reason">Enemies who play spread out deny all bounce chain value. If no two enemies are within 7 meters of each other, Crescent Dart becomes a single-target low-damage projectile. [[0]](#__0)</div>
+            </div>
+          </div>
+          <div class="counter-entry">
+            <div class="counter-emoji">👁️</div>
+            <div>
+              <div class="counter-name">Ankh-Aware Players</div>
+              <div class="counter-reason">Any player who immediately destroys the Ankh on sight puts Moon Knight on a 12-second cooldown where he is barely a threat. Ankh awareness is the single most effective counter to his entire kit. [[0]](#__0)</div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="ability">
-      <h3>⚡ Ankh Summon (E)</h3>
-      <p>Places an Ankh totem that amplifies nearby damage output. Positioning the Ankh near grouped enemies or on the objective dramatically increases your team's effectiveness.</p>
+
+    <!-- TEAM COMP -->
+    <div class="section">
+      <div class="section-label">Team Strategy</div>
+      <h2>Best Team <span>Compositions</span></h2>
+      <div class="comp-grid">
+        <div class="comp-card">
+          <div class="comp-role tank">Vanguard</div>
+          <div class="comp-hero">
+            <div class="comp-hero-emoji">🌿</div>
+            <div>
+              <div class="comp-hero-name">Groot</div>
+              <div class="comp-hero-reason">Root locks enemies in place for Hand of Khonshu — prevents them from walking out of the AoE zone during the ult</div>
+            </div>
+          </div>
+          <div class="comp-hero">
+            <div class="comp-hero-emoji">🔮</div>
+            <div>
+              <div class="comp-hero-name">Doctor Strange</div>
+              <div class="comp-hero-reason">Eye of Agamotto stun is the perfect Hand of Khonshu setup — stunned enemies cannot escape the zone during the full duration</div>
+            </div>
+          </div>
+          <div class="comp-synergy">Groot and Strange both provide the CC that transforms Hand of Khonshu from a good ultimate into an unavoidable team wipe. Either one is Moon Knight's best Vanguard pairing. [[0]](#__0)</div>
+        </div>
+        <div class="comp-card">
+          <div class="comp-role support">Support</div>
+          <div class="comp-hero">
+            <div class="comp-hero-emoji">🔴</div>
+            <div>
+              <div class="comp-hero-name">Scarlet Witch</div>
+              <div class="comp-hero-reason">Full Moon team-up enhances Moon Knight's bounce damage; Reality Erasure forces enemy scatter that sets up Hand of Khonshu perfectly</div>
+            </div>
+          </div>
+          <div class="comp-hero">
+            <div class="comp-hero-emoji">🟢</div>
+            <div>
+              <div class="comp-hero-name">Loki</div>
+              <div class="comp-hero-reason">Clone healing sustains Moon Knight through his high-ground positioning phases where he's not actively dealing damage</div>
+            </div>
+          </div>
+          <div class="comp-synergy support">Scarlet Witch's team-up directly amplifies Moon Knight's bounce-chain damage while providing a complementary ultimate that covers his weakness against spread-out teams. [[1]](#__1)</div>
+        </div>
+        <div class="comp-card">
+          <div class="comp-role dps">DPS Partner</div>
+          <div class="comp-hero">
+            <div class="comp-hero-emoji">❄️</div>
+            <div>
+              <div class="comp-hero-name">Winter Soldier</div>
+              <div class="comp-hero-reason">Ground-level pressure forces enemies to group tightly, feeding Moon Knight's bounce chain damage from elevated positions above</div>
+            </div>
+          </div>
+          <div class="comp-hero">
+            <div class="comp-hero-emoji">🎯</div>
+            <div>
+              <div class="comp-hero-name">Hela</div>
+              <div class="comp-hero-reason">Long-range hitscan covers Moon Knight's weakness against aerial and distant targets that his slow projectiles struggle to hit</div>
+            </div>
+          </div>
+          <div class="comp-synergy dps">Moon Knight's bounce chain punishes grouped enemies hardest — a ground-level DPS partner who forces enemies to cluster together multiplies his effective damage output significantly. [[0]](#__0)</div>
+        </div>
+      </div>
     </div>
-    <div class="ability">
-      <h3>🌕 Moonfall (Ultimate)</h3>
-      <p>Calls down a massive lunar strike in a large area. Excellent for clearing objectives and punishing tightly grouped enemies — one of the best AoE ultimates in the game.</p>
+
+    <!-- COMBOS -->
+    <div class="section">
+      <div class="section-label">Advanced Techniques</div>
+      <h2>Combo <span>Guide</span></h2>
+      <p style="margin-bottom:8px;font-size:0.88rem;">Choose your starting point based on your current skill level:</p>
+      <table class="difficulty-table">
+        <thead>
+          <tr><th>Technique</th><th>Difficulty</th><th>Best For</th></tr>
+        </thead>
+        <tbody>
+          <tr><td style="font-weight:700">Ankh Setup Loop</td><td><span class="diff-badge diff-easy">⭐ Easy</span></td><td style="color:var(--muted)">New Moon Knight players</td></tr>
+          <tr><td style="font-weight:700">Bounce Chain Burst</td><td><span class="diff-badge diff-med">⭐⭐ Medium</span></td><td style="color:var(--muted)">Players with Ankh placement down</td></tr>
+          <tr><td style="font-weight:700">Backline Assassination</td><td><span class="diff-badge diff-hard">⭐⭐⭐ Hard</span></td><td style="color:var(--muted)">Players ready for ranked carry</td></tr>
+          <tr><td style="font-weight:700">CC-Chained Hand of Khonshu</td><td><span class="diff-badge diff-expert">⭐⭐⭐⭐⭐ Expert</span></td><td style="color:var(--muted)">Coordinated / competitive play</td></tr>
+        </tbody>
+      </table>
+
+      <div class="combo-section-divider"></div>
+      <h3 style="margin-bottom:16px;color:var(--gold)">Ankh Setup Loop</h3>
+      <ul class="combo-steps">
+        <li class="combo-step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <div class="step-title">Reach high ground with Moonlight Hook before the fight <span class="key-badge">SHIFT</span> <span class="time-badge">pre-fight</span></div>
+            <div class="step-desc">Always establish high ground before placing your Ankh. Elevated positions give you bounce angles that ground-level enemies can't easily block, and make the Ankh harder to spot and destroy. [[0]](#__0)</div>
+          </div>
+        </li>
+        <li class="combo-step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <div class="step-title">Place Ancient Ankh out of enemy line of sight <span class="key-badge">E</span> <span class="time-badge">pre-fight</span></div>
+            <div class="step-desc">Stick the Ankh on a wall, ceiling, or surface that enemies cannot see from their natural sightlines. The Ankh only needs to be within 7 meters of where enemies are standing — it does not need to be visible to them to bounce your projectiles. [[0]](#__0)</div>
+          </div>
+        </li>
+        <li class="combo-step">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <div class="step-title">Spam Crescent Dart at grouped enemies and Vanguards <span class="key-badge">LMB</span> <span class="time-badge">ongoing</span></div>
+            <div class="step-desc">Fire primary fire continuously at the nearest Vanguard. Every hit generates ult charge. Every dart that bounces off the Ankh hits additional targets. Focus on headshots — they trigger no additional cooldown but deal double damage and generate extra ult charge. [[0]](#__0)</div>
+          </div>
+        </li>
+        <li class="combo-step">
+          <div class="step-num">4</div>
+          <div class="step-body">
+            <div class="step-title">Immediately redeploy Ankh to a new position when destroyed <span class="key-badge">E</span></div>
+            <div class="step-desc">When enemies destroy your Ankh, never place the replacement in the same spot. Move to a new surface at a different angle — enemies who just destroyed the first Ankh will look in the same location for the second one. [[0]](#__0)</div>
+          </div>
+        </li>
+      </ul>
+      <div class="combo-note"><strong>Pro tip:</strong> The Ankh setup loop is the foundation of every Moon Knight game. Your entire damage output depends on the Ankh surviving long enough to bounce projectiles. An Ankh that lasts 10 seconds generates more value than three Ankhs that each last 2 seconds in obvious positions. [[0]](#__0) [[1]](#__1)</div>
+
+      <div class="combo-section-divider"></div>
+      <h3 style="margin-bottom:16px;color:var(--gold)">Bounce Chain Burst</h3>
+      <ul class="combo-steps">
+        <li class="combo-step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <div class="step-title">Confirm Ankh is active and 2+ enemies are within 7m of each other <span class="time-badge">pre-burst</span></div>
+            <div class="step-desc">The bounce chain only generates multi-target value when enemies are close together. Wait for the right moment — a grouped team on an objective is the ideal trigger. [[0]](#__0)</div>
+          </div>
+        </li>
+        <li class="combo-step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <div class="step-title">Fire Moon Blade at the primary target <span class="key-badge">RMB</span> <span class="time-badge">0.0s</span></div>
+            <div class="step-desc">Lead with Moon Blade — 80 damage on the primary hit, then bounces to nearby enemies and the Ankh for additional hits. Each hit grants 25 bonus HP, so a full bounce chain can give you up to 100 bonus HP instantly. [[0]](#__0)</div>
+          </div>
+        </li>
+        <li class="combo-step">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <div class="step-title">Follow immediately with Crescent Dart burst <span class="key-badge">LMB</span> <span class="time-badge">~0.3s</span></div>
+            <div class="step-desc">After Moon Blade, dump a full Crescent Dart burst at the same target cluster. The darts bounce off the Ankh and between enemies — with 3 darts per shot and up to 3 bounces each, a single shot can hit the same group of 3 enemies for 9 total dart impacts. [[0]](#__0)</div>
+          </div>
+        </li>
+        <li class="combo-step">
+          <div class="step-num">4</div>
+          <div class="step-body">
+            <div class="step-title">Finish lowest HP target with headshot primary fire <span class="key-badge">LMB</span></div>
+            <div class="step-desc">After the burst, identify the lowest HP target and aim for their head. Moon Knight's primary fire headshots deal double damage — at close range against a chipped target, a single headshot burst is often enough to secure the elimination. [[0]](#__0)</div>
+          </div>
+        </li>
+      </ul>
+      <div class="combo-note"><strong>Why it works:</strong> Moon Blade + Crescent Dart burst is Moon Knight's highest single-rotation damage output. The Moon Blade bounce chains generate bonus HP while dealing damage, and the immediate Crescent Dart follow-up catches enemies before they can react to the first hit. Against a grouped team near an Ankh, this rotation deals more effective damage than almost any other Duelist's opener. [[0]](#__0) [[1]](#__1)</div>
+
+      <div class="combo-section-divider"></div>
+      <h3 style="margin-bottom:16px;color:var(--gold)">Backline Assassination</h3>
+      <ul class="combo-steps">
+        <li class="combo-step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <div class="step-title">Identify an unaware support target in the enemy backline <span class="time-badge">pre-engage</span></div>
+            <div class="step-desc">Moon Knight's assassination combo only works against targets who are not actively dodging. Look for supports who are focused on healing, not watching their flanks. An aware target can dodge his slow projectiles consistently. [[0]](#__0)</div>
+          </div>
+        </li>
+        <li class="combo-step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <div class="step-title">Reach the backline via Moonlight Hook to an elevated angle <span class="key-badge">SHIFT</span></div>
+            <div class="step-desc">Don't approach at ground level — hookshot to an elevated position above or behind the enemy support. Attacking from above breaks their natural sightline and gives your darts a downward angle that's harder to dodge. [[0]](#__0)</div>
+          </div>
+        </li>
+        <li class="combo-step">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <div class="step-title">Place Ankh on the nearest surface before engaging <span class="key-badge">E</span> <span class="time-badge">~0.5s</span></div>
+            <div class="step-desc">Even in the backline, place your Ankh on the nearest wall or ceiling before firing. A backline Ankh that bounces darts between the support and a nearby Vanguard doubles your effective damage output in the assassination window. [[0]](#__0)</div>
+          </div>
+        </li>
+        <li class="combo-step">
+          <div class="step-num">4</div>
+          <div class="step-body">
+            <div class="step-title">Moon Blade → Crescent Dart headshots → escape with hookshot <span class="key-badge">RMB → LMB → SHIFT</span></div>
+            <div class="step-desc">Execute the burst combo: Moon Blade for the initial 80 damage hit, then Crescent Dart headshots to finish. If the target survives, use Moonlight Hook immediately to escape before their team can respond. Never stay in the backline after the burst — retreat and reset. [[0]](#__0)</div>
+          </div>
+        </li>
+      </ul>
+      <div class="combo-note"><strong>Why it works:</strong> Moon Knight's triple mobility tools (hookshot, double jump, glide) make him one of the hardest Duelists to catch after a backline assassination attempt. The key is the unaware target requirement — his slow projectiles mean aware enemies can dodge, but unaware supports caught in the burst have no time to react before the combo lands. [[0]](#__0) [[1]](#__1)</div>
+
+      <div class="combo-section-divider"></div>
+      <h3 style="margin-bottom:4px;color:var(--silver)">CC-Chained Hand of Khonshu <span class="diff-badge diff-expert" style="font-size:0.72rem;vertical-align:middle">Expert</span></h3>
+      <p style="font-size:0.83rem;margin-bottom:16px;">Turning Hand of Khonshu from a good ultimate into an unavoidable team wipe through coordinated crowd control.</p>
+      <ul class="combo-steps">
+        <li class="combo-step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <div class="step-title">Farm ult charge by bouncing darts off Vanguards all game <span class="key-badge">LMB</span> <span class="time-badge">ongoing</span></div>
+            <div class="step-desc">Moon Knight should reach his ultimate first in almost every fight. Prioritize Vanguard targets with primary fire throughout the entire game — their large hitboxes and slow movement make them the most reliable ult charge source. [[0]](#__0)</div>
+          </div>
+        </li>
+        <li class="combo-step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <div class="step-title">Coordinate Hand of Khonshu with teammate CC timing</div>
+            <div class="step-desc">Communicate with your Groot or Doctor Strange before the fight. The plan: they CC first on a grouped cluster, you activate Hand of Khonshu immediately after. Without CC, aware enemies simply walk out of the AoE zone. [[0]](#__0)</div>
+          </div>
+        </li>
+        <li class="combo-step">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <div class="step-title">Activate Hand of Khonshu the moment CC lands <span class="key-badge">Q</span> <span class="time-badge">0.0s after CC</span></div>
+            <div class="step-desc">Zero delay between CC landing and ult activation. Every second of delay is a second enemies spend trying to escape the zone. The ult's damage rate is fast enough to kill through Luna Snow's healing ult — no defensive ability can save enemies who are locked in place. [[0]](#__0)</div>
+          </div>
+        </li>
+        <li class="combo-step">
+          <div class="step-num">4</div>
+          <div class="step-body">
+            <div class="step-title">Follow up on survivors with Moon Blade + Crescent Dart burst <span class="key-badge">RMB + LMB</span></div>
+            <div class="step-desc">Any enemies who survived the ult are now critically low HP and likely disoriented. Immediately execute the bounce chain burst on the lowest HP survivor — your ult charge is already regenerating from the ult hits, so your next Hand of Khonshu will arrive faster than any other Duelist's. [[0]](#__0) [[1]](#__1)</div>
+          </div>
+        </li>
+      </ul>
+      <div class="combo-note"><strong>Why it works:</strong> Hand of Khonshu's post-Season 1 buff damage rate is uniquely powerful — it is one of the only ultimates in Marvel Rivals that kills enemies even through defensive healing ultimates like Luna Snow's. Combined with CC that prevents escape, it is a guaranteed team wipe on any grouped composition. Moon Knight's fast ult charge rate means this combo can happen multiple times per game. [[0]](#__0) [[1]](#__1)</div>
     </div>
-  </div>
-  <div class="section">
-    <h2>💡 Pro Tips</h2>
-    <div class="tip-box">
-      <h3>🎯 Learn the Bounce Angles</h3>
-      <p>Spend time in the practice range learning how darts bounce off common wall angles on each map. Hitting enemies behind cover is Moon Knight's biggest advantage over other DPS heroes.</p>
+
+    <!-- FAQ -->
+    <div class="section">
+      <div class="section-label">Common Questions</div>
+      <h2>FAQ</h2>
+      <div class="faq-list">
+
+        <div class="faq-item open">
+          <button class="faq-q" onclick="toggleFaq(this)">Is Moon Knight good for beginners? <span class="faq-arrow">▼</span></button>
+          <div class="faq-a"><p>Moon Knight has a moderate learning curve. His primary fire is straightforward, but his effectiveness is almost entirely dependent on Ankh placement — a skill that requires map knowledge and game sense to execute well. Beginners can still deal decent damage with basic Ankh placement, but his full potential requires understanding bounce angles, hidden placement spots, and when to reposition. His 52.2% win rate and 8.53 KDA suggest he rewards players who invest time in learning
+        his mechanics.  </p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">Where should I place my Ancient Ankh? <span class="faq-arrow">▼</span></button>
+          <div class="faq-a"><p>Always out of enemy line of sight — on walls behind corners, above doorframes, or on ceilings. The Ankh only needs to be within 7 meters of where enemies are standing to bounce your projectiles toward them. If enemies can see it, they will destroy it in seconds. The best placements are spots only reachable by Moonlight Hook, since ground-level enemies can't easily reach them to destroy it. </p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">Why does Hand of Khonshu feel weak when I use it? <span class="faq-arrow">▼</span></button>
+          <div class="faq-a"><p>Almost certainly because you're using it without teammate CC. Aware enemies simply walk out of the AoE zone during the activation. Hand of Khonshu is only truly lethal when enemies are rooted or stunned in place — coordinate with Groot or Doctor Strange to lock enemies down first, then activate the ult. With CC, it kills through even Luna Snow's defensive healing ultimate.  </p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">How do I charge my ultimate so fast? <span class="faq-arrow">▼</span></button>
+          <div class="faq-a"><p>Target Vanguards with primary fire all game. Every Crescent Dart hit generates ult charge, and Vanguards' large hitboxes make it trivially easy to land consistent hits. When your Ankh is active and darts are bouncing between grouped enemies, each shot generates ult charge from every bounce hit simultaneously — this is why Moon Knight charges his ultimate faster than any other Duelist. </p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">What's the best counter to Moon Knight? <span class="faq-arrow">▼</span></button>
+          <div class="faq-a"><p>Destroy his Ankh immediately every time you see it — it only has limited HP and takes seconds to kill. Without the Ankh, Moon Knight is on a 12-second cooldown where his damage output drops dramatically. Aerial heroes like Storm and Iron Man also hard-counter him because his Ankh can't help against flying targets and his slow projectiles are easy to dodge at range. Psylocke's close-range burst kills him before he can set up his positioning.  </p></div>
+        </div>
+
+      </div>
     </div>
-    <div class="tip-box">
-      <h3>⚡ Ankh Placement Strategy</h3>
-      <p>Place your Ankh in high-traffic areas or directly on the objective. The damage amplification can turn a losing fight into a full wipe if positioned correctly before the engagement starts.</p>
+
+  </div><!-- end main-col -->
+
+  <!-- SIDEBAR -->
+  <div class="side-col">
+    <div class="side-card">
+      <div class="side-card-title">Tier Rating</div>
+      <div class="tier-badge tier-b">B</div>
+      <p style="font-size:0.85rem;color:var(--muted);line-height:1.6">Moon Knight sits at B-Tier with a strong 52.2% win rate and the highest KDA of any Duelist at 8.53. His Ankh bounce mechanics and fastest-charging ultimate make him uniquely powerful against grouped compositions — but his Ankh dependency and weakness to aerial heroes keep him from A-Tier. </p>
     </div>
-    <div class="tip-box">
-      <h3>🌕 Ultimate Combo</h3>
-      <p>Combine Moonfall with Doctor Strange's portal to pull enemies into the strike zone. Coordinate with your team for a guaranteed team wipe on the objective.</p>
+
+    <div class="side-card">
+      <div class="side-card-title">Role Ratings</div>
+      <div class="rating-row"><span>Ease of Use</span><div class="dots"><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot off"></div><div class="dot off"></div></div></div>
+      <div class="rating-row"><span>Burst Damage</span><div class="dots"><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot off"></div></div></div>
+      <div class="rating-row"><span>Sustained DPS</span><div class="dots"><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot off"></div><div class="dot off"></div></div></div>
+      <div class="rating-row"><span>Survivability</span><div class="dots"><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot off"></div><div class="dot off"></div></div></div>
+      <div class="rating-row"><span>Ult Impact</span><div class="dots"><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div></div></div>
     </div>
-    <div class="tip-box">
-      <h3>🦅 Cape Glide for Safety</h3>
-      <p>When a flanker dives you, immediately use Cape
+
+    <div class="side-card">
+      <div class="side-card-title">Team-Up Heroes</div>
+      <div class="teamup-pill">
+        <span style="font-size:1.1rem">🔴</span>
+        <div>
+          <div class="teamup-pill-name">Scarlet Witch</div>
+          <div class="teamup-pill-sub">Full Moon team-up — amplifies bounce-chain damage output</div>
+        </div>
+      </div>
+      <div class="teamup-pill">
+        <span style="font-size:1.1rem">🌿</span>
+        <div>
+          <div class="teamup-pill-name">Groot</div>
+          <div class="teamup-pill-sub">Root locks enemies in Hand of Khonshu zone — guaranteed team wipe</div>
+        </div>
+      </div>
+      <div class="teamup-pill">
+        <span style="font-size:1.1rem">🔮</span>
+        <div>
+          <div class="teamup-pill-name">Doctor Strange</div>
+          <div class="teamup-pill-sub">Eye of Agamotto stun — perfect Hand of Khonshu setup</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-card">
+      <div class="side-card-title">Quick Tips</div>
+      <div class="quick-tip"><div class="tip-icon">🪝</div><div class="tip-text">Always place your Ankh out of enemy line of sight. If they can see it, they will destroy it instantly.</div></div>
+      <div class="quick-tip"><div class="tip-icon">🛡️</div><div class="tip-text">Target Vanguards with primary fire all game — large hitboxes charge your ultimate faster than any other target.</div></div>
+      <div class="quick-tip"><div class="tip-icon">🌙</div><div class="tip-text">Never use Hand of Khonshu without teammate CC. Coordinate with Groot or Strange — stun first, then ult.</div></div>
+      <div class="quick-tip"><div class="tip-icon">💉</div><div class="tip-text">Moon Blade generates bonus HP on every bounce hit — use it aggressively to self-sustain without supports.</div></div>
+      <div class="quick-tip"><div class="tip-icon">🔄</div><div class="tip-text">Vary Ankh placement every time it's destroyed. Enemies adapt fast — never place it in the same spot twice.</div></div>
+    </div>
+
+    <a class="ai-btn-side" href="/">← Back to All Heroes</a>
+  </div><!-- end side-col -->
+
+</div><!-- end page-body -->
+
+<footer>
+  <div class="footer-logo">RIVALS<span style="color:var(--gold)">GUIDE</span></div>
+  <p>Fan-made guide site · Not affiliated with Marvel or NetEase Games</p>
+  <p style="margin-top:8px">© 2025 RivalsGuide.site · All rights reserved</p>
+</footer>
+
+<script>
+  function toggleFaq(btn){
+    const item=btn.closest('.faq-item');
+    item.classList.toggle('open');
+  }
+</script>
+</body>
+</html>
