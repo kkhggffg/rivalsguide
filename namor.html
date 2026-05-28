@@ -1,159 +1,726 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Namor Guide – Marvel Rivals | RivalsGuide</title>
-<meta name="description" content="Complete Namor guide for Marvel Rivals. Abilities, turret placement, counters, and pro tips for the King of Atlantis DPS."/>
-<link rel="canonical" href="https://www.rivalsguide.site/namor.html"/>
-<style>
-  :root{--gold:#ffd700;--bg:#0a0e1a;--card:#111827;--text:#e2e8f0}
-  *{margin:0;padding:0;box-sizing:border-box}
-  body{background:var(--bg);color:var(--text);font-family:'Segoe UI',sans-serif;line-height:1.6}
-  header{background:linear-gradient(135deg,#1a2a4a,#0d1b2e);padding:16px 24px;display:flex;align-items:center;gap:16px;border-bottom:2px solid var(--gold)}
-  header a{color:var(--gold);text-decoration:none;font-weight:700;font-size:1.2rem}
-  .hero-banner{background:linear-gradient(135deg,#0a2a3a 0%,#051520 100%);padding:48px 24px;text-align:center}
-  .hero-emoji{font-size:5rem;margin-bottom:16px}
-  .hero-banner h1{font-size:2.5rem;color:var(--gold);margin-bottom:8px}
-  .role-tag{display:inline-block;background:#7f1d1d;color:#fca5a5;padding:4px 16px;border-radius:20px;font-size:0.85rem;font-weight:700;margin:8px 4px}
-  .container{max-width:900px;margin:0 auto;padding:32px 24px}
-  .section{background:var(--card);border-radius:12px;padding:28px;margin-bottom:24px;border:1px solid #1e293b}
-  .section h2{color:var(--gold);font-size:1.4rem;margin-bottom:16px;border-bottom:1px solid #1e293b;padding-bottom:8px}
-  .ability{background:#0d1b2e;border-radius:8px;padding:16px;margin-bottom:12px;border-left:3px solid #0ea5e9}
-  .ability h3{color:#38bdf8;margin-bottom:6px}
-  .tip-box{background:#051520;border:1px solid #0ea5e9;border-radius:8px;padding:16px;margin-bottom:12px}
-  .tip-box h3{color:#38bdf8;margin-bottom:6px}
-  .counter-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px}
-  .counter-card{background:#0d1b2e;border-radius:8px;padding:12px;text-align:center;border:1px solid #1e293b}
-  .counter-card .emoji{font-size:2rem}
-  .counter-card .name{font-size:0.85rem;font-weight:600;margin-top:6px}
-  .stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-  .stat-box{background:#0d1b2e;border-radius:8px;padding:16px;text-align:center}
-  .stat-box .val{font-size:1.8rem;font-weight:700;color:var(--gold)}
-  .stat-box .label{font-size:0.8rem;color:#94a3b8;margin-top:4px}
-  footer{text-align:center;padding:32px;color:#64748b;font-size:0.85rem;border-top:1px solid #1e293b}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Namor Guide – Abilities, Combos & Counters | RivalsGuide</title>
+  <meta name="description" content="Complete Namor guide for Marvel Rivals. Learn his Monstro Spawn turrets, trident combos, counters, and pro tips to master the Atlantean King.">
+  <meta property="og:title" content="Namor Guide – Marvel Rivals | RivalsGuide">
+  <meta property="og:description" content="Master Namor in Marvel Rivals with our in-depth guide covering abilities, combos, counters, and team comps.">
+  <meta property="og:url" content="https://rivalsguide.site/namor.html">
+  <meta property="og:type" content="article">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-D4EJPR83TH"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-D4EJPR83TH');</script>
+  <style>
+    :root{--orange:#fb923c;--amber:#f59e0b;--gold:#ffd60a;--dark:#0a0a0f;--dark2:#12121a;--dark3:#1a1a2e;--card:#16213e;--text:#e0e0e0;--muted:#888;--border:rgba(251,146,60,0.35);--green:#4ade80;--red:#f87171;--blue:#60a5fa;--purple:#a855f7;--accent:#fb923c;--accent2:#f59e0b}
+    *{margin:0;padding:0;box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{background:var(--dark);color:var(--text);font-family:'Segoe UI',sans-serif;overflow-x:hidden}
+    nav{position:fixed;top:0;width:100%;z-index:999;background:rgba(10,10,15,0.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);padding:0 40px;display:flex;align-items:center;justify-content:space-between;height:64px}
+    .nav-logo{font-size:1.3rem;font-weight:900;color:var(--accent);letter-spacing:1px;text-decoration:none}
+    .nav-logo span{color:var(--gold)}
+    .nav-back{color:var(--muted);text-decoration:none;font-size:0.9rem;display:flex;align-items:center;gap:8px;transition:color 0.2s}
+    .nav-back:hover{color:var(--accent)}
+    .hero-banner{min-height:380px;background:radial-gradient(ellipse at 30% 50%,rgba(96,165,250,0.18) 0%,transparent 60%),radial-gradient(ellipse at 80% 30%,rgba(74,222,128,0.1) 0%,transparent 50%),var(--dark);display:flex;align-items:center;padding:100px 40px 60px;position:relative;overflow:hidden}
+    .hero-banner::before{content:'🔱';position:absolute;right:80px;top:50%;transform:translateY(-50%);font-size:12rem;opacity:0.06;pointer-events:none}
+    .banner-inner{max-width:1200px;margin:0 auto;width:100%}
+    .breadcrumb{font-size:0.8rem;color:var(--muted);margin-bottom:16px}
+    .breadcrumb a{color:var(--muted);text-decoration:none}
+    .breadcrumb a:hover{color:var(--accent)}
+    .breadcrumb span{margin:0 8px}
+    .banner-role{display:inline-block;background:rgba(96,165,250,0.12);border:1px solid rgba(96,165,250,0.35);color:var(--blue);font-size:0.75rem;padding:3px 14px;border-radius:20px;margin-bottom:16px;letter-spacing:2px;text-transform:uppercase}
+    .banner-title{font-size:clamp(2.5rem,6vw,4.5rem);font-weight:900;line-height:1.1;margin-bottom:12px;text-shadow:0 0 40px rgba(96,165,250,0.3)}
+    .banner-title .accent{color:var(--blue)}
+    .banner-sub{color:var(--muted);font-size:1rem;max-width:560px;line-height:1.6;margin-bottom:12px}
+    .banner-hook{color:var(--text);font-size:1rem;max-width:560px;line-height:1.6;margin-bottom:28px;font-style:italic;border-left:3px solid var(--blue);padding-left:14px}
+    .banner-tags{display:flex;gap:10px;flex-wrap:wrap}
+    .tag{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);padding:5px 14px;border-radius:20px;font-size:0.8rem;color:var(--muted)}
+    .tag.blue{border-color:rgba(96,165,250,0.35);color:var(--blue);background:rgba(96,165,250,0.08)}
+    .tag.gold{border-color:rgba(255,214,10,0.3);color:var(--gold);background:rgba(255,214,10,0.06)}
+    .page-body{max-width:1200px;margin:0 auto;padding:60px 40px 80px;display:grid;grid-template-columns:1fr 320px;gap:40px;align-items:start}
+    .main-col{display:flex;flex-direction:column;gap:48px}
+    .side-col{display:flex;flex-direction:column;gap:24px;position:sticky;top:84px}
+    .section{background:var(--card);border:1px solid rgba(255,255,255,0.05);border-radius:12px;padding:32px;transition:border-color 0.2s}
+    .section:hover{border-color:rgba(96,165,250,0.35)}
+    .section-label{font-size:0.72rem;text-transform:uppercase;letter-spacing:3px;color:var(--blue);margin-bottom:8px;font-weight:700}
+    h2{font-size:1.5rem;font-weight:900;margin-bottom:20px;line-height:1.2}
+    h2 span{color:var(--blue)}
+    h3{font-size:1rem;font-weight:700;margin-bottom:8px;color:var(--text)}
+    p{color:var(--muted);line-height:1.7;font-size:0.93rem}
+    .stats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:24px}
+    .stat-box{background:var(--dark2);border-radius:8px;padding:16px;text-align:center;border:1px solid rgba(255,255,255,0.04)}
+    .stat-val{font-size:1.4rem;font-weight:900;color:var(--blue);display:block}
+    .stat-key{font-size:0.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-top:4px;display:block}
+    .stat-desc{color:var(--muted);font-size:0.88rem;line-height:1.6}
+    .sw-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:24px}
+    .sw-col{background:var(--dark2);border-radius:8px;padding:16px}
+    .sw-col-title{font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:12px}
+    .sw-col.str .sw-col-title{color:var(--green)}
+    .sw-col.wk .sw-col-title{color:var(--red)}
+    .sw-item{display:flex;align-items:flex-start;gap:8px;padding:6px 0;font-size:0.83rem;color:var(--muted);line-height:1.5;border-bottom:1px solid rgba(255,255,255,0.04)}
+    .sw-item:last-child{border-bottom:none}
+    .sw-icon{flex-shrink:0;margin-top:1px}
+    .ability-list{display:flex;flex-direction:column;gap:16px}
+    .ability-item{background:var(--dark2);border:1px solid rgba(255,255,255,0.05);border-radius:10px;padding:20px;display:flex;gap:16px;transition:border-color 0.2s;align-items:flex-start}
+    .ability-item:hover{border-color:rgba(96,165,250,0.35)}
+    .ability-key{background:var(--blue);color:#000;padding:4px 12px;border-radius:5px;font-size:0.78rem;font-weight:700;font-family:monospace;white-space:nowrap;flex-shrink:0;margin-top:2px;min-width:52px;text-align:center}
+    .ability-key.ult{background:var(--gold);color:#000}
+    .ability-key.passive{background:rgba(96,165,250,0.15);color:var(--blue);border:1px solid rgba(96,165,250,0.35)}
+    .ability-key.teamup{background:rgba(168,85,247,0.2);color:var(--purple);border:1px solid rgba(168,85,247,0.3)}
+    .ability-body{flex:1}
+    .ability-name{font-weight:700;font-size:1rem;margin-bottom:6px}
+    .ability-desc{color:var(--muted);font-size:0.88rem;line-height:1.65;margin-bottom:8px}
+    .ability-tip{font-size:0.82rem;color:var(--gold);padding:8px 12px;background:rgba(255,214,10,0.06);border-radius:6px;border-left:2px solid var(--gold)}
+    .ability-stats{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:8px}
+    .ability-stat-chip{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);border-radius:4px;padding:3px 9px;font-size:0.74rem;color:var(--muted)}
+    .ability-stat-chip b{color:var(--blue)}
+    .counter-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .counter-col{background:var(--dark2);border-radius:10px;padding:20px}
+    .counter-col-title{font-size:0.78rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:14px}
+    .counter-col.good .counter-col-title{color:var(--green)}
+    .counter-col.bad .counter-col-title{color:var(--red)}
+    .counter-entry{display:flex;align-items:flex-start;gap:10px;padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.04)}
+    .counter-entry:last-child{border-bottom:none;padding-bottom:0}
+    .counter-emoji{font-size:1.3rem;flex-shrink:0;margin-top:1px}
+    .counter-name{font-weight:700;font-size:0.88rem;margin-bottom:2px}
+    .counter-reason{font-size:0.78rem;color:var(--muted);line-height:1.5}
+    .comp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .comp-card{background:var(--dark2);border-radius:10px;padding:16px;border:1px solid rgba(255,255,255,0.04);transition:border-color 0.2s;display:flex;flex-direction:column}
+    .comp-card:hover{border-color:rgba(96,165,250,0.35)}
+    .comp-role{font-size:0.72rem;text-transform:uppercase;letter-spacing:1px;font-weight:700;margin-bottom:10px}
+    .comp-role.tank{color:var(--blue)}
+    .comp-role.support{color:var(--green)}
+    .comp-role.dps{color:var(--accent)}
+    .comp-hero{display:flex;align-items:flex-start;gap:8px;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04)}
+    .comp-hero:last-of-type{border-bottom:none}
+    .comp-hero-emoji{font-size:1.1rem;flex-shrink:0;margin-top:1px}
+    .comp-hero-name{font-size:0.85rem;font-weight:700}
+    .comp-hero-reason{font-size:0.75rem;color:var(--muted);line-height:1.4;margin-top:2px}
+    .comp-synergy{margin-top:12px;padding:10px 12px;background:rgba(255,255,255,0.03);border-radius:6px;border-left:2px solid var(--blue);font-size:0.78rem;color:var(--muted);line-height:1.5}
+    .comp-synergy.support{border-left-color:var(--green)}
+    .comp-synergy.dps{border-left-color:var(--accent)}
+    .difficulty-table{width:100%;border-collapse:collapse;margin:20px 0 8px}
+    .difficulty-table th{font-size:0.75rem;text-transform:uppercase;letter-spacing:1px;color:var(--muted);font-weight:700;padding:8px 12px;text-align:left;border-bottom:1px solid rgba(255,255,255,0.08)}
+    .difficulty-table td{padding:10px 12px;font-size:0.85rem;border-bottom:1px solid rgba(255,255,255,0.04);vertical-align:middle}
+    .difficulty-table tr:last-child td{border-bottom:none}
+    .difficulty-table tr:hover td{background:rgba(255,255,255,0.02)}
+    .diff-badge{display:inline-block;padding:2px 10px;border-radius:20px;font-size:0.75rem;font-weight:700}
+    .diff-easy{background:rgba(74,222,128,0.12);color:var(--green)}
+    .diff-med{background:rgba(255,214,10,0.12);color:var(--gold)}
+    .diff-hard{background:rgba(251,146,60,0.12);color:var(--orange)}
+    .diff-expert{background:rgba(96,165,250,0.12);color:var(--blue)}
+    .combo-steps{list-style:none;display:flex;flex-direction:column;gap:0}
+    .combo-step{display:flex;gap:16px;padding:16px 0;border-bottom:1px solid rgba(255,255,255,0.04);align-items:flex-start}
+    .combo-step:last-child{border-bottom:none}
+    .step-num{width:32px;height:32px;min-width:32px;background:var(--blue);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:0.88rem;flex-shrink:0;color:#000}
+    .step-body{flex:1}
+    .step-title{font-weight:700;font-size:0.95rem;margin-bottom:4px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+    .key-badge{background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.18);padding:1px 9px;border-radius:4px;font-size:0.75rem;font-family:monospace}
+    .time-badge{background:rgba(74,222,128,0.1);border:1px solid rgba(74,222,128,0.25);color:var(--green);padding:1px 9px;border-radius:4px;font-size:0.72rem;font-family:monospace}
+    .step-desc{color:var(--muted);font-size:0.88rem;line-height:1.6}
+    .combo-note{background:rgba(96,165,250,0.06);border:1px solid rgba(96,165,250,0.35);border-radius:8px;padding:14px 16px;margin-top:16px;font-size:0.85rem;color:var(--text);line-height:1.6}
+    .combo-note strong{color:var(--blue)}
+    .combo-section-divider{height:1px;background:rgba(255,255,255,0.06);margin:28px 0}
+    .faq-list{display:flex;flex-direction:column;gap:0}
+    .faq-item{border-bottom:1px solid rgba(255,255,255,0.05)}
+    .faq-item:last-child{border-bottom:none}
+    .faq-q{width:100%;background:transparent;border:none;color:var(--text);text-align:left;padding:18px 0;font-size:0.95rem;font-weight:700;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px}
+    .faq-q:hover{color:var(--blue)}
+    .faq-arrow{color:var(--muted);font-size:0.8rem;transition:transform 0.2s;flex-shrink:0}
+    .faq-item.open .faq-arrow{transform:rotate(180deg)}
+    .faq-a{max-height:0;overflow:hidden;transition:max-height 0.35s ease}
+    .faq-item.open .faq-a{max-height:300px}
+    .faq-a p{padding-bottom:16px;font-size:0.88rem}
+    .side-card{background:var(--card);border:1px solid rgba(255,255,255,0.05);border-radius:12px;padding:24px}
+    .side-card-title{font-size:0.72rem;text-transform:uppercase;letter-spacing:2px;color:var(--blue);font-weight:700;margin-bottom:16px}
+    .quick-tip{display:flex;gap:10px;padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.04);align-items:flex-start}
+    .quick-tip:last-child{border-bottom:none}
+    .tip-icon{font-size:1.1rem;flex-shrink:0;margin-top:1px}
+    .tip-text{font-size:0.82rem;color:var(--muted);line-height:1.5}
+    .tier-badge{display:inline-flex;align-items:center;justify-content:center;width:56px;height:56px;border-radius:12px;font-size:2rem;font-weight:900;margin-bottom:12px}
+    .tier-a{background:linear-gradient(135deg,#60a5fa,#3b82f6);color:#000}
+    .rating-row{display:flex;justify-content:space-between;align-items:center;font-size:0.8rem;margin-bottom:8px}
+    .rating-row span{color:var(--muted)}
+    .dots{display:flex;gap:3px}
+    .dot{width:10px;height:10px;border-radius:2px}
+    .dot.on{background:var(--blue)}
+    .dot.off{background:rgba(255,255,255,0.08)}
+    .teamup-pill{display:flex;align-items:center;gap:8px;background:rgba(96,165,250,0.06);border:1px solid rgba(96,165,250,0.18);border-radius:6px;padding:8px 10px;margin-bottom:8px}
+    .teamup-pill:last-child{margin-bottom:0}
+    .teamup-pill-name{font-size:0.82rem;font-weight:700;color:var(--text)}
+    .teamup-pill-sub{font-size:0.72rem;color:var(--muted)}
+    .ai-btn-side{display:block;text-align:center;padding:12px;background:rgba(96,165,250,0.06);border:1px solid rgba(96,165,250,0.35);border-radius:8px;color:var(--muted);text-decoration:none;font-size:0.85rem;transition:all 0.2s}
+    .ai-btn-side:hover{background:rgba(96,165,250,0.16);color:var(--text)}
+    footer{background:var(--dark2);border-top:1px solid var(--border);padding:40px;text-align:center;color:var(--muted);font-size:0.85rem}
+    .footer-logo{font-size:1.2rem;font-weight:900;color:var(--accent);margin-bottom:8px}
+    ::-webkit-scrollbar{width:6px}
+    ::-webkit-scrollbar-track{background:var(--dark)}
+    ::-webkit-scrollbar-thumb{background:var(--blue);border-radius:3px}
+    @media(max-width:900px){.page-body{grid-template-columns:1fr;padding:40px 20px 60px}.side-col{position:static}.counter-grid{grid-template-columns:1fr}.comp-grid{grid-template-columns:1fr 1fr}.hero-banner{padding:90px 20px 48px}nav{padding:0 20px}.sw-grid{grid-template-columns:1fr}}
+    @media(max-width:560px){.stats-grid{grid-template-columns:repeat(2,1fr)}.comp-grid{grid-template-columns:1fr}}
+  </style>
 </head>
 <body>
-<header>
-  <a href="/index.html">🛡️ RivalsGuide</a>
-  <span style="color:#64748b">/ Namor</span>
-</header>
+
+<nav>
+  <a class="nav-logo" href="/">RIVALS<span>GUIDE</span></a>
+  <a class="nav-back" href="/">← Back to Home</a>
+</nav>
+
 <div class="hero-banner">
-  <div class="hero-emoji">💧</div>
-  <h1>Namor</h1>
-  <span class="role-tag">⚔️ DPS</span>
-  <p style="color:#94a3b8;margin-top:12px;max-width:600px;margin-left:auto;margin-right:auto">
-    King of Atlantis. Namor is a zone-control DPS who summons sea creatures to dominate areas and punish enemies who cluster together.
-  </p>
-</div>
-<div class="container">
-  <div class="section">
-    <h2>📊 Base Stats</h2>
-    <div class="stat-grid">
-      <div class="stat-box"><div class="val">300</div><div class="label">Health</div></div>
-      <div class="stat-box"><div class="val">Zone</div><div class="label">Damage Type</div></div>
-      <div class="stat-box"><div class="val">Medium</div><div class="label">Difficulty</div></div>
+  <div class="banner-inner">
+    <div class="breadcrumb">
+      <a href="/">Home</a><span>›</span>
+      <a href="/">Heroes</a><span>›</span>
+      <span style="color:var(--text)">Namor</span>
     </div>
-  </div>
-  <div class="section">
-    <h2>⚡ Abilities</h2>
-    <div class="ability">
-      <h3>🌊 Trident Surge (Primary)</h3>
-      <p>Fires a burst of water energy from his trident. Consistent medium-range damage with good projectile speed — use to poke enemies out of position.</p>
+    <div class="banner-role">DPS · Duelist</div>
+    <h1 class="banner-title"><span class="accent" style="color:var(--blue)">Namor</span><br>Complete Guide</h1>
+    <p class="banner-sub">The Atlantean King — who summons auto-tracking Monstro Spawn turrets, hurls tridents from mid-range, and calls Giganto to flatten entire teams with his ultimate.</p>
+    <p class="banner-hook">If you want a Duelist who punishes dive characters automatically, melts tanks with relentless turret pressure, and can go completely invulnerable on demand — Namor rewards smart positioning and turret placement over raw mechanical skill.</p>
+    <div class="banner-tags">
+      <span class="tag blue">DPS</span>
+      <span class="tag">A-Tier</span>
+      <span class="tag">Turret Summon</span>
+      <span class="tag">Anti-Dive</span>
+      <span class="tag">Mid-Range</span>
     </div>
-    <div class="ability">
-      <h3>🦈 Aquatic Summon (Shift)</h3>
-      <p>Summons a sea creature turret that attacks nearby enemies automatically. Place these on flanks and choke points to control space and force enemies to deal with them.</p>
-    </div>
-    <div class="ability">
-      <h3>💨 Atlantean Flight (E)</h3>
-      <p>Briefly takes flight, gaining mobility and a better angle on enemies. Use to escape flankers or reposition your turrets to better coverage spots.</p>
-    </div>
-    <div class="ability">
-      <h3>🌊 Tidal Wave (Ultimate)</h3>
-      <p>Unleashes a massive wave that deals huge damage and pushes enemies back. Devastating on payload maps and choke points — coordinate with your team to follow up the knockback.</p>
-    </div>
-  </div>
-  <div class="section">
-    <h2>💡 Pro Tips</h2>
-    <div class="tip-box">
-      <h3>🦈 Turret Placement is Everything</h3>
-      <p>Place Aquatic Summons on high ground or behind cover where enemies cannot easily destroy them. Well-placed turrets force enemies to deal with them or take constant chip damage throughout the fight.</p>
-    </div>
-    <div class="tip-box">
-      <h3>🌊 Ultimate on Choke Points</h3>
-      <p>Tidal Wave is best used when enemies are funneled through a doorway or narrow corridor. The knockback sends them flying and opens them up for your team's follow-up damage.</p>
-    </div>
-    <div class="tip-box">
-      <h3>📍 Set Up Before the Fight</h3>
-      <p>Rotate early and place turrets before enemies arrive. A fully set-up Namor with three turrets on the objective is extremely difficult to push into without taking heavy damage.</p>
-    </div>
-    <div class="tip-box">
-      <h3>✈️ Use Flight to Escape Flankers</h3>
-      <p>Atlantean Flight is your panic button when a Spider-Man or Star-Lord dives you. Use it immediately to gain height and distance, then let your turrets deal with them.</p>
-    </div>
-  </div>
-  <div class="section">
-    <h2>⚔️ Counters Namor</h2>
-    <div class="counter-grid">
-      <div class="counter-card"><div class="emoji">🎵</div><div class="name">Star-Lord</div><p style="font-size:0.75rem;color:#94a3b8;margin-top:4px">High mobility avoids turrets</p></div>
-      <div class="counter-card"><div class="emoji">🕷️</div><div class="name">Spider-Man</div><p style="font-size:0.75rem;color:#94a3b8;margin-top:4px">Swings past turrets, dives him directly</p></div>
-      <div class="counter-card"><div class="emoji">🏹</div><div class="name">Hawkeye</div><p style="font-size:0.75rem;color:#94a3b8;margin-top:4px">Destroys turrets from long range safely</p></div>
-      <div class="counter-card"><div class="emoji">🕸️</div><div class="name">Black Widow</div><p style="font-size:0.75rem;color:#94a3b8;margin-top:4px">Snipes him and clears turrets at distance</p></div>
-    </div>
-  </div>
-  <div class="section">
-    <h2>🤝 Best Team Synergies</h2>
-    <div class="counter-grid">
-      <div class="counter-card"><div class="emoji">🔮</div><div class="name">Doctor Strange</div><p style="font-size:0.75rem;color:#94a3b8;margin-top:4px">Portals enemies into turret zones</p></div>
-      <div class="counter-card"><div class="emoji">🌿</div><div class="name">Groot</div><p style="font-size:0.75rem;color:#94a3b8;margin-top:4px">Walls force enemies into turret range</p></div>
-      <div class="counter-card"><div class="emoji">🌸</div><div class="name">Mantis</div><p style="font-size:0.75rem;color:#94a3b8;margin-top:4px">Healing sustains his frontline presence</p></div>
-      <div class="counter-card"><div class="emoji">🛡️</div><div class="name">Captain America</div><p style="font-size:0.75rem;color:#94a3b8;margin-top:4px">Stuns enemies into turret range</p></div>
-    </div>
-  </div>
-  <div class="section">
-    <h2>📋 Playstyle Summary</h2>
-    <table style="width:100%;border-collapse:collapse;font-size:0.9rem">
-      <thead>
-        <tr style="border-bottom:1px solid #1e293b">
-          <th style="text-align:left;padding:10px;color:#94a3b8">Aspect</th>
-          <th style="text-align:left;padding:10px;color:#94a3b8">Rating</th>
-          <th style="text-align:left;padding:10px;color:#94a3b8">Notes</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr style="border-bottom:1px solid #0f172a">
-          <td style="padding:10px">Zone Control</td>
-          <td style="padding:10px;color:#4ade80">⭐⭐⭐⭐⭐</td>
-          <td style="padding:10px;color:#94a3b8">Turrets dominate enclosed spaces</td>
-        </tr>
-        <tr style="border-bottom:1px solid #0f172a">
-          <td style="padding:10px">Setup Required</td>
-          <td style="padding:10px;color:#f87171">⭐⭐⭐⭐⭐</td>
-          <td style="padding:10px;color:#94a3b8">Weak before turrets are placed</td>
-        </tr>
-        <tr style="border-bottom:1px solid #0f172a">
-          <td style="padding:10px">Mobility</td>
-          <td style="padding:10px;color:#fbbf24">⭐⭐⭐</td>
-          <td style="padding:10px;color:#94a3b8">Flight helps but limited duration</td>
-        </tr>
-        <tr style="border-bottom:1px solid #0f172a">
-          <td style="padding:10px">Ultimate Power</td>
-          <td style="padding:10px;color:#4ade80">⭐⭐⭐⭐</td>
-          <td style="padding:10px;color:#94a3b8">Tidal Wave is map-dependent but strong</td>
-        </tr>
-        <tr>
-          <td style="padding:10px">Difficulty</td>
-          <td style="padding:10px;color:#fbbf24">⭐⭐⭐</td>
-          <td style="padding:10px;color:#94a3b8">Medium — turret placement takes practice</td>
-        </tr>
-      </tbody>
-    </table>
   </div>
 </div>
+
+<div class="page-body">
+  <div class="main-col">
+
+    <!-- STATS -->
+    <div class="section">
+      <div class="section-label">Overview</div>
+      <h2>Base <span>Stats</span></h2>
+      <div class="stats-grid">
+        <div class="stat-box"><span class="stat-val">275</span><span class="stat-key">Health</span></div>
+        <div class="stat-box"><span class="stat-val">75</span><span class="stat-key">Trident Damage</span></div>
+        <div class="stat-box"><span class="stat-val">∞</span><span class="stat-key">Primary Ammo</span></div>
+        <div class="stat-box"><span class="stat-val">2</span><span class="stat-key">Max Turrets</span></div>
+        <div class="stat-box"><span class="stat-val">3s</span><span class="stat-key">Invuln Window</span></div>
+        <div class="stat-box"><span class="stat-val">★★☆☆☆</span><span class="stat-key">Difficulty</span></div>
+      </div>
+
+      <div class="sw-grid">
+        <div class="sw-col str">
+          <div class="sw-col-title">✅ Strengths</div>
+          <div class="sw-item"><span class="sw-icon">🦑</span>Auto-tracking Monstro Spawn turrets never miss — counters high-mobility dive heroes that most Duelists struggle to hit</div>
+          <div class="sw-item"><span class="sw-icon">💥</span>Consistently top damage output — infinite primary ammo plus two turrets firing simultaneously creates relentless pressure</div>
+          <div class="sw-item"><span class="sw-icon">🛡️</span>Blessing of the Deep grants 100% invulnerability for 3 seconds — one of the strongest defensive tools of any Duelist</div>
+          <div class="sw-item"><span class="sw-icon">🐋</span>Horn of Proteus deals 500 damage in the inner circle — instant elimination for most non-tank heroes when it lands</div>
+        </div>
+        <div class="sw-col wk">
+          <div class="sw-col-title">⛔ Weaknesses</div>
+          <div class="sw-item"><span class="sw-icon">🔫</span>Weak without turrets — primary fire alone has slow fire rate, arced trajectory, and unreliable damage against mobile targets</div>
+          <div class="sw-item"><span class="sw-icon">👀</span>Ultimate is easy to evade — Giganto's AoE indicator gives enemies time to walk out of the danger zone</div>
+          <div class="sw-item"><span class="sw-icon">🩹</span>Blessing of the Deep leaves him exposed after — enemies track him out of the ability and burst him down if his team isn't there</div>
+          <div class="sw-item"><span class="sw-icon">📏</span>Turrets have 100 HP each — any AoE or focused fire destroys them instantly, gutting his damage output</div>
+        </div>
+      </div>
+
+      <p class="stat-desc">Namor sits at A-Tier in the current meta — his Monstro Spawn turrets are uniquely powerful against dive-heavy compositions, and his sustained damage output consistently tops team scoreboards. His skill expression is almost entirely in turret placement: a Namor who hides turrets on walls at hard-to-reach angles is dramatically more effective than one who places them on the ground where enemies instantly destroy them. [[1]](#__1) [[2]](#__2)</p>
+    </div>
+
+    <!-- ABILITIES -->
+    <div class="section">
+      <div class="section-label">Kit Breakdown</div>
+      <h2>Abilities <span>&amp; Skills</span></h2>
+      <div class="ability-list">
+
+        <div class="ability-item">
+          <div class="ability-key passive">PASSIVE</div>
+          <div class="ability-body">
+            <div class="ability-name">Tide Fall</div>
+            <div class="ability-desc">Namor falls more slowly when holding the jump button, giving him extended aerial hang time. This passive allows him to reposition vertically during fights, reach elevated turret placement spots, and avoid ground-level crowd control more easily than most Duelists.</div>
+            <div class="ability-tip">💡 Use Tide Fall to reach elevated wall surfaces for turret placement — a Monstro Spawn stuck to a wall 4–5 meters up is significantly harder for enemies to destroy than one placed on the ground.</div>
+          </div>
+        </div>
+
+        <div class="ability-item">
+          <div class="ability-key" style="background:var(--blue)">LMB</div>
+          <div class="ability-body">
+            <div class="ability-name">Trident of Neptune</div>
+            <div class="ability-desc">Namor throws his trident forward in an arced trajectory, dealing damage on hit. The trident has no damage falloff — it deals full damage at any range — but the arc requires aim compensation at longer distances. Every hit on an enemy reduces the Aquatic Dominion cooldown, incentivizing constant primary fire. Headshots trigger Monstro Spawn berserk mode, increasing their attack speed temporarily.</div>
+            <div class="ability-stats">
+              <span class="ability-stat-chip">Body damage: <b>75</b></span>
+              <span class="ability-stat-chip">Headshot: <b>140</b></span>
+              <span class="ability-stat-chip">Fire rate: <b>1.09/s</b></span>
+              <span class="ability-stat-chip">Ammo: <b>Infinite</b></span>
+              <span class="ability-stat-chip">Falloff: <b>None</b></span>
+            </div>
+            <div class="ability-tip">💡 Fish for headshots aggressively — every headshot triggers berserk mode on your turrets without spending your secondary fire cooldown. Against Vanguards who are easy to hit, landing consistent headshots effectively doubles your turret DPS for free. [[1]](#__1)</div>
+          </div>
+        </div>
+
+        <div class="ability-item">
+          <div class="ability-key" style="background:var(--blue)">RMB</div>
+          <div class="ability-body">
+            <div class="ability-name">Wrath of the Seven Seas</div>
+            <div class="ability-desc">Namor launches a special trident that deals damage on impact and generates a spell field at the impact point. Most importantly, it directs all active Monstro Spawn to focus on the hit target and enter berserk mode — significantly increasing their attack speed for 2 seconds. This is Namor's single highest-damage ability when turrets are active, as the berserk state multiplies total DPS dramatically.</div>
+            <div class="ability-stats">
+              <span class="ability-stat-chip">Projectile dmg: <b>40</b></span>
+              <span class="ability-stat-chip">Spell field dmg: <b>60</b></span>
+              <span class="ability-stat-chip">Turret focus: <b>Yes</b></span>
+              <span class="ability-stat-chip">Berserk: <b>2s</b></span>
+              <span class="ability-stat-chip">Cooldown: <b>6s</b></span>
+            </div>
+            <div class="ability-tip">💡 Never use Wrath of the Seven Seas without at least one turret active — the ability's damage multiplier is entirely dependent on turrets being alive. Save it for high-value targets: a Vanguard below 50% HP or a diving hero caught in your turret range. [[2]](#__2)</div>
+          </div>
+        </div>
+
+        <div class="ability-item">
+          <div class="ability-key" style="background:var(--blue)">SHIFT</div>
+          <div class="ability-body">
+            <div class="ability-name">Blessing of the Deep</div>
+            <div class="ability-desc">Namor summons a protective barrier while flying upward 7 meters, granting complete invulnerability for up to 3 seconds. During this window, he cannot be damaged, stunned, eaten, or affected by any enemy ability — including ultimates. He can still receive healing from allies while invulnerable. The cooldown is 20 seconds.</div>
+            <div class="ability-stats">
+              <span class="ability-stat-chip">Duration: <b>3s</b></span>
+              <span class="ability-stat-chip">Vertical: <b>7m</b></span>
+              <span class="ability-stat-chip">Cooldown: <b>20s</b></span>
+              <span class="ability-stat-chip">Invulnerable: <b>100%</b></span>
+            </div>
+            <div class="ability-tip">💡 Save Blessing of the Deep exclusively as an escape tool — never use it proactively for repositioning. The moment you use it offensively, you have no escape for 20 seconds. The highest-value use is dodging enemy ultimates: it works against Jeff's swallow, Strange's stun, Punisher's ult, and every other ability in the game. [[1]](#__1)</div>
+          </div>
+        </div>
+
+        <div class="ability-item">
+          <div class="ability-key" style="background:var(--blue)">E</div>
+          <div class="ability-body">
+            <div class="ability-name">Aquatic Domination</div>
+            <div class="ability-desc">Namor summons a Monstro Spawn — a squid-like turret that autonomously attacks the nearest enemy within 40 meters. Each turret has 100 HP, lasts 8 seconds, and deals damage that falls off starting at 20 meters (reducing to 50% at 40m). Namor can have 2 turrets active simultaneously, with 2 charges that recharge individually. Every primary fire hit on an enemy reduces the charge cooldown.</div>
+            <div class="ability-stats">
+              <span class="ability-stat-chip">Turret HP: <b>100</b></span>
+              <span class="ability-stat-chip">Duration: <b>8s</b></span>
+              <span class="ability-stat-chip">Range: <b>40m</b></span>
+              <span class="ability-stat-chip">Max active: <b>2</b></span>
+              <span class="ability-stat-chip">Charges: <b>2</b></span>
+            </div>
+            <div class="ability-tip">💡 Always place turrets on walls rather than floors — wall-mounted turrets require enemies to look away from the fight to destroy them. Vary your placement every round so enemies don't develop a habit of instantly destroying them. Place one turret near your supports to automatically counter any dive attempt. [[2]](#__2)</div>
+          </div>
+        </div>
+
+        <div class="ability-item">
+          <div class="ability-key ult">Q — ULT</div>
+          <div class="ability-body">
+            <div class="ability-name">Horn of Proteus</div>
+            <div class="ability-desc">Namor blows his horn to summon Giganto — a massive sea creature that leaps onto the targeted area after a 1.5-second delay. The inner circle (3.5m radius) deals 500 damage and disables all movement abilities for 1.5 seconds. The outer ring (9m radius) deals 180 damage and knocks enemies down. The 1.5-second delay gives enemies time to escape, making this ult highly telegraphed — but when combined with crowd control, the inner circle is an instant elimination for nearly every non-tank hero.</div>
+            <div class="ability-stats">
+              <span class="ability-stat-chip">Inner dmg: <b>500</b></span>
+              <span class="ability-stat-chip">Outer dmg: <b>180</b></span>
+              <span class="ability-stat-chip">Hit delay: <b>1.5s</b></span>
+              <span class="ability-stat-chip">Immobilize: <b>1.5s</b></span>
+              <span class="ability-stat-chip">Range: <b>30m</b></span>
+            </div>
+            <div class="ability-tip">💡 Never use Horn of Proteus without a teammate CC ability to lock enemies in place. Doctor Strange's Eye of Agamotto or Groot's root are ideal — stun the group first, then immediately activate Giganto. Without CC, enemies simply walk out of the inner circle during the 1.5-second delay. [[1]](#__1)</div>
+          </div>
+        </div>
+
+        <div class="ability-item">
+          <div class="ability-key teamup">TEAM-UP</div>
+          <div class="ability-body">
+            <div class="ability-name">Gamma Charge — with Hulk &amp; Iron Man</div>
+            <div class="ability-desc">When Hulk charges Iron Man with gamma radiation and Iron Man activates Armor Overdrive, Namor receives a gamma upgrade that summons an extra Gamma Monstro — a supercharged turret that continuously fires gamma rays at locked-on enemies. The longer the rays hit a target, the higher the damage output, making it exceptionally powerful against tanks and grouped enemies.</div>
+            <div class="ability-tip">💡 The Gamma Monstro's continuous ray damage scales up the longer it stays on target — prioritize using it against Vanguards who can't easily escape the lock-on. This team-up turns Namor's already high sustained damage into one of the strongest DPS windows in the game. [[2]](#__2)</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- COUNTERS -->
+    <div class="section">
+      <div class="section-label">Matchup Analysis</div>
+      <h2>Counters <span>&amp; Matchups</span></h2>
+      <div class="counter-grid">
+        <div class="counter-col good">
+          <div class="counter-col-title">✅ Namor Counters</div>
+          <div class="counter-entry">
+            <div class="counter-emoji">🕷️</div>
+            <div>
+              <div class="counter-name">Spider-Man</div>
+              <div class="counter-reason">Monstro Spawn auto-tracking negates his evasive web-swinging entirely. Spider-Man cannot dodge turret fire no matter how erratically he moves.</div>
+            </div>
+          </div>
+          <div class="counter-entry">
+            <div class="counter-emoji">🐾</div>
+            <div>
+              <div class="counter-name">Black Panther</div>
+              <div class="counter-reason">Dive attempts are automatically countered by turrets that start firing the moment he enters range — before Namor even sees him coming.</div>
+            </div>
+          </div>
+          <div class="counter-entry">
+            <div class="counter-emoji">🌪️</div>
+            <div>
+              <div class="counter-name">Flying Heroes (Storm, Human Torch)</div>
+              <div class="counter-reason">Turrets track aerial targets just as effectively as ground targets. Flying heroes gain no evasion advantage against Monstro Spawn auto-fire. [[2]](#__2)</div>
+            </div>
+          </div>
+          <div class="counter-entry">
+            <div class="counter-emoji">🛡️</div>
+            <div>
+              <div class="counter-name">Vanguards</div>
+              <div class="counter-reason">Large hitboxes make trident headshots easy to land, triggering berserk mode constantly. Combined with secondary fire, Namor melts tanks faster than most Duelists.</div>
+            </div>
+          </div>
+        </div>
+        <div class="counter-col bad">
+          <div class="counter-col-title">❌ Hard Counters Namor</div>
+          <div class="counter-entry">
+            <div class="counter-emoji">🌙</div>
+            <div>
+              <div class="counter-name">Moon Knight</div>
+              <div class="counter-reason">Bouncing blades destroy both Monstro Spawn turrets simultaneously with minimal effort, instantly gutting Namor's entire damage output. [[2]](#__2)</div>
+            </div>
+          </div>
+          <div class="counter-entry">
+            <div class="counter-emoji">🎯</div>
+            <div>
+              <div class="counter-name">Long-Range Hitscan (Punisher, Hela)</div>
+              <div class="counter-reason">Reliable long-range damage beats Namor's arced trident trajectory. Hitscan heroes destroy turrets from safe distances and out-range his effective zone. [[2]](#__2)</div>
+            </div>
+          </div>
+          <div class="counter-entry">
+            <div class="counter-emoji">🕸️</div>
+            <div>
+              <div class="counter-name">Venom / The Thing</div>
+              <div class="counter-reason">Sticky dive tanks can chase Namor down while absorbing turret damage, negating his anti-dive strength by simply tanking through it.</div>
+            </div>
+          </div>
+          <div class="counter-entry">
+            <div class="counter-emoji">💨</div>
+            <div>
+              <div class="counter-name">Any AoE Clearer</div>
+              <div class="counter-reason">Heroes with AoE abilities can destroy both 100 HP turrets in a single cast, leaving Namor with only his slow primary fire for the remainder of the cooldown.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TEAM COMP -->
+    <div class="section">
+      <div class="section-label">Team Strategy</div>
+      <h2>Best Team <span>Compositions</span></h2>
+      <div class="comp-grid">
+        <div class="comp-card">
+          <div class="comp-role tank">Vanguard</div>
+          <div class="comp-hero">
+            <div class="comp-hero-emoji">🌿</div>
+            <div>
+              <div class="comp-hero-name">Groot</div>
+              <div class="comp-hero-reason">Root ability locks enemies in place for Horn of Proteus — the single best setup for Namor's ultimate in the game</div>
+            </div>
+          </div>
+          <div class="comp-hero">
+            <div class="comp-hero-emoji">💚</div>
+            <div>
+              <div class="comp-hero-name">Hulk</div>
+              <div class="comp-hero-reason">Gamma Charge team-up with Iron Man activates Namor's Gamma Monstro — his highest single-target sustained DPS window</div>
+            </div>
+          </div>
+          <div class="comp-synergy">Groot's root is Namor's best ult setup — enemies locked in place cannot walk out of Giganto's inner circle during the 1.5-second delay. [[1]](#__1)</div>
+        </div>
+        <div class="comp-card">
+          <div class="comp-role support">Support</div>
+          <div class="comp-hero">
+            <div class="comp-hero-emoji">🦝</div>
+            <div>
+              <div class="comp-hero-name">Rocket Raccoon</div>
+              <div class="comp-hero-reason">Damage boost amplifies Namor's already high sustained output; healing sustains him through the post-Blessing of the Deep vulnerability window</div>
+            </div>
+          </div>
+          <div class="comp-hero">
+            <div class="comp-hero-emoji">❄️</div>
+            <div>
+              <div class="comp-hero-name">Luna Snow</div>
+              <div class="comp-hero-reason">Consistent healing keeps Namor alive during his 20-second Blessing of the Deep cooldown when he has no escape tool</div>
+            </div>
+          </div>
+          <div class="comp-synergy support">Namor needs reliable healing coverage during his Blessing of the Deep cooldown — supports who can sustain him through focused fire are essential to his survivability. [[2]](#__2)</div>
+        </div>
+        <div class="comp-card">
+          <div class="comp-role dps">DPS Partner</div>
+          <div class="comp-hero">
+            <div class="comp-hero-emoji">🦾</div>
+            <div>
+              <div class="comp-hero-name">Iron Man</div>
+              <div class="comp-hero-reason">Gamma Charge team-up activates Namor's Gamma Monstro; aerial pressure from above while Namor controls mid-range</div>
+            </div>
+          </div>
+          <div class="comp-hero">
+            <div class="comp-hero-emoji">🔮</div>
+            <div>
+              <div class="comp-hero-name">Doctor Strange</div>
+              <div class="comp-hero-reason">Eye of Agamotto stun sets up Horn of Proteus perfectly — stunned enemies cannot walk out of Giganto's inner circle</div>
+            </div>
+          </div>
+          <div class="comp-synergy dps">Iron Man's team-up and Strange's CC both directly amplify Namor's two biggest strengths — sustained turret DPS and ult setup. This trio is Namor's strongest possible composition. [[1]](#__1)</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- COMBOS -->
+    <div class="section">
+      <div class="section-label">Advanced Techniques</div>
+      <h2>Combo <span>Guide</span></h2>
+      <p style="margin-bottom:8px;font-size:0.88rem;">Choose your starting point based on your current skill level:</p>
+      <table class="difficulty-table">
+        <thead>
+          <tr><th>Technique</th><th>Difficulty</th><th>Best For</th></tr>
+        </thead>
+        <tbody>
+          <tr><td style="font-weight:700">Turret Setup Loop</td><td><span class="diff-badge diff-easy">⭐ Easy</span></td><td style="color:var(--muted)">New Namor players</td></tr>
+          <tr><td style="font-weight:700">Dive Counter Combo</td><td><span class="diff-badge diff-med">⭐⭐ Medium</span></td><td style="color:var(--muted)">Players with turret placement down</td></tr>
+          <tr><td style="font-weight:700">Berserk Burst Rotation</td><td><span class="diff-badge diff-hard">⭐⭐⭐ Hard</span></td><td style="color:var(--muted)">Players ready for ranked carry</td></tr>
+          <tr><td style="font-weight:700">CC-Chained Giganto</td><td><span class="diff-badge diff-expert">⭐⭐⭐⭐⭐ Expert</span></td><td style="color:var(--muted)">Coordinated / competitive play</td></tr>
+        </tbody>
+      </table>
+
+      <div class="combo-section-divider"></div>
+      <h3 style="margin-bottom:16px;color:var(--gold)">Turret Setup Loop</h3>
+      <ul class="combo-steps">
+        <li class="combo-step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <div class="step-title">Place first Monstro Spawn on a wall before engaging <span class="key-badge">E</span> <span class="time-badge">pre-fight</span></div>
+            <div class="step-desc">Always enter a fight with at least one turret already active. Use Tide Fall to reach elevated wall surfaces — a turret placed 4–5 meters up on a wall is dramatically harder to destroy than one on the ground.</div>
+          </div>
+        </li>
+        <li class="combo-step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <div class="step-title">Spam primary fire on the nearest Vanguard <span class="key-badge">LMB</span> <span class="time-badge">ongoing</span></div>
+            <div class="step-desc">Target tanks with your primary fire — large hitboxes make headshots easy to land, each hit reduces your turret cooldown, and headshots trigger berserk mode for free. Let your turret handle flankers automatically while you focus on the frontline.</div>
+          </div>
+        </li>
+        <li class="combo-step">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <div class="step-title">Deploy second turret as soon as charge reloads <span class="key-badge">E</span></div>
+            <div class="step-desc">Place the second turret at a different angle from the first — two turrets covering different sightlines force enemies to choose which one to destroy, and whichever they ignore keeps firing freely.</div>
+          </div>
+        </li>
+        <li class="combo-step">
+          <div class="step-num">4</div>
+          <div class="step-body">
+            <div class="step-title">Immediately redeploy destroyed turrets to new positions <span class="key-badge">E</span></div>
+            <div class="step-desc">When a turret is destroyed, never place the replacement in the same spot. Vary placement constantly — enemies who destroyed the first turret will look in the same place for the second one.</div>
+          </div>
+        </li>
+      </ul>
+      <div class="combo-note"><strong>Pro tip:</strong> The turret loop is most effective when you treat turret placement as an active decision every 8 seconds, not a passive setup. The best Namor players are constantly repositioning turrets to angles the enemy team hasn't adapted to yet. [[1]](#__1)</div>
+
+      <div class="combo-section-divider"></div>
+      <h3 style="margin-bottom:16px;color:var(--gold)">Dive Counter Combo</h3>
+      <ul class="combo-steps">
+        <li class="combo-step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <div class="step-title">Pre-place one turret near your supports <span class="key-badge">E</span> <span class="time-badge">pre-fight</span></div>
+            <div class="step-desc">Position one Monstro Spawn behind your team near your supports. When a dive hero like Spider-Man or Black Panther flanks, the turret starts firing automatically before you even see the threat.</div>
+          </div>
+        </li>
+        <li class="combo-step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <div class="step-title">Hit the diving enemy with Wrath of the Seven Seas <span class="key-badge">RMB</span> <span class="time-badge">0.0s</span></div>
+            <div class="step-desc">The moment you see a dive hero enter your backline, immediately fire secondary fire at them. This directs all active turrets to focus on the diver and enter berserk mode — the combined auto-tracking damage is nearly impossible for most dive heroes to survive.</div>
+          </div>
+        </li>
+        <li class="combo-step">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <div class="step-title">Follow up with primary fire headshots <span class="key-badge">LMB</span> <span class="time-badge">~0.3s</span></div>
+            <div class="step-desc">While turrets focus the diver, add primary fire headshots to accelerate the kill. The diver is now taking turret auto-fire plus your trident damage simultaneously — most dive heroes cannot survive this combined burst.</div>
+          </div>
+        </li>
+        <li class="combo-step">
+          <div class="step-num">4</div>
+          <div class="step-body">
+            <div class="step-title">Use Blessing of the Deep if the diver reaches you <span class="key-badge">SHIFT</span></div>
+            <div class="step-desc">If the dive hero closes the gap before dying, activate Blessing of the Deep immediately. The 3-second invulnerability window lets turrets finish them off while you take zero damage — then exit the ability and resume firing.</div>
+          </div>
+        </li>
+      </ul>
+      <div class="combo-note"><strong>Why it works:</strong> Namor's auto-tracking turrets are the single best anti-dive tool in the Duelist roster. Unlike other heroes who need to manually aim at fast-moving targets, Monstro Spawn cannot miss — making Namor the natural counter to Spider-Man, Black Panther, and any other high-mobility flanker. [[2]](#__2)</div>
+
+      <div class="combo-section-divider"></div>
+      <h3 style="margin-bottom:16px;color:var(--gold)">Berserk Burst Rotation</h3>
+      <ul class="combo-steps">
+        <li class="combo-step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <div class="step-title">Confirm both turrets are active before engaging a priority target <span class="time-badge">pre-burst</span></div>
+            <div class="step-desc">The berserk burst rotation only reaches its maximum damage potential with two turrets active. Never initiate this combo with zero or one turret — the damage difference is significant.</div>
+          </div>
+        </li>
+        <li class="combo-step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <div class="step-title">Land a headshot to trigger free berserk mode <span class="key-badge">LMB</span> <span class="time-badge">0.0s</span></div>
+            <div class="step-desc">Aim for the head on your primary fire. A successful headshot triggers berserk mode on both turrets without spending your secondary fire cooldown — effectively giving you a free berserk activation every time you land a headshot.</div>
+          </div>
+        </li>
+        <li class="combo-step">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <div class="step-title">Immediately follow with Wrath of the Seven Seas on the same target <span class="key-badge">RMB</span> <span class="time-badge">~0.2s</span></div>
+            <div class="step-desc">Stack a secondary fire hit immediately after the headshot berserk trigger. This extends the berserk window and focuses both turrets on the target simultaneously — the combined DPS during this window is Namor's highest single-rotation output.</div>
+          </div>
+        </li>
+        <li class="combo-step">
+          <div class="step-num">4</div>
+          <div class="step-body">
+            <div class="step-title">Continue primary fire until target is eliminated <span class="key-badge">LMB</span></div>
+            <div class="step-desc">Maintain primary fire throughout the berserk window. Each additional headshot extends the pressure and reduces turret cooldown simultaneously — keeping the rotation going continuously.</div>
+          </div>
+        </li>
+      </ul>
+      <div class="combo-note"><strong>Why it works:</strong> The headshot berserk trigger is Namor's most efficient damage mechanic — it activates the same turret berserk state as secondary fire without spending the 6-second cooldown. Stacking headshot berserk into an immediate secondary fire creates a double-berserk window that no target at half HP can survive. [[1]](#__1)</div>
+
+      <div class="combo-section-divider"></div>
+      <h3 style="margin-bottom:4px;color:var(--blue)">CC-Chained Giganto <span class="diff-badge diff-expert" style="font-size:0.72rem;vertical-align:middle">Expert</span></h3>
+      <p style="font-size:0.83rem;margin-bottom:16px;">Turning Horn of Proteus from an easily-avoided ult into a guaranteed team wipe through coordinated crowd control.</p>
+      <ul class="combo-steps">
+        <li class="combo-step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <div class="step-title">Coordinate with a CC teammate before activating (Groot / Strange)</div>
+            <div class="step-desc">Communicate with your Groot or Doctor Strange before the fight. The plan is simple: they CC first, you ult immediately after. Without this coordination, Horn of Proteus is one of the most telegraphed and avoidable ultimates in the game.</div>
+          </div>
+        </li>
+        <li class="combo-step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <div class="step-title">Wait for CC to land on a grouped cluster <span class="time-badge">0.0s</span></div>
+            <div class="step-desc">Only activate Horn of Proteus after you see the CC land and enemies are visibly locked in place. Activating before CC means enemies can still walk out during the 1.5-second delay.</div>
+          </div>
+        </li>
+        <li class="combo-step">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <div class="step-title">Aim Giganto's inner circle on the center of the CC'd group <span class="key-badge">Q</span> <span class="time-badge">~0.5s after CC</span></div>
+            <div class="step-desc">Place the inner circle (3.5m radius) directly on the grouped enemies. The 500 inner damage eliminates most non-tank heroes instantly. Even if some survive, the 1.5-second immobilize from Giganto sets up a follow-up burst from your team.</div>
+          </div>
+        </li>
+        <li class="combo-step">
+          <div class="step-num">4</div>
+          <div class="step-body">
+            <div class="step-title">Immediately fire secondary fire on survivors <span class="key-badge">RMB</span></div>
+            <div class="step-desc">Any enemies who survived the outer ring are now immobilized and chipped. Hit them with Wrath of the Seven Seas to focus all turrets on the lowest HP survivor — the combined turret berserk plus primary fire finishes them before the immobilize expires.</div>
+          </div>
+        </li>
+      </ul>
+      <div class="combo-note"><strong>Why it works:</strong> Horn of Proteus is uniquely powerful when paired with CC — the 1.5-second delay that makes it easily avoidable in solo play becomes irrelevant when enemies are rooted or stunned. A CC-chained Giganto on a grouped team is one of the highest single-ult team wipe potentials in Marvel Rivals, dealing 500 damage to every hero caught in the inner circle simultaneously. [[1]](#__1) [[2]](#__2)</div>
+    </div>
+
+    <!-- FAQ -->
+    <div class="section">
+      <div class="section-label">Common Questions</div>
+      <h2>FAQ</h2>
+      <div class="faq-list">
+
+        <div class="faq-item open">
+          <button class="faq-q" onclick="toggleFaq(this)">Is Namor good for beginners? <span class="faq-arrow">▼</span></button>
+          <div class="faq-a"><p>Namor is one of the more beginner-friendly Duelists in the roster. His auto-tracking turrets do a lot of the aiming work for you, his primary fire has infinite ammo, and Blessing of the Deep provides a safety net against ultimates. The main skill expression is turret placement — learning where to put Monstro Spawn so enemies can't easily destroy them is the primary learning curve. His damage output is naturally high even with suboptimal play. [[2]](#__2)</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">Where should I place my Monstro Spawn turrets? <span class="faq-arrow">▼</span></button>
+          <div class="faq-a"><p>Always on walls rather than floors — wall-mounted turrets require enemies to look away from the fight to destroy them. Aim for elevated positions 3–5 meters up with clear sightlines to the objective or choke point. Place one turret covering the frontline and one covering your backline to counter flankers simultaneously. Most importantly: never place them in the same spot twice in a row — enemies adapt quickly. [[1]](#__1)</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">When should I use Blessing of the Deep? <span class="faq-arrow">▼</span></button>
+          <div class="faq-a"><p>Save it exclusively as an escape tool — never use it proactively for repositioning. The highest-value uses are: (1) dodging enemy ultimates like Jeff's swallow or Strange's stun, (2) escaping a dive hero who has closed the gap before your turrets finish them, and (3) surviving a focused burst from multiple enemies.
+        The 20-second cooldown means every use must count — a wasted Blessing of the Deep leaves you with no escape for a full 20 seconds. </p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">Why is my Horn of Proteus always getting avoided? <span class="faq-arrow">▼</span></button>
+          <div class="faq-a"><p>Because the 1.5-second hit delay gives enemies enough time to walk out of the AoE indicator. Horn of Proteus should almost never be used without a teammate CC ability to lock enemies in place first. Coordinate with Groot or Doctor Strange — their root and stun abilities prevent enemies from moving during the delay window. A solo Horn of Proteus against aware enemies is nearly always wasted. </p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">What's the best counter to Namor? <span class="faq-arrow">▼</span></button>
+          <div class="faq-a"><p>Moon Knight is his hardest counter — bouncing blades destroy both Monstro Spawn turrets simultaneously with minimal effort, instantly gutting Namor's entire damage output. Long-range hitscan heroes like Punisher and Hela also beat him by staying outside his effective range and destroying turrets safely. The general rule against Namor: destroy his turrets immediately every time they appear. Monstro Spawn only have 100 HP — it's always worth the one second it takes to kill them. </p></div>
+        </div>
+
+      </div>
+    </div>
+
+  </div><!-- end main-col -->
+
+  <!-- SIDEBAR -->
+  <div class="side-col">
+    <div class="side-card">
+      <div class="side-card-title">Tier Rating</div>
+      <div class="tier-badge tier-a">A</div>
+      <p style="font-size:0.85rem;color:var(--muted);line-height:1.6">Namor sits at A-Tier in the current meta. His auto-tracking turrets are uniquely powerful against dive-heavy compositions, and his sustained damage output consistently tops team scoreboards — but his reliance on turrets and the easily-avoided ultimate keep him from S-Tier.</p>
+    </div>
+
+    <div class="side-card">
+      <div class="side-card-title">Role Ratings</div>
+      <div class="rating-row"><span>Ease of Use</span><div class="dots"><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot off"></div></div></div>
+      <div class="rating-row"><span>Burst Damage</span><div class="dots"><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot off"></div><div class="dot off"></div></div></div>
+      <div class="rating-row"><span>Sustained DPS</span><div class="dots"><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div></div></div>
+      <div class="rating-row"><span>Survivability</span><div class="dots"><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot off"></div><div class="dot off"></div></div></div>
+      <div class="rating-row"><span>Ult Impact</span><div class="dots"><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot off"></div><div class="dot off"></div></div></div>
+    </div>
+
+    <div class="side-card">
+      <div class="side-card-title">Team-Up Heroes</div>
+      <div class="teamup-pill">
+        <span style="font-size:1.1rem">💚</span>
+        <div>
+          <div class="teamup-pill-name">Hulk</div>
+          <div class="teamup-pill-sub">Gamma Charge — activates Namor's Gamma Monstro for sustained ray damage</div>
+        </div>
+      </div>
+      <div class="teamup-pill">
+        <span style="font-size:1.1rem">🦾</span>
+        <div>
+          <div class="teamup-pill-name">Iron Man</div>
+          <div class="teamup-pill-sub">Armor Overdrive triggers the Gamma team-up chain with Hulk</div>
+        </div>
+      </div>
+      <div class="teamup-pill">
+        <span style="font-size:1.1rem">🌿</span>
+        <div>
+          <div class="teamup-pill-name">Groot</div>
+          <div class="teamup-pill-sub">Root combos perfectly with Horn of Proteus — enemies can't escape Giganto</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-card">
+      <div class="side-card-title">Quick Tips</div>
+      <div class="quick-tip"><div class="tip-icon">🦑</div><div class="tip-text">Always place turrets on walls, not floors. Wall-mounted Monstro Spawn are significantly harder for enemies to destroy.</div></div>
+      <div class="quick-tip"><div class="tip-icon">🎯</div><div class="tip-text">Fish for headshots on Vanguards — every headshot triggers free berserk mode without spending your secondary fire cooldown.</div></div>
+      <div class="quick-tip"><div class="tip-icon">🛡️</div><div class="tip-text">Save Blessing of the Deep for escaping ultimates and dives. Never use it proactively for repositioning.</div></div>
+      <div class="quick-tip"><div class="tip-icon">🐋</div><div class="tip-text">Never use Horn of Proteus without teammate CC. Coordinate with Groot or Strange — stun first, then ult.</div></div>
+      <div class="quick-tip"><div class="tip-icon">🔄</div><div class="tip-text">Vary turret placement every round. Enemies adapt fast — never put replacements in the same spot as destroyed ones.</div></div>
+    </div>
+
+    <a class="ai-btn-side" href="/">← Back to All Heroes</a>
+  </div><!-- end side-col -->
+
+</div><!-- end page-body -->
+
 <footer>
-  <p>© 2025 RivalsGuide.site — Fan site, not affiliated with Marvel or NetEase Games.</p>
+  <div class="footer-logo">RIVALS<span style="color:var(--gold)">GUIDE</span></div>
+  <p>Fan-made guide site · Not affiliated with Marvel or NetEase Games</p>
+  <p style="margin-top:8px">© 2025 RivalsGuide.site · All rights reserved</p>
 </footer>
+
+<script>
+  function toggleFaq(btn){
+    const item=btn.closest('.faq-item');
+    item.classList.toggle('open');
+  }
+</script>
 </body>
 </html>
