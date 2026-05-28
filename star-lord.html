@@ -52,7 +52,6 @@
     .stat-val{font-size:1.4rem;font-weight:900;color:var(--accent);display:block}
     .stat-key{font-size:0.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-top:4px;display:block}
     .stat-desc{color:var(--muted);font-size:0.88rem;line-height:1.6}
-    /* FUEL BAR */
     .fuel-bar-wrap{background:var(--dark2);border:1px solid rgba(255,255,255,0.05);border-radius:10px;padding:18px 20px;margin-bottom:24px}
     .fuel-bar-label{font-size:0.75rem;text-transform:uppercase;letter-spacing:2px;color:var(--accent);font-weight:700;margin-bottom:10px}
     .fuel-track{height:10px;background:rgba(255,255,255,0.06);border-radius:5px;overflow:hidden;margin-bottom:8px}
@@ -60,7 +59,6 @@
     @keyframes fuelPulse{from{opacity:0.6;width:30%}to{opacity:1;width:100%;filter:brightness(1.3)}}
     .fuel-labels{display:flex;justify-content:space-between;font-size:0.72rem;color:var(--muted)}
     .fuel-labels span:last-child{color:var(--gold)}
-    /* SW GRID */
     .sw-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:24px}
     .sw-col{background:var(--dark2);border-radius:8px;padding:16px}
     .sw-col-title{font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:12px}
@@ -69,7 +67,6 @@
     .sw-item{display:flex;align-items:flex-start;gap:8px;padding:6px 0;font-size:0.83rem;color:var(--muted);line-height:1.5;border-bottom:1px solid rgba(255,255,255,0.04)}
     .sw-item:last-child{border-bottom:none}
     .sw-icon{flex-shrink:0;margin-top:1px}
-    /* ABILITIES */
     .ability-list{display:flex;flex-direction:column;gap:16px}
     .ability-item{background:var(--dark2);border:1px solid rgba(255,255,255,0.05);border-radius:10px;padding:20px;display:flex;gap:16px;transition:border-color 0.2s;align-items:flex-start}
     .ability-item:hover{border-color:var(--border)}
@@ -84,7 +81,6 @@
     .ability-stats{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:8px}
     .ability-stat-chip{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);border-radius:4px;padding:3px 9px;font-size:0.74rem;color:var(--muted)}
     .ability-stat-chip b{color:var(--gold)}
-    /* COUNTERS */
     .counter-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
     .counter-col{background:var(--dark2);border-radius:10px;padding:20px}
     .counter-col-title{font-size:0.78rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:14px}
@@ -95,7 +91,6 @@
     .counter-emoji{font-size:1.3rem;flex-shrink:0;margin-top:1px}
     .counter-name{font-weight:700;font-size:0.88rem;margin-bottom:2px}
     .counter-reason{font-size:0.78rem;color:var(--muted);line-height:1.5}
-    /* TEAM COMP */
     .comp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
     .comp-card{background:var(--dark2);border-radius:10px;padding:16px;border:1px solid rgba(255,255,255,0.04);transition:border-color 0.2s;display:flex;flex-direction:column}
     .comp-card:hover{border-color:var(--border)}
@@ -111,7 +106,6 @@
     .comp-synergy{margin-top:12px;padding:10px 12px;background:rgba(255,255,255,0.03);border-radius:6px;border-left:2px solid var(--blue);font-size:0.78rem;color:var(--muted);line-height:1.5}
     .comp-synergy.support{border-left-color:var(--green)}
     .comp-synergy.dps{border-left-color:var(--accent)}
-    /* COMBOS */
     .difficulty-table{width:100%;border-collapse:collapse;margin:20px 0 8px}
     .difficulty-table th{font-size:0.75rem;text-transform:uppercase;letter-spacing:1px;color:var(--muted);font-weight:700;padding:8px 12px;text-align:left;border-bottom:1px solid rgba(255,255,255,0.08)}
     .difficulty-table td{padding:10px 12px;font-size:0.85rem;border-bottom:1px solid rgba(255,255,255,0.04);vertical-align:middle}
@@ -134,7 +128,6 @@
     .combo-note{background:rgba(251,146,60,0.06);border:1px solid var(--border);border-radius:8px;padding:14px 16px;margin-top:16px;font-size:0.85rem;color:var(--text);line-height:1.6}
     .combo-note strong{color:var(--accent)}
     .combo-section-divider{height:1px;background:rgba(255,255,255,0.06);margin:28px 0}
-    /* FAQ */
     .faq-list{display:flex;flex-direction:column;gap:0}
     .faq-item{border-bottom:1px solid rgba(255,255,255,0.05)}
     .faq-item:last-child{border-bottom:none}
@@ -145,7 +138,6 @@
     .faq-a{max-height:0;overflow:hidden;transition:max-height 0.35s ease}
     .faq-item.open .faq-a{max-height:300px}
     .faq-a p{padding-bottom:16px;font-size:0.88rem}
-    /* SIDEBAR */
     .side-card{background:var(--card);border:1px solid rgba(255,255,255,0.05);border-radius:12px;padding:24px}
     .side-card-title{font-size:0.72rem;text-transform:uppercase;letter-spacing:2px;color:var(--accent);font-weight:700;margin-bottom:16px}
     .quick-tip{display:flex;gap:10px;padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.04);align-items:flex-start}
@@ -218,8 +210,6 @@
         <div class="stat-box"><span class="stat-val">0.65s</span><span class="stat-key">I-Frame Window</span></div>
         <div class="stat-box"><span class="stat-val">★★★☆☆</span><span class="stat-key">Difficulty</span></div>
       </div>
-
-      <!-- FUEL BAR -->
       <div class="fuel-bar-wrap">
         <div class="fuel-bar-label">🔫 Element Guns Ammo Mechanic</div>
         <div class="fuel-track"><div class="fuel-fill"></div></div>
@@ -228,8 +218,6 @@
           <span>Full → 12 rounds per gun (24 total)</span>
         </div>
       </div>
-
-      <!-- STRENGTHS / WEAKNESSES -->
       <div class="sw-grid">
         <div class="sw-col str">
           <div class="sw-col-title">✅ Strengths</div>
@@ -246,8 +234,7 @@
           <div class="sw-item"><span class="sw-icon">⚡</span>I-frame timing is strict — mistimed dodge wastes both charges and leaves him fully exposed</div>
         </div>
       </div>
-
-      <p class="stat-desc">Star-Lord sits at B-Tier in the current meta — strong in the hands of players who master his I-frame dodge timing and aerial movement, but punishing for those who treat him as a standard ground-based shooter. His skill ceiling is entirely defined by dodge timing: the ability to roll through Iron Man's Invincible Pulse Cannon or Scarlet Witch's Reality Erasure is one of the most impactful single mechanics in the game when executed correctly.</p>
+      <p class="stat-desc">Star-Lord sits at B-Tier in the current meta — strong in the hands of players who master his I-frame dodge timing and aerial movement, but punishing for those who treat him as a standard ground-based shooter.</p>
     </div>
 
     <!-- ABILITIES -->
@@ -255,21 +242,19 @@
       <div class="section-label">Kit Breakdown</div>
       <h2>Abilities <span>&amp; Skills</span></h2>
       <div class="ability-list">
-
         <div class="ability-item">
           <div class="ability-key passive">PASSIVE</div>
           <div class="ability-body">
             <div class="ability-name">Stellar Shift</div>
             <div class="ability-desc">Star-Lord gains access to a dodge roll with full invincibility frames (I-frames) for 0.65 seconds during the animation. This passive is the single most important mechanic in his entire kit — it is one of the only abilities in Marvel Rivals that grants true invulnerability on demand. The dodge has 2 charges with a per-charge cooldown. During the I-frame window, Star-Lord takes zero damage from any source, including ultimates.</div>
-            <div class="ability-tip">💡 The I-frame window is 0.65 seconds — roughly the duration of most ultimate explosions. Practice the timing in custom games against Iron Man and Scarlet Witch ultimates specifically. A perfectly timed dodge through Reality Erasure or Invincible Pulse Cannon is a full team-fight swing that no other Duelist can replicate.</div>
+            <div class="ability-tip">💡 The I-frame window is 0.65 seconds — roughly the duration of most ultimate explosions. Practice the timing in custom games against Iron Man and Scarlet Witch ultimates specifically.</div>
           </div>
         </div>
-
         <div class="ability-item">
           <div class="ability-key">LMB</div>
           <div class="ability-body">
             <div class="ability-name">Element Guns</div>
-            <div class="ability-desc">Star-Lord dual-wields his Element Guns, firing both simultaneously for 13 damage per bullet at a high fire rate. Each gun holds 12 rounds for a total of 24 rounds per magazine. The guns fire in a tight spread pattern that rewards mid-range engagement — too close and the spread causes inconsistent hits, too far and damage falls off. Both guns reload simultaneously, creating a punishing full-reload window when both run dry at the same time.</div>
+            <div class="ability-desc">Star-Lord dual-wields his Element Guns, firing both simultaneously for 13 damage per bullet at a high fire rate. Each gun holds 12 rounds for a total of 24 rounds per magazine. Both guns reload simultaneously, creating a punishing full-reload window when both run dry at the same time.</div>
             <div class="ability-stats">
               <span class="ability-stat-chip">Damage: <b>13 per bullet</b></span>
               <span class="ability-stat-chip">DPS: <b>~130/s</b></span>
@@ -277,79 +262,70 @@
               <span class="ability-stat-chip">Reload: <b>~1.5s</b></span>
               <span class="ability-stat-chip">Optimal range: <b>10–20m</b></span>
             </div>
-            <div class="ability-tip">💡 Never let both guns hit empty simultaneously in a fight. When you reach 4–5 rounds per gun, disengage or dodge to cover and reload. Running dry in the middle of a duel is one of the most punishing mistakes on Star-Lord — you have zero damage output for the full 1.5-second reload.</div>
+            <div class="ability-tip">💡 Never let both guns hit empty simultaneously in a fight. When you reach 4–5 rounds per gun, disengage or dodge to cover and reload.</div>
           </div>
         </div>
-
         <div class="ability-item">
           <div class="ability-key">RMB</div>
           <div class="ability-body">
             <div class="ability-name">Explosive Shot</div>
-            <div class="ability-desc">Star-Lord fires a charged explosive round that deals direct hit damage plus AoE splash damage in a small radius at the impact point. The splash damage punishes grouped enemies — hitting one target in a cluster deals partial damage to all nearby enemies simultaneously. Consumes ammo from the primary magazine. The AoE component makes this Star-Lord's best ability for punishing teams that stack on objectives or choke points.</div>
+            <div class="ability-desc">Star-Lord fires a charged explosive round that deals direct hit damage plus AoE splash damage in a small radius at the impact point. The AoE component makes this Star-Lord's best ability for punishing teams that stack on objectives or choke points.</div>
             <div class="ability-stats">
               <span class="ability-stat-chip">Direct hit: <b>~55 dmg</b></span>
               <span class="ability-stat-chip">Splash: <b>~30 dmg AoE</b></span>
               <span class="ability-stat-chip">Ammo cost: <b>2 rounds</b></span>
-              <span class="ability-stat-chip">Cooldown: <b>Ammo-gated</b></span>
             </div>
-            <div class="ability-tip">💡 Fire Explosive Shot at the feet of grouped enemies rather than directly at a single target — the splash radius catches multiple heroes simultaneously. On objective points where enemies stack, a well-placed Explosive Shot deals more effective damage than 4–5 primary fire bullets.</div>
+            <div class="ability-tip">💡 Fire Explosive Shot at the feet of grouped enemies rather than directly at a single target — the splash radius catches multiple heroes simultaneously.</div>
           </div>
         </div>
-
         <div class="ability-item">
           <div class="ability-key">SHIFT</div>
           <div class="ability-body">
             <div class="ability-name">Rocket Propulsion</div>
-            <div class="ability-desc">Star-Lord activates his jet boots for a burst of aerial movement in any direction — forward, backward, sideways, or upward. This is his primary mobility tool for repositioning mid-fight, gaining height advantage, and escaping dives. Unlike Mystic Projection (Scarlet Witch's phase), Rocket Propulsion does not grant invulnerability — it is purely a movement ability. However, the speed and directional freedom make him extremely difficult to track during the boost.</div>
+            <div class="ability-desc">Star-Lord activates his jet boots for a burst of aerial movement in any direction. This is his primary mobility tool for repositioning mid-fight, gaining height advantage, and escaping dives.</div>
             <div class="ability-stats">
               <span class="ability-stat-chip">Direction: <b>Any</b></span>
               <span class="ability-stat-chip">Duration: <b>~1s burst</b></span>
               <span class="ability-stat-chip">Cooldown: <b>~8s</b></span>
-              <span class="ability-stat-chip">Invulnerable: <b>No</b></span>
             </div>
-            <div class="ability-tip">💡 Use Rocket Propulsion to gain height before engaging — aerial Star-Lord is significantly harder to hit than ground-level Star-Lord. Most enemies aim at head height; hovering 3–4 meters above the ground breaks their crosshair placement and forces them to readjust while you're already firing.</div>
+            <div class="ability-tip">💡 Use Rocket Propulsion to gain height before engaging — aerial Star-Lord is significantly harder to hit than ground-level Star-Lord.</div>
           </div>
         </div>
-
         <div class="ability-item">
           <div class="ability-key">E</div>
           <div class="ability-body">
             <div class="ability-name">Blaster Barrage</div>
-            <div class="ability-desc">Star-Lord unleashes a rapid burst of shots in a wide cone in front of him, dealing high damage to all enemies caught in the spray. This is his highest single-ability damage output tool — the full barrage hitting a single target deals more damage than any other ability in his kit. The wide cone makes it effective against grouped enemies at close-to-mid range. Has a moderate cooldown that requires careful timing to maximize value.</div>
+            <div class="ability-desc">Star-Lord unleashes a rapid burst of shots in a wide cone in front of him, dealing high damage to all enemies caught in the spray. This is his highest single-ability damage output tool.</div>
             <div class="ability-stats">
               <span class="ability-stat-chip">Damage: <b>High burst</b></span>
               <span class="ability-stat-chip">Pattern: <b>Wide cone</b></span>
               <span class="ability-stat-chip">Cooldown: <b>~10s</b></span>
-              <span class="ability-stat-chip">Best range: <b>8–15m</b></span>
             </div>
-            <div class="ability-tip">💡 Blaster Barrage is your execute tool — save it for targets below 40% HP to guarantee the kill rather than using it as an opener. At full HP, enemies can survive the barrage and escape. At low HP, the burst guarantees the elimination before they can be healed.</div>
+            <div class="ability-tip">💡 Blaster Barrage is your execute tool — save it for targets below 40% HP to guarantee the kill rather than using it as an opener.</div>
           </div>
         </div>
-
         <div class="ability-item">
           <div class="ability-key ult">Q — ULT</div>
           <div class="ability-body">
             <div class="ability-name">Celestial Awakening</div>
-            <div class="ability-desc">Star-Lord channels his Celestial heritage for 12 seconds, gaining enhanced versions of all his abilities, increased damage output, and the ability to fly freely. During Celestial Awakening, his Element Guns deal significantly increased damage, Explosive Shot has a larger AoE radius, and Blaster Barrage fires faster with wider spread. The 12-second duration is the longest sustained DPS ultimate of any Duelist — it rewards staying alive and dealing damage throughout the window rather than a single burst.</div>
+            <div class="ability-desc">Star-Lord channels his Celestial heritage for 12 seconds, gaining enhanced versions of all his abilities, increased damage output, and the ability to fly freely. The 12-second duration is the longest sustained DPS ultimate of any Duelist.</div>
             <div class="ability-stats">
               <span class="ability-stat-chip">Duration: <b>12s</b></span>
               <span class="ability-stat-chip">Damage boost: <b>Significant</b></span>
               <span class="ability-stat-chip">Free flight: <b>Yes</b></span>
               <span class="ability-stat-chip">Type: <b>Sustained DPS</b></span>
             </div>
-            <div class="ability-tip">💡 Activate Celestial Awakening when 3+ enemies are grouped and your supports are alive to keep you healthy during the 12-second window. Unlike burst ultimates, this ult rewards staying in the fight — dying 4 seconds in wastes 8 seconds of the most powerful DPS window in your kit. Positioning and support coverage are everything.</div>
+            <div class="ability-tip">💡 Activate Celestial Awakening when 3+ enemies are grouped and your supports are alive. Unlike burst ultimates, this ult rewards staying in the fight for the full 12 seconds.</div>
           </div>
         </div>
-
         <div class="ability-item">
           <div class="ability-key teamup">TEAM-UP</div>
           <div class="ability-body">
             <div class="ability-name">Rocket Network 2099 — with Rocket Raccoon</div>
-            <div class="ability-desc">When paired with Rocket Raccoon, Star-Lord gains access to Rocket Network 2099 — a team-up enhancement that upgrades Star-Lord's Element Guns with Rocket's tech, increasing their damage output and adding additional effects to Explosive Shot. Rocket Raccoon's support utility also directly benefits Star-Lord's aggressive playstyle by providing ammo resupply and healing, reducing the punishment of running dry mid-fight.</div>
-            <div class="ability-tip">💡 In a Star-Lord + Rocket Raccoon composition, coordinate Rocket's ammo pack drops with Star-Lord's reload windows. If Rocket drops an ammo pack the moment Star-Lord's guns run dry, the reload penalty is completely eliminated — maintaining continuous DPS pressure that no other Duelist can sustain.</div>
+            <div class="ability-desc">When paired with Rocket Raccoon, Star-Lord gains access to Rocket Network 2099 — upgrading his Element Guns with increased damage output and additional effects to Explosive Shot.</div>
+            <div class="ability-tip">💡 Coordinate Rocket's ammo pack drops with Star-Lord's reload windows. If Rocket drops an ammo pack the moment Star-Lord's guns run dry, the reload penalty is completely eliminated.</div>
           </div>
         </div>
-
       </div>
     </div>
 
@@ -409,7 +385,7 @@
             <div class="counter-emoji">🎯</div>
             <div>
               <div class="counter-name">Long-Range Snipers</div>
-              <div class="counter-reason">Star-Lord's optimal range is 10–20m. Snipers force him out of effective range entirely — Rocket Propulsion can't close the distance fast enough.</div>
+              <div class="counter-reason">Star-Lord's optimal range is 10–20m. Snipers force him out of effective range entirely.</div>
             </div>
           </div>
           <div class="counter-entry">
@@ -444,7 +420,7 @@
               <div class="comp-hero-reason">Eye of Agamotto stuns enemies — Star-Lord activates Celestial Awakening on the stunned group for a guaranteed full ult window</div>
             </div>
           </div>
-          <div class="comp-synergy">Groot's walls eliminate the sniper weakness that hard-counters Star-Lord, while Strange's stun creates the perfect setup for Celestial Awakening with zero interruption risk.</div>
+          <div class="comp-synergy">Groot's walls eliminate the sniper weakness while Strange's stun creates the perfect setup for Celestial Awakening.</div>
         </div>
         <div class="comp-card">
           <div class="comp-role support">Support</div>
@@ -462,7 +438,7 @@
               <div class="comp-hero-reason">Clone healing sustains Star-Lord through his aggressive mid-range positioning without requiring him to retreat</div>
             </div>
           </div>
-          <div class="comp-synergy support">Rocket Raccoon is Star-Lord's best support pairing — the team-up directly addresses his biggest weakness (reload penalty) while providing healing to sustain the 12-second Celestial Awakening window.</div>
+          <div class="comp-synergy support">Rocket Raccoon is Star-Lord's best support pairing — the team-up directly addresses his biggest weakness while sustaining the 12-second Celestial Awakening window.</div>
         </div>
         <div class="comp-card">
           <div class="comp-role dps">DPS Partner</div>
@@ -480,7 +456,7 @@
               <div class="comp-hero-reason">Dive threat forces enemies to look ground-level while Star-Lord fires freely from aerial positions above</div>
             </div>
           </div>
-          <div class="comp-synergy dps">Star-Lord's aerial positioning pairs best with a ground-level DPS threat — enemies forced to track two different vertical angles simultaneously can't effectively counter either one.</div>
+          <div class="comp-synergy dps">Star-Lord's aerial positioning pairs best with a ground-level DPS threat — enemies forced to track two vertical angles can't effectively counter either one.</div>
         </div>
       </div>
     </div>
@@ -489,37 +465,16 @@
     <div class="section">
       <div class="section-label">Advanced Techniques</div>
       <h2>Combo <span>Guide</span></h2>
-
       <p style="margin-bottom:8px;font-size:0.88rem;">Choose your starting point based on your current skill level:</p>
       <table class="difficulty-table">
         <thead>
-          <tr>
-            <th>Technique</th>
-            <th>Difficulty</th>
-            <th>Best For</th>
-          </tr>
+          <tr><th>Technique</th><th>Difficulty</th><th>Best For</th></tr>
         </thead>
         <tbody>
-          <tr>
-            <td style="font-weight:700">Aerial Gunslinger Loop</td>
-            <td><span class="diff-badge diff-easy">⭐ Easy</span></td>
-            <td style="color:var(--muted)">New Star-Lord players</td>
-          </tr>
-          <tr>
-            <td style="font-weight:700">Explosive Shot AoE Spike</td>
-            <td><span class="diff-badge diff-med">⭐⭐ Medium</span></td>
-            <td style="color:var(--muted)">Players with the loop down</td>
-          </tr>
-          <tr>
-            <td style="font-weight:700">I-Frame Ult Dodge</td>
-            <td><span class="diff-badge diff-hard">⭐⭐⭐ Hard</span></td>
-            <td style="color:var(--muted)">Players ready for ranked carry</td>
-          </tr>
-          <tr>
-            <td style="font-weight:700">Celestial Awakening Full Window</td>
-            <td><span class="diff-badge diff-expert">⭐⭐⭐⭐⭐ Expert</span></td>
-            <td style="color:var(--muted)">Coordinated / competitive play</td>
-          </tr>
+          <tr><td style="font-weight:700">Aerial Gunslinger Loop</td><td><span class="diff-badge diff-easy">⭐ Easy</span></td><td style="color:var(--muted)">New Star-Lord players</td></tr>
+          <tr><td style="font-weight:700">Explosive Shot AoE Spike</td><td><span class="diff-badge diff-med">⭐⭐ Medium</span></td><td style="color:var(--muted)">Players with the loop down</td></tr>
+          <tr><td style="font-weight:700">I-Frame Ult Dodge</td><td><span class="diff-badge diff-hard">⭐⭐⭐ Hard</span></td><td style="color:var(--muted)">Players ready for ranked carry</td></tr>
+          <tr><td style="font-weight:700">Celestial Awakening Full Window</td><td><span class="diff-badge diff-expert">⭐⭐⭐⭐⭐ Expert</span></td><td style="color:var(--muted)">Coordinated / competitive play</td></tr>
         </tbody>
       </table>
 
@@ -537,25 +492,25 @@
           <div class="step-num">2</div>
           <div class="step-body">
             <div class="step-title">Fire Element Guns at 10–20m range <span class="key-badge">LMB</span> <span class="time-badge">ongoing</span></div>
-            <div class="step-desc">Stay at the optimal range band. Too close and burst heroes kill you before you can dodge. Too far and damage falls off. The sweet spot is mid-range where your DPS is highest and their accuracy is lowest.</div>
+            <div class="step-desc">Stay at the optimal range band. Too close and burst heroes kill you before you can dodge. Too far and damage falls off.</div>
           </div>
         </li>
         <li class="combo-step">
           <div class="step-num">3</div>
           <div class="step-body">
             <div class="step-title">Weave Explosive Shot into the rotation <span class="key-badge">RMB</span></div>
-            <div class="step-desc">Fire one Explosive Shot every 3–4 primary fire bursts. Don't spam it — the AoE value is wasted on single isolated targets. Save it for when a second enemy steps into range.</div>
+            <div class="step-desc">Fire one Explosive Shot every 3–4 primary fire bursts. Save it for when a second enemy steps into range.</div>
           </div>
         </li>
         <li class="combo-step">
           <div class="step-num">4</div>
           <div class="step-body">
             <div class="step-title">Disengage and reload before both guns hit empty <span class="key-badge">SHIFT</span></div>
-            <div class="step-desc">At 4–5 rounds remaining per gun, use Rocket Propulsion to reposition behind cover and reload. Never let both guns run dry in the open — the 1.5-second reload window is a death sentence against any burst hero.</div>
+            <div class="step-desc">At 4–5 rounds remaining per gun, use Rocket Propulsion to reposition behind cover and reload. Never let both guns run dry in the open.</div>
           </div>
         </li>
       </ul>
-      <div class="combo-note"><strong>Pro tip:</strong> The aerial loop is most effective against teams without a dedicated anti-air hero. If the enemy has a sniper or a hero with strong vertical tracking, switch to ground-level angles and rely on Rocket Propulsion for horizontal repositioning instead of vertical height advantage.</div>
+      <div class="combo-note"><strong>Pro tip:</strong> The aerial loop is most effective against teams without a dedicated anti-air hero. If the enemy has a sniper, switch to ground-level angles and rely on Rocket Propulsion for horizontal repositioning instead.</div>
 
       <div class="combo-section-divider"></div>
       <h3 style="margin-bottom:16px;color:var(--gold)">Explosive Shot AoE Spike</h3>
@@ -564,7 +519,7 @@
           <div class="step-num">1</div>
           <div class="step-body">
             <div class="step-title">Identify a grouped enemy cluster (2+ heroes within 5m) <span class="time-badge">pre-shot</span></div>
-            <div class="step-desc">Explosive Shot's value multiplies with target density. Wait for 2+ enemies to stack on an objective, choke point, or behind cover before committing the shot.</div>
+            <div class="step-desc">Explosive Shot's value multiplies with target density. Wait for 2+ enemies to stack on an objective or choke point before committing the shot.</div>
           </div>
         </li>
         <li class="combo-step">
@@ -578,18 +533,18 @@
           <div class="step-num">3</div>
           <div class="step-body">
             <div class="step-title">Follow up with Blaster Barrage on the lowest HP target <span class="key-badge">E</span> <span class="time-badge">~0.3s</span></div>
-            <div class="step-desc">The Explosive Shot splash chips all grouped enemies. Immediately pivot to Blaster Barrage on whichever target is now lowest HP to secure the elimination before they can be healed.</div>
+            <div class="step-desc">The Explosive Shot splash chips all grouped enemies. Immediately pivot to Blaster Barrage on whichever target is now lowest HP to secure the elimination.</div>
           </div>
         </li>
         <li class="combo-step">
           <div class="step-num">4</div>
           <div class="step-body">
             <div class="step-title">Continue primary fire on remaining targets <span class="key-badge">LMB</span></div>
-            <div class="step-desc">After the elimination, all remaining enemies are chipped from the Explosive Shot splash. Your primary fire now needs fewer bullets to finish each target — press the advantage immediately.</div>
+            <div class="step-desc">After the elimination, all remaining enemies are chipped from the Explosive Shot splash. Press the advantage immediately.</div>
           </div>
         </li>
       </ul>
-      <div class="combo-note"><strong>Why it works:</strong> Explosive Shot + Blaster Barrage is Star-Lord's highest single-rotation damage output. The AoE chips multiple targets simultaneously, and Blaster Barrage's burst finishes the weakest link before supports can react. Against objective-stacking teams, this rotation deals more effective damage than any other Duelist's opener.</div>
+      <div class="combo-note"><strong>Why it works:</strong> Explosive Shot + Blaster Barrage is Star-Lord's highest single-rotation damage output. The AoE chips multiple targets simultaneously, and Blaster Barrage's burst finishes the weakest link before supports can react.</div>
 
       <div class="combo-section-divider"></div>
       <h3 style="margin-bottom:16px;color:var(--gold)">I-Frame Ult Dodge</h3>
@@ -598,32 +553,32 @@
           <div class="step-num">1</div>
           <div class="step-body">
             <div class="step-title">Identify the enemy ultimate activation (audio + visual cue)</div>
-            <div class="step-desc">Learn the activation sounds and visual effects of Iron Man's Invincible Pulse Cannon and Scarlet Witch's Reality Erasure specifically — these are the two ultimates most worth dodging. The activation cue gives you ~0.5–1 second of reaction time.</div>
+            <div class="step-desc">Learn the activation sounds of Iron Man's Invincible Pulse Cannon and Scarlet Witch's Reality Erasure specifically. The activation cue gives you ~0.5–1 second of reaction time.</div>
           </div>
         </li>
         <li class="combo-step">
           <div class="step-num">2</div>
           <div class="step-body">
             <div class="step-title">Hold one dodge charge in reserve at all times <span class="key-badge">SPACE</span></div>
-            <div class="step-desc">Never use both dodge charges for repositioning. One charge is always reserved as the ult-dodge insurance. If both charges are on cooldown when an enemy ult activates, you cannot dodge it.</div>
+            <div class="step-desc">Never use both dodge charges for repositioning. One charge is always reserved as the ult-dodge insurance.</div>
           </div>
         </li>
         <li class="combo-step">
           <div class="step-num">3</div>
           <div class="step-body">
             <div class="step-title">Dodge at the moment of detonation — not at activation <span class="key-badge">SPACE</span> <span class="time-badge">exact timing</span></div>
-            <div class="step-desc">The critical mistake is dodging too early. The I-frame window is 0.65 seconds — if you dodge at activation, the I-frame expires before the damage hits. Dodge at the moment the explosion actually fires, not when the enemy presses their ult button.</div>
+            <div class="step-desc">The critical mistake is dodging too early. The I-frame window is 0.65 seconds — if you dodge at activation, the I-frame expires before the damage hits.</div>
           </div>
         </li>
         <li class="combo-step">
           <div class="step-num">4</div>
           <div class="step-body">
             <div class="step-title">Immediately counterattack after surviving <span class="key-badge">LMB + E</span></div>
-            <div class="step-desc">The enemy just wasted their ultimate. They have no ult, possibly low HP from the fight, and are psychologically off-balance. Immediately activate Blaster Barrage and dump primary fire — this is your highest-value counterattack window in the entire game.</div>
+            <div class="step-desc">The enemy just wasted their ultimate. Immediately activate Blaster Barrage and dump primary fire — this is your highest-value counterattack window in the entire game.</div>
           </div>
         </li>
       </ul>
-      <div class="combo-note"><strong>Why it works:</strong> Surviving an enemy ultimate while your entire team dies is the single highest individual-impact play in Marvel Rivals. The enemy team spent their ult meter, your team respawns in 10 seconds, and you're still alive at full HP ready to contest. Practice the timing in custom games — it is the defining skill expression of Star-Lord at high level.</div>
+      <div class="combo-note"><strong>Why it works:</strong> Surviving an enemy ultimate while your entire team dies is the single highest individual-impact play in Marvel Rivals. Practice the timing in custom games — it is the defining skill expression of Star-Lord at high level.</div>
 
       <div class="combo-section-divider"></div>
       <h3 style="margin-bottom:4px;color:var(--blue)">Celestial Awakening Full Window <span class="diff-badge diff-expert" style="font-size:0.72rem;vertical-align:middle">Expert</span></h3>
@@ -633,78 +588,68 @@
           <div class="step-num">1</div>
           <div class="step-body">
             <div class="step-title">Confirm support coverage before activating</div>
-            <div class="step-desc">Celestial Awakening is a sustained 12-second ult — dying at second 4 wastes 8 seconds of the most powerful DPS window in your kit. Only activate when Loki, Rocket, or another support is actively healing you.</div>
+            <div class="step-desc">Celestial Awakening is a sustained 12-second ult — dying at second 4 wastes 8 seconds of the most powerful DPS window in your kit. Only activate when a support is actively healing you.</div>
           </div>
         </li>
         <li class="combo-step">
           <div class="step-num">2</div>
           <div class="step-body">
             <div class="step-title">Activate on a grouped enemy cluster <span class="key-badge">Q</span></div>
-            <div class="step-desc">The ult's enhanced Explosive Shot has a larger AoE radius — grouped enemies take significantly more damage per second during Celestial Awakening than spread-out enemies. Timing the activation on a grouped fight multiplies the total damage output.</div>
+            <div class="step-desc">The ult's enhanced Explosive Shot has a larger AoE radius — grouped enemies take significantly more damage per second during Celestial Awakening.</div>
           </div>
         </li>
         <li class="combo-step">
           <div class="step-num">3</div>
           <div class="step-body">
             <div class="step-title">Maintain aerial positioning throughout the 12 seconds <span class="time-badge">0–12s</span></div>
-            <div class="step-desc">Free flight during Celestial Awakening means you can hover at any height. Stay 4–6 meters above ground level — high enough to avoid most melee dives, low enough to hit ground-level targets with Explosive Shot splash.</div>
+            <div class="step-desc">Stay 4–6 meters above ground level — high enough to avoid most melee dives, low enough to hit ground-level targets with Explosive Shot splash.</div>
           </div>
         </li>
         <li class="combo-step">
           <div class="step-num">4</div>
           <div class="step-body">
             <div class="step-title">Prioritize Explosive Shot on grouped targets every cooldown <span class="key-badge">RMB</span></div>
-            <div class="step-desc">During Celestial Awakening, Explosive Shot's enhanced AoE is your primary damage source against teams. Fire it on cooldown at grouped enemies — the enhanced radius means near-misses still deal significant splash damage.</div>
+            <div class="step-desc">During Celestial Awakening, Explosive Shot's enhanced AoE is your primary damage source. Fire it on cooldown at grouped enemies.</div>
           </div>
         </li>
         <li class="combo-step">
           <div class="step-num">5</div>
           <div class="step-body">
             <div class="step-title">Save one I-frame dodge for the counterattack window after ult ends</div>
-            <div class="step-desc">When Celestial Awakening ends, enemies will immediately focus you. Have one dodge charge ready to escape the counterattack — the ult window leaves you exposed the moment it expires.</div>
+            <div class="step-desc">When Celestial Awakening ends, enemies will immediately focus you. Have one dodge charge ready to escape the counterattack.</div>
           </div>
         </li>
       </ul>
-      <div class="combo-note"><strong>Why it works:</strong> Celestial Awakening's 12-second duration is 3× longer than most burst ultimates. A fully utilized window with support coverage deals more total damage than any other Duelist ultimate in the game. The skill expression is entirely about staying alive for all 12 seconds — positioning, support coordination, and the reserved dodge charge are what separate a 4-second wasted ult from a full 12-second team wipe.</div>
+      <div class="combo-note"><strong>Why it works:</strong> Celestial Awakening's 12-second duration is 3× longer than most burst ultimates. The skill expression is entirely about staying alive for all 12 seconds — positioning, support coordination, and the reserved dodge charge are what separate a 4-second wasted ult from a full 12-second team wipe.</div>
     </div>
-
-                 <div class="combo-note"><strong>Why it works:</strong> Celestial Awakening's 12-second duration is 3× longer than most burst ultimates. A fully utilized window with support coverage deals more total damage than any other Duelist ultimate in the game. The skill expression is entirely about staying alive for all 12 seconds — positioning, support coordination, and the reserved dodge charge are what separate a 4-second wasted ult from a full 12-second team wipe.</div>
-    </div>
-      </div><!-- end section combos -->
 
     <!-- FAQ -->
     <div class="section">
       <div class="section-label">Common Questions</div>
       <h2>FAQ</h2>
       <div class="faq-list">
-
         <div class="faq-item open">
           <button class="faq-q" onclick="toggleFaq(this)">Is Star-Lord good for beginners? <span class="faq-arrow">▼</span></button>
-          <div class="faq-a"><p>Star-Lord is a medium-difficulty Duelist. His primary fire is straightforward, but his skill ceiling is defined by I-frame dodge timing — a mechanic that requires deliberate practice to execute reliably. If you're new to the game, start with a simpler Duelist first, then transition to Star-Lord once you understand positioning fundamentals. The aerial movement and reload management add layers that punish new players more than most heroes.</p></div>
+          <div class="faq-a"><p>Star-Lord is a medium-difficulty Duelist. His primary fire is straightforward, but his skill ceiling is defined by I-frame dodge timing — a mechanic that requires deliberate practice to execute reliably. If you're new to the game, start with a simpler Duelist first, then transition to Star-Lord once you understand positioning fundamentals.</p></div>
         </div>
-
         <div class="faq-item">
           <button class="faq-q" onclick="toggleFaq(this)">How do I practice the I-frame dodge timing? <span class="faq-arrow">▼</span></button>
-          <div class="faq-a"><p>Use custom game mode against an Iron Man bot set to use Invincible Pulse Cannon repeatedly. The key habit is dodging at the moment of detonation — not at activation. Most players dodge too early and the I-frame expires before the damage hits. After 20–30 repetitions against Iron Man, move to Scarlet Witch's Reality Erasure. These two ultimates cover 80% of the situations where the I-frame dodge changes a game outcome.</p></div>
+          <div class="faq-a"><p>Use custom game mode against an Iron Man bot set to use Invincible Pulse Cannon repeatedly. The key habit is dodging at the moment of detonation — not at activation. Most players dodge too early and the I-frame expires before the damage hits.</p></div>
         </div>
-
         <div class="faq-item">
           <button class="faq-q" onclick="toggleFaq(this)">When should I use Celestial Awakening? <span class="faq-arrow">▼</span></button>
-          <div class="faq-a"><p>Only when three conditions are met: (1) 3+ enemies are grouped within your effective range, (2) at least one support is alive and actively healing you, and (3) you have one dodge charge in reserve for the post-ult escape. Missing any of these conditions turns a 12-second power window into a 4-second death. Patience is the entire skill expression — a held Celestial Awakening waiting for the right moment is worth far more than an early activation on two spread-out enemies.</p></div>
+          <div class="faq-a"><p>Only when three conditions are met: (1) 3+ enemies are grouped within your effective range, (2) at least one support is alive and actively healing you, and (3) you have one dodge charge in reserve for the post-ult escape. Patience is the entire skill expression.</p></div>
         </div>
-
         <div class="faq-item">
           <button class="faq-q" onclick="toggleFaq(this)">Why does my damage feel low compared to other Duelists? <span class="faq-arrow">▼</span></button>
-          <div class="faq-a"><p>Two most common reasons: (1) you're fighting outside the 10–20m optimal range — too close causes spread inconsistency, too far causes damage falloff; and (2) you're letting both guns run empty simultaneously, creating a 1.5-second zero-DPS reload window mid-fight. Fix the range first, then practice the reload discipline of disengaging at 4–5 rounds remaining. Star-Lord's DPS is competitive at B-Tier when both mechanics are clean.</p></div>
+          <div class="faq-a"><p>Two most common reasons: (1) you're fighting outside the 10–20m optimal range — too close causes spread inconsistency, too far causes damage falloff; and (2) you're letting both guns run empty simultaneously, creating a 1.5-second zero-DPS reload window mid-fight.</p></div>
         </div>
-
         <div class="faq-item">
           <button class="faq-q" onclick="toggleFaq(this)">What's the best counter to Star-Lord? <span class="faq-arrow">▼</span></button>
-          <div class="faq-a"><p>Any hero with a stun or root is his hardest counter — crowd control during Celestial Awakening wastes the entire ult window. Psylocke's close-range burst is particularly brutal because her damage speed exceeds his I-frame reaction window at point-blank range. If you're playing against Star-Lord, don't chase him into the air — force him to ground level by denying his Rocket Propulsion angles, then burst him down during his reload window when both guns are empty.</p></div>
+          <div class="faq-a"><p>Any hero with a stun or root is his hardest counter — crowd control during Celestial Awakening wastes the entire ult window. Psylocke's close-range burst is particularly brutal because her damage speed exceeds his I-frame reaction window at point-blank range.</p></div>
         </div>
-
-      </div><!-- end faq-list -->
-    </div><!-- end section FAQ -->
+      </div>
+    </div>
 
   </div><!-- end main-col -->
 
@@ -715,66 +660,10 @@
       <div class="tier-badge tier-b">B</div>
       <p style="font-size:0.85rem;color:var(--muted);line-height:1.6">Star-Lord sits at B-Tier in the current meta. His I-frame dodge mechanic is uniquely powerful against specific ultimates, and Celestial Awakening has the longest sustained DPS window of any Duelist ult — but his zero self-sustain and punishing reload mechanic keep him from S-Tier.</p>
     </div>
-
     <div class="side-card">
       <div class="side-card-title">Role Ratings</div>
       <div class="rating-row"><span>Ease of Use</span><div class="dots"><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot off"></div><div class="dot off"></div></div></div>
       <div class="rating-row"><span>Burst Damage</span><div class="dots"><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot off"></div><div class="dot off"></div></div></div>
       <div class="rating-row"><span>Sustained DPS</span><div class="dots"><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot off"></div></div></div>
       <div class="rating-row"><span>Survivability</span><div class="dots"><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot off"></div></div></div>
-      <div class="rating-row"><span>Ult Impact</span><div class="dots"><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div></div></div>
-    </div>
-
-    <div class="side-card">
-      <div class="side-card-title">Team-Up Heroes</div>
-      <div class="teamup-pill">
-        <span style="font-size:1.1rem">🦝</span>
-        <div>
-          <div class="teamup-pill-name">Rocket Raccoon</div>
-          <div class="teamup-pill-sub">Rocket Network 2099 — ammo packs eliminate reload penalty</div>
-        </div>
-      </div>
-      <div class="teamup-pill">
-        <span style="font-size:1.1rem">🌿</span>
-        <div>
-          <div class="teamup-pill-name">Groot</div>
-          <div class="teamup-pill-sub">Walls block snipers and create safe aerial launch points</div>
-        </div>
-      </div>
-      <div class="teamup-pill">
-        <span style="font-size:1.1rem">🔮</span>
-        <div>
-          <div class="teamup-pill-name">Doctor Strange</div>
-          <div class="teamup-pill-sub">Eye of Agamotto stun — free Celestial Awakening setup window</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="side-card">
-      <div class="side-card-title">Quick Tips</div>
-      <div class="quick-tip"><div class="tip-icon">🚀</div><div class="tip-text">Always engage from height. Aerial Star-Lord is significantly harder to hit than ground-level Star-Lord.</div></div>
-      <div class="quick-tip"><div class="tip-icon">🔫</div><div class="tip-text">Never let both guns run empty in a fight. Disengage at 4–5 rounds remaining to reload safely.</div></div>
-      <div class="quick-tip"><div class="tip-icon">⚡</div><div class="tip-text">Keep one dodge charge reserved at all times as your ult-dodge insurance. Never use both for repositioning.</div></div>
-      <div class="quick-tip"><div class="tip-icon">💥</div><div class="tip-text">Aim Explosive Shot at the ground between grouped enemies — splash radius beats direct hits on single targets.</div></div>
-      <div class="quick-tip"><div class="tip-icon">🌟</div><div class="tip-text">Only activate Celestial Awakening with support coverage and 3+ grouped enemies. Patience wins games.</div></div>
-    </div>
-
-    <a class="ai-btn-side" href="/">← Back to All Heroes</a>
-  </div><!-- end side-col -->
-
-</div><!-- end page-body -->
-
-<footer>
-  <div class="footer-logo">RIVALS<span style="color:var(--gold)">GUIDE</span></div>
-  <p>Fan-made guide site · Not affiliated with Marvel or NetEase Games</p>
-  <p style="margin-top:8px">© 2025 RivalsGuide.site · All rights reserved</p>
-</footer>
-
-<script>
-  function toggleFaq(btn){
-    const item=btn.closest('.faq-item');
-    item.classList.toggle('open');
-  }
-</script>
-</body>
-</html>
+      <div class="rating-row"><span>Ult Impact</span><div class="dots"><div class="dot on"></div><div class="dot on"></div><div
