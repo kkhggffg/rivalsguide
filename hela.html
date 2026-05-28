@@ -1,55 +1,727 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Hela Guide – Marvel Rivals | RivalsGuide</title>
-<meta name="description" content="Complete Hela guide for Marvel Rivals. Stats, abilities, counters, team comps, and combos for the Goddess of Death."/>
-<meta name="keywords" content="Hela Marvel Rivals, Hela guide, Goddess of Death build, Marvel Rivals DPS sniper"/>
-<meta property="og:title" content="Hela Guide – Marvel Rivals"/>
-<meta property="og:url" content="https://rivalsguide.site/hela.html"/>
-<link rel="canonical" href="https://rivalsguide.site/hela.html"/>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-D4EJPR83TH"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-D4EJPR83TH');</script>
-<style>
-  :root{--red:#e63946;--gold:#ffd60a;--dark:#0d0d0d;--dark2:#111;--card:#1a1a1a;--border:rgba(255,255,255,0.12);--muted:#888;--text:#f0f0f0}
-  *{margin:0;padding:0;box-sizing:border-box}
-  body{background:var(--dark);color:var(--text);font-family:'Segoe UI',sans-serif;line-height:1.7}
-  a{color:var(--red);text-decoration:none}a:hover{text-decoration:underline}
-  header{background:var(--dark2);border-bottom:1px solid var(--border);padding:16px 40px}
-  .hero-banner{background:linear-gradient(135deg,#1a0a0a 0%,#2d0a2d 50%,#0a0a1a 100%);padding:60px 40px;text-align:center;border-bottom:2px solid #c084fc}
-  .hero-banner .emoji{font-size:5rem;display:block;margin-bottom:16px}
-  .hero-banner h1{font-size:2.8rem;font-weight:900;letter-spacing:2px;text-transform:uppercase}
-  .hero-banner .subtitle{color:var(--muted);font-size:1rem;margin-top:8px}
-  .tag{display:inline-block;padding:4px 14px;border-radius:20px;font-size:0.8rem;font-weight:700;margin:4px}
-  .tag-dps{background:rgba(230,57,70,0.2);color:#f87171;border:1px solid rgba(230,57,70,0.3)}
-  .tag-tier{background:rgba(192,132,252,0.2);color:#c084fc;border:1px solid rgba(192,132,252,0.3)}
-  .container{max-width:900px;margin:0 auto;padding:40px}
-  .section{margin-bottom:48px}
-  .section h2{font-size:1.4rem;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:#c084fc;border-left:4px solid #c084fc;padding-left:12px;margin-bottom:20px}
-  .section h3{font-size:1rem;font-weight:700;color:var(--gold);margin:16px 0 8px}
-  .stats-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px}
-  .stat-card{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:16px;text-align:center}
-  .stat-card .val{font-size:1.6rem;font-weight:900;color:var(--gold)}
-  .stat-card .label{font-size:0.75rem;color:var(--muted);margin-top:4px}
-  .ability-list{display:flex;flex-direction:column;gap:12px}
-  .ability{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:16px}
-  .ability .name{font-weight:700;color:var(--gold);margin-bottom:6px}
-  .ability .key{display:inline-block;background:rgba(255,255,255,0.1);border-radius:4px;padding:1px 8px;font-size:0.75rem;margin-right:8px;font-family:monospace}
-  table{width:100%;border-collapse:collapse;font-size:0.9rem}
-  th{background:rgba(192,132,252,0.15);color:#c084fc;padding:10px 14px;text-align:left;font-size:0.8rem;text-transform:uppercase;letter-spacing:0.5px}
-  td{padding:10px 14px;border-bottom:1px solid rgba(255,255,255,0.05)}
-  tr:hover td{background:rgba(255,255,255,0.03)}
-  .combo-step{display:flex;align-items:flex-start;gap:12px;margin-bottom:12px}
-  .step-num{background:#c084fc;color:#000;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.8rem;font-weight:700;flex-shrink:0;margin-top:2px}
-  .faq-item{border-bottom:1px solid var(--border);padding:16px 0}
-  .faq-item .q{font-weight:700;color:var(--gold);margin-bottom:6px}
-  footer{background:var(--dark2);border-top:1px solid var(--border);padding:24px 40px;text-align:center;color:var(--muted);font-size:0.85rem}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hela Guide – Abilities, Combos & Counters | RivalsGuide</title>
+  <meta name="description" content="Complete Hela guide for Marvel Rivals. Learn her Nightsword Thorn hitscan, Soul Drainer combos, counters, and pro tips to master the Goddess of Death.">
+  <meta property="og:title" content="Hela Guide – Marvel Rivals | RivalsGuide">
+  <meta property="og:description" content="Master Hela in Marvel Rivals with our in-depth guide covering abilities, combos, counters, and team comps.">
+  <meta property="og:url" content="https://rivalsguide.site/hela.html">
+  <meta property="og:type" content="article">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-D4EJPR83TH"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-D4EJPR83TH');</script>
+  <style>
+    :root{--orange:#fb923c;--amber:#f59e0b;--gold:#ffd60a;--dark:#0a0a0f;--dark2:#12121a;--dark3:#1a1a2e;--card:#16213e;--text:#e0e0e0;--muted:#888;--border:rgba(251,146,60,0.35);--green:#4ade80;--red:#f87171;--blue:#60a5fa;--purple:#a855f7;--hela:#7c3aed;--hela2:#a78bfa;--accent:#7c3aed;--accent2:#a78bfa}
+    *{margin:0;padding:0;box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{background:var(--dark);color:var(--text);font-family:'Segoe UI',sans-serif;overflow-x:hidden}
+    nav{position:fixed;top:0;width:100%;z-index:999;background:rgba(10,10,15,0.95);backdrop-filter:blur(10px);border-bottom:1px solid rgba(124,58,237,0.35);padding:0 40px;display:flex;align-items:center;justify-content:space-between;height:64px}
+    .nav-logo{font-size:1.3rem;font-weight:900;color:#fb923c;letter-spacing:1px;text-decoration:none}
+    .nav-logo span{color:var(--gold)}
+    .nav-back{color:var(--muted);text-decoration:none;font-size:0.9rem;display:flex;align-items:center;gap:8px;transition:color 0.2s}
+    .nav-back:hover{color:var(--hela2)}
+    .hero-banner{min-height:380px;background:radial-gradient(ellipse at 30% 50%,rgba(124,58,237,0.2) 0%,transparent 60%),radial-gradient(ellipse at 80% 30%,rgba(167,139,250,0.1) 0%,transparent 50%),var(--dark);display:flex;align-items:center;padding:100px 40px 60px;position:relative;overflow:hidden}
+    .hero-banner::before{content:'💀';position:absolute;right:80px;top:50%;transform:translateY(-50%);font-size:12rem;opacity:0.06;pointer-events:none}
+    .banner-inner{max-width:1200px;margin:0 auto;width:100%}
+    .breadcrumb{font-size:0.8rem;color:var(--muted);margin-bottom:16px}
+    .breadcrumb a{color:var(--muted);text-decoration:none}
+    .breadcrumb a:hover{color:var(--hela2)}
+    .breadcrumb span{margin:0 8px}
+    .banner-role{display:inline-block;background:rgba(124,58,237,0.12);border:1px solid rgba(124,58,237,0.4);color:var(--hela2);font-size:0.75rem;padding:3px 14px;border-radius:20px;margin-bottom:16px;letter-spacing:2px;text-transform:uppercase}
+    .banner-title{font-size:clamp(2.5rem,6vw,4.5rem);font-weight:900;line-height:1.1;margin-bottom:12px;text-shadow:0 0 40px rgba(124,58,237,0.35)}
+    .banner-title .accent{color:var(--hela2)}
+    .banner-sub{color:var(--muted);font-size:1rem;max-width:560px;line-height:1.6;margin-bottom:12px}
+    .banner-hook{color:var(--text);font-size:1rem;max-width:560px;line-height:1.6;margin-bottom:28px;font-style:italic;border-left:3px solid var(--hela2);padding-left:14px}
+    .banner-tags{display:flex;gap:10px;flex-wrap:wrap}
+    .tag{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);padding:5px 14px;border-radius:20px;font-size:0.8rem;color:var(--muted)}
+    .tag.purple{border-color:rgba(124,58,237,0.4);color:var(--hela2);background:rgba(124,58,237,0.08)}
+    .tag.gold{border-color:rgba(255,214,10,0.3);color:var(--gold);background:rgba(255,214,10,0.06)}
+    .page-body{max-width:1200px;margin:0 auto;padding:60px 40px 80px;display:grid;grid-template-columns:1fr 320px;gap:40px;align-items:start}
+    .main-col{display:flex;flex-direction:column;gap:48px}
+    .side-col{display:flex;flex-direction:column;gap:24px;position:sticky;top:84px}
+    .section{background:var(--card);border:1px solid rgba(255,255,255,0.05);border-radius:12px;padding:32px;transition:border-color 0.2s}
+    .section:hover{border-color:rgba(124,58,237,0.35)}
+    .section-label{font-size:0.72rem;text-transform:uppercase;letter-spacing:3px;color:var(--hela2);margin-bottom:8px;font-weight:700}
+    h2{font-size:1.5rem;font-weight:900;margin-bottom:20px;line-height:1.2}
+    h2 span{color:var(--hela2)}
+    h3{font-size:1rem;font-weight:700;margin-bottom:8px;color:var(--text)}
+    p{color:var(--muted);line-height:1.7;font-size:0.93rem}
+    .stats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:24px}
+    .stat-box{background:var(--dark2);border-radius:8px;padding:16px;text-align:center;border:1px solid rgba(255,255,255,0.04)}
+    .stat-val{font-size:1.4rem;font-weight:900;color:var(--hela2);display:block}
+    .stat-key{font-size:0.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-top:4px;display:block}
+    .stat-desc{color:var(--muted);font-size:0.88rem;line-height:1.6}
+    .sw-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:24px}
+    .sw-col{background:var(--dark2);border-radius:8px;padding:16px}
+    .sw-col-title{font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:12px}
+    .sw-col.str .sw-col-title{color:var(--green)}
+    .sw-col.wk .sw-col-title{color:var(--red)}
+    .sw-item{display:flex;align-items:flex-start;gap:8px;padding:6px 0;font-size:0.83rem;color:var(--muted);line-height:1.5;border-bottom:1px solid rgba(255,255,255,0.04)}
+    .sw-item:last-child{border-bottom:none}
+    .sw-icon{flex-shrink:0;margin-top:1px}
+    .ability-list{display:flex;flex-direction:column;gap:16px}
+    .ability-item{background:var(--dark2);border:1px solid rgba(255,255,255,0.05);border-radius:10px;padding:20px;display:flex;gap:16px;transition:border-color 0.2s;align-items:flex-start}
+    .ability-item:hover{border-color:rgba(124,58,237,0.4)}
+    .ability-key{background:var(--hela2);color:#000;padding:4px 12px;border-radius:5px;font-size:0.78rem;font-weight:700;font-family:monospace;white-space:nowrap;flex-shrink:0;margin-top:2px;min-width:52px;text-align:center}
+    .ability-key.ult{background:var(--gold);color:#000}
+    .ability-key.passive{background:rgba(124,58,237,0.15);color:var(--hela2);border:1px solid rgba(124,58,237,0.4)}
+    .ability-key.teamup{background:rgba(168,85,247,0.2);color:#d8b4fe;border:1px solid rgba(168,85,247,0.3)}
+    .ability-body{flex:1}
+    .ability-name{font-weight:700;font-size:1rem;margin-bottom:6px}
+    .ability-desc{color:var(--muted);font-size:0.88rem;line-height:1.65;margin-bottom:8px}
+    .ability-tip{font-size:0.82rem;color:var(--gold);padding:8px 12px;background:rgba(255,214,10,0.06);border-radius:6px;border-left:2px solid var(--gold)}
+    .ability-stats{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:8px}
+    .ability-stat-chip{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);border-radius:4px;padding:3px 9px;font-size:0.74rem;color:var(--muted)}
+    .ability-stat-chip b{color:var(--hela2)}
+    .counter-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .counter-col{background:var(--dark2);border-radius:10px;padding:20px}
+    .counter-col-title{font-size:0.78rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:14px}
+    .counter-col.good .counter-col-title{color:var(--green)}
+    .counter-col.bad .counter-col-title{color:var(--red)}
+    .counter-entry{display:flex;align-items:flex-start;gap:10px;padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.04)}
+    .counter-entry:last-child{border-bottom:none;padding-bottom:0}
+    .counter-emoji{font-size:1.3rem;flex-shrink:0;margin-top:1px}
+    .counter-name{font-weight:700;font-size:0.88rem;margin-bottom:2px}
+    .counter-reason{font-size:0.78rem;color:var(--muted);line-height:1.5}
+    .comp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .comp-card{background:var(--dark2);border-radius:10px;padding:16px;border:1px solid rgba(255,255,255,0.04);transition:border-color 0.2s;display:flex;flex-direction:column}
+    .comp-card:hover{border-color:rgba(124,58,237,0.35)}
+    .comp-role{font-size:0.72rem;text-transform:uppercase;letter-spacing:1px;font-weight:700;margin-bottom:10px}
+    .comp-role.tank{color:var(--blue)}
+    .comp-role.support{color:var(--green)}
+    .comp-role.dps{color:#fb923c}
+    .comp-hero{display:flex;align-items:flex-start;gap:8px;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04)}
+    .comp-hero:last-of-type{border-bottom:none}
+    .comp-hero-emoji{font-size:1.1rem;flex-shrink:0;margin-top:1px}
+    .comp-hero-name{font-size:0.85rem;font-weight:700}
+    .comp-hero-reason{font-size:0.75rem;color:var(--muted);line-height:1.4;margin-top:2px}
+    .comp-synergy{margin-top:12px;padding:10px 12px;background:rgba(255,255,255,0.03);border-radius:6px;border-left:2px solid var(--hela2);font-size:0.78rem;color:var(--muted);line-height:1.5}
+    .comp-synergy.support{border-left-color:var(--green)}
+    .comp-synergy.dps{border-left-color:#fb923c}
+    .difficulty-table{width:100%;border-collapse:collapse;margin:20px 0 8px}
+    .difficulty-table th{font-size:0.75rem;text-transform:uppercase;letter-spacing:1px;color:var(--muted);font-weight:700;padding:8px 12px;text-align:left;border-bottom:1px solid rgba(255,255,255,0.08)}
+    .difficulty-table td{padding:10px 12px;font-size:0.85rem;border-bottom:1px solid rgba(255,255,255,0.04);vertical-align:middle}
+    .difficulty-table tr:last-child td{border-bottom:none}
+    .difficulty-table tr:hover td{background:rgba(255,255,255,0.02)}
+    .diff-badge{display:inline-block;padding:2px 10px;border-radius:20px;font-size:0.75rem;font-weight:700}
+    .diff-easy{background:rgba(74,222,128,0.12);color:var(--green)}
+    .diff-med{background:rgba(255,214,10,0.12);color:var(--gold)}
+    .diff-hard{background:rgba(251,146,60,0.12);color:#fb923c}
+    .diff-expert{background:rgba(124,58,237,0.15);color:var(--hela2)}
+    .combo-steps{list-style:none;display:flex;flex-direction:column;gap:0}
+    .combo-step{display:flex;gap:16px;padding:16px 0;border-bottom:1px solid rgba(255,255,255,0.04);align-items:flex-start}
+    .combo-step:last-child{border-bottom:none}
+    .step-num{width:32px;height:32px;min-width:32px;background:var(--hela2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:0.88rem;flex-shrink:0;color:#000}
+    .step-body{flex:1}
+    .step-title{font-weight:700;font-size:0.95rem;margin-bottom:4px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+    .key-badge{background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.18);padding:1px 9px;border-radius:4px;font-size:0.75rem;font-family:monospace}
+    .time-badge{background:rgba(74,222,128,0.1);border:1px solid rgba(74,222,128,0.25);color:var(--green);padding:1px 9px;border-radius:4px;font-size:0.72rem;font-family:monospace}
+    .step-desc{color:var(--muted);font-size:0.88rem;line-height:1.6}
+    .combo-note{background:rgba(124,58,237,0.06);border:1px solid rgba(124,58,237,0.3);border-radius:8px;padding:14px 16px;margin-top:16px;font-size:0.85rem;color:var(--text);line-height:1.6}
+    .combo-note strong{color:var(--hela2)}
+    .combo-section-divider{height:1px;background:rgba(255,255,255,0.06);margin:28px 0}
+    .faq-list{display:flex;flex-direction:column;gap:0}
+    .faq-item{border-bottom:1px solid rgba(255,255,255,0.05)}
+    .faq-item:last-child{border-bottom:none}
+    .faq-q{width:100%;background:transparent;border:none;color:var(--text);text-align:left;padding:18px 0;font-size:0.95rem;font-weight:700;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px}
+    .faq-q:hover{color:var(--hela2)}
+    .faq-arrow{color:var(--muted);font-size:0.8rem;transition:transform 0.2s;flex-shrink:0}
+    .faq-item.open .faq-arrow{transform:rotate(180deg)}
+    .faq-a{max-height:0;overflow:hidden;transition:max-height 0.35s ease}
+    .faq-item.open .faq-a{max-height:300px}
+    .faq-a p{padding-bottom:16px;font-size:0.88rem}
+    .side-card{background:var(--card);border:1px solid rgba(255,255,255,0.05);border-radius:12px;padding:24px}
+    .side-card-title{font-size:0.72rem;text-transform:uppercase;letter-spacing:2px;color:var(--hela2);font-weight:700;margin-bottom:16px}
+    .quick-tip{display:flex;gap:10px;padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.04);align-items:flex-start}
+    .quick-tip:last-child{border-bottom:none}
+    .tip-icon{font-size:1.1rem;flex-shrink:0;margin-top:1px}
+    .tip-text{font-size:0.82rem;color:var(--muted);line-height:1.5}
+    .tier-badge{display:inline-flex;align-items:center;justify-content:center;width:56px;height:56px;border-radius:12px;font-size:2rem;font-weight:900;margin-bottom:12px}
+    .tier-s{background:linear-gradient(135deg,#a78bfa,#7c3aed);color:#fff}
+    .rating-row{display:flex;justify-content:space-between;align-items:center;font-size:0.8rem;margin-bottom:8px}
+    .rating-row span{color:var(--muted)}
+    .dots{display:flex;gap:3px}
+    .dot{width:10px;height:10px;border-radius:2px}
+    .dot.on{background:var(--hela2)}
+    .dot.off{background:rgba(255,255,255,0.08)}
+    .teamup-pill{display:flex;align-items:center;gap:8px;background:rgba(124,58,237,0.06);border:1px solid rgba(124,58,237,0.2);border-radius:6px;padding:8px 10px;margin-bottom:8px}
+    .teamup-pill:last-child{margin-bottom:0}
+    .teamup-pill-name{font-size:0.82rem;font-weight:700;color:var(--text)}
+    .teamup-pill-sub{font-size:0.72rem;color:var(--muted)}
+    .ai-btn-side{display:block;text-align:center;padding:12px;background:rgba(124,58,237,0.06);border:1px solid rgba(124,58,237,0.3);border-radius:8px;color:var(--muted);text-decoration:none;font-size:0.85rem;transition:all 0.2s}
+    .ai-btn-side:hover{background:rgba(124,58,237,0.18);color:var(--text)}
+    footer{background:var(--dark2);border-top:1px solid var(--border);padding:40px;text-align:center;color:var(--muted);font-size:0.85rem}
+    .footer-logo{font-size:1.2rem;font-weight:900;color:#fb923c;margin-bottom:8px}
+    ::-webkit-scrollbar{width:6px}
+    ::-webkit-scrollbar-track{background:var(--dark)}
+    ::-webkit-scrollbar-thumb{background:var(--hela2);border-radius:3px}
+    @media(max-width:900px){.page-body{grid-template-columns:1fr;padding:40px 20px 60px}.side-col{position:static}.counter-grid{grid-template-columns:1fr}.comp-grid{grid-template-columns:1fr 1fr}.hero-banner{padding:90px 20px 48px}nav{padding:0 20px}.sw-grid{grid-template-columns:1fr}}
+    @media(max-width:560px){.stats-grid{grid-template-columns:repeat(2,1fr)}.comp-grid{grid-template-columns:1fr}}
+  </style>
 </head>
 <body>
-<header><a style="color:#888;font-size:0.9rem" href="/">← Back to RivalsGuide</a></header>
+
+<nav>
+  <a class="nav-logo" href="/">RIVALS<span>GUIDE</span></a>
+  <a class="nav-back" href="/">← Back to Home</a>
+</nav>
+
 <div class="hero-banner">
-  <span class="emoji">🥈</span>
-  <h1>Hela</h1>
-  
+  <div class="banner-inner">
+    <div class="breadcrumb">
+      <a href="/">Home</a><span>›</span>
+      <a href="/">Heroes</a><span>›</span>
+      <span style="color:var(--text)">Hela</span>
+    </div>
+    <div class="banner-role">DPS · Duelist</div>
+    <h1 class="banner-title"><span class="accent">Hela</span><br>Complete Guide</h1>
+    <p class="banner-sub">The Goddess of Death — who dominates long-range engagements with hitscan Nightsword Thorns, stuns advancing enemies with Soul Drainer, and transforms into a crow to escape death before calling upon her ultimate to haunt the entire battlefield.</p>
+    <p class="banner-hook">If you want the single best long-range Duelist in Marvel Rivals — a hero who can two-tap 275 HP heroes in under one second, shut down every flying hero in the game, and survive dives with multiple layered defensive tools — Hela is the Goddess of Death for a reason.</p>
+    <div class="banner-tags">
+      <span class="tag purple">DPS</span>
+      <span class="tag gold">S-Tier</span>
+      <span class="tag">Hitscan</span>
+      <span class="tag">Long Range</span>
+      <span class="tag">Anti-Air</span>
+      <span class="tag">High Skill Cap</span>
+    </div>
+  </div>
+</div>
+
+<div class="page-body">
+  <div class="main-col">
+
+    <!-- STATS -->
+    <div class="section">
+      <div class="section-label">Overview</div>
+      <h2>Base <span>Stats</span></h2>
+      <div class="stats-grid">
+        <div class="stat-box"><span class="stat-val">250</span><span class="stat-key">Health</span></div>
+        <div class="stat-box"><span class="stat-val">70</span><span class="stat-key">Primary Damage</span></div>
+        <div class="stat-box"><span class="stat-val">140</span><span class="stat-key">Headshot Damage</span></div>
+        <div class="stat-box"><span class="stat-val">10</span><span class="stat-key">Primary Ammo</span></div>
+        <div class="stat-box"><span class="stat-val">2/s</span><span class="stat-key">Fire Rate</span></div>
+        <div class="stat-box"><span class="stat-val">★★★★☆</span><span class="stat-key">Difficulty</span></div>
+      </div>
+
+      <div class="sw-grid">
+        <div class="sw-col str">
+          <div class="sw-col-title">✅ Strengths</div>
+          <div class="sw-item"><span class="sw-icon">🎯</span>Best long-range hitscan in the game — two headshots eliminate any 275 HP hero in under one second at up to 18 meters with zero falloff</div>
+          <div class="sw-item"><span class="sw-icon">✈️</span>Dominant anti-air presence — her hitscan primary shuts down every flying hero including Storm, Iron Man, and Human Torch with ease</div>
+          <div class="sw-item"><span class="sw-icon">🛡️</span>Multiple layered defensive tools — Soul Drainer stun, Astral Flock invincibility dash, and Goddess of Death 1000 temp HP ult make her extremely hard to kill</div>
+          <div class="sw-item"><span class="sw-icon">💀</span>Goddess of Death ult grants 1000 temporary HP on cast — activating it just before dying effectively gives her a second life in every fight</div>
+        </div>
+        <div class="sw-col wk">
+          <div class="sw-col-title">⛔ Weaknesses</div>
+          <div class="sw-item"><span class="sw-icon">🛡️</span>Hard countered by shield compositions — Doctor Strange, Magneto, and Groot shields completely negate her primary fire advantage, forcing awkward off-angle repositioning</div>
+          <div class="sw-item"><span class="sw-icon">⏱️</span>Long cooldowns on all defensive abilities — both Astral Flock and Soul Drainer are 12–15 second cooldowns, leaving large windows of vulnerability</div>
+          <div class="sw-item"><span class="sw-icon">🎯</span>Extremely aim-dependent — without consistent headshots she contributes almost nothing; body shot Hela is one of the weakest Duelists in the roster</div>
+          <div class="sw-item"><span class="sw-icon">🥊</span>Very squishy at 250 HP — dive heroes who catch her without Astral Flock available will eliminate her before she can respond</div>
+        </div>
+      </div>
+
+      <p class="stat-desc">Hela is S-Tier and has dominated every version of Marvel Rivals since the beta — the only hero to maintain top-tier status across all seasons. Her primary fire is the best long-range damage tool in the game, her anti-air capability is unmatched, and her defensive kit is surprisingly robust for a sniper. The caveat is absolute: if you cannot land consistent headshots, Hela is a throw pick. Her entire power budget is concentrated in headshot damage — body-shot Hela deals less effective damage than most other Duelists. [[0]](#__0) [[1]](#__1)</p>
+    </div>
+
+    <!-- ABILITIES -->
+    <div class="section">
+      <div class="section-label">Kit Breakdown</div>
+      <h2>Abilities <span>&amp; Skills</span></h2>
+      <div class="ability-list">
+
+        <div class="ability-item">
+          <div class="ability-key passive">PASSIVE</div>
+          <div class="ability-body">
+            <div class="ability-name">Goddess of Death</div>
+            <div class="ability-desc">When Hela activates her ultimate, she immediately gains 1000 temporary HP on top of her base 250 HP — giving her an effective 1250 HP pool during the ult window. This passive-ult interaction means activating Goddess of Death just before dying effectively resurrects her with a massive HP buffer, allowing her to continue fighting through situations that would eliminate any other Duelist. The temporary HP decays after the ult ends. [[0]](#__0)</div>
+            <div class="ability-tip">💡 The most important Hela skill to master: learn to activate Goddess of Death reactively when you're being burst down. A Hela at 30 HP who activates her ult instantly becomes a 1030 HP target — enemies who committed to the kill are suddenly fighting a completely different opponent. [[0]](#__0)</div>
+          </div>
+        </div>
+
+        <div class="ability-item">
+          <div class="ability-key" style="background:var(--hela2)">LMB</div>
+          <div class="ability-body">
+            <div class="ability-name">Nightsword Thorn</div>
+            <div class="ability-desc">Hela throws a single Nightsword Thorn as a direct-hit hitscan projectile dealing 70 body damage or 140 on headshot. The fire rate is 2 rounds per second with 10 ammo per magazine. Damage falloff begins at 18 meters and reduces to 70% at 30 meters — meaning within 18 meters, two headshots eliminate any 275 HP hero in exactly 1 second. The half-second delay between shots gives her enough time to jiggle peek corners between each throw. [[0]](#__0)</div>
+            <div class="ability-stats">
+              <span class="ability-stat-chip">Body damage: <b>70</b></span>
+              <span class="ability-stat-chip">Headshot: <b>140</b></span>
+              <span class="ability-stat-chip">Fire rate: <b>2/s</b></span>
+              <span class="ability-stat-chip">Ammo: <b>10</b></span>
+              <span class="ability-stat-chip">Falloff start: <b>18m</b></span>
+              <span class="ability-stat-chip">Falloff max: <b>70% at 30m</b></span>
+            </div>
+            <div class="ability-tip">💡 Prioritize the enemy backline — supports and Duelists, not Vanguards. Hela's headshot two-tap is wasted on tanks who require 4+ shots to kill. Target the squishiest enemy regardless of how far back they're positioned — her effective range reaches further than almost any other hero in the game. [[0]](#__0) [[2]](#__2)</div>
+          </div>
+        </div>
+
+        <div class="ability-item">
+          <div class="ability-key" style="background:var(--hela2)">RMB</div>
+          <div class="ability-body">
+            <div class="ability-name">Piercing Night</div>
+            <div class="ability-desc">Hela fires 4 Nightsword Thorns simultaneously in a spread pattern. Each projectile deals 10 damage on hit and sticks to enemies. After a 3-second delay, each stuck projectile explodes for 35 damage in a 3-meter spherical radius. The Season 2 spell field damage buff enables a full 4-projectile hit plus a single primary fire body shot to eliminate 250 HP heroes outright. Against Vanguards, their large hitboxes make it easy to land all 4 projectiles for a reliable burst of damage. [[0]](#__0)</div>
+            <div class="ability-stats">
+              <span class="ability-stat-chip">Projectiles: <b>4</b></span>
+              <span class="ability-stat-chip">Hit damage: <b>10 each</b></span>
+              <span class="ability-stat-chip">Explosion dmg: <b>35 each</b></span>
+              <span class="ability-stat-chip">Explosion delay: <b>3s</b></span>
+              <span class="ability-stat-chip">Cooldown: <b>8s</b></span>
+              <span class="ability-stat-chip">Speed: <b>80m/s</b></span>
+            </div>
+            <div class="ability-tip">💡 The anti-dive combo: when a melee Duelist flanks you, immediately stick them with Piercing Night, then use Astral Flock to escape. By the time you transform back, the 3-second explosion timer detonates — dealing 140 explosion damage while you resume primary fire. This combo turns a dangerous dive into a free elimination. [[0]](#__0)</div>
+          </div>
+        </div>
+
+        <div class="ability-item">
+          <div class="ability-key" style="background:var(--hela2)">SHIFT</div>
+          <div class="ability-body">
+            <div class="ability-name">Astral Flock</div>
+            <div class="ability-desc">Hela transforms into a Nastrond Crow and dashes 18 meters at 15 m/s, gaining complete invincibility during the transformation. She can press SHIFT again to cancel the transformation early. The 15-second cooldown is the longest of any of her abilities — making every use a high-stakes decision. During the dash she cannot attack, but she is completely immune to all damage, stuns, and ultimates. [[0]](#__0)</div>
+            <div class="ability-stats">
+              <span class="ability-stat-chip">Dash distance: <b>18m</b></span>
+              <span class="ability-stat-chip">Dash speed: <b>15m/s</b></span>
+              <span class="ability-stat-chip">Invincible: <b>Yes</b></span>
+              <span class="ability-stat-chip">Cooldown: <b>15s</b></span>
+            </div>
+            <div class="ability-tip">💡 Save Astral Flock exclusively for survival — never use it for aggressive repositioning. When enemies see you use it, they know they have a 15-second window to dive and eliminate you. When Astral Flock is on cooldown, position near cover, a health pack, or an ally who can protect you. [[0]](#__0) [[1]](#__1)</div>
+          </div>
+        </div>
+
+        <div class="ability-item">
+          <div class="ability-key" style="background:var(--hela2)">E</div>
+          <div class="ability-body">
+            <div class="ability-name">Soul Drainer</div>
+            <div class="ability-desc">Hela projects an explosive Hel sphere in an arced trajectory that detonates on impact, dealing 40 damage in a 3-meter radius and stunning all enemies hit for 0.3 seconds. The stun duration is short but provides just enough time to line up a critical headshot. The 12-second cooldown means it must be used deliberately — either defensively to interrupt a dive, or offensively to stun a grouped cluster for a guaranteed headshot follow-up. [[0]](#__0)</div>
+            <div class="ability-stats">
+              <span class="ability-stat-chip">Damage: <b>40 (AoE)</b></span>
+              <span class="ability-stat-chip">Stun: <b>0.3s</b></span>
+              <span class="ability-stat-chip">Radius: <b>3m</b></span>
+              <span class="ability-stat-chip">Cooldown: <b>12s</b></span>
+              <span class="ability-stat-chip">Speed: <b>40m/s</b></span>
+            </div>
+            <div class="ability-tip">💡 Soul Drainer's primary value is defensive — use it to interrupt advancing Vanguards or flanking Duelists. The 0.3-second stun is enough to land a guaranteed headshot follow-up. Against grouped enemies, the 3-meter AoE can stun multiple targets simultaneously, creating a brief window to two-tap the lowest HP target. [[0]](#__0) [[2]](#__2)</div>
+          </div>
+        </div>
+
+        <div class="ability-item">
+          <div class="ability-key ult">Q — ULT</div>
+          <div class="ability-body">
+            <div class="ability-name">Goddess of Death</div>
+            <div class="ability-desc">Hela calls upon her full divine power, instantly gaining 1000 temporary HP and summoning a storm of Nightsword Thorns that rain down on a targeted area. The ult combines the defensive 1000 HP buffer with offensive AoE damage, making it simultaneously the best defensive and offensive ultimate in the Duelist roster. The temporary HP absorbs incoming damage first before her base HP is affected — allowing her to survive burst combos that would instantly eliminate any other hero. [[0]](#__0) [[1]](#__1)</div>
+            <div class="ability-stats">
+              <span class="ability-stat-chip">Temp HP granted: <b>1000</b></span>
+              <span class="ability-stat-chip">Type: <b>AoE + self-buff</b></span>
+              <span class="ability-stat-chip">Unique: <b>Dual offensive/defensive</b></span>
+            </div>
+            <div class="ability-tip">💡 The most powerful use of Goddess of Death is reactive — activate it the moment you're being burst down rather than proactively. A Hela at 20 HP who activates her ult becomes a 1020 HP target instantly. Enemies who committed their entire burst combo to killing you are now fighting a nearly full-HP opponent. [[0]](#__0)</div>
+          </div>
+        </div>
+
+        <div class="ability-item">
+          <div class="ability-key teamup">TEAM-UP</div>
+          <div class="ability-body">
+            <div class="ability-name">Asgardian Might — with Thor &amp; Loki</div>
+            <div class="ability-desc">When paired with Thor and/or Loki, Hela gains access to the Asgardian Might team-up ability. This synergy enhances her Nightsword Thorn damage output and grants additional effects tied to Asgardian divine power. The team-up rewards running an Asgard-themed composition and amplifies Hela's already dominant primary fire damage to even higher levels. [[0]](#__0) [[1]](#__1)</div>
+            <div class="ability-tip">💡 Thor is Hela's best team-up partner — his Mjolnir throw stuns enemies in place, giving Hela a guaranteed two-headshot window on any stunned target. A Thor stun into Hela headshot is one of the fastest and most reliable kill confirmations in the game.</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- COUNTERS -->
+    <div class="section">
+      <div class="section-label">Matchup Analysis</div>
+      <h2>Counters <span>&amp; Matchups</span></h2>
+      <div class="counter-grid">
+        <div class="counter-col good">
+          <div class="counter-col-title">✅ Hela Counters</div>
+          <div class="counter-entry">
+            <div class="counter-emoji">🌪️</div>
+            <div>
+              <div class="counter-name">All Flying Heroes (Storm, Iron Man, Human Torch)</div>
+              <div class="counter-reason">Hitscan primary fire tracks aerial targets perfectly — flying heroes gain zero evasion advantage against Hela. She is the definitive anti-air Duelist in the entire roster. [[0]](#__0)</div>
+            </div>
+          </div>
+          <div class="counter-entry">
+            <div class="counter-emoji">🏃</div>
+            <div>
+              <div class="counter-name">Long-Range Duelists (Hawkeye, Black Widow)</div>
+              <div class="counter-reason">Hela's 2-round-per-second fire rate and zero falloff within 18 meters out-duels every other long-range hero in head-to-head sniper battles. [[0]](#__0) [[2]](#__2)</div>
+            </div>
+          </div>
+          <div class="counter-entry">
+            <div class="counter-emoji">💚</div>
+            <div>
+              <div class="counter-name">Supports in the Backline</div>
+              <div class="counter-reason">Hela's effective range reaches further than most supports can position safely. She punishes supports who stand still to heal — a two-tap eliminates any 250–275 HP support in under one second. [[0]](#__0)</div>
+            </div>
+          </div>
+          <div class="counter-entry">
+            <div class="counter-emoji">🦑</div>
+            <div>
+              <div class="counter-name">Namor</div>
+              <div class="counter-reason">Reliable long-range hitscan destroys Namor's Monstro Spawn turrets from safe distances and out-ranges his arced trident trajectory entirely. [[1]](#__1) [[2]](#__2)</div>
+            </div>
+          </div>
+        </div>
+        <div class="counter-col bad">
+          <div class="counter-col-title">❌ Hard Counters Hela</div>
+          <div class="counter-entry">
+            <div class="counter-emoji">🔮</div>
+            <div>
+              <div class="counter-name">Doctor Strange</div>
+              <div class="counter-reason">Shields completely absorb Nightsword Thorn damage. Strange can fly up and physically block her ult with his body. The single strongest counter to Hela in the entire game. [[0]](#__0) [[1]](#__1)</div>
+            </div>
+          </div>
+          <div class="counter-entry">
+            <div class="counter-emoji">🧲</div>
+            <div>
+              <div class="counter-name">Magneto / Groot</div>
+              <div class="counter-reason">Shield compositions force Hela to find off-angles that take time to establish. While she's repositioning she contributes zero damage — effectively removing her from the fight. [[0]](#__0)</div>
+            </div>
+          </div>
+          <div class="counter-entry">
+            <div class="counter-emoji">🕷️</div>
+            <div>
+              <div class="counter-name">Spider-Man / Black Panther (Dive)</div>
+              <div class="counter-reason">Dive heroes who catch Hela without Astral Flock available eliminate her before she can respond. At 250 HP she is one of the squishiest targets in the game at close range. [[0]](#__0) [[2]](#__2)</div>
+            </div>
+          </div>
+          <div class="counter-entry">
+            <div class="counter-emoji">🥷</div>
+            <div>
+              <div class="counter-name">Psylocke</div>
+              <div class="counter-reason">Close-range burst combo kills Hela before her 0.5-second between-shot window allows a response. Psylocke's mobility makes her nearly impossible to stun with Soul Drainer. [[1]](#__1)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TEAM COMP -->
+    <div class="section">
+      <div class="section-label">Team Strategy</div>
+      <h2>Best Team <span>Compositions</span></h2>
+      <div class="comp-grid">
+        <div class="comp-card">
+          <div class="comp-role tank">Vanguard</div>
+          <div class="comp-hero">
+            <div class="comp-hero-emoji">⚡</div>
+            <div>
+              <div class="comp-hero-name">Thor</div>
+              <div class="comp-hero-reason">Asgardian Might team-up amplifies Hela's damage; Mjolnir stun gives guaranteed two-headshot windows on any target</div>
+            </div>
+          </div>
+          <div class="comp-hero">
+            <div class="comp-hero-emoji">🌿</div>
+            <div>
+              <div class="comp-hero-name">Groot</div>
+              <div class="comp-hero-reason">Root locks enemies in place for guaranteed Hela headshots; wall creation forces enemies into predictable sightlines she can exploit</div>
+            </div>
+          </div>
+          <div class="comp-synergy">Thor is Hela's best Vanguard — Mjolnir stun into Hela two-tap is one of the fastest and most reliable kill confirmations in Marvel Rivals. The Asgardian Might team-up further amplifies her damage output. [[0]](#__0) [[1]](#__1)</div>
+        </div>
+        <div class="comp-card">
+          <div class="comp-role support">Support</div>
+          <div class="comp-hero">
+            <div class="comp-hero-emoji">🟢</div>
+            <div>
+              <div class="comp-hero-name">Loki</div>
+              <div class="comp-hero-reason">Asgardian Might team-up member; clone healing sustains Hela through dive attempts when Astral Flock is on cooldown</div>
+            </div>
+          </div>
+          <div class="comp-hero">
+            <div class="comp-hero-emoji">🌸</div>
+            <div>
+              <div class="comp-hero-name">Mantis</div>
+              <div class="comp-hero-reason">Damage boost amplifies Hela's already lethal headshot damage — a boosted headshot eliminates even 300 HP targets in two shots</div>
+            </div>
+          </div>
+          <div class="comp-synergy support">Loki completes the Asgardian Might team-up trio and provides healing that covers Hela's 15-second Astral Flock vulnerability window. Mantis damage boost turns her two-tap into a one-tap against most targets. [[0]](#__0) [[2]](#__2)</div>
+        </div>
+        <div class="comp-card">
+          <div class="comp-role dps">DPS Partner</div>
+          <div class="comp-hero">
+            <div class="comp-hero-emoji">❄️</div>
+            <div>
+              <div class="comp-hero-name">Winter Soldier</div>
+              <div class="comp-hero-reason">Ground-level pressure forces enemies to group and advance predictably, feeding Hela's long-range headshot angles from elevated positions</div>
+            </div>
+          </div>
+          <div class="comp-hero">
+            <div class="comp-hero-emoji">🌙</div>
+            <div>
+              <div class="comp-hero-name">Moon Knight</div>
+              <div class="comp-hero-reason">Covers Hela's weakness against grouped close-range targets; Moon Knight's bounce chains punish the same grouped enemies that Hela's long range pressures into clustering</div>
+            </div>
+          </div>
+          <div class="comp-synergy dps">Hela + Moon Knight is a strong dual-Duelist composition — Hela dominates long range and aerial targets while Moon Knight's bounce chains punish grouped enemies at mid-range. Together they cover each other's weaknesses almost completely. [[0]](#__0) [[1]](#__1)</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- COMBOS -->
+    <div class="section">
+      <div class="section-label">Advanced Techniques</div>
+      <h2>Combo <span>Guide</span></h2>
+      <p style="margin-bottom:8px;font-size:0.88rem;">Choose your starting point based on your current skill level:</p>
+      <table class="difficulty-table">
+        <thead>
+          <tr><th>Technique</th><th>Difficulty</th><th>Best For</th></tr>
+        </thead>
+        <tbody>
+          <tr><td style="font-weight:700">Two-Tap Headshot Loop</td><td><span class="diff-badge diff-easy">⭐ Easy</span></td><td style="color:var(--muted)">New Hela players</td></tr>
+          <tr><td style="font-weight:700">Piercing Night Anti-Dive</td><td><span class="diff-badge diff-med">⭐⭐ Medium</span></td><td style="color:var(--muted)">Players with aim fundamentals down</td></tr>
+          <tr><td style="font-weight:700">Soul Drainer Stun Combo</td><td><span class="diff-badge diff-hard">⭐⭐⭐ Hard</span></td><td style="color:var(--muted)">Players ready for ranked carry</td></tr>
+          <tr><td style="font-weight:700">Reactive Goddess of Death</td><td><span class="diff-badge diff-expert">⭐⭐⭐⭐⭐ Expert</span></td><td style="color:var(--muted)">High-level / competitive play</td></tr>
+        </tbody>
+      </table>
+
+      <div class="combo-section-divider"></div>
+      <h3 style="margin-bottom:16px;color:var(--gold)">Two-Tap Headshot Loop</h3>
+      <ul class="combo-steps">
+        <li class="combo-step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <div class="step-title">Establish high ground before the fight begins <span class="time-badge">pre-fight</span></div>
+            <div class="step-desc">Hela's primary fire is most effective from elevated positions where enemies must look upward to target her. High ground also increases the distance between her and diving heroes, giving her more time to respond with Soul Drainer or Astral Flock before they close the gap. [[0]](#__0)</div>
+          </div>
+        </li>
+        <li class="combo-step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <div class="step-title">Identify the lowest HP non-Vanguard target in the enemy backline <span class="time-badge">0.0s</span></div>
+            <div class="step-desc">Prioritize supports and Duelists over Vanguards. Hela's two-tap is wasted on tanks — focus on the squishiest target regardless of how far back they're positioned. Her effective range reaches further than almost any other hero. [[0]](#__0) [[2]](#__2)</div>
+          </div>
+        </li>
+        <li class="combo-step">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <div class="step-title">Land two consecutive headshots within 1 second <span class="key-badge">LMB → LMB</span> <span class="time-badge">0.5s apart</span></div>
+            <div class="step-desc">The fire rate is exactly 2 rounds per second — meaning the second shot fires 0.5 seconds after the first. Two headshots deal 280 damage total, eliminating any 275 HP hero instantly. Jiggle peek corners between shots to avoid return fire during the 0.5-second window. [[0]](#__0)</div>
+          </div>
+        </li>
+        <li class="combo-step">
+          <div class="step-num">4</div>
+          <div class="step-body">
+            <div class="step-title">Immediately acquire the next priority target and repeat</div>
+            <div class="step-desc">After each elimination, immediately identify the next lowest HP target. Hela's value compounds with consecutive eliminations — each kill reduces the enemy team's healing output and creates more exposed targets for follow-up two-taps. [[0]](#__0)</div>
+          </div>
+        </li>
+      </ul>
+      <div class="combo-note"><strong>Pro tip:</strong> The two-tap loop is Hela's entire game plan. Every other ability exists to protect this loop — Soul Drainer stops dives, Astral Flock escapes burst, and Goddess of Death extends the loop through situations that would kill any other hero. If you're not landing two headshots per second on priority targets, you're not playing Hela correctly. [[0]](#__0) [[1]](#__1)</div>
+
+      <div class="combo-section-divider"></div>
+      <h3 style="margin-bottom:16px;color:var(--gold)">Piercing Night Anti-Dive</h3>
+      <ul class="combo-steps">
+        <li class="combo-step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <div class="step-title">Identify a diving melee hero approaching your position <span class="time-badge">pre-engage</span></div>
+            <div class="step-desc">Watch for Spider-Man, Black Panther, Psylocke, or any melee Duelist flanking toward you. The anti-dive combo requires you to react before they close the gap — if they reach melee range before you activate it, the combo fails. [[0]](#__0)</div>
+          </div>
+        </li>
+        <li class="combo-step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <div class="step-title">Stick all 4 Piercing Night projectiles onto the diver <span class="key-badge">RMB</span> <span class="time-badge">0.0s</span></div>
+            <div class="step-desc">Fire Piercing Night directly at the diving hero. Their forward momentum actually helps — they're moving toward you, making it easier to land all 4 projectiles on their body. Each projectile sticks and will detonate after 3 seconds for 35 damage each (140 total explosion damage). [[0]](#__0)</div>
+          </div>
+        </li>
+        <li class="combo-step">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <div class="step-title">Immediately activate Astral Flock to escape <span class="key-badge">SHIFT</span> <span class="time-badge">~0.2s</span></div>
+            <div class="step-desc">The moment Piercing Night lands, activate Astral Flock and dash away from the diver. You are completely invincible during the dash — the diver cannot follow you effectively, and the 3-second explosion timer is already counting down on their body. [[0]](#__0)</div>
+          </div>
+        </li>
+        <li class="combo-step">
+          <div class="step-num">4</div>
+          <div class="step-body">
+            <div class="step-title">Resume primary fire as explosions detonate <span class="key-badge">LMB</span> <span class="time-badge">~3s after RMB</span></div>
+            <div class="step-desc">After transforming back from Astral Flock, immediately resume primary fire on the diver. The 140 explosion damage has already chipped them significantly — a single headshot follow-up eliminates most 250 HP Duelists who attempted the dive. [[0]](#__0) [[2]](#__2)</div>
+          </div>
+        </li>
+      </ul>
+      <div class="combo-note"><strong>Why it works:</strong> Piercing Night + Astral Flock converts a dangerous dive situation into a free elimination. The diver commits their mobility cooldowns to reach Hela, only to find her invincible and escaping — then takes 140 explosion damage while she resumes shooting from a new position. Most dive heroes cannot survive this counter-sequence. [[0]](#__0) [[1]](#__1)</div>
+
+      <div class="combo-section-divider"></div>
+      <h3 style="margin-bottom:16px;color:var(--gold)">Soul Drainer Stun Combo</h3>
+      <ul class="combo-steps">
+        <li class="combo-step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <div class="step-title">Identify an advancing Vanguard or grouped cluster <span class="time-badge">pre-engage</span></div>
+            <div class="step-desc">Soul Drainer's 3-meter AoE stun is most valuable against Vanguards pushing your position or grouped enemies standing close together. The 0.3-second stun window is short — only use it when you have a clear headshot angle ready to follow up immediately. [[0]](#__0)</div>
+          </div>
+        </li>
+        <li class="combo-step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <div class="step-title">Land Soul Drainer directly on the target <span class="key-badge">E</span> <span class="time-badge">0.0s</span></div>
+            <div class="step-desc">Arc the Hel sphere directly onto the target's position. The 40m/s projectile speed requires slight lead time at range — aim slightly ahead of moving targets. The 40 AoE damage plus stun creates a guaranteed headshot window on any stunned enemy. [[0]](#__0)</div>
+          </div>
+        </li>
+        <li class="combo-step">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <div class="step-title">Immediately fire two headshots during the 0.3s stun window <span class="key-badge">LMB → LMB</span> <span class="time-badge">0.0–0.3s</span></div>
+            <div class="step-desc">The 0.3-second stun is exactly enough time for one guaranteed headshot. The second shot fires 0.5 seconds after the first — meaning the stun expires before the second shot, but the first headshot is guaranteed. Soul Drainer + one headshot deals 40 + 140 = 180 damage, eliminating most 175 HP supports outright. [[0]](#__0) [[2]](#__2)</div>
+          </div>
+        </li>
+        <li class="combo-step">
+          <div class="step-num">4</div>
+          <div class="step-body">
+            <div class="step-title">Follow up with Piercing Night if the target survives <span class="key-badge">RMB</span></div>
+            <div class="step-desc">If the target survives the stun combo, immediately fire Piercing Night to stick 4 projectiles onto them. The 140 delayed explosion damage combined with the initial stun combo damage eliminates virtually any non-Vanguard hero in the game. [[0]](#__0)</div>
+          </div>
+        </li>
+      </ul>
+      <div class="combo-note"><strong>Why it works:</strong> Soul Drainer's stun converts Hela's aim-dependent headshot into a guaranteed hit. Against enemies who are actively dodging her primary fire, the stun forces a stationary target for the critical 0.3-second window. The 40 AoE damage also softens the target, reducing the number of headshots needed to secure the elimination. [[0]](#__0) [[1]](#__1)</div>
+
+      <div class="combo-section-divider"></div>
+      <h3 style="margin-bottom:4px;color:var(--hela2)">Reactive Goddess of Death <span class="diff-badge diff-expert" style="font-size:0.72rem;vertical-align:middle">Expert</span></h3>
+      <p style="font-size:0.83rem;margin-bottom:16px;">Using the 1000 temporary HP ult as a reactive survival tool rather than an offensive ultimate — the highest-skill Hela technique.</p>
+      <ul class="combo-steps">
+        <li class="combo-step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <div class="step-title">Monitor your HP constantly throughout the fight <span class="time-badge">ongoing</span></div>
+            <div class="step-desc">Reactive Goddess of Death requires constant HP awareness. You need to activate the ult at the exact moment you're being burst down — too early wastes the HP buffer on non-critical damage, too late and you're already dead before it activates. [[0]](#__0)</div>
+          </div>
+        </li>
+        <li class="combo-step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <div class="step-title">Identify when enemies commit their burst combo to eliminating you</div>
+            <div class="step-desc">Learn to recognize burst patterns — a Spider-Man web combo, a Punisher ult, a coordinated focus fire. The moment you identify that enemies are committing to eliminating you in the next 1–2 seconds, that is the activation window. [[0]](#__0) [[1]](#__1)</div>
+          </div>
+        </li>
+        <li class="combo-step">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <div class="step-title">Activate Goddess of Death at 30–50 HP <span class="key-badge">
+            Q</span> <span class="time-badge">30–50 HP threshold</span></div>
+            <div class="step-desc">Activate the ult when your HP drops to 30–50. The 1000 temporary HP activates instantly — you go from near-death to 1030–1050 effective HP in a single frame. Enemies who committed their entire burst combo to killing you are now fighting a nearly full-HP opponent with zero cooldowns remaining. </div>
+          </div>
+        </li>
+        <li class="combo-step">
+          <div class="step-num">4</div>
+          <div class="step-body">
+            <div class="step-title">Immediately resume two-tap headshot loop during the 1000 HP window <span class="key-badge">LMB → LMB</span></div>
+            <div class="step-desc">After activating, don't panic — you now have 1000 temporary HP absorbing all incoming damage. Use this window aggressively: the enemies who just tried to kill you have spent their cooldowns and are now vulnerable. Two-tap the lowest HP attacker immediately while they're exposed.  </div>
+          </div>
+        </li>
+      </ul>
+      <div class="combo-note"><strong>Why it works:</strong> Reactive Goddess of Death is the single highest-skill technique in Hela's kit because it requires reading enemy intent and reacting in under a second. When executed correctly, it completely invalidates the enemy team's burst combo — they spent every cooldown to kill a 250 HP target and instead created a 1250 HP opponent who is now shooting back at full effectiveness.   </div>
+    </div>
+
+    <!-- FAQ -->
+    <div class="section">
+      <div class="section-label">Common Questions</div>
+      <h2>FAQ</h2>
+      <div class="faq-list">
+
+        <div class="faq-item open">
+          <button class="faq-q" onclick="toggleFaq(this)">Is Hela good for beginners? <span class="faq-arrow">▼</span></button>
+          <div class="faq-a"><p>Hela is not recommended for beginners. Her entire power budget is concentrated in headshot damage — body-shot Hela deals less effective damage than most other Duelists and contributes almost nothing to her team. She requires consistent aim, map knowledge for high-ground positioning, and the game sense to use Astral Flock and Goddess of Death reactively rather than proactively. Players who invest time in her mechanics are rewarded with the highest individual carry potential of any Duelist in the game.  </p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">How do I deal with shields as Hela? <span class="faq-arrow">▼</span></button>
+          <div class="faq-a"><p>Shields are Hela's hardest counter — Doctor Strange, Magneto, and Groot shields completely negate her primary fire. The solution is off-angles: find elevated or flanking positions where you can shoot around the shield rather than into it. If the enemy team is running a full shield composition and you cannot find off-angles, consider switching to a hero who deals with shields better. Hela should never be force-picked into a shield-heavy composition.  </p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">When should I use Astral Flock? <span class="faq-arrow">▼</span></button>
+          <div class="faq-a"><p>Save it exclusively as a survival tool — never use it for aggressive repositioning. The 15-second cooldown is the longest of any ability in her kit, and enemies who see you use it know they have a 15-second window to dive and eliminate you. Highest-value uses: escaping a dive hero who has closed the gap, dodging enemy ultimates, and escaping burst combos when Goddess of Death is not yet available. </p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">What's the best way to use Goddess of Death? <span class="faq-arrow">▼</span></button>
+          <div class="faq-a"><p>Reactively, not proactively. The 1000 temporary HP is most valuable when activated at 30–50 HP as enemies commit their burst combo to killing you. Activating it at full HP wastes the buffer on non-critical damage. The expert technique is reading enemy intent — the moment you identify that enemies are committing to eliminating you in the next second, activate immediately.  </p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">How do I counter dive heroes as Hela? <span class="faq-arrow">▼</span></button>
+          <div class="faq-a"><p>The Piercing Night anti-dive combo is your primary tool: stick all 4 projectiles onto the diver, immediately activate Astral Flock to escape, then resume shooting as the 140 explosion damage detonates 3 seconds later. Position near cover so dive heroes must commit fully to reach you. Against persistent dive, ask your Vanguard to peel — Hela cannot reliably handle sustained dive pressure alone when both Astral Flock and Soul Drainer are on cooldown simultaneously.  </p></div>
+        </div>
+
+      </div>
+    </div>
+
+  </div><!-- end main-col -->
+
+  <!-- SIDEBAR -->
+  <div class="side-col">
+    <div class="side-card">
+      <div class="side-card-title">Tier Rating</div>
+      <div class="tier-badge tier-s">S</div>
+      <p style="font-size:0.85rem;color:var(--muted);line-height:1.6">Hela is S-Tier and the only hero to maintain top-tier status across every season of Marvel Rivals. Her hitscan two-tap, dominant anti-air, and uniquely powerful defensive ult make her the highest individual carry potential Duelist in the game — for players who can land consistent headshots.  </p>
+    </div>
+
+    <div class="side-card">
+      <div class="side-card-title">Role Ratings</div>
+      <div class="rating-row"><span>Ease of Use</span><div class="dots"><div class="dot on"></div><div class="dot on"></div><div class="dot off"></div><div class="dot off"></div><div class="dot off"></div></div></div>
+      <div class="rating-row"><span>Burst Damage</span><div class="dots"><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div></div></div>
+      <div class="rating-row"><span>Sustained DPS</span><div class="dots"><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot off"></div></div></div>
+      <div class="rating-row"><span>Survivability</span><div class="dots"><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot off"></div><div class="dot off"></div></div></div>
+      <div class="rating-row"><span>Ult Impact</span><div class="dots"><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div></div></div>
+    </div>
+
+    <div class="side-card">
+      <div class="side-card-title">Team-Up Heroes</div>
+      <div class="teamup-pill">
+        <span style="font-size:1.1rem">⚡</span>
+        <div>
+          <div class="teamup-pill-name">Thor</div>
+          <div class="teamup-pill-sub">Asgardian Might team-up — Mjolnir stun gives guaranteed headshot windows</div>
+        </div>
+      </div>
+      <div class="teamup-pill">
+        <span style="font-size:1.1rem">🟢</span>
+        <div>
+          <div class="teamup-pill-name">Loki</div>
+          <div class="teamup-pill-sub">Completes Asgardian Might trio — clone healing covers Astral Flock cooldown</div>
+        </div>
+      </div>
+      <div class="teamup-pill">
+        <span style="font-size:1.1rem">🌸</span>
+        <div>
+          <div class="teamup-pill-name">Mantis</div>
+          <div class="teamup-pill-sub">Damage boost turns two-tap into one-tap against most non-tank heroes</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-card">
+      <div class="side-card-title">Quick Tips</div>
+      <div class="quick-tip"><div class="tip-icon">🎯</div><div class="tip-text">Always target supports and Duelists first — never waste two-taps on Vanguards who require 4+ shots to kill.</div></div>
+      <div class="quick-tip"><div class="tip-icon">✈️</div><div class="tip-text">You are the best anti-air in the game. Immediately prioritize any flying hero — Storm, Iron Man, Human Torch.</div></div>
+      <div class="quick-tip"><div class="tip-icon">🛡️</div><div class="tip-text">Save Astral Flock for survival only. Enemies track when you use it — they will dive you during the 15s cooldown.</div></div>
+      <div class="quick-tip"><div class="tip-icon">💀</div><div class="tip-text">Activate Goddess of Death reactively at 30–50 HP, not proactively. The 1000 temp HP is wasted on non-critical damage.</div></div>
+      <div class="quick-tip"><div class="tip-icon">🔄</div><div class="tip-text">Against shields, find off-angles. Never shoot directly into Doctor Strange or Magneto shields — reposition instead.</div></div>
+    </div>
+
+    <a class="ai-btn-side" href="/">← Back to All Heroes</a>
+  </div><!-- end side-col -->
+
+</div><!-- end page-body -->
+
+<footer>
+  <div class="footer-logo">RIVALS<span style="color:var(--gold)">GUIDE</span></div>
+  <p>Fan-made guide site · Not affiliated with Marvel or NetEase Games</p>
+  <p style="margin-top:8px">© 2025 RivalsGuide.site · All rights reserved</p>
+</footer>
+
+<script>
+  function toggleFaq(btn){
+    const item=btn.closest('.faq-item');
+    item.classList.toggle('open');
+  }
+</script>
+</body>
+</html>
