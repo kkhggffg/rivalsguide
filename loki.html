@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loki Guide – Abilities, Combos & Counters | RivalsGuide</title>
+  <meta name="description" content="Complete Loki guide for Marvel Rivals. Learn his abilities, clone mechanic, Deception invisibility, counters, and pro tips to master the God of Mischief.">
+  <meta property="og:title" content="Loki Guide – Marvel Rivals | RivalsGuide">
+  <meta property="og:description" content="Master Loki in Marvel Rivals with our in-depth guide covering abilities, combos, counters, and team comps.">
+  <meta property="og:url" content="https://rivalsguide.site/loki.html">
+  <meta property="og:type" content="article">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-D4EJPR83TH"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-D4EJPR83TH');</script>
+  <style>
+    :root{--green:#4ade80;--teal:#2dd4bf;--gold:#ffd60a;--dark:#0a0a0f;--dark2:#12121a;--dark3:#1a1a2e;--card:#16213e;--text:#e0e0e0;--muted:#888;--border:rgba(45,212,191,0.35);--red:#f87171;--blue:#60a5fa;--orange:#fb923c;--purple:#a855f7;--accent:#2dd4bf;--accent2:#14b8a6}
+    *{margin:0;padding:0;box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{background:var(--dark);color:var(--text);font-family:'Segoe UI',sans-serif;overflow-x:hidden}
+    nav{position:fixed;top:0;width:100%;z-index:999;background:rgba(10,10,15,0.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);padding:0 40px;display:flex;align-items:center;justify-content:space-between;height:64px}
+    .nav-logo{font-size:1.3rem;font-weight:900;color:var(--accent);letter-spacing:1px;text-decoration:none}
+    .nav-logo span{color:var(--gold)}
+    .nav-back{color:var(--muted);text-decoration:none;font-size:0.9rem;display:flex;align-items:center;gap:8px;transition:color 0.2s}
+    .nav-back:hover{color:var(--accent)}
+    .hero-banner{min-height:380px;background:radial-gradient(ellipse at 30% 50%,rgba(45,212,191,0.18) 0%,transparent 60%),radial-gradient(ellipse at 80% 30%,rgba(20,184,166,0.1) 0%,transparent 50%),var(--dark);display:flex;align-items:center;padding:100px 40px 60px;position:relative;overflow:hidden}
+    .hero-banner::before{content:'🟢';position:absolute;right:80px;top:50%;transform:translateY(-50%);font-size:12rem;opacity:0.06;pointer-events:none}
+    .banner-inner{max-width:1200px;margin:0 auto;width:100%}
+    .breadcrumb{font-size:0.8rem;color:var(--muted);margin-bottom:16px}
+    .breadcrumb a{color:var(--muted);text-decoration:none}
+    .breadcrumb a:hover{color:var(--accent)}
+    .breadcrumb span{margin:0 8px}
+    .banner-role{display:inline-block;background:rgba(45,212,191,0.12);border:1px solid var(--border);color:var(--accent);font-size:0.75rem;padding:3px 14px;border-radius:20px;margin-bottom:16px;letter-spacing:2px;text-transform:uppercase}
+    .banner-title{font-size:clamp(2.5rem,6vw,4.5rem);font-weight:900;line-height:1.1;margin-bottom:12px;text-shadow:0 0 40px rgba(45,212,191,0.3)}
+    .banner-title .accent{color:var(--accent)}
+    .banner-sub{color:var(--muted);font-size:1rem;max-width:560px;line-height:1.6;margin-bottom:12px}
+    .banner-hook{color:var(--text);font-size:1rem;max-width:560px;line-height:1.6;margin-bottom:28px;font-style:italic;border-left:3px solid var(--accent);padding-left:14px}
+    .banner-tags{display:flex;gap:10px;flex-wrap:wrap}
+    .tag{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);padding:5px 14px;border-radius:20px;font-size:0.8rem;color:var(--muted)}
+    .tag.teal{border-color:var(--border);color:var(--accent);background:rgba(45,212,191,0.08)}
+    .tag.gold{border-color:rgba(255,214,10,0.3);color:var(--gold);background:rgba(255,214,10,0.06)}
+    .page-body{max-width:1200px;margin:0 auto;padding:60px 40px 80px;display:grid;grid-template-columns:1fr 320px;gap:40px;align-items:start}
+    .main-col{display:flex;flex-direction:column;gap:48px}
+    .side-col{display:flex;flex-direction:column;gap:24px;position:sticky;top:84px}
+    .section{background:var(--card);border:1px solid rgba(255,255,255,0.05);border-radius:12px;padding:32px;transition:border-color 0.2s}
+    .section:hover{border-color:var(--border)}
+    .section-label{font-size:0.72rem;text-transform:uppercase;letter-spacing:3px;color:var(--accent);margin-bottom:8px;font-weight:700}
+    h2{font-size:1.5rem;font-weight:900;margin-bottom:20px;line-height:1.2}
+    h2 span{color:var(--accent)}
+    h3{font-size:1rem;font-weight:700;margin-bottom:8px;color:var(--text)}
+    p{color:var(--muted);line-height:1.7;font-size:0.93rem}
+    .stats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:24px}
+    .stat-box{background:var(--dark2);border-radius:8px;padding:16px;text-align:center;border:1px solid rgba(255,255,255,0.04)}
+    .stat-val{font-size:1.4rem;font-weight:900;color:var(--accent);display:block}
+    .stat-key{font-size:0.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-top:4px;display:block}
+    .stat-desc{color:var(--muted);font-size:0.88rem;line-height:1.6}
+    /* CLONE METER */
+    .clone-bar-wrap{background:var(--dark2);border:1px solid rgba(255,255,255,0.05);border-radius:10px;padding:18px 20px;margin-bottom:24px}
+    .clone-bar-label{font-size:0.75rem;text-transform:uppercase;letter-spacing:2px;color:var(--accent);font-weight:700;margin-bottom:10px}
+    .clone-track{height:10px;background:rgba(255,255,255,0.06);border-radius:5px;overflow:hidden;margin-bottom:8px;display:flex;gap:4px;padding:0 2px}
+    .clone-seg{flex:1;height:100%;border-radius:3px;background:linear-gradient(90deg,var(--accent2),var(--teal));animation:clonePulse 2.4s ease-in-out infinite alternate}
+    .clone-seg:nth-child(2){animation-delay:0.4s}
+    .clone-seg:nth-child(3){animation-delay:0.8s;opacity:0.4}
+    @keyframes clonePulse{from{opacity:0.4;filter:brightness(0.8)}to{opacity:1;filter:brightness(1.4)}}
+    .clone-labels{display:flex;justify-content:space-between;font-size:0.72rem;color:var(--muted)}
+    .clone-labels span:last-child{color:var(--gold)}
+    /* SW GRID */
+    .sw-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:24px}
+    .sw-col{background:var(--dark2);border-radius:8px;padding:16px}
+    .sw-col-title{font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:12px}
+    .sw-col.str .sw-col-title{color:var(--green)}
+    .sw-col.wk .sw-col-title{color:var(--red)}
+    .sw-item{display:flex;align-items:flex-start;gap:8px;padding:6px 0;font-size:0.83rem;color:var(--muted);line-height:1.5;border-bottom:1px solid rgba(255,255,255,0.04)}
+    .sw-item:last-child{border-bottom:none}
+    .sw-icon{flex-shrink:0;margin-top:1px}
+    /* ABILITIES */
+    .ability-list{display:flex;flex-direction:column;gap:16px}
+    .ability-item{background:var(--dark2);border:1px solid rgba(255,255,255,0.05);border-radius:10px;padding:20px;display:flex;gap:16px;transition:border-color 0.2s;align-items:flex-start}
+    .ability-item:hover{border-color:var(--border)}
+    .ability-key{background:var(--accent2);color:#000;padding:4px 12px;border-radius:5px;font-size:0.78rem;font-weight:700;font-family:monospace;white-space:nowrap;flex-shrink:0;margin-top:2px;min-width:52px;text-align:center}
+    .ability-key.ult{background:var(--gold);color:#000}
+    .ability-key.passive{background:rgba(45,212,191,0.15);color:var(--accent);border:1px solid rgba(45,212,191,0.35)}
+    .ability-key.teamup{background:rgba(168,85,247,0.2);color:var(--purple);border:1px solid rgba(168,85,247,0.3)}
+    .ability-body{flex:1}
+    .ability-name{font-weight:700;font-size:1rem;margin-bottom:6px}
+    .ability-desc{color:var(--muted);font-size:0.88rem;line-height:1.65;margin-bottom:8px}
+    .ability-tip{font-size:0.82rem;color:var(--gold);padding:8px 12px;background:rgba(255,214,10,0.06);border-radius:6px;border-left:2px solid var(--gold)}
+    .ability-stats{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:8px}
+    .ability-stat-chip{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);border-radius:4px;padding:3px 9px;font-size:0.74rem;color:var(--muted)}
+    .ability-stat-chip b{color:var(--gold)}
+    /* COUNTERS */
+    .counter-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .counter-col{background:var(--dark2);border-radius:10px;padding:20px}
+    .counter-col-title{font-size:0.78rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:14px}
+    .counter-col.good .counter-col-title{color:var(--green)}
+    .counter-col.bad .counter-col-title{color:var(--red)}
+    .counter-entry{display:flex;align-items:flex-start;gap:10px;padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.04)}
+    .counter-entry:last-child{border-bottom:none;padding-bottom:0}
+    .counter-emoji{font-size:1.3rem;flex-shrink:0;margin-top:1px}
+    .counter-name{font-weight:700;font-size:0.88rem;margin-bottom:2px}
+    .counter-reason{font-size:0.78rem;color:var(--muted);line-height:1.5}
+    /* TEAM COMP */
+    .comp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .comp-card{background:var(--dark2);border-radius:10px;padding:16px;border:1px solid rgba(255,255,255,0.04);transition:border-color 0.2s;display:flex;flex-direction:column}
+    .comp-card:hover{border-color:var(--border)}
+    .comp-role{font-size:0.72rem;text-transform:uppercase;letter-spacing:1px;font-weight:700;margin-bottom:10px}
+    .comp-role.tank{color:var(--blue)}
+    .comp-role.support{color:var(--green)}
+    .comp-role.dps{color:var(--accent)}
+    .comp-hero{display:flex;align-items:flex-start;gap:8px;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04)}
+    .comp-hero:last-of-type{border-bottom:none}
+    .comp-hero-emoji{font-size:1.1rem;flex-shrink:0;margin-top:1px}
+    .comp-hero-name{font-size:0.85rem;font-weight:700}
+    .comp-hero-reason{font-size:0.75rem;color:var(--muted);line-height:1.4;margin-top:2px}
+    .comp-synergy{margin-top:12px;padding:10px 12px;background:rgba(255,255,255,0.03);border-radius:6px;border-left:2px solid var(--blue);font-size:0.78rem;color:var(--muted);line-height:1.5}
+    .comp-synergy.support{border-left-color:var(--green)}
+    .comp-synergy.dps{border-left-color:var(--accent)}
+    /* COMBOS */
+    .difficulty-table{width:100%;border-collapse:collapse;margin:20px 0 8px}
+    .difficulty-table th{font-size:0.75rem;text-transform:uppercase;letter-spacing:1px;color:var(--muted);font-weight:700;padding:8px 12px;text-align:left;border-bottom:1px solid rgba(255,255,255,0.08)}
+    .difficulty-table td{padding:10px 12px;font-size:0.85rem;border-bottom:1px solid rgba(255,255,255,0.04);vertical-align:middle}
+    .difficulty-table tr:last-child td{border-bottom:none}
+    .difficulty-table tr:hover td{background:rgba(255,255,255,0.02)}
+    .diff-badge{display:inline-block;padding:2px 10px;border-radius:20px;font-size:0.75rem;font-weight:700}
+    .diff-easy{background:rgba(74,222,128,0.12);color:var(--green)}
+    .diff-med{background:rgba(255,214,10,0.12);color:var(--gold)}
+    .diff-hard{background:rgba(251,146,60,0.12);color:var(--orange)}
+    .diff-expert{background:rgba(96,165,250,0.12);color:var(--blue)}
+    .combo-steps{list-style:none;display:flex;flex-direction:column;gap:0}
+    .combo-step{display:flex;gap:16px;padding:16px 0;border-bottom:1px solid rgba(255,255,255,0.04);align-items:flex-start}
+    .combo-step:last-child{border-bottom:none}
+    .step-num{width:32px;height:32px;min-width:32px;background:var(--accent2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:0.88rem;flex-shrink:0;color:#000}
+    .step-body{flex:1}
+    .step-title{font-weight:700;font-size:0.95rem;margin-bottom:4px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+    .key-badge{background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.18);padding:1px 9px;border-radius:4px;font-size:0.75rem;font-family:monospace}
+    .time-badge{background:rgba(74,222,128,0.1);border:1px solid rgba(74,222,128,0.25);color:var(--green);padding:1px 9px;border-radius:4px;font-size:0.72rem;font-family:monospace}
+    .step-desc{color:var(--muted);font-size:0.88rem;line-height:1.6}
+    .combo-note{background:rgba(45,212,191,0.06);border:1px solid var(--border);border-radius:8px;padding:14px 16px;margin-top:16px;font-size:0.85rem;color:var(--text);line-height:1.6}
+    .combo-note strong{color:var(--accent)}
+    .combo-section-divider{height:1px;background:rgba(255,255,255,0.06);margin:28px 0}
+    /* FAQ */
+    .faq-list{display:flex;flex-direction:column;gap:0}
+    .faq-item{border-bottom:1px solid rgba(255,255,255,0.05)}
+    .faq-item:last-child{border-bottom:none}
+    .faq-q{width:100%;background:transparent;border:none;color:var(--text);text-align:left;padding:18px 0;font-size:0.95rem;font-weight:700;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px}
+    .faq-q:hover{color:var(--accent)}
+    .faq-arrow{color:var(--muted);font-size:0.8rem;transition:transform 0.2s;flex-shrink:0}
+    .faq-item.open .faq-arrow{transform:rotate(180deg)}
+    .faq-a{max-height:0;overflow:hidden;transition:max-height 0.35s ease}
+    .faq-item.open .faq-a{max-height:300px}
+    .faq-a p{padding-bottom:16px;font-size:0.88rem}
+    /* SIDEBAR */
+    .side-card{background:var(--card);border:1px solid rgba(255,255,255,0.05);border-radius:12px;padding:24px}
+    .side-card-title{font-size:0.72rem;text-transform:uppercase;letter-spacing:2px;color:var(--accent);font-weight:700;margin-bottom:16px}
+    .quick-tip{display:flex;gap:10px;padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.04);align-items:flex-start}
+    .quick-tip:last-child{border-bottom:none}
+    .tip-icon{font-size:1.1rem;flex-shrink:0;margin-top:1px}
+    .tip-text{font-size:0.82rem;color:var(--muted);line-height:1.5}
+    .tier-badge{display:inline-flex;align-items:center;justify-content:center;width:56px;height:56px;border-radius:12px;font-size:2rem;font-weight:900;margin-bottom:12px}
+    .tier-splus{background:linear-gradient(135deg,#2dd4bf,#14b8a6);color:#000}
+    .rating-row{display:flex;justify-content:space-between;align-items:center;font-size:0.8rem;margin-bottom:8px}
+    .rating-row span{color:var(--muted)}
+    .dots{display:flex;gap:3px}
+    .dot{width:10px;height:10px;border-radius:2px}
+    .dot.on{background:var(--accent)}
+    .dot.off{background:rgba(255,255,255,0.08)}
+    .teamup-pill{display:flex;align-items:center;gap:8px;background:rgba(45,212,191,0.06);border:1px solid rgba(45,212,191,0.18);border-radius:6px;padding:8px 10px;margin-bottom:8px}
+    .teamup-pill:last-child{margin-bottom:0}
+    .teamup-pill-name{font-size:0.82rem;font-weight:700;color:var(--text)}
+    .teamup-pill-sub{font-size:0.72rem;color:var(--muted)}
+    .ai-btn-side{display:block;text-align:center;padding:12px;background:rgba(45,212,191,0.06);border:1px solid var(--border);border-radius:8px;color:var(--muted);text-decoration:none;font-size:0.85rem;transition:all 0.2s}
+    .ai-btn-side:hover{background:rgba(45,212,191,0.16);color:var(--text)}
+    footer{background:var(--dark2);border-top:1px solid var(--border);padding:40px;text-align:center;color:var(--muted);font-size:0.85rem}
+    .footer-logo{font-size:1.2rem;font-weight:900;color:var(--accent);margin-bottom:8px}
+    ::-webkit-scrollbar{width:6px}
+    ::-webkit-scrollbar-track{background:var(--dark)}
+    ::-webkit-scrollbar-thumb{background:var(--accent2);border-radius:3px}
+    @media(max-width:900px){.page-body{grid-template-columns:1fr;padding:40px 20px 60px}.side-col{position:static}.counter-grid{grid-template-columns:1fr}.comp-grid{grid-template-columns:1fr 1fr}.hero-banner{padding:90px 20px 48px}nav{padding:0 20px}.sw-grid{grid-template-columns:1fr}}
+    @media(max-width:560px){.stats-grid{grid-template-columns:repeat(2,1fr)}.comp-grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="/">RIVALS<span>GUIDE</span></a>
+  <a class="nav-back" href="/">← Back to Home</a>
+</nav>
+
+<div class="hero-banner">
+  <div class="banner-inner">
+    <div class="breadcrumb">
+      <a href="/">Home</a><span>›</span>
+      <a href="/">Heroes</a><span>›</span>
+      <span style="color:var(--text)">Loki</span>
+    </div>
+    <div class="banner-role">Support · Strategist</div>
+    <h1 class="banner-title"><span class="accent">Loki</span><br>Complete Guide</h1>
+    <p class="banner-sub">The God of Mischief — a Strategist who heals through basic attacks, deploys autonomous healing clones, turns invisible at will, and copies enemy ultimates to turn their own power against them.</p>
+    <p class="banner-hook">If you want a Strategist who can out-sustain entire dive compositions with clone uptime, vanish from any threat, and steal the enemy's ultimate to flip a round — Loki is the most deceptive support in the game.</p>
+    <div class="banner-tags">
+      <span class="tag teal">Strategist</span>
+      <span class="tag gold">S+ Tier (Diamond+)</span>
+      <span class="tag">Clone Healing</span>
+      <span class="tag">Invisibility</span>
+      <span class="tag">Ult Copy</span>
+    </div>
+  </div>
+</div>
+
+<div class="page-body">
+  <div class="main-col">
+
+    <!-- STATS -->
+    <div class="section">
+      <div class="section-label">Overview</div>
+      <h2>Base <span>Stats</span></h2>
+      <div class="stats-grid">
+        <div class="stat-box"><span class="stat-val">275</span><span class="stat-key">Health</span></div>
+        <div class="stat-box"><span class="stat-val">~220/s</span><span class="stat-key">Max HPS (2 clones)</span></div>
+        <div class="stat-box"><span class="stat-val">55</span><span class="stat-key">Primary Damage</span></div>
+        <div class="stat-box"><span class="stat-val">2</span><span class="stat-key">Max Clones</span></div>
+        <div class="stat-box"><span class="stat-val">∞</span><span class="stat-key">Invis Duration</span></div>
+        <div class="stat-box"><span class="stat-val">★★★☆☆</span><span class="stat-key">Difficulty</span></div>
+      </div>
+
+      <!-- CLONE METER -->
+      <div class="clone-bar-wrap">
+        <div class="clone-bar-label">🟢 Clone Uptime Mechanic</div>
+        <div class="clone-track">
+          <div class="clone-seg"></div>
+          <div class="clone-seg"></div>
+          <div class="clone-seg"></div>
+        </div>
+        <div class="clone-labels">
+          <span>0 clones — Loki heals alone (~70 HPS)</span>
+          <span>2 clones active → ~220 HPS peak</span>
+        </div>
+      </div>
+
+      <!-- STRENGTHS / WEAKNESSES -->
+      <div class="sw-grid">
+        <div class="sw-col str">
+          <div class="sw-col-title">✅ Strengths</div>
+          <div class="sw-item"><span class="sw-icon">🩹</span>Highest theoretical HPS in the game with 2 clones active — ~220 healing per second</div>
+          <div class="sw-item"><span class="sw-icon">👻</span>Permanent invisibility on demand — no duration limit, hardest support to assassinate</div>
+          <div class="sw-item"><span class="sw-icon">🎭</span>Ult Copy steals enemy ultimates — the most disruptive support ultimate in the game</div>
+          <div class="sw-item"><span class="sw-icon">🔄</span>Clones are autonomous — they heal teammates passively even while Loki repositions</div>
+        </div>
+        <div class="sw-col wk">
+          <div class="sw-col-title">⛔ Weaknesses</div>
+          <div class="sw-item"><span class="sw-icon">🎯</span>Healing requires basic attack aim — misses mean zero healing, unlike auto-heal supports</div>
+          <div class="sw-item"><span class="sw-icon">💀</span>Clones are fragile — AoE damage or a single burst kills them instantly, gutting HPS</div>
+          <div class="sw-item"><span class="sw-icon">📏</span>Clones have limited range — poor positioning means clones heal nobody useful</div>
+          <div class="sw-item"><span class="sw-icon">⚡</span>Ult Copy requires knowing enemy ult timings — weak in solo queue without communication</div>
+        </div>
+      </div>
+
+      <p class="stat-desc">Loki is rated S+ Tier at Diamond+ in Season 8 — the highest tier on the Mobalytics tier list — thanks to his unmatched healing ceiling and near-unkillable playstyle when played correctly. His skill expression lies entirely in clone placement, attack accuracy, and knowing exactly when to go invisible versus when to stay visible and pump healing. In the right hands, he produces more healing output than any other Strategist in the game.</p>
+    </div>
+
+    <!-- ABILITIES -->
+    <div class="section">
+      <div class="section-label">Kit Breakdown</div>
+      <h2>Abilities <span>&amp; Skills</span></h2>
+      <div class="ability-list">
+
+        <div class="ability-item">
+          <div class="ability-key passive">PASSIVE</div>
+          <div class="ability-body">
+            <div class="ability-name">Glorious Illusion</div>
+            <div class="ability-desc">Loki passively generates Illusion Charges over time, which are consumed to deploy Loki Clones. Each clone autonomously heals nearby allies at a fixed rate. Up to 2 clones can be active simultaneously. Clones persist until destroyed by enemy damage or manually recalled. The passive charge generation means Loki always has clone resources available as long as he manages them carefully rather than deploying recklessly.</div>
+            <div class="ability-tip">💡 Think of your clones as a second and third healer on the field. Place them at the back of your team near the supports and tanks — not at the frontline where AoE will instantly delete them. A clone that survives for 15 seconds contributes far more healing than one that dies in 3.</div>
+          </div>
+        </div>
+
+        <div class="ability-item">
+          <div class="ability-key">LMB</div>
+          <div class="ability-body">
+            <div class="ability-name">Scepter of Mischief</div>
+            <div class="ability-desc">Loki fires a projectile from his scepter that deals 55 damage to enemies on hit — but more importantly, heals allies on hit. This is his primary healing delivery mechanism. Unlike most Strategists who have passive or area healing, Loki must actively aim at teammates to heal them. Every successful hit on an ally restores a significant chunk of their health. Missing means zero healing delivered that tick.</div>
+            <div class="ability-stats">
+              <span class="ability-stat-chip">Damage: <b>55</b></span>
+              <span class="ability-stat-chip">Heal on ally hit: <b>~65 HP</b></span>
+              <span class="ability-stat-chip">Projectile: <b>Yes</b></span>
+              <span class="ability-stat-chip">Ammo: <b>∞</b></span>
+            </div>
+            <div class="ability-tip">💡 Aim at your tank's body — it's the largest target and they need the most healing. Against dive threats, switch to healing the dived ally first, then return to the tank. The key habit is never letting your crosshair sit idle — always be firing at someone, enemy or ally.</div>
+          </div>
+        </div>
+
+        <div class="ability-item">
+          <div class="ability-key">RMB</div>
+          <div class="ability-body">
+            <div class="ability-name">Deception</div>
+            <div class="ability-desc">Loki turns invisible and leaves behind a stationary illusion decoy at his current position. The invisibility lasts indefinitely — until Loki attacks, takes damage, or manually cancels it. The decoy left behind looks identical to Loki and draws enemy attention and fire. Enemies who shoot the decoy deal no meaningful damage while Loki repositions freely. This is the most powerful escape tool of any Strategist in the game.</div>
+            <div class="ability-stats">
+              <span class="ability-stat-chip">Duration: <b>Indefinite</b></span>
+              <span class="ability-stat-chip">Breaks on: <b>Attack / Damage taken</b></span>
+              <span class="ability-stat-chip">Decoy: <b>Yes — draws fire</b></span>
+              <span class="ability-stat-chip">Cooldown: <b>~8s after break</b></span>
+            </div>
+            <div class="ability-tip">💡 Never use Deception reactively when you're already at 50 HP — use it proactively the moment you see a diver commit. Activate it before they reach you, reposition to a new angle, and resume healing. The decoy buys you 2–3 seconds of free movement every time.</div>
+          </div>
+        </div>
+
+        <div class="ability-item">
+          <div class="ability-key">SHIFT</div>
+          <div class="ability-body">
+            <div class="ability-name">Loki's Tricks</div>
+            <div class="ability-desc">Loki teleports to the location of one of his active clones, swapping positions with it. The clone remains at Loki's original position. This creates an instant repositioning tool that is completely unpredictable to enemies — they cannot track where Loki teleported because the clone stays visible at the original spot. Combined with Deception, Loki has two independent escape and repositioning tools, making him the hardest Strategist to pin down in the entire game.</div>
+            <div class="ability-stats">
+              <span class="ability-stat-chip">Range: <b>Unlimited (to clone position)</b></span>
+              <span class="ability-stat-chip">Charges: <b>1 per active clone</b></span>
+              <span class="ability-stat-chip">Cooldown: <b>~10s</b></span>
+            </div>
+            <div class="ability-tip">💡 Always place at least one clone at a safe elevated position or behind cover specifically as a teleport destination — not just for healing. A clone on a rooftop or behind a wall gives you an instant escape route that no diver can follow without climbing themselves.</div>
+          </div>
+        </div>
+
+        <div class="ability-item">
+          <div class="ability-key">E</div>
+          <div class="ability-body">
+            <div class="ability-name">Regeneration Domain</div>
+            <div class="ability-desc">Loki creates a healing zone at a target location that continuously heals all allies standing inside it. The zone lasts several seconds and stacks with clone healing — meaning allies inside the domain while clones are also active receive triple-layered healing. Pairing this ability with clone placement near a choke point or objective creates a near-unkillable sustain bubble for your team during pushes.</div>
+            <div class="ability-stats">
+              <span class="ability-stat-chip">Duration: <b>~5s</b></span>
+              <span class="ability-stat-chip">Heal: <b>AoE continuous</b></span>
+              <span class="ability-stat-chip">Cooldown: <b>~14s</b></span>
+              <span class="ability-stat-chip">Stacks with: <b>Clone healing</b></span>
+            </div>
+            <div class="ability-tip">💡 Drop Regeneration Domain on the objective point during a contest, then teleport a clone next to it. Your team standing on the point now has two simultaneous healing sources — this is the highest sustained healing output Loki can produce and makes objective fights extremely difficult to win against him.</div>
+          </div>
+        </div>
+
+        <div class="ability-item">
+          <div class="ability-key ult">Q — ULT</div>
+          <div class="ability-body">
+            <div class="ability-name">God of Mischief</div>
+            <div class="ability-desc">Loki transforms into a copy of a random enemy hero and gains access to all of that hero's abilities for a limited duration. This is the most situationally powerful ultimate in the game — if Loki copies Iron Man, he can fire Invincible Pulse Cannon. If he copies Doctor Strange, he can use Eye of Agamotto to stun the entire enemy team. The transformation is complete and functional, not cosmetic. The unpredictability of which hero gets copied is both the strength and the limitation of this ultimate.</div>
+            <div class="ability-stats">
+              <span class="ability-stat-chip">Duration: <b>~12s transformation</b></span>
+              <span class="ability-stat-chip">Copies: <b>Random enemy hero</b></span>
+              <span class="ability-stat-chip">Includes: <b>All abilities + ult</b></span>
+            </div>
+            <div class="ability-tip">💡 Activate God of Mischief when the enemy team has a high-value ult ready — Iron Man, Doctor Strange, Jeff the Land Shark. If you copy one of those heroes, you can fire their ultimate immediately. The best timing is right after the enemy uses a non-ult ability, when their ult meter is likely full from the fight.</div>
+          </div>
+        </div>
+
+        <div class="ability-item">
+          <div class="ability-key teamup">TEAM-UP</div>
+          <div class="ability-body">
+            <div class="ability-name">Vibrant Vitality — with Thor</div>
+            <div class="ability-desc">When paired with Thor, Loki gains access to Vibrant Vitality — a team-up enhancement that amplifies the healing output of both Loki and his clones when Thor is nearby. Thor's presence on the frontline drawing aggro while Loki's clones heal from behind creates one of the most self-sustaining frontline compositions in the game. Thor benefits from enhanced healing while Loki benefits from Thor absorbing all the dive pressure that would otherwise target him.</div>
+            <div class="ability-tip">💡 In a Thor + Loki composition, position your clones directly behind Thor on the frontline. Thor draws all attention, clones heal Thor passively, and Loki stays at mid-range pumping additional healing through Scepter of Mischief. This three-layer healing loop is extremely difficult for enemy teams to break without a coordinated dive.</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- COUNTERS -->
+    <div class="section">
+      <div class="section-label">Matchup Analysis</div>
+      <h2>Counters <span>&amp; Matchups</span></h2>
+      <div class="counter-grid">
+        <div class="counter-col good">
+          <div class="counter-col-title">✅ Loki Excels Against</div>
+          <div class="counter-entry">
+            <div class="counter-emoji">🕷</div>
+            <div>
+              <div class="counter-name">Spider-Man</div>
+              <div class="counter-reason">Deception and clone teleport make Loki nearly impossible to pin down. Spider-Man's dive combo requires landing on a stationary target — Loki never is one.</div>
+            </div>
+          </div>
+          <div class="counter-entry">
+            <div class="counter-emoji">🐾</div>
+            <div>
+              <div class="counter-name">Black Panther</div>
+              <div class="counter-reason">Same reason as Spider-Man — dive heroes that rely on burst combos can't finish Loki before he vanishes or teleports to a clone.</div>
+            </div>
+          </div>
+          <div class="counter-entry">
+            <div class="counter-emoji">💚</div>
+            <div>
+              <div class="counter-name">Hulk / Thor (enemy)</div>
+              <div class="counter-reason">High-HP Vanguards can't burst down Loki's clones fast enough before the healing compounds. Sustained tank fights heavily favor Loki's HPS ceiling.</div>
+            </div>
+          </div>
+          <div class="counter-entry">
+            <div class="counter-emoji">🎭</div>
+            <div>
+              <div class="counter-name">Ult-Dependent Teams</div>
+              <div class="counter-reason">God of Mischief copies their best ultimate and fires it back. Teams built around one key ult (Iron Man, Strange) are particularly vulnerable.</div>
+            </div>
+          </div>
+        </div>
+        <div class="counter-col bad">
+          <div class="counter-col-title">❌ Hard Counters Loki</div>
+          <div class="counter-entry">
+            <div class="counter-emoji">💥</div>
+            <div>
+              <div class="counter-name">AoE Burst Heroes</div>
+              <div class="counter-reason">Clones have low HP — any AoE ability (Scarlet Witch ult, Iron Man ult) instantly destroys both clones, collapsing Loki's HPS from ~220 to ~70.</div>
+            </div>
+          </div>
+          <div class="counter-entry">
+            <div class="counter-emoji">🎯</div>
+            <div>
+              <div class="counter-name">Psylocke</div>
+              <div class="counter-reason">High single-target burst at close range can kill Loki before Deception activates. Her damage speed is faster than Loki's reaction window.</div>
+            </div>
+          </div>
+          <div class="counter-entry">
+            <div class="counter-emoji">🔍</div>
+            <div>
+              <div class="counter-name">Reveal / True Sight Abilities</div>
+              <div class="counter-reason">Any hero with a reveal ability (certain ults or passives) negates Deception entirely — Loki becomes a 275 HP target with no escape tool.</div>
+            </div>
+          </div>
+          <div class="counter-entry">
+            <div class="counter-emoji">🏹</div>
+            <div>
+              <div class="counter-name">Long-Range Snipers</div>
+              <div class="counter-reason">Loki's healing requires staying within mid-range. Snipers force him back, reducing his effective healing angle and clone placement options.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TEAM COMP -->
+    <div class="section">
+      <div class="section-label">Team Strategy</div>
+      <h2>Best Team <span>Compositions</span></h2>
+      <div class="comp-grid">
+        <div class="comp-card">
+          <div class="comp-role tank">Vanguard</div>
+          <div class="comp-hero">
+            <div class="comp-hero-emoji">⚡</div>
+            <div>
+              <div class="comp-hero-name">Thor</div>
+              <div class="comp-hero-reason">Vibrant Vitality team-up; absorbs all frontline aggro while Loki's clones heal him passively</div>
+            </div>
+          </div>
+          <div class="comp-hero">
+            <div class="comp-hero-emoji">🌿</div>
+            <div>
+              <div class="comp-hero-name">Groot</div>
+              <div class="comp-hero-reason">S+ Tier tank whose walls create safe clone placement zones and protect Loki from dives</div>
+            </div>
+          </div>
+          <div class="comp-synergy">Thor + Loki is the most synergistic Vanguard-Strategist pairing in the game. Thor draws all aggro, Loki's clones sustain him indefinitely, and the Vibrant Vitality team-up amplifies the entire loop.</div>
+        </div>
+        <div class="comp-card">
+          <div class="comp-role support">Support Partner</div>
+          <div class="comp-hero">
+            <div class="comp-hero-emoji">🌸</div>
+            <div>
+              <div class="comp-hero-name">Mantis</div>
+              <div class="comp-hero-reason">Damage amp on Loki's scepter attacks increases both his damage and healing output simultaneously</div>
+            </div>
+          </div>
+          <div class="comp-hero">
+            <div class="comp-hero-emoji">🌙</div>
+            <div>
+              <div class="comp-hero-name">Cloak &amp; Dagger</div>
+              <div class="comp-hero-reason">S+ Tier support — their zone healing stacks with Loki's clone healing for near-unkillable sustain</div>
+            </div>
+          </div>
+          <div class="comp-synergy support">Loki pairs best with a second support who has reliable burst heals — his clone healing is excellent sustained output, but he needs a partner who can spike-heal a dying ally in an emergency.</div>
+        </div>
+        <div class="comp-card">
+          <div class="comp-role dps">DPS Partner</div>
+          <div class="comp-hero">
+            <div class="comp-hero-emoji">🔫</div>
+            <div>
+              <div class="comp-hero-name">Winter Soldier</div>
+              <div class="comp-hero-reason">S Tier DPS — Loki's sustained healing keeps him alive through his aggressive frontline positioning</div>
+            </div>
+          </div>
+          <div class="comp-hero">
+            <div class="comp-hero-emoji">🌟</div>
+            <div>
+              <div class="comp-hero-name">Star-Lord</div>
+              <div class="comp-hero-reason">High mobility DPS who benefits enormously from Loki's clone healing while staying in constant motion</div>
+            </div>
+          </div>
+          <div class="comp-synergy dps">Loki's clone healing is most effective on aggressive DPS heroes who stay in the fight rather than retreating — heroes who can't afford to back off benefit most from passive clone sustain.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- COMBOS -->
+    <div class="section">
+      <div class="section-label">Advanced Techniques</div>
+      <h2>Combo <span>Guide</span></h2>
+
+      <p style="margin-bottom:8px;font-size:0.88rem;">Choose your starting point based on your current skill level:</p>
+      <table class="difficulty-table">
+        <thead>
+          <tr>
+            <th>Technique</th>
+            <th>Difficulty</th>
+            <th>Best For</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="font-weight:700">Clone + Scepter Loop</td>
+            <td><span class="diff-badge diff-easy">⭐ Easy</span></td>
+            <td style="color:var(--muted)">New Loki players</td>
+          </tr>
+          <tr>
+            <td style="font-weight:700">Regen Domain + Clone Stack</td>
+            <td><span class="diff-badge diff-med">⭐⭐ Medium</span></td>
+            <td style="color:var(--muted)">Players with the loop down</td>
+          </tr>
+          <tr>
+            <td style="font-weight:700">Deception Bait + Teleport Escape</td>
+            <td><span class="diff-badge diff-hard">⭐⭐⭐ Hard</span></td>
+            <td style="color:var(--muted)">Players ready for ranked carry</td>
+          </tr>
+          <tr>
+            <td style="font-weight:700">God of Mischief Ult Copy Timing</td>
+            <td><span class="diff-badge diff-expert">⭐⭐⭐⭐⭐ Expert</span></td>
+            <td style="color:var(--muted)">Coordinated / competitive play</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="combo-section-divider"></div>
+      <h3 style="margin-bottom:16px;color:var(--gold)">Clone + Scepter Loop</h3>
+      <ul class="combo-steps">
+        <li class="combo-step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <div class="step-title">Deploy both clones at the start of every fight <span class="time-badge">pre-fight</span></div>
+            <div class="step-desc">Before any engagement begins, place both clones behind your frontline tanks. This establishes your passive healing foundation before you need to aim at anything.</div>
+          </div>
+        </li>
+        <li class="combo-step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <div class="step-title">Fire Scepter of Mischief at your tank continuously <span class="key-badge">LMB</span> <span class="time-badge">ongoing</span></div>
+            <div class="step-desc">Your tank is the primary healing target. Keep your crosshair on their body and fire constantly. Clones heal passively — your job is to stack active healing on top of them.</div>
+          </div>
+        </li>
+        <li class="combo-step">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <div class="step-title">Switch to a dived ally immediately when a diver commits <span class="key-badge">LMB</span></div>
+            <div class="step-desc">The moment a Black Panther or Spider-Man dives your backline, redirect all scepter fire to the dived ally. Clones will continue healing the tank passively — your active healing is the emergency resource.</div>
+          </div>
+        </li>
+        <li class="combo-step">
+          <div class="step-num">4</div>
+          <div class="step-body">
+            <div class="step-title">Redeploy destroyed clones immediately <span class="time-badge">on cooldown</span></div>
+            <div class="step-desc">The moment a clone dies, redeploy it as soon as the charge is available. Every second without 2 active clones is a significant HPS loss. Clone uptime is the single most important mechanical habit for Loki.</div>
+          </div>
+        </li>
+      </ul>
+      <div class="combo-note"><strong>Pro tip:</strong> By the numbers, Loki should have the highest healing output in the game with max clone uptime — approximately 220 HPS. The reason many Loki players underperform is poor clone placement and letting clones die without immediately redeploying them.</div>
+
+      <div class="combo-section-divider"></div>
+      <h3 style="margin-bottom:16px;color:var(--gold)">Regen Domain + Clone Stack</h3>
+      <ul class="combo-steps">
+        <li class="combo-step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <div class="step-title">Identify the objective contest point <span class="time-badge">pre-push</span></div>
+            <div class="step-desc">This technique is designed for objective fights — payload stops, capture points. Identify where your team will be standing for the next 5–8 seconds.</div>
+          </div>
+        </li>
+        <li class="combo-step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <div class="step-title">Place both clones on the objective point <span class="key-badge">Passive charges</span></div>
+            <div class="step-desc">Deploy clones directly on or adjacent to the objective. They will passively heal every ally contesting the point without Loki needing to aim at them.</div>
+          </div>
+        </li>
+        <li class="combo-step">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <div class="step-title">Drop Regeneration Domain on the objective <span class="key-badge">E</span> <span class="time-badge">0.0s</span></div>
+            <div class="step-desc">Activate the healing zone directly on top of your clones. Allies on the point now receive clone healing + domain healing simultaneously — the highest burst healing output Loki can produce.</div>
+          </div>
+        </li>
+        <li class="combo-step">
+          <div class="step-num">4</div>
+          <div class="step-body">
+            <div class="step-title">Continue firing Scepter at your tank <span class="key-badge">LMB</span></div>
+            <div class="step-desc">While the domain and clones handle the objective, keep your active scepter healing on your tank who is likely taking the most damage. Three simultaneous healing sources make this objective fight nearly impossible to win against.</div>
+          </div>
+        </li>
+      </ul>
+      <div class="combo-note"><strong>Why it works:</strong> Stacking clone healing + Regeneration Domain creates a healing density that exceeds what most enemy teams can burst through. The objective becomes a near-unkillable zone for your team as long as clones survive.</div>
+
+      <div class="combo-section-divider"></div>
+      <h3 style="margin-bottom:16px;color:var(--gold)">Deception Bait + Teleport Escape</h3>
+      <ul class="combo-steps">
+        <li class="combo-step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <div class="step-title">Pre-place one clone at an elevated escape position</div>
+            <div class="step-desc">Before the fight, place one clone on a rooftop, ledge, or behind cover specifically as a teleport destination — not for healing. This is your emergency exit.</div>
+          </div>
+        </li>
+        <li class="combo-step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <div class="step-title">Activate Deception the moment a diver commits <span class="key-badge">RMB</span> <span class="time-badge">0.0s</span></div>
+            <div class="step-desc">Go invisible before the diver reaches you — not after. The decoy stays at your original position. The diver will attack the decoy for 2–3 seconds while you move freely.</div>
+          </div>
+        </li>
+        <li class="combo-step">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <div class="step-title">Teleport to the escape clone <span class="key-badge">SHIFT</span></div>
+            <div class="step-desc">While invisible, teleport to your pre-placed escape clone. You are now on a rooftop or behind cover — completely out of the diver's reach — while the decoy still draws their attention below.</div>
+          </div>
+        </li>
+        <li class="combo-step">
+          <div class="step-num">4</div>
+          <div class="step-body">
+            <div class="step-title">Resume healing from the new position</div>
+            <div class="step-desc">The diver is now confused, attacking a decoy, while you're already back to pumping healing from a safe elevated angle. Redeploy a new clone at the escape position to restore your escape route for the next dive.</div>
+          </div>
+        </li>
+      </ul>
+      <div class="combo-note"><strong>Why it works:</strong> Most dive heroes have a single burst window — if they can't kill you in that window, they've wasted their cooldowns and are now vulnerable. Deception + teleport guarantees you survive every dive attempt as long as you activate Deception before taking damage, not after.</div>
+
+      <div class="combo-section-divider"></div>
+      <h3 style="margin-bottom:4px;color:var(--blue)">God of Mischief Ult Copy Timing <span class="diff-badge diff-expert" style="font-size:0.72rem;vertical-align:middle">Expert</span></h3>
+      <p style="font-size:0.83rem;margin-bottom:16px;">The highest skill expression on Loki — reading enemy ult timings to copy the most valuable ultimate at the right moment.</p>
+      <ul class="combo-steps">
+        <li class="combo-step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <div class="step-title">Track enemy ult charge throughout the fight</div>
+            <div class="step-desc">Watch for visual and audio cues that high-value enemies (Iron Man, Doctor Strange, Jeff) are approaching full ult charge. The more damage they deal, the faster they charge.</div>
+          </div>
+        </li>
+        <li class="combo-step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <div class="step-title">Hold God of Mischief until the enemy ult is ready <span class="key-badge">Q</span></div>
+            <div class="step-desc">Do not activate God of Mischief early. The random copy is most valuable when the enemy hero you copy has their own ult ready to fire. Patience is the entire skill expression here.</div>
+          </div>
+        </li>
+        <li class="combo-step">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <div class="step-title">Activate and immediately fire the copied ultimate <span class="time-badge">0.0s</span></div>
+            <div class="step-desc">The moment you transform, check if the copied hero's ult is available. If it is — fire it immediately. Don't waste time using basic abilities in the transformed state.</div>
+          </div>
+        </li>
+        <li class="combo-step">
+          <div class="step-num">4</div>
+          <div class="step-body">
+            <div class="step-title">Return to Loki and resume healing</div>
+            <div class="step-desc">After the copied ult fires, the transformation ends. Immediately return to clone management and scepter healing — the team still needs you as a support after the ult play.</div>
+          </div>
+        </li>
+      </ul>
+      <div class="combo-note"><strong>Why it works:</strong> God of Mischief is the only ultimate in the game that can fire two Iron Man ults, two Doctor Strange ults, or two Jeff cluster ults in a single round. In coordinated play, this creates a double-ult combo that no team can survive. The randomness is the only limiting factor — which is why timing the activation when the highest-value enemy has their ult ready is the entire skill expression.</div>
+    </div>
+
+    <!-- FAQ -->
+    <div class="section">
+      <div class="section-label">Common Questions</div>
+      <h2>FAQ</h2>
+      <div class="faq-list">
+
+        <div class="faq-item open">
+          <button class="faq-q" onclick="toggleFaq(this)">Is Loki good for beginners? <span class="faq-arrow">▼</span></button>
+          <div class="faq-a"><p>Loki is a medium-difficulty Strategist. His clone passive makes him forgiving — even if you miss scepter shots, clones provide baseline healing. The challenge is clone management: knowing where to place them, keeping them alive, and redeploying them instantly when they die. If you're new to support, start with a simpler healer like Mantis, then transition to Loki once you understand positioning fundamentals.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">Why does my healing feel low even with clones? <span class="faq-arrow">▼</span></button>
+          <div class="faq-a"><p>The most common reason is clone placement — if clones are placed too far from your team, or in positions where AoE damage instantly destroys them, your HPS collapses from ~220 to ~70. Check two things: (1) are both clones always active, and (2) are they within healing range of your frontline? A clone that survives for 15 seconds contributes far more than one that dies in 3 seconds from enemy splash damage.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">When should I use Deception
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">When should I use Deception? <span class="faq-arrow">▼</span></button>
+          <div class="faq-a"><p>Use Deception proactively — the moment you see a diver commit, not after they've already hit you. Activating it at 50 HP is too late; activating it when a Spider-Man starts their swing toward you is correct. The decoy buys you 2–3 seconds of free movement every time. Also use it to reposition between fights without being tracked — going invisible mid-rotation makes you nearly impossible to assassinate.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">What's the best setup for God of Mischief? <span class="faq-arrow">▼</span></button>
+          <div class="faq-a"><p>The best setup is waiting until a high-value enemy — Iron Man, Doctor Strange, or Jeff the Land Shark — has their ultimate fully charged. Activate God of Mischief, and if you copy one of those heroes, immediately fire their ultimate. In coordinated play, your team can chain their own ultimates right after yours for a double-ult combo that no team survives. Never waste God of Mischief early in a fight when enemy ult meters are empty.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">How do I keep my clones alive longer? <span class="faq-arrow">▼</span></button>
+          <div class="faq-a"><p>Clone survival is entirely about placement. Never put clones at the frontline where AoE abilities will instantly delete them. Place them behind your tanks, on elevated positions, or tucked into corners where only targeted fire can reach them. A clone behind a Groot wall or on a rooftop survives dramatically longer than one standing in the open. Also use Loki's Tricks to teleport away from a clone that's about to be destroyed — saving the teleport charge for a new escape route.</p></div>
+        </div>
+
+      </div><!-- end faq-list -->
+    </div><!-- end section FAQ -->
+
+  </div><!-- end main-col -->
+
+  <!-- SIDEBAR -->
+  <div class="side-col">
+    <div class="side-card">
+      <div class="side-card-title">Tier Rating</div>
+      <div class="tier-badge tier-splus">S+</div>
+      <p style="font-size:0.85rem;color:var(--muted);line-height:1.6">Loki sits at S+ Tier at Diamond+ in Season 8 — the highest-rated Strategist on the current tier list. His unmatched healing ceiling with 2 active clones and near-unkillable playstyle make him the strongest support in coordinated play.</p>
+    </div>
+
+    <div class="side-card">
+      <div class="side-card-title">Role Ratings</div>
+      <div class="rating-row"><span>Ease of Use</span><div class="dots"><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot off"></div><div class="dot off"></div></div></div>
+      <div class="rating-row"><span>Healing Output</span><div class="dots"><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div></div></div>
+      <div class="rating-row"><span>Survivability</span><div class="dots"><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div></div></div>
+      <div class="rating-row"><span>Ult Impact</span><div class="dots"><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot off"></div></div></div>
+      <div class="rating-row"><span>Team Utility</span><div class="dots"><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot off"></div></div></div>
+    </div>
+
+    <div class="side-card">
+      <div class="side-card-title">Team-Up Heroes</div>
+      <div class="teamup-pill">
+        <span style="font-size:1.1rem">⚡</span>
+        <div>
+          <div class="teamup-pill-name">Thor</div>
+          <div class="teamup-pill-sub">Vibrant Vitality — amplified healing when Thor is nearby</div>
+        </div>
+      </div>
+      <div class="teamup-pill">
+        <span style="font-size:1.1rem">🌿</span>
+        <div>
+          <div class="teamup-pill-name">Groot</div>
+          <div class="teamup-pill-sub">Walls protect clones and create safe healing zones</div>
+        </div>
+      </div>
+      <div class="teamup-pill">
+        <span style="font-size:1.1rem">🌸</span>
+        <div>
+          <div class="teamup-pill-name">Mantis</div>
+          <div class="teamup-pill-sub">Damage amp boosts scepter healing and damage output</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-card">
+      <div class="side-card-title">Quick Tips</div>
+      <div class="quick-tip"><div class="tip-icon">🟢</div><div class="tip-text">Always keep both clone charges active. Every second without 2 clones is a significant HPS loss.</div></div>
+      <div class="quick-tip"><div class="tip-icon">👻</div><div class="tip-text">Use Deception proactively — before the diver reaches you, not after you're already taking damage.</div></div>
+      <div class="quick-tip"><div class="tip-icon">🎭</div><div class="tip-text">Hold God of Mischief until a high-value enemy ult is ready. Never activate it when ult meters are empty.</div></div>
+      <div class="quick-tip"><div class="tip-icon">🏠</div><div class="tip-text">Pre-place one clone at an elevated escape position before every fight — your emergency teleport destination.</div></div>
+      <div class="quick-tip"><div class="tip-icon">🎯</div><div class="tip-text">Target your tank with scepter fire constantly. Clones handle passive healing — your active shots are the emergency resource.</div></div>
+    </div>
+
+    <a class="ai-btn-side" href="/">← Back to All Heroes</a>
+  </div><!-- end side-col -->
+
+</div><!-- end page-body -->
+
+<footer>
+  <div class="footer-logo">RIVALS<span style="color:var(--gold)">GUIDE</span></div>
+  <p>Fan-made guide site · Not affiliated with Marvel or NetEase Games</p>
+  <p style="margin-top:8px">© 2025 RivalsGuide.site · All rights reserved</p>
+</footer>
+
+<script>
+  function toggleFaq(btn){
+    const item=btn.closest('.faq-item');
+    item.classList.toggle('open');
+  }
+</script>
+</body>
+</html>
