@@ -1,251 +1,719 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Peni Parker Guide – Marvel Rivals | RivalsGuide</title>
-<meta name="description" content="Complete Peni Parker guide for Marvel Rivals. Abilities, mine placement, counters, and pro tips for the SP//dr Tank."/>
-<link rel="canonical" href="https://www.rivalsguide.site/peni-parker.html"/>
-<style>
-  :root{--gold:#ffd700;--bg:#0a0e1a;--card:#111827;--text:#e2e8f0}
-  *{margin:0;padding:0;box-sizing:border-box}
-  body{background:var(--bg);color:var(--text);font-family:'Segoe UI',sans-serif;line-height:1.6}
-  header{background:linear-gradient(135deg,#1a2a4a,#0d1b2e);padding:16px 24px;display:flex;align-items:center;gap:16px;border-bottom:2px solid var(--gold)}
-  header a{color:var(--gold);text-decoration:none;font-weight:700;font-size:1.2rem}
-  .hero-banner{background:linear-gradient(135deg,#0a1a3a 0%,#050d1e 100%);padding:48px 24px;text-align:center}
-  .hero-emoji{font-size:5rem;margin-bottom:16px}
-  .hero-banner h1{font-size:2.5rem;color:var(--gold);margin-bottom:8px}
-  .role-tag{display:inline-block;background:#1e40af;color:#93c5fd;padding:4px 16px;border-radius:20px;font-size:0.85rem;font-weight:700;margin:8px 4px}
-  .container{max-width:900px;margin:0 auto;padding:32px 24px}
-  .section{background:var(--card);border-radius:12px;padding:28px;margin-bottom:24px;border:1px solid #1e293b}
-  .section h2{color:var(--gold);font-size:1.4rem;margin-bottom:16px;border-bottom:1px solid #1e293b;padding-bottom:8px}
-  .ability{background:#0d1b2e;border-radius:8px;padding:16px;margin-bottom:12px;border-left:3px solid #3b82f6}
-  .ability h3{color:#93c5fd;margin-bottom:6px}
-  .tip-box{background:#050d1e;border:1px solid #2563eb;border-radius:8px;padding:16px;margin-bottom:12px}
-  .tip-box h3{color:#60a5fa;margin-bottom:6px}
-  .counter-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px}
-  .counter-card{background:#0d1b2e;border-radius:8px;padding:12px;text-align:center;border:1px solid #1e293b}
-  .counter-card .emoji{font-size:2rem}
-  .counter-card .name{font-size:0.85rem;font-weight:600;margin-top:6px}
-  .stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-  .stat-box{background:#0d1b2e;border-radius:8px;padding:16px;text-align:center}
-  .stat-box .val{font-size:1.8rem;font-weight:700;color:var(--gold)}
-  .stat-box .label{font-size:0.8rem;color:#94a3b8;margin-top:4px}
-  footer{text-align:center;padding:32px;color:#64748b;font-size:0.85rem;border-top:1px solid #1e293b}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Peni Parker Guide – Abilities, Combos & Counters | RivalsGuide</title>
+  <meta name="description" content="Complete Peni Parker guide for Marvel Rivals. Learn her SP//dr mech, cyber-web mines, area denial combos, counters, and pro tips to master the Spider-Mech Vanguard.">
+  <meta property="og:title" content="Peni Parker Guide – Marvel Rivals | RivalsGuide">
+  <meta property="og:description" content="Master Peni Parker in Marvel Rivals with our in-depth guide covering abilities, combos, counters, and team comps.">
+  <meta property="og:url" content="https://rivalsguide.site/peni-parker.html">
+  <meta property="og:type" content="article">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-D4EJPR83TH"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-D4EJPR83TH');</script>
+  <style>
+    :root{--orange:#fb923c;--gold:#ffd60a;--dark:#0a0a0f;--dark2:#12121a;--card:#16213e;--text:#e0e0e0;--muted:#888;--border:rgba(251,146,60,0.35);--green:#4ade80;--red:#f87171;--blue:#60a5fa;--purple:#a855f7;--peni:#e879f9;--peni2:#f0abfc;--peni3:rgba(232,121,249,0.15)}
+    *{margin:0;padding:0;box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{background:var(--dark);color:var(--text);font-family:'Segoe UI',sans-serif;overflow-x:hidden}
+    nav{position:fixed;top:0;width:100%;z-index:999;background:rgba(10,10,15,0.95);backdrop-filter:blur(10px);border-bottom:1px solid rgba(232,121,249,0.3);padding:0 40px;display:flex;align-items:center;justify-content:space-between;height:64px}
+    .nav-logo{font-size:1.3rem;font-weight:900;color:#fb923c;letter-spacing:1px;text-decoration:none}
+    .nav-logo span{color:var(--gold)}
+    .nav-back{color:var(--muted);text-decoration:none;font-size:0.9rem;display:flex;align-items:center;gap:8px;transition:color 0.2s}
+    .nav-back:hover{color:var(--peni2)}
+    .hero-banner{min-height:380px;background:radial-gradient(ellipse at 30% 50%,rgba(232,121,249,0.18) 0%,transparent 60%),radial-gradient(ellipse at 80% 30%,rgba(240,171,252,0.08) 0%,transparent 50%),var(--dark);display:flex;align-items:center;padding:100px 40px 60px;position:relative;overflow:hidden}
+    .hero-banner::before{content:'🕷️';position:absolute;right:80px;top:50%;transform:translateY(-50%);font-size:12rem;opacity:0.06;pointer-events:none}
+    .banner-inner{max-width:1200px;margin:0 auto;width:100%}
+    .breadcrumb{font-size:0.8rem;color:var(--muted);margin-bottom:16px}
+    .breadcrumb a{color:var(--muted);text-decoration:none}
+    .breadcrumb a:hover{color:var(--peni2)}
+    .breadcrumb span{margin:0 8px}
+    .banner-role{display:inline-block;background:rgba(232,121,249,0.1);border:1px solid rgba(232,121,249,0.4);color:var(--peni2);font-size:0.75rem;padding:3px 14px;border-radius:20px;margin-bottom:16px;letter-spacing:2px;text-transform:uppercase}
+    .banner-title{font-size:clamp(2.5rem,6vw,4.5rem);font-weight:900;line-height:1.1;margin-bottom:12px;text-shadow:0 0 40px rgba(232,121,249,0.3)}
+    .banner-title .accent{color:var(--peni2)}
+    .banner-sub{color:var(--muted);font-size:1rem;max-width:560px;line-height:1.6;margin-bottom:12px}
+    .banner-hook{color:var(--text);font-size:1rem;max-width:560px;line-height:1.6;margin-bottom:28px;font-style:italic;border-left:3px solid var(--peni);padding-left:14px}
+    .banner-tags{display:flex;gap:10px;flex-wrap:wrap}
+    .tag{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);padding:5px 14px;border-radius:20px;font-size:0.8rem;color:var(--muted)}
+    .tag.pink{border-color:rgba(232,121,249,0.4);color:var(--peni2);background:rgba(232,121,249,0.08)}
+    .tag.gold{border-color:rgba(255,214,10,0.3);color:var(--gold);background:rgba(255,214,10,0.06)}
+    .page-body{max-width:1200px;margin:0 auto;padding:60px 40px 80px;display:grid;grid-template-columns:1fr 320px;gap:40px;align-items:start}
+    .main-col{display:flex;flex-direction:column;gap:48px}
+    .side-col{display:flex;flex-direction:column;gap:24px;position:sticky;top:84px}
+    .section{background:var(--card);border:1px solid rgba(255,255,255,0.05);border-radius:12px;padding:32px;transition:border-color 0.2s}
+    .section:hover{border-color:rgba(232,121,249,0.3)}
+    .section-label{font-size:0.72rem;text-transform:uppercase;letter-spacing:3px;color:var(--peni2);margin-bottom:8px;font-weight:700}
+    h2{font-size:1.5rem;font-weight:900;margin-bottom:20px;line-height:1.2}
+    h2 span{color:var(--peni2)}
+    h3{font-size:1rem;font-weight:700;margin-bottom:8px;color:var(--text)}
+    p{color:var(--muted);line-height:1.7;font-size:0.93rem}
+    .stats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:24px}
+    .stat-box{background:var(--dark2);border-radius:8px;padding:16px;text-align:center;border:1px solid rgba(255,255,255,0.04)}
+    .stat-val{font-size:1.4rem;font-weight:900;color:var(--peni2);display:block}
+    .stat-key{font-size:0.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-top:4px;display:block}
+    .stat-desc{color:var(--muted);font-size:0.88rem;line-height:1.6}
+    .sw-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:24px}
+    .sw-col{background:var(--dark2);border-radius:8px;padding:16px}
+    .sw-col-title{font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:12px}
+    .sw-col.str .sw-col-title{color:var(--green)}
+    .sw-col.wk .sw-col-title{color:var(--red)}
+    .sw-item{display:flex;align-items:flex-start;gap:8px;padding:6px 0;font-size:0.83rem;color:var(--muted);line-height:1.5;border-bottom:1px solid rgba(255,255,255,0.04)}
+    .sw-item:last-child{border-bottom:none}
+    .sw-icon{flex-shrink:0;margin-top:1px}
+    .ability-list{display:flex;flex-direction:column;gap:16px}
+    .ability-item{background:var(--dark2);border:1px solid rgba(255,255,255,0.05);border-radius:10px;padding:20px;display:flex;gap:16px;transition:border-color 0.2s;align-items:flex-start}
+    .ability-item:hover{border-color:rgba(232,121,249,0.35)}
+    .ability-key{background:var(--peni2);color:#000;padding:4px 12px;border-radius:5px;font-size:0.78rem;font-weight:700;font-family:monospace;white-space:nowrap;flex-shrink:0;margin-top:2px;min-width:52px;text-align:center}
+    .ability-key.ult{background:var(--gold);color:#000}
+    .ability-key.passive{background:var(--peni3);color:var(--peni2);border:1px solid rgba(232,121,249,0.4)}
+    .ability-key.teamup{background:rgba(168,85,247,0.2);color:#d8b4fe;border:1px solid rgba(168,85,247,0.3)}
+    .ability-body{flex:1}
+    .ability-name{font-weight:700;font-size:1rem;margin-bottom:6px}
+    .ability-desc{color:var(--muted);font-size:0.88rem;line-height:1.65;margin-bottom:8px}
+    .ability-tip{font-size:0.82rem;color:var(--gold);padding:8px 12px;background:rgba(255,214,10,0.06);border-radius:6px;border-left:2px solid var(--gold)}
+    .ability-stats{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:8px}
+    .ability-stat-chip{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);border-radius:4px;padding:3px 9px;font-size:0.74rem;color:var(--muted)}
+    .ability-stat-chip b{color:var(--peni2)}
+    .counter-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .counter-col{background:var(--dark2);border-radius:10px;padding:20px}
+    .counter-col-title{font-size:0.78rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:14px}
+    .counter-col.good .counter-col-title{color:var(--green)}
+    .counter-col.bad .counter-col-title{color:var(--red)}
+    .counter-entry{display:flex;align-items:flex-start;gap:10px;padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.04)}
+    .counter-entry:last-child{border-bottom:none;padding-bottom:0}
+    .counter-emoji{font-size:1.3rem;flex-shrink:0;margin-top:1px}
+    .counter-name{font-weight:700;font-size:0.88rem;margin-bottom:2px}
+    .counter-reason{font-size:0.78rem;color:var(--muted);line-height:1.5}
+    .comp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .comp-card{background:var(--dark2);border-radius:10px;padding:16px;border:1px solid rgba(255,255,255,0.04);transition:border-color 0.2s;display:flex;flex-direction:column}
+    .comp-card:hover{border-color:rgba(232,121,249,0.3)}
+    .comp-role{font-size:0.72rem;text-transform:uppercase;letter-spacing:1px;font-weight:700;margin-bottom:10px}
+    .comp-role.tank{color:var(--blue)}
+    .comp-role.support{color:var(--green)}
+    .comp-role.dps{color:#fb923c}
+    .comp-hero{display:flex;align-items:flex-start;gap:8px;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04)}
+    .comp-hero:last-of-type{border-bottom:none}
+    .comp-hero-emoji{font-size:1.1rem;flex-shrink:0;margin-top:1px}
+    .comp-hero-name{font-size:0.85rem;font-weight:700}
+    .comp-hero-reason{font-size:0.75rem;color:var(--muted);line-height:1.4;margin-top:2px}
+    .comp-synergy{margin-top:12px;padding:10px 12px;background:rgba(255,255,255,0.03);border-radius:6px;border-left:2px solid var(--peni);font-size:0.78rem;color:var(--muted);line-height:1.5}
+    .comp-synergy.support{border-left-color:var(--green)}
+    .comp-synergy.dps{border-left-color:#fb923c}
+    .difficulty-table{width:100%;border-collapse:collapse;margin:20px 0 8px}
+    .difficulty-table th{font-size:0.75rem;text-transform:uppercase;letter-spacing:1px;color:var(--muted);font-weight:700;padding:8px 12px;text-align:left;border-bottom:1px solid rgba(255,255,255,0.08)}
+    .difficulty-table td{padding:10px 12px;font-size:0.85rem;border-bottom:1px solid rgba(255,255,255,0.04);vertical-align:middle}
+    .difficulty-table tr:last-child td{border-bottom:none}
+    .difficulty-table tr:hover td{background:rgba(255,255,255,0.02)}
+    .diff-badge{display:inline-block;padding:2px 10px;border-radius:20px;font-size:0.75rem;font-weight:700}
+    .diff-easy{background:rgba(74,222,128,0.12);color:var(--green)}
+    .diff-med{background:rgba(255,214,10,0.12);color:var(--gold)}
+    .diff-hard{background:rgba(251,146,60,0.12);color:#fb923c}
+    .diff-expert{background:rgba(232,121,249,0.12);color:var(--peni2)}
+    .combo-steps{list-style:none;display:flex;flex-direction:column;gap:0}
+    .combo-step{display:flex;gap:16px;padding:16px 0;border-bottom:1px solid rgba(255,255,255,0.04);align-items:flex-start}
+    .combo-step:last-child{border-bottom:none}
+    .step-num{width:32px;height:32px;min-width:32px;background:var(--peni2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:0.88rem;flex-shrink:0;color:#000}
+    .step-body{flex:1}
+    .step-title{font-weight:700;font-size:0.95rem;margin-bottom:4px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+    .key-badge{background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.18);padding:1px 9px;border-radius:4px;font-size:0.75rem;font-family:monospace}
+    .time-badge{background:rgba(74,222,128,0.1);border:1px solid rgba(74,222,128,0.25);color:var(--green);padding:1px 9px;border-radius:4px;font-size:0.72rem;font-family:monospace}
+    .step-desc{color:var(--muted);font-size:0.88rem;line-height:1.6}
+    .combo-note{background:rgba(232,121,249,0.05);border:1px solid rgba(232,121,249,0.25);border-radius:8px;padding:14px 16px;margin-top:16px;font-size:0.85rem;color:var(--text);line-height:1.6}
+    .combo-note strong{color:var(--peni2)}
+    .combo-section-divider{height:1px;background:rgba(255,255,255,0.06);margin:28px 0}
+    .faq-list{display:flex;flex-direction:column;gap:0}
+    .faq-item{border-bottom:1px solid rgba(255,255,255,0.05)}
+    .faq-item:last-child{border-bottom:none}
+    .faq-q{width:100%;background:transparent;border:none;color:var(--text);text-align:left;padding:18px 0;font-size:0.95rem;font-weight:700;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px}
+    .faq-q:hover{color:var(--peni2)}
+    .faq-arrow{color:var(--muted);font-size:0.8rem;transition:transform 0.2s;flex-shrink:0}
+    .faq-item.open .faq-arrow{transform:rotate(180deg)}
+    .faq-a{max-height:0;overflow:hidden;transition:max-height 0.35s ease}
+    .faq-item.open .faq-a{max-height:300px}
+    .faq-a p{padding-bottom:16px;font-size:0.88rem}
+    .side-card{background:var(--card);border:1px solid rgba(255,255,255,0.05);border-radius:12px;padding:24px}
+    .side-card-title{font-size:0.72rem;text-transform:uppercase;letter-spacing:2px;color:var(--peni2);font-weight:700;margin-bottom:16px}
+    .quick-tip{display:flex;gap:10px;padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.04);align-items:flex-start}
+    .quick-tip:last-child{border-bottom:none}
+    .tip-icon{font-size:1.1rem;flex-shrink:0;margin-top:1px}
+    .tip-text{font-size:0.82rem;color:var(--muted);line-height:1.5}
+    .tier-badge{display:inline-flex;align-items:center;justify-content:center;width:56px;height:56px;border-radius:12px;font-size:2rem;font-weight:900;margin-bottom:12px}
+    .tier-a{background:linear-gradient(135deg,#f0abfc,#e879f9);color:#000}
+    .rating-row{display:flex;justify-content:space-between;align-items:center;font-size:0.8rem;margin-bottom:8px}
+    .rating-row span{color:var(--muted)}
+    .dots{display:flex;gap:3px}
+    .dot{width:10px;height:10px;border-radius:2px}
+    .dot.on{background:var(--peni2)}
+    .dot.off{background:rgba(255,255,255,0.08)}
+    .teamup-pill{display:flex;align-items:center;gap:8px;background:rgba(232,121,249,0.05);border:1px solid rgba(232,121,249,0.18);border-radius:6px;padding:8px 10px;margin-bottom:8px}
+    .teamup-pill:last-child{margin-bottom:0}
+    .teamup-pill-name{font-size:0.82rem;font-weight:700;color:var(--text)}
+    .teamup-pill-sub{font-size:0.72rem;color:var(--muted)}
+    .ai-btn-side{display:block;text-align:center;padding:12px;background:rgba(232,121,249,0.05);border:1px solid rgba(232,121,249,0.25);border-radius:8px;color:var(--muted);text-decoration:none;font-size:0.85rem;transition:all 0.2s}
+    .ai-btn-side:hover{background:rgba(232,121,249,0.15);color:var(--text)}
+    footer{background:var(--dark2);border-top:1px solid var(--border);padding:40px;text-align:center;color:var(--muted);font-size:0.85rem}
+    .footer-logo{font-size:1.2rem;font-weight:900;color:#fb923c;margin-bottom:8px}
+    ::-webkit-scrollbar{width:6px}
+    ::-webkit-scrollbar-track{background:var(--dark)}
+    ::-webkit-scrollbar-thumb{background:var(--peni);border-radius:3px}
+    @media(max-width:900px){.page-body{grid-template-columns:1fr;padding:40px 20px 60px}.side-col{position:static}.counter-grid{grid-template-columns:1fr}.comp-grid{grid-template-columns:1fr 1fr}.hero-banner{padding:90px 20px 48px}nav{padding:0 20px}.sw-grid{grid-template-columns:1fr}}
+    @media(max-width:560px){.stats-grid{grid-template-columns:repeat(2,1fr)}.comp-grid{grid-template-columns:1fr}}
+  </style>
 </head>
 <body>
 
-<header>
-  <a href="/index.html">🛡️ RivalsGuide</a>
-  <span style="color:#64748b">/ Peni Parker</span>
-</header>
+<nav>
+  <a class="nav-logo" href="/">RIVALS<span>GUIDE</span></a>
+  <a class="nav-back" href="/">← Back to Home</a>
+</nav>
 
 <div class="hero-banner">
-  <div class="hero-emoji">🔷</div>
-  <h1>Peni Parker</h1>
-  <span class="role-tag">🛡️ Tank</span>
-  <p style="color:#94a3b8;margin-top:12px;max-width:600px;margin-left:auto;margin-right:auto">
-    Pilot of the SP//dr mech suit. Peni Parker is a zone-control Tank who dominates enclosed spaces with her web mines, making her one of the strongest defenders on objective-based maps. [[0]](#__0)
-  </p>
+  <div class="banner-inner">
+    <div class="breadcrumb">
+      <a href="/">Home</a><span>›</span>
+      <a href="/">Heroes</a><span>›</span>
+      <span style="color:var(--text)">Peni Parker</span>
+    </div>
+    <div class="banner-role">Tank · Vanguard</div>
+    <h1 class="banner-title"><span class="accent">Peni Parker</span><br>Complete Guide</h1>
+    <p class="banner-sub">The SP//dr pilot — who dominates objectives through cyber-web mine fields, slows and immobilizes advancing enemies with her mech's web attacks, and creates impenetrable area denial zones that force entire teams to rethink their approach.</p>
+    <p class="banner-hook">If you want a Vanguard who wins games through map control rather than raw HP — a tank who can make entire sections of the map unplayable for the enemy team while simultaneously healing herself and her allies — Peni Parker is the most unique and frustrating-to-fight Vanguard in Marvel Rivals.</p>
+    <div class="banner-tags">
+      <span class="tag pink">Tank</span>
+      <span class="tag">A-Tier</span>
+      <span class="tag">Area Denial</span>
+      <span class="tag">Mine Field</span>
+      <span class="tag">Objective Control</span>
+      <span class="tag">Self-Sustain</span>
+    </div>
+  </div>
 </div>
 
-<div class="container">
+<div class="page-body">
+  <div class="main-col">
 
-  <!-- Stats -->
-  <div class="section">
-    <h2>📊 Base Stats</h2>
-    <div class="stat-grid">
-      <div class="stat-box"><div class="val">650</div><div class="label">Health</div></div>
-      <div class="stat-box"><div class="val">Zone</div><div class="label">Damage Type</div></div>
-      <div class="stat-box"><div class="val">Medium</div><div class="label">Difficulty</div></div>
-    </div>
-    <p style="color:#94a3b8;font-size:0.85rem;margin-top:12px">
-      Peni has one of the highest health pools in the game. Her strength comes not from raw damage but from area denial — forcing enemies to fight on her terms. [[1]](#__1)
-    </p>
-  </div>
-
-  <!-- Abilities -->
-  <div class="section">
-    <h2>⚡ Abilities</h2>
-
-    <div class="ability">
-      <h3>🔷 SP//dr Fist (Primary Fire)</h3>
-      <p>
-        Fires energy blasts from the SP//dr mech at medium range. Consistent damage output that works best when enemies are slowed or caught in mines.
-        Use this to finish off enemies who are already trapped. [[1]](#__1)
-      </p>
-    </div>
-
-    <div class="ability">
-      <h3>🕸️ Arachno-Mine (Shift)</h3>
-      <p>
-        Places a web mine on a surface that detonates when enemies walk near it, dealing damage and slowing them.
-        This is Peni's core ability — mines placed in doorways, on objectives, and around corners create a deadly zone that enemies must navigate carefully. [[0]](#__0)
-      </p>
-    </div>
-
-    <div class="ability">
-      <h3>🛡️ Cyber-Web Barrier (E)</h3>
-      <p>
-        Deploys a web barrier that blocks enemy movement and projectiles for a short duration.
-        Use to cut off flanking routes, protect teammates, or block a key chokepoint during a push. [[1]](#__1)
-      </p>
-    </div>
-
-    <div class="ability">
-      <h3>🤖 SP//dr Rage (Ultimate)</h3>
-      <p>
-        Overcharges the SP//dr suit, dramatically increasing damage output and deploying multiple mines simultaneously across a wide area.
-        Best used when enemies are grouped on the objective — the mine saturation makes the area nearly impassable. [[0]](#__0)
-      </p>
-    </div>
-  </div>
-
-  <!-- Pro Tips -->
-  <div class="section">
-    <h2>💡 Pro Tips</h2>
-
-    <div class="tip-box">
-      <h3>🕸️ Mine Placement is Everything</h3>
-      <p>
-        Place Arachno-Mines at head height on doorframes and corners — enemies often don't look up and will walk straight into them.
-        Layering 2–3 mines in the same chokepoint creates a near-instant kill zone. [[0]](#__0)
-      </p>
-    </div>
-
-    <div class="tip-box">
-      <h3>📍 Own the Objective</h3>
-      <p>
-        Peni is at her strongest when she has time to set up mines around the objective before enemies arrive.
-        Rotate early, place mines, then hold position. Enemies who push in will take massive chip damage before the fight even starts. [[1]](#__1)
-      </p>
-    </div>
-
-    <div class="tip-box">
-      <h3>📏 Distance is Your Enemy's Friend</h3>
-      <p>
-        Long-range heroes like Hawkeye and Black Widow can safely destroy your mines and poke you down without ever entering your mine field.
-        When facing snipers, reposition aggressively and close the gap. [[3]](#__3)
-      </p>
-    </div>
-
-    <div class="tip-box">
-      <h3>🤖 Ultimate Combo</h3>
-      <p>
-        Activate SP//dr Rage right as enemies commit to pushing the objective. The sudden mine saturation combined with your boosted damage output can wipe an entire team in seconds.
-        Coordinate with your support to stay alive through the channel. [[2]](#__2)
-      </p>
-    </div>
-  </div>
-
-  <!-- Counters -->
-  <div class="section">
-    <h2>⚔️ Counters Peni Parker</h2>
-    <p style="color:#94a3b8;margin-bottom:16px;font-size:0.9rem">
-      The key to countering Peni is staying at distance and destroying her mines before engaging. Never fight her in enclosed spaces on her terms. [[1]](#__1)
-    </p>
-    <div class="counter-grid">
-      <div class="counter-card">
-        <div class="emoji">🏹</div>
-        <div class="name">Hawkeye</div>
-        <p style="font-size:0.75rem;color:#94a3b8;margin-top:4px">Destroys mines from long range safely</p>
+    <!-- STATS -->
+    <div class="section">
+      <div class="section-label">Overview</div>
+      <h2>Base <span>Stats</span></h2>
+      <div class="stats-grid">
+        <div class="stat-box"><span class="stat-val">650</span><span class="stat-key">Health</span></div>
+        <div class="stat-box"><span class="stat-val">50</span><span class="stat-key">Primary Damage</span></div>
+        <div class="stat-box"><span class="stat-val">6 m/s</span><span class="stat-key">Move Speed</span></div>
+        <div class="stat-box"><span class="stat-val">3</span><span class="stat-key">Max Mines</span></div>
+        <div class="stat-box"><span class="stat-val">80</span><span class="stat-key">Mine Damage</span></div>
+        <div class="stat-box"><span class="stat-val">★★☆☆☆</span><span class="stat-key">Difficulty</span></div>
       </div>
-      <div class="counter-card">
-        <div class="emoji">🕸️</div>
-        <div class="name">Black Widow</div>
-        <p style="font-size:0.75rem;color:#94a3b8;margin-top:4px">Snipes her and clears mines at distance</p>
-      </div>
-      <div class="counter-card">
-        <div class="emoji">⚡</div>
-        <div class="name">Thor</div>
-        <p style="font-size:0.75rem;color:#94a3b8;margin-top:4px">High mobility to avoid mines, out-tanks her</p>
-      </div>
-      <div class="counter-card">
-        <div class="emoji">🎵</div>
-        <div class="name">Star-Lord</div>
-        <p style="font-size:0.75rem;color:#94a3b8;margin-top:4px">Aerial mobility bypasses mine placement</p>
-      </div>
-    </div>
-    <p style="font-size:0.8rem;color:#64748b;margin-top:12px">Sources: [[0]](#__0), [[1]](#__1), [[3]](#__3)</p>
-  </div>
 
-  <!-- Synergies -->
-  <div class="section">
-    <h2>🤝 Best Team Synergies</h2>
-    <p style="color:#94a3b8;margin-bottom:16px;font-size:0.9rem">
-      Peni works best with heroes who can herd enemies into her mine fields or protect her while she sets up. [[1]](#__1)
-    </p>
-    <div class="counter-grid">
-      <div class="counter-card">
-        <div class="emoji">🔮</div>
-        <div class="name">Doctor Strange</div>
-        <p style="font-size:0.75rem;color:#94a3b8;margin-top:4px">Portals enemies directly into mine zones</p>
+      <div class="sw-grid">
+        <div class="sw-col str">
+          <div class="sw-col-title">✅ Strengths</div>
+          <div class="sw-item"><span class="sw-icon">🕸️</span>Unmatched area denial — cyber-web mine fields make entire sections of the map nearly unplayable for enemies, forcing them into predictable alternate routes</div>
+          <div class="sw-item"><span class="sw-icon">💊</span>Strong self-sustain — Arachno-Mine detonations heal Peni and nearby allies, making her one of the most self-sufficient Vanguards in the roster</div>
+          <div class="sw-item"><span class="sw-icon">🐢</span>Exceptional objective control — her mine network on a payload or capture point is extremely difficult to contest without first clearing all mines</div>
+          <div class="sw-item"><span class="sw-icon">🔒</span>Web Tangle immobilizes enemies in place — a fully immobilized target is a guaranteed kill setup for her entire team</div>
+        </div>
+        <div class="sw-col wk">
+          <div class="sw-col-title">⛔ Weaknesses</div>
+          <div class="sw-item"><span class="sw-icon">✈️</span>Extremely weak against aerial heroes — mines only trigger on ground-level contact, making Storm, Iron Man, and Human Torch almost completely immune to her area denial</div>
+          <div class="sw-item"><span class="sw-icon">📏</span>Very low mobility — no gap-closers, no escapes, no vertical movement tools; the slowest and least mobile Vanguard in the game</div>
+          <div class="sw-item"><span class="sw-icon">🔥</span>Mine fields are easily cleared — AoE abilities destroy multiple mines simultaneously, instantly removing her entire area denial setup</div>
+          <div class="sw-item"><span class="sw-icon">😤</span>Requires setup time — she contributes almost nothing in the first 10–15 seconds of a fight before her mine network is established</div>
+        </div>
       </div>
-      <div class="counter-card">
-        <div class="emoji">🌿</div>
-        <div class="name">Groot</div>
-        <p style="font-size:0.75rem;color:#94a3b8;margin-top:4px">Walls funnel enemies into mine fields</p>
-      </div>
-      <div class="counter-card">
-        <div class="emoji">🌸</div>
-        <div class="name">Mantis</div>
-        <p style="font-size:0.75rem;color:#94a3b8;margin-top:4px">Healing sustains her while she holds position</p>
-      </div>
-      <div class="counter-card">
-        <div class="emoji">🛡️</div>
-        <div class="name">Captain America</div>
-        <p style="font-size:0.75rem;color:#94a3b8;margin-top:4px">Double tank frontline is nearly unbreakable</p>
+
+      <p class="stat-desc">Peni Parker is A-Tier and one of the most uniquely powerful Vanguards in Marvel Rivals. Her 650 HP pool is among the highest in the roster, and her mine-based area denial is the single best objective control tool available to any tank. She dominates static defense scenarios — payload defense, capture point holds, and chokepoint control — but struggles significantly against aerial compositions and in open-field engagements where she cannot establish her mine network. [[1]](#__1) [[3]](#__3)</p>
+    </div>
+
+    <!-- ABILITIES -->
+    <div class="section">
+      <div class="section-label">Kit Breakdown</div>
+      <h2>Abilities <span>&amp; Skills</span></h2>
+      <div class="ability-list">
+
+        <div class="ability-item">
+          <div class="ability-key passive">PASSIVE</div>
+          <div class="ability-body">
+            <div class="ability-name">Cyber-Weave</div>
+            <div class="ability-desc">Peni Parker's SP//dr mech passively generates cyber-web material over time, which is consumed by her Arachno-Mine ability. When mines are detonated by enemies, the explosion heals Peni and nearby allies within the blast radius. This passive healing mechanic makes her uniquely self-sustaining among Vanguards — a fully established mine network essentially provides continuous area healing whenever enemies push through it. [[1]](#__1)</div>
+            <div class="ability-tip">💡 The passive healing from mine detonations is most powerful on objective points where enemies must repeatedly walk through your mine field. Each detonation heals you and nearby allies — a sustained push through a fully mined objective can heal your entire team significantly over the course of a fight. [[1]](#__1)</div>
+          </div>
+        </div>
+
+        <div class="ability-item">
+          <div class="ability-key" style="background:var(--peni2)">LMB</div>
+          <div class="ability-body">
+            <div class="ability-name">SP//dr Fist</div>
+            <div class="ability-desc">Peni's SP//dr mech delivers a powerful melee strike dealing 50 damage per hit. As a melee primary attack, it requires close range — but the SP//dr mech's 650 HP pool means she can sustain close-range engagements far longer than any other Duelist or Support. The primary attack also generates cyber-web material for mine deployment, incentivizing active combat rather than passive mine camping. [[1]](#__1) [[3]](#__3)</div>
+            <div class="ability-stats">
+              <span class="ability-stat-chip">Damage: <b>50</b></span>
+              <span class="ability-stat-chip">Type: <b>Melee</b></span>
+              <span class="ability-stat-chip">Range: <b>Close</b></span>
+            </div>
+            <div class="ability-tip">💡 Use SP//dr Fist to generate cyber-web material between mine deployments. Staying actively engaged in melee combat accelerates your mine cooldown recharge, letting you maintain a denser mine network throughout the fight. [[1]](#__1)</div>
+          </div>
+        </div>
+
+        <div class="ability-item">
+          <div class="ability-key" style="background:var(--peni2)">RMB</div>
+          <div class="ability-body">
+            <div class="ability-name">Cyber-Web Snare</div>
+            <div class="ability-desc">Peni fires a web projectile that slows any enemy it hits by 30% for 2 seconds. The slow makes it significantly harder for enemies to escape her mine field, dodge follow-up attacks, or reposition away from her team's focus fire. Against dive heroes attempting to close the gap, the 30% slow provides just enough time for her team to respond before the diver reaches the backline. [[1]](#__1) [[3]](#__3)</div>
+            <div class="ability-stats">
+              <span class="ability-stat-chip">Slow: <b>30%</b></span>
+              <span class="ability-stat-chip">Duration: <b>2s</b></span>
+              <span class="ability-stat-chip">Type: <b>Projectile</b></span>
+              <span class="ability-stat-chip">Cooldown: <b>8s</b></span>
+            </div>
+            <div class="ability-tip">💡 Use Cyber-Web Snare on enemies entering your mine field — the 30% slow forces them to spend more time inside the mine zone, dramatically increasing the chance of triggering multiple mines. A slowed enemy walking through a 3-mine field is almost guaranteed to detonate at least two of them. [[1]](#__1)</div>
+          </div>
+        </div>
+
+        <div class="ability-item">
+          <div class="ability-key" style="background:var(--peni2)">E</div>
+          <div class="ability-body">
+            <div class="ability-name">Arachno-Mine</div>
+            <div class="ability-desc">Peni deploys a cyber-web mine on any surface that detonates when an enemy comes within proximity, dealing 80 damage in an AoE and healing Peni and nearby allies. She can have up to 3 mines active simultaneously. Mines can be placed on walls, ceilings, floors, and any surface — making them extremely versatile for creating layered trap networks. Each mine has its own HP and can be destroyed by enemy AoE before detonating. [[1]](#__1) [[3]](#__3)</div>
+            <div class="ability-stats">
+              <span class="ability-stat-chip">Damage: <b>80 per mine</b></span>
+              <span class="ability-stat-chip">Max active: <b>3</b></span>
+              <span class="ability-stat-chip">Placement: <b>Any surface</b></span>
+              <span class="ability-stat-chip">Heal: <b>On detonation</b></span>
+            </div>
+            <div class="ability-tip">💡 Layer mines at different heights — one on the floor, one on a wall at waist height, one on the ceiling. Enemies clearing the floor mine with AoE often miss the wall and ceiling mines entirely. A 3-mine layered setup deals 240 damage to any enemy who triggers all three, eliminating most non-tank heroes outright. [[0]](#__0) [[1]](#__1)</div>
+          </div>
+        </div>
+
+        <div class="ability-item">
+          <div class="ability-key" style="background:var(--peni2)">SHIFT</div>
+          <div class="ability-body">
+            <div class="ability-name">Web Tangle</div>
+            <div class="ability-desc">Peni fires a web that immobilizes the first enemy it hits for 1.5 seconds, completely preventing all movement. Unlike a slow, immobilization stops all movement abilities — dive heroes cannot dash out, flying heroes are grounded, and mobile Duelists cannot use their repositioning tools. The 1.5-second window is enough for her entire team to focus fire on the immobilized target. [[1]](#__1) [[3]](#__3)</div>
+            <div class="ability-stats">
+              <span class="ability-stat-chip">Immobilize: <b>1.5s</b></span>
+              <span class="ability-stat-chip">Type: <b>Hard CC</b></span>
+              <span class="ability-stat-chip">Cooldown: <b>12s</b></span>
+            </div>
+            <div class="ability-tip">💡 Web Tangle is your highest-value ability in coordinated play — communicate with your team before using it. An immobilized target that your team immediately focuses is a guaranteed elimination. Use it on the highest-priority target: the enemy carry, the diving hero, or the support trying to escape. [[0]](#__0) [[1]](#__1)</div>
+          </div>
+        </div>
+
+        <div class="ability-item">
+          <div class="ability-key ult">Q — ULT</div>
+          <div class="ability-body">
+            <div class="ability-name">Arachno-Burst</div>
+            <div class="ability-desc">Peni activates her SP//dr mech's full power, rapidly deploying a massive web network across a large area that simultaneously detonates all active mines and deploys new ones in a wide radius. The ult creates an instant mine field covering the entire objective area, dealing massive AoE damage to all enemies caught in the detonation zone while healing Peni and all nearby allies. The combination of instant mine detonation plus new mine deployment makes it both an offensive burst and a defensive area denial tool simultaneously. [[1]](#__1) [[3]](#__3)</div>
+            <div class="ability-stats">
+              <span class="ability-stat-chip">Type: <b>AoE burst + area denial</b></span>
+              <span class="ability-stat-chip">Effect: <b>Detonates all mines</b></span>
+              <span class="ability-stat-chip">Heal: <b>Self + allies</b></span>
+            </div>
+            <div class="ability-tip">💡 Activate Arachno-Burst when enemies are grouped on the objective AND you have all 3 mines active. The simultaneous detonation of 3 mines deals 240 damage to every enemy in the zone — enough to eliminate most supports and Duelists outright. The new mine deployment immediately re-establishes area denial after the burst. [[1]](#__1) [[2]](#__2)</div>
+          </div>
+        </div>
+
+        <div class="ability-item">
+          <div class="ability-key teamup">TEAM-UP</div>
+          <div class="ability-body">
+            <div class="ability-name">Spider-Clan — with Spider-Man &amp; Venom</div>
+            <div class="ability-desc">When paired with Spider-Man and/or Venom, Peni gains access to the Spider-Clan team-up ability. This synergy enhances her web-based abilities and grants additional effects tied to the Spider-Clan network. Spider-Man's mobility complements Peni's area denial — while she locks down the objective, Spider-Man applies pressure to the enemy backline, forcing enemies to choose between contesting the objective or dealing with the flanker. [[1]](#__1) [[3]](#__3)</div>
+            <div class="ability-tip">💡 The Spider-Clan composition is uniquely effective because Peni and Spider-Man cover completely opposite playstyles — Peni is the slowest, most stationary Vanguard while Spider-Man is the fastest, most mobile Duelist. Together they force enemies to split attention between two completely different threats simultaneously. [[0]](#__0) [[1]](#__1)</div>
+          </div>
+        </div>
+
       </div>
     </div>
-  </div>
 
-  <!-- Playstyle Summary Table -->
-  <div class="section">
-    <h2>📋 Playstyle Summary</h2>
-    <table style="width:100%;border-collapse:collapse;font-size:0.9rem">
-      <thead>
-        <tr style="border-bottom:1px solid #1e293b">
-          <th style="text-align:left;padding:10px;color:#94a3b8">Aspect</th>
-          <th style="text-align:left;padding:10px;color:#94a3b8">Rating</th>
-          <th style="text-align:left;padding:10px;color:#94a3b8">Notes</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr style="border-bottom:1px solid #0f172a">
-          <td style="padding:10px">Zone Control</td>
-          <td style="padding:10px;color:#4ade80">⭐⭐⭐⭐⭐</td>
-          <td style="padding:10px;color:#94a3b8">Best mine-based area denial in game</td>
-        </tr>
-        <tr style="border-bottom:1px solid #0f172a">
-          <td style="padding:10px">Survivability</td>
-          <td style="padding:10px;color:#4ade80">⭐⭐⭐⭐⭐</td>
-          <td style="padding:10px;color:#94a3b8">Highest health pool in Tank class</td>
-        </tr>
-        <tr style="border-bottom:1px solid #0f172a">
-          <td style="padding:10px">Mobility</td>
-          <td style="padding:10px;color:#f87171">⭐⭐</td>
-          <td style="padding:10px;color:#94a3b8">Slow mech, struggles vs mobile heroes</td>
-        </tr>
-        <tr style="border-bottom:1px solid #0f172a">
-          <td style="padding:10px">Damage Output</td>
-          <td style="padding:10px;color:#fbbf24">⭐⭐⭐</td>
-          <td style="padding:10px;color:#94a3b8">Mines do the work, not primary fire</td>
-        </tr>
-        <tr>
-          <td style="padding:10px">Difficulty</td>
-          <td style="padding:10px;color:#fbbf24">⭐⭐⭐</td>
-          <td style="padding:10px;color:#94a3b8">Medium — mine placement takes practice</td>
-        </tr>
-      </tbody>
-    </table>
-    <p style="font-size:0.8rem;color:#64748b;margin-top:12px">Sources: [[0]](#__0), [[1]](#__1), [[2]](#__2)</p>
-  </div>
+    <!-- COUNTERS -->
+    <div class="section">
+      <div class="section-label">Matchup Analysis</div>
+      <h2>Counters <span>&amp; Matchups</span></h2>
+      <div class="counter-grid">
+        <div class="counter-col good">
+          <div class="counter-col-title">✅ Peni Parker Counters</div>
+          <div class="counter-entry">
+            <div class="counter-emoji">🏃</div>
+            <div>
+              <div class="counter-name">Ground-Based Dive Heroes</div>
+              <div class="counter-reason">Spider-Man and Black Panther who approach at ground level trigger mines before reaching Peni. Web Tangle immobilizes them mid-dive, completely negating their mobility advantage. [[0]](#__0) [[1]](#__1)</div>
+            </div>
+          </div>
+          <div class="counter-entry">
+            <div class="counter-emoji">🛡️</div>
+            <div>
+              <div class="counter-name">Vanguard-Heavy Compositions</div>
+              <div class="counter-reason">Slow-moving tanks walk directly into mine fields. Their large hitboxes make Cyber-Web Snare easy to land, and they cannot avoid the mine detonation zone without abandoning the objective entirely. [[1]](#__1) [[3]](#__3)</div>
+            </div>
+          </div>
+          <div class="counter-entry">
+            <div class="counter-emoji">🎯</div>
+            <div>
+              <div class="counter-name">Objective-Stacking Teams</div>
+              <div class="counter-reason">Teams that group tightly on objectives trigger multiple mines simultaneously. A 3-mine detonation on a grouped team deals 240 damage to every hero in the zone — enough to eliminate most non-tanks outright. [[0]](#__0) [[1]](#__1)</div>
+            </div>
+          </div>
+          <div class="counter-entry">
+            <div class="counter-emoji">🔫</div>
+            <div>
+              <div class="counter-name">Long-Range Stationary Heroes</div>
+              <div class="counter-reason">Heroes who want to hold static positions (Hawkeye, Hela) are forced to relocate when Peni establishes a mine field in their preferred sightline — disrupting their positioning game entirely. [[1]](#__1)</div>
+            </div>
+          </div>
+        </div>
+        <div class="counter-col bad">
+          <div class="counter-col-title">❌ Hard Counters Peni Parker</div>
+          <div class="counter-entry">
+            <div class="counter-emoji">🌪️</div>
+            <div>
+              <div class="counter-name">Aerial Heroes (Storm, Iron Man, Human Torch)</div>
+              <div class="counter-reason">Mines only trigger on ground-level contact — flying heroes are completely immune to her entire area denial kit. Against aerial compositions, Peni contributes almost nothing offensively. [[0]](#__0) [[1]](#__1)</div>
+            </div>
+          </div>
+          <div class="counter-entry">
+            <div class="counter-emoji">💥</div>
+            <div>
+              <div class="counter-name">AoE Clearers (Moon Knight, Scarlet Witch)</div>
+              <div class="counter-reason">Moon Knight's bouncing blades and Scarlet Witch's AoE abilities destroy all 3 mines simultaneously in a single cast, instantly removing Peni's entire area denial setup and putting her on cooldown. [[0]](#__0) [[2]](#__2)</div>
+            </div>
+          </div>
+          <div class="counter-entry">
+            <div class="counter-emoji">📏</div>
+            <div>
+              <div class="counter-name">Long-Range Burst (Hela, Punisher)</div>
+              <div class="counter-reason">Peni has zero mobility tools to close the gap against long-range heroes. She cannot chase, cannot escape, and her melee primary becomes useless when enemies simply stay at range and destroy her mines safely. [[1]](#__1) [[3]](#__3)</div>
+            </div>
+          </div>
+          <div class="counter-entry">
+            <div class="counter-emoji">🔄</div>
+            <div>
+              <div class="counter-name">High-Mobility Flankers (Psylocke)</div>
+              <div class="counter-reason">Psylocke's close-range burst eliminates Peni before Web Tangle can land. Her extreme mobility lets her approach from angles that bypass the mine field entirely, reaching Peni's position without triggering a single mine. [[0]](#__0)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-</div>
+    <!-- TEAM COMP -->
+    <div class="section">
+      <div class="section-label">Team Strategy</div>
+      <h2>Best Team <span>Compositions</span></h2>
+      <div class="comp-grid">
+        <div class="comp-card">
+          <div class="comp-role tank">Vanguard Partner</div>
+          <div class="comp-hero">
+            <div class="comp-hero-emoji">💚</div>
+            <div>
+              <div class="comp-hero-name">Hulk</div>
+              <div class="comp-hero-reason">Hulk's mobility and frontline presence compensates for Peni's complete lack of gap-closing — he engages while she controls the objective behind him</div>
+            </div>
+          </div>
+          <div class="comp-hero">
+            <div class="comp-hero-emoji">🕸️</div>
+            <div>
+              <div class="comp-hero-name">Venom</div>
+              <div class="comp-hero-reason">Spider-Clan team-up synergy; Venom's dive capability forces enemies to split attention between his aggression and Peni's mine field</div>
+            </div>
+          </div>
+          <div class="comp-synergy">Peni needs a mobile Vanguard partner to compensate for her zero mobility. Hulk or Venom can engage and chase enemies while Peni holds the objective with her mine network. [[1]](#__1) [[3]](#__3)</div>
+        </div>
+        <div class="comp-card">
+          <div class="comp-role support">Support</div>
+          <div class="comp-hero">
+            <div class="comp-hero-emoji">🦝</div>
+            <div>
+              <div class="comp-hero-name">Rocket Raccoon</div>
+              <div class="comp-hero-reason">Damage boost amplifies mine detonation damage; healing sustains Peni through sustained pushes when mine healing alone isn't enough</div>
+            </div>
+          </div>
+          <div class="comp-hero">
+            <div class="comp-hero-emoji">🌸</div>
+            <div>
+              <div class="comp-hero-name">Mantis</div>
+              <div class="comp-hero-reason">Sleep ability combos perfectly with Web Tangle — a sleeping enemy hit by Web Tangle is guaranteed dead before either effect expires</div>
+            </div>
+          </div>
+          <div class="comp-synergy support">Rocket's damage boost turns Peni's 80-damage mines into 96+ damage mines — a full 3-mine detonation with Rocket boost deals nearly 290 damage, eliminating every non-tank hero in the game. [[1]](#__1) [[2]](#__2)</div>
+        </div>
+        <div class="comp-card">
+          <div class="comp-role dps">DPS Partner</div>
+          <div class="comp-hero">
+            <div class="comp-hero-emoji">🕷️</div>
+            <div>
+              <div class="comp-hero-name">Spider-Man</div>
+              <div class="comp-hero-reason">Spider-Clan team-up; his backline pressure forces enemies to choose between contesting Peni's objective or dealing with his flanks</div>
+            </div>
+          </div>
+          <div class="comp-hero">
+            <div class="comp-hero-emoji">💀</div>
+            <div>
+              <div class="comp-hero-name">Hela</div>
+              <div class="comp-hero-reason">Long-range hitscan covers Peni's complete inability to deal with aerial heroes — Hela handles Storm and Iron Man while Peni controls the ground</div>
+            </div>
+          </div>
+          <div class="comp-synergy dps">Hela is Peni's best DPS partner — she covers every aerial hero that Peni's mine network cannot touch, while Peni's ground control forces enemies into Hela's long-range headshot angles. [[0]](#__0) [[1]](#__1)</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- COMBOS -->
+    <div class="section">
+      <div class="section-label">Advanced Techniques</div>
+      <h2>Combo <span>Guide</span></h2>
+      <p style="margin-bottom:8px;font-size:0.88rem;">Choose your starting point based on your current skill level:</p>
+      <table class="difficulty-table">
+        <thead>
+          <tr><th>Technique</th><th>Difficulty</th><th>Best For</th></tr>
+        </thead>
+        <tbody>
+          <tr><td style="font-weight:700">Mine Network Setup</td><td><span class="diff-badge diff-easy">⭐ Easy</span></td><td style="color:var(--muted)">New Peni Parker players</td></tr>
+          <tr><td style="font-weight:700">Snare + Mine Funnel</td><td><span class="diff-badge diff-med">⭐⭐ Medium</span></td><td style="color:var(--muted)">Players with mine placement down</td></tr>
+          <tr><td style="font-weight:700">Web Tangle Kill Setup</td><td><span class="diff-badge diff-hard">⭐⭐⭐ Hard</span></td><td style="color:var(--muted)">Players ready for ranked carry</td></tr>
+          <tr><td style="font-weight:700">Arachno-Burst Team Wipe</td><td><span class="diff-badge diff-expert">⭐⭐⭐⭐⭐ Expert</span></td><td style="color:var(--muted)">Coordinated / competitive play</td></tr>
+        </tbody>
+      </table>
+
+      <div class="combo-section-divider"></div>
+      <h3 style="margin-bottom:16px;color:var(--gold)">Mine Network Setup</h3>
+      <ul class="combo-steps">
+        <li class="combo-step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <div class="step-title">Arrive at the objective 5–8 seconds before the fight begins <span class="time-badge">pre-fight</span></div>
+            <div class="step-desc">Peni needs setup time — arriving early to establish her mine network is the single most important habit to develop. A fully mined objective before the enemy team arrives is dramatically more effective than deploying mines reactively during the fight. [[1]](#__1)</div>
+          </div>
+        </li>
+        <li class="combo-step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <div class="step-title">Deploy first mine at the primary approach angle <span class="key-badge">E</span> <span class="time-badge">0.0s</span></div>
+            <div class="step-desc">Place the first mine at the most likely enemy approach route — the main entrance to the objective, the chokepoint, or the doorway. This mine will trigger first and deal the initial 80 damage to the lead enemy. [[1]](#__1) [[3]](#__3)</div>
+          </div>
+        </li>
+        <li class="combo-step">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <div class="step-title">Deploy second and third mines at different heights on walls <span class="key-badge">E × 2</span></div>
+            <div class="step-desc">Place the remaining two mines on walls at waist and head height rather than the floor. Enemies who clear the floor mine with AoE will miss the wall mines entirely. Three mines at different heights covering the same approach route deal 240 damage to any enemy who triggers all three. [[0]](#__0) [[1]](#__1)</div>
+          </div>
+        </li>
+        <li class="combo-step">
+          <div class="step-num">4</div>
+          <div class="step-body">
+            <div class="step-title">Immediately redeploy destroyed mines to new positions <span class="key-badge">E</span></div>
+            <div class="step-desc">When enemies destroy your mines with AoE, never place replacements in the same positions. Move to a different wall, a different height, or a secondary approach route. Enemies who just cleared your mine field will look in the same locations for replacements. [[0]](#__0) [[1]](#__1)</div>
+          </div>
+        </li>
+      </ul>
+      <div class="combo-note"><strong>Pro tip:</strong> The mine network is most effective when enemies cannot see all three mines from a single vantage point. If an enemy can spot and destroy all 3 mines without moving, your placement is too obvious. The ideal setup forces enemies to clear mines one at a time from different positions — giving you time to redeploy between each clear. [[0]](#__0) [[1]](#__1)</div>
+
+      <div class="combo-section-divider"></div>
+      <h3 style="margin-bottom:16px;color:var(--gold)">Snare + Mine Funnel</h3>
+      <ul class="combo-steps">
+        <li class="combo-step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <div class="step-title">Establish a dense mine field at the objective chokepoint <span class="key-badge">E × 3</span> <span class="time-badge">pre-fight</span></div>
+            <div class="step-desc">The Snare + Mine Funnel combo requires a pre-established mine field to be effective. Deploy all 3 mines at the chokepoint before the enemy team arrives — the combo only works if mines are already in place when you land the snare. [[1]](#__1)</div>
+          </div>
+        </li>
+        <li class="combo-step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <div class="step-title">Hit the lead enemy with Cyber-Web Snare as they approach <span class="key-badge">RMB</span> <span class="time-badge">0.0s</span></div>
+            <div class="step-desc">Fire Cyber-Web Snare at the first enemy entering the chokepoint. The 30% slow forces them to spend significantly more time inside the mine zone — a slowed enemy walking through a 3-mine field is almost guaranteed to trigger all three mines before the slow expires. [[1]](#__1) [[3]](#__3)</div>
+          </div>
+        </li>
+        <li class="combo-step">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <div class="step-title">Follow up with SP//dr Fist melee while they're slowed <span class="key-badge">LMB</span></div>
+            <div class="step-desc">While the enemy is slowed inside the mine field, close the gap and add SP//dr Fist melee damage. The combined mine detonations plus melee hits while slowed creates a burst window that most non-tank heroes cannot survive. [[1]](#__1)</div>
+          </div>
+        </li>
+        <li class="combo-step">
+          <div class="step-num">4</div>
+          <div class="step-body">
+            <div class="step-title">Immediately redeploy mines to maintain the field <span class="key-badge">E</span></div>
+            <div class="step-desc">After the slowed enemy triggers your mines, immediately redeploy replacements before the next enemy enters the chokepoint. The goal is to maintain a continuously active mine field — never let the chokepoint go unguarded for more than a few seconds. [[1]](#__1) [[3]](#__3)</div>
+          </div>
+        </li>
+      </ul>
+      <div class="combo-note"><strong>Why it works:</strong> Cyber-Web Snare transforms Peni's static mine field into an active kill zone. Without the slow, mobile enemies can sometimes sprint through the mine field quickly enough to only trigger one or two mines. The 30% slow ensures they spend enough time in the zone to trigger all three — turning a 80–160 damage encounter into a guaranteed 240 damage hit. [[0]](#__0) [[1]](#__1)</div>
+
+      <div class="combo-section-divider"></div>
+      <h3 style="margin-bottom:16px;color:var(--gold)">Web Tangle Kill Setup</h3>
+      <ul class="combo-steps">
+        <li class="combo-step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <div class="step-title">Identify the highest-priority enemy target <span class="time-badge">pre-engage</span></div>
+            <div class="step-desc">Web Tangle's 1.5-second immobilize is your highest-value CC ability — save it for the enemy carry, the diving hero, or the support trying to escape. Using it on a Vanguard wastes the CC on a target your team cannot burst down in 1.5 seconds. [[1]](#__1)</div>
+          </div>
+        </li>
+        <li class="combo-step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <div class="step-title">Communicate the Web Tangle target to your team <span class="time-badge">0.5s before</span></div>
+            <div class="step-desc">Call out "Web Tangle on [target]" before activating. The 1.5-second window is only enough to secure a kill if your entire team immediately focuses the immobilized target — an uncoordinated Web Tangle wastes the CC entirely. [[0]](#__0) [[1]](#__1)</div>
+          </div>
+        </li>
+        <li class="combo-step">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <div class="step-title">Land Web Tangle on the priority target <span class="key-badge">SHIFT</span> <span class="time-badge">0.0s</span></div>
+            <div class="step-desc">Fire Web Tangle directly at the priority target. The immobilize stops all movement — dive heroes cannot dash out, flying heroes are grounded, mobile Duelists cannot use repositioning tools. The target is completely stationary for 1.5 seconds. [[1]](#__1) [[3]](#__3)</div>
+          </div>
+        </li>
+        <li class="combo-step">
+          <div class="step-num">4</div>
+          <div class="step-body">
+            <div class="step-title">Immediately follow with SP//dr Fist + mine detonation <span class="key-badge">LMB + E</span></div>
+            <div class="step-desc">While the target is immobilized, deploy a mine directly on their position and immediately melee them. The mine detonates instantly on contact, dealing 80 damage while your team focuses fire. A Web Tangle into mine + melee + team focus fire eliminates most heroes before the 1.5 seconds expires. [[0]](#__0) [[1]](#__1)</div>
+          </div>
+        </li>
+      </ul>
+      <div class="combo-note"><strong>Why it works:</strong> Web Tangle's hard immobilize is uniquely powerful because it stops movement abilities — not just movement speed. Spider-Man cannot web-swing out, Black Panther cannot dash, Psylocke cannot blink. The 1.5-second window where a mobile hero is completely stationary is enough for coordinated team focus fire to eliminate any target in the game. [[0]](#__0) [[1]](#__1) [[2]](#__2)</div>
+
+      <div class="combo-section-divider"></div>
+      <h3 style="margin-bottom:4px;color:var(--peni2)">Arachno-Burst Team Wipe <span class="diff-badge diff-expert" style="font-size:0.72rem;vertical-align:middle">Expert</span></h3>
+      <p style="font-size:0.83rem;margin-bottom:16px;">Maximizing Arachno-Burst damage by pre-loading all 3 mines before activation for a simultaneous 240-damage detonation.</p>
+      <ul class="combo-steps">
+        <li class="combo-step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <div class="step-title">Confirm all 3 mines are active on the objective before activating ult <span class="time-badge">pre-ult</span></div>
+            <div class="step-desc">Arachno-Burst detonates all active mines simultaneously — if you have 0 or 1 mines active when you ult, the damage output is dramatically reduced. Always wait until all 3 mines are deployed before activating. [[1]](#__1)</div>
+          </div>
+        </li>
+        <li class="combo-step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <div class="step-title">Wait for enemies to group on the objective <span class="time-badge">timing</span></div>
+            <div class="step-desc">The ult's AoE detonation hits every enemy in the mine zone simultaneously. Wait for the enemy team to commit to contesting the objective — a full team grouped on the point triggers all 3 mines for 240 damage to every hero in the zone. [[1]](#__1) [[3]](#__3)</div>
+          </div>
+        </li>
+        <li class="combo-step">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <div class="step-title">Activate Arachno-Burst at peak enemy grouping <span class="key-badge">Q</span> <span class="time-badge">0.0s</span></div>
+            <div class="step-desc">Activate the ult the moment the maximum number of enemies are inside the mine zone. The simultaneous detonation of all 3 mines deals 240 damage to every enemy in the zone — eliminating most supports and Duelists outright and severely chipping Vanguards. [[1]](#__1)</div>
+          </div>
+        </li>
+        <li class="combo-step">
+          <div class="step-num">4</div>
+          <div class="step-body">
+            <div class="step-title">Immediately Web Tangle the lowest HP survivor <span class="key-badge">SHIFT</span></div>
+            <div class="step-desc">After the burst, identify the lowest HP enemy who survived. Immediately Web Tangle them — they're at critically low HP and immobilized, making them a guaranteed elimination for your team's follow-up. The new mine deployment from the ult re-establishes area denial simultaneously. [[0]](#__0) [[1]](#__1)</div>
+          </div>
+        </li>
+      </ul>
+      <div class="combo-note"><strong>Why it works:</strong> Arachno-Burst's simultaneous mine detonation is Peni's highest single-rotation damage output. Three mines detonating at once deal 240 damage to every enemy in the zone — no other Vanguard ultimate deals this much damage to grouped enemies. The immediate Web Tangle follow-up converts the burst into a guaranteed elimination, and the new mine deployment means the objective is instantly re-fortified after the wipe.</div>
+    </div>
+
+    <!-- FAQ -->
+    <div class="section">
+      <div class="section-label">Common Questions</div>
+      <h2>FAQ</h2>
+      <div class="faq-list">
+
+        <div class="faq-item open">
+          <button class="faq-q" onclick="toggleFaq(this)">Is Peni Parker good for beginners? <span class="faq-arrow">▼</span></button>
+          <div class="faq-a"><p>Peni Parker is one of the most beginner-friendly Vanguards in the roster. Her 650 HP pool is forgiving of positioning mistakes, her mine placement is intuitive, and her kit does not require precise aim — Cyber-Web Snare and Web Tangle are both relatively easy to land against ground-level enemies. The main learning curve is mine placement creativity and knowing when to use Web Tangle for maximum team impact.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">How do I deal with aerial heroes as Peni Parker? <span class="faq-arrow">▼</span></button>
+          <div class="faq-a"><p>You largely cannot — aerial heroes are Peni's hardest counter and there is no clean solution within her kit. Mines only trigger on ground contact, so Storm, Iron Man, and Human Torch are completely immune to her area denial. The best approach is to pair with a teammate who covers aerial targets (Hela is ideal), or switch to a different Vanguard when the enemy team is running a primarily aerial composition.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">How do I stop enemies from destroying my mines? <span class="faq-arrow">▼</span></button>
+          <div class="faq-a"><p>Layer mines at different heights — floor, wall, and ceiling. AoE abilities that clear floor mines often miss wall and ceiling mines entirely. Place mines out of enemy line of sight when possible, and vary placement every time mines are destroyed. Enemies who clear your mines in the same location repeatedly will stop looking for them in new positions. The goal is to make mine clearing cost more time and resources than it's worth.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">When should I use Web Tangle? <span class="faq-arrow">▼</span></button>
+          <div class="faq-a"><p>Save it for the highest-priority target and coordinate with your team before using it. The 1.5-second immobilize is only valuable if your team immediately focuses the immobilized target — an uncoordinated Web Tangle wastes the CC entirely. Best targets: the enemy carry Duelist, a diving hero mid-approach, or a support trying to escape. Never use it on a Vanguard — your team cannot burst a tank down in 1.5 seconds.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">What's the best counter to Peni Parker? <span class="faq-arrow">▼</span></button>
+          <div class="faq-a"><p>Aerial heroes completely bypass her mine network — Storm, Iron Man, and Human Torch are her hardest counters. AoE clearers like Moon Knight destroy all 3 mines simultaneously in a single cast. Long-range heroes like Hela and Punisher destroy mines safely from outside her melee range while she has no tools to close the gap. The universal counter tip: always destroy her mines immediately when you see them — never walk through an uncleared Peni mine field.</p></div>
+        </div>
+
+      </div>
+    </div>
+
+  </div><!-- end main-col -->
+
+  <!-- SIDEBAR -->
+  <div class="side-col">
+    <div class="side-card">
+      <div class="side-card-title">Tier Rating</div>
+      <div class="tier-badge tier-a">A</div>
+      <p style="font-size:0.85rem;color:var(--muted);line-height:1.6">Peni Parker is A-Tier with the best objective control of any Vanguard in the game. Her mine-based area denial dominates static defense scenarios and her self-sustain through mine detonation healing makes her extremely difficult to remove from a well-fortified objective.</p>
+    </div>
+
+    <div class="side-card">
+      <div class="side-card-title">Role Ratings</div>
+      <div class="rating-row"><span>Ease of Use</span><div class="dots"><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot off"></div></div></div>
+      <div class="rating-row"><span>Damage Output</span><div class="dots"><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot off"></div><div class="dot off"></div></div></div>
+      <div class="rating-row"><span>Area Control</span><div class="dots"><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div></div></div>
+      <div class="rating-row"><span>Survivability</span><div class="dots"><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot off"></div></div></div>
+      <div class="rating-row"><span>Ult Impact</span><div class="dots"><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot off"></div></div></div>
+    </div>
+
+    <div class="side-card">
+      <div class="side-card-title">Team-Up Heroes</div>
+      <div class="teamup-pill">
+        <span style="font-size:1.1rem">🕷️</span>
+        <div>
+          <div class="teamup-pill-name">Spider-Man</div>
+          <div class="teamup-pill-sub">Spider-Clan team-up — backline pressure while Peni holds the objective</div>
+        </div>
+      </div>
+      <div class="teamup-pill">
+        <span style="font-size:1.1rem">🕸️</span>
+        <div>
+          <div class="teamup-pill-name">Venom</div>
+          <div class="teamup-pill-sub">Spider-Clan team-up — dive capability forces enemy attention split</div>
+        </div>
+      </div>
+      <div class="teamup-pill">
+        <span style="font-size:1.1rem">💀</span>
+        <div>
+          <div class="teamup-pill-name">Hela</div>
+          <div class="teamup-pill-sub">Covers all aerial heroes that Peni's mine network cannot touch</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-card">
+      <div class="side-card-title">Quick Tips</div>
+      <div class="quick-tip"><div class="tip-icon">🕸️</div><div class="tip-text">Layer mines at different heights — floor, wall, and ceiling. AoE that clears floor mines often misses wall mines entirely.</div></div>
+      <div class="quick-tip"><div class="tip-icon">⏰</div><div class="tip-text">Arrive at objectives 5–8 seconds early to establish your mine network before the fight begins.</div></div>
+      <div class="quick-tip"><div class="tip-icon">🔒</div><div class="tip-text">Save Web Tangle for the enemy carry — always communicate with your team before using it for coordinated focus fire.</div></div>
+      <div class="quick-tip"><div class="tip-icon">💥</div><div class="tip-text">Never activate Arachno-Burst without all 3 mines active. The simultaneous detonation is the entire value of the ultimate.</div></div>
+      <div class="quick-tip"><div class="tip-icon">🔄</div><div class="tip-text">Vary mine placement every time they're destroyed. Never replace mines in the same positions enemies just cleared.</div></div>
+    </div>
+
+    <a class="ai-btn-side" href="/">← Back to All Heroes</a>
+  </div><!-- end side-col -->
+
+</div><!-- end page-body -->
 
 <footer>
-  <p>© 2025 RivalsGuide.site — Fan site, not affiliated with Marvel or NetEase Games.</p>
+  <div class="footer-logo">RIVALS<span style="color:var(--gold)">GUIDE</span></div>
+  <p>Fan-made guide site · Not affiliated with Marvel or NetEase Games</p>
+  <p style="margin-top:8px">© 2025 RivalsGuide.site · All rights reserved</p>
 </footer>
+
+<script>
+  function toggleFaq(btn){
+    const item=btn.closest('.faq-item');
+    item.classList.toggle('open');
+  }
+</script>
 </body>
 </html>
