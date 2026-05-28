@@ -622,7 +622,7 @@ async function askAI(){
   result.classList.add('show');
   resultText.innerHTML='<span class="loading-dots">Generating strategy</span>';
   try{
-    const res=await fetch('https://rivalsguide.kkhggffg.workers.dev/guide',{
+    const res=await fetch('https://rivals-ai.larrylpgaekle7091.workers.dev',{
       method:'POST',headers:{'Content-Type':'application/json'},
       body:JSON.stringify({hero,question}),
     });
