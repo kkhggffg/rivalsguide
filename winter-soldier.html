@@ -1,133 +1,705 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Winter Soldier Guide – Marvel Rivals | RivalsGuide</title>
-<meta name="description" content="Complete Winter Soldier guide for Marvel Rivals. Stats, abilities, counters, team comps, and combos for Bucky Barnes."/>
-<link rel="canonical" href="https://rivalsguide.site/winter-soldier.html"/>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-D4EJPR83TH"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-D4EJPR83TH');</script>
-<style>
-  :root{--red:#e63946;--gold:#ffd60a;--dark:#0d0d0d;--dark2:#111;--card:#1a1a1a;--border:rgba(255,255,255,0.12);--muted:#888;--text:#f0f0f0}
-  *{margin:0;padding:0;box-sizing:border-box}
-  body{background:var(--dark);color:var(--text);font-family:'Segoe UI',sans-serif;line-height:1.7}
-  a{color:var(--red);text-decoration:none} a:hover{text-decoration:underline}
-  header{background:var(--dark2);border-bottom:1px solid var(--border);padding:16px 40px}
-  header .back{color:var(--muted);font-size:0.9rem} header .back:hover{color:var(--text)}
-  .hero-banner{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);padding:60px 40px;text-align:center;border-bottom:2px solid var(--red)}
-  .hero-banner .emoji{font-size:5rem;display:block;margin-bottom:16px}
-  .hero-banner h1{font-size:2.8rem;font-weight:900;letter-spacing:2px;text-transform:uppercase}
-  .hero-banner .subtitle{color:var(--muted);font-size:1rem;margin-top:8px}
-  .tag{display:inline-block;padding:4px 14px;border-radius:20px;font-size:0.8rem;font-weight:700;margin:4px}
-  .tag-dps{background:rgba(230,57,70,0.2);color:#f87171;border:1px solid rgba(230,57,70,0.3)}
-  .tag-tier{background:rgba(255,214,10,0.2);color:var(--gold);border:1px solid rgba(255,214,10,0.3)}
-  .container{max-width:900px;margin:0 auto;padding:40px}
-  .section{margin-bottom:48px}
-  .section h2{font-size:1.4rem;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:var(--red);border-left:4px solid var(--red);padding-left:12px;margin-bottom:20px}
-  .section h3{font-size:1rem;font-weight:700;color:var(--gold);margin:16px 0 8px}
-  .stats-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px}
-  .stat-card{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:16px;text-align:center}
-  .stat-card .val{font-size:1.6rem;font-weight:900;color:var(--gold)}
-  .stat-card .label{font-size:0.75rem;color:var(--muted);margin-top:4px}
-  .ability-list{display:flex;flex-direction:column;gap:12px}
-  .ability{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:16px}
-  .ability .name{font-weight:700;color:var(--gold);margin-bottom:6px}
-  .ability .key{display:inline-block;background:rgba(255,255,255,0.1);border-radius:4px;padding:1px 8px;font-size:0.75rem;margin-right:8px;font-family:monospace}
-  table{width:100%;border-collapse:collapse;font-size:0.9rem}
-  th{background:rgba(230,57,70,0.15);color:var(--red);padding:10px 14px;text-align:left;font-size:0.8rem;text-transform:uppercase;letter-spacing:0.5px}
-  td{padding:10px 14px;border-bottom:1px solid rgba(255,255,255,0.05)}
-  tr:hover td{background:rgba(255,255,255,0.03)}
-  .combo-step{display:flex;align-items:flex-start;gap:12px;margin-bottom:12px}
-  .step-num{background:var(--red);color:#fff;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.8rem;font-weight:700;flex-shrink:0;margin-top:2px}
-  .faq-item{border-bottom:1px solid var(--border);padding:16px 0}
-  .faq-item .q{font-weight:700;color:var(--gold);margin-bottom:6px}
-  footer{background:var(--dark2);border-top:1px solid var(--border);padding:24px 40px;text-align:center;color:var(--muted);font-size:0.85rem}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Winter Soldier Guide – Abilities, Combos & Counters | RivalsGuide</title>
+  <meta name="description" content="Complete Winter Soldier guide for Marvel Rivals. Learn his abilities, Bionic Hook combos, Kraken Impact resets, counters, and pro tips to master Bucky Barnes.">
+  <meta property="og:title" content="Winter Soldier Guide – Marvel Rivals | RivalsGuide">
+  <meta property="og:description" content="Master Winter Soldier in Marvel Rivals with our in-depth guide covering abilities, combos, counters, and team comps.">
+  <meta property="og:url" content="https://rivalsguide.site/winter-soldier.html">
+  <meta property="og:type" content="article">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-D4EJPR83TH"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-D4EJPR83TH');</script>
+  <style>
+    :root{--blue:#3b82f6;--blue-glow:#60a5fa;--steel:#94a3b8;--gold:#ffd60a;--dark:#0a0a0f;--dark2:#12121a;--dark3:#1a1a2e;--card:#16213e;--text:#e0e0e0;--muted:#888;--border:rgba(59,130,246,0.35);--green:#4ade80;--red:#f87171;--orange:#fb923c;--purple:#a855f7}
+    *{margin:0;padding:0;box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{background:var(--dark);color:var(--text);font-family:'Segoe UI',sans-serif;overflow-x:hidden}
+    nav{position:fixed;top:0;width:100%;z-index:999;background:rgba(10,10,15,0.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);padding:0 40px;display:flex;align-items:center;justify-content:space-between;height:64px}
+    .nav-logo{font-size:1.3rem;font-weight:900;color:var(--blue-glow);letter-spacing:1px;text-decoration:none}
+    .nav-logo span{color:var(--gold)}
+    .nav-back{color:var(--muted);text-decoration:none;font-size:0.9rem;display:flex;align-items:center;gap:8px;transition:color 0.2s}
+    .nav-back:hover{color:var(--blue-glow)}
+    .hero-banner{min-height:380px;background:radial-gradient(ellipse at 30% 50%,rgba(59,130,246,0.2) 0%,transparent 60%),radial-gradient(ellipse at 80% 30%,rgba(96,165,250,0.08) 0%,transparent 50%),var(--dark);display:flex;align-items:center;padding:100px 40px 60px;position:relative;overflow:hidden}
+    .hero-banner::before{content:'🦾';position:absolute;right:80px;top:50%;transform:translateY(-50%);font-size:12rem;opacity:0.06;pointer-events:none}
+    .banner-inner{max-width:1200px;margin:0 auto;width:100%}
+    .breadcrumb{font-size:0.8rem;color:var(--muted);margin-bottom:16px}
+    .breadcrumb a{color:var(--muted);text-decoration:none}
+    .breadcrumb a:hover{color:var(--blue-glow)}
+    .breadcrumb span{margin:0 8px}
+    .banner-role{display:inline-block;background:rgba(59,130,246,0.15);border:1px solid var(--border);color:var(--blue-glow);font-size:0.75rem;padding:3px 14px;border-radius:20px;margin-bottom:16px;letter-spacing:2px;text-transform:uppercase}
+    .banner-title{font-size:clamp(2.5rem,6vw,4.5rem);font-weight:900;line-height:1.1;margin-bottom:12px;text-shadow:0 0 40px rgba(59,130,246,0.35)}
+    .banner-title .accent{color:var(--blue-glow)}
+    .banner-sub{color:var(--muted);font-size:1rem;max-width:560px;line-height:1.6;margin-bottom:12px}
+    .banner-hook{color:var(--text);font-size:1rem;max-width:560px;line-height:1.6;margin-bottom:28px;font-style:italic;border-left:3px solid var(--blue-glow);padding-left:14px}
+    .banner-tags{display:flex;gap:10px;flex-wrap:wrap}
+    .tag{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);padding:5px 14px;border-radius:20px;font-size:0.8rem;color:var(--muted)}
+    .tag.blue{border-color:var(--border);color:var(--blue-glow);background:rgba(59,130,246,0.08)}
+    .tag.gold{border-color:rgba(255,214,10,0.3);color:var(--gold);background:rgba(255,214,10,0.06)}
+    .page-body{max-width:1200px;margin:0 auto;padding:60px 40px 80px;display:grid;grid-template-columns:1fr 320px;gap:40px;align-items:start}
+    .main-col{display:flex;flex-direction:column;gap:48px}
+    .side-col{display:flex;flex-direction:column;gap:24px;position:sticky;top:84px}
+    .section{background:var(--card);border:1px solid rgba(255,255,255,0.05);border-radius:12px;padding:32px;transition:border-color 0.2s}
+    .section:hover{border-color:var(--border)}
+    .section-label{font-size:0.72rem;text-transform:uppercase;letter-spacing:3px;color:var(--blue-glow);margin-bottom:8px;font-weight:700}
+    h2{font-size:1.5rem;font-weight:900;margin-bottom:20px;line-height:1.2}
+    h2 span{color:var(--blue-glow)}
+    h3{font-size:1rem;font-weight:700;margin-bottom:8px;color:var(--text)}
+    p{color:var(--muted);line-height:1.7;font-size:0.93rem}
+    .stats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:24px}
+    .stat-box{background:var(--dark2);border-radius:8px;padding:16px;text-align:center;border:1px solid rgba(255,255,255,0.04)}
+    .stat-val{font-size:1.4rem;font-weight:900;color:var(--blue-glow);display:block}
+    .stat-key{font-size:0.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-top:4px;display:block}
+    .stat-desc{color:var(--muted);font-size:0.88rem;line-height:1.6}
+    /* STRENGTHS / WEAKNESSES */
+    .sw-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:24px}
+    .sw-col{background:var(--dark2);border-radius:8px;padding:16px}
+    .sw-col-title{font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:12px}
+    .sw-col.str .sw-col-title{color:var(--green)}
+    .sw-col.wk .sw-col-title{color:var(--red)}
+    .sw-item{display:flex;align-items:flex-start;gap:8px;padding:6px 0;font-size:0.83rem;color:var(--muted);line-height:1.5;border-bottom:1px solid rgba(255,255,255,0.04)}
+    .sw-item:last-child{border-bottom:none}
+    .sw-icon{flex-shrink:0;margin-top:1px}
+    /* ABILITIES */
+    .ability-list{display:flex;flex-direction:column;gap:16px}
+    .ability-item{background:var(--dark2);border:1px solid rgba(255,255,255,0.05);border-radius:10px;padding:20px;display:flex;gap:16px;transition:border-color 0.2s;align-items:flex-start}
+    .ability-item:hover{border-color:var(--border)}
+    .ability-key{background:var(--blue);color:#fff;padding:4px 12px;border-radius:5px;font-size:0.78rem;font-weight:700;font-family:monospace;white-space:nowrap;flex-shrink:0;margin-top:2px;min-width:52px;text-align:center}
+    .ability-key.ult{background:var(--gold);color:#000}
+    .ability-key.passive{background:rgba(96,165,250,0.2);color:var(--blue-glow);border:1px solid rgba(96,165,250,0.35)}
+    .ability-key.teamup{background:rgba(168,85,247,0.2);color:var(--purple);border:1px solid rgba(168,85,247,0.3)}
+    .ability-body{flex:1}
+    .ability-name{font-weight:700;font-size:1rem;margin-bottom:6px}
+    .ability-desc{color:var(--muted);font-size:0.88rem;line-height:1.65;margin-bottom:8px}
+    .ability-tip{font-size:0.82rem;color:var(--gold);padding:8px 12px;background:rgba(255,214,10,0.06);border-radius:6px;border-left:2px solid var(--gold)}
+    .ability-stats{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:8px}
+    .ability-stat-chip{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);border-radius:4px;padding:3px 9px;font-size:0.74rem;color:var(--muted)}
+    .ability-stat-chip b{color:var(--gold)}
+    /* COUNTERS */
+    .counter-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .counter-col{background:var(--dark2);border-radius:10px;padding:20px}
+    .counter-col-title{font-size:0.78rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:14px}
+    .counter-col.good .counter-col-title{color:var(--green)}
+    .counter-col.bad .counter-col-title{color:var(--red)}
+    .counter-entry{display:flex;align-items:flex-start;gap:10px;padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.04)}
+    .counter-entry:last-child{border-bottom:none;padding-bottom:0}
+    .counter-emoji{font-size:1.3rem;flex-shrink:0;margin-top:1px}
+    .counter-name{font-weight:700;font-size:0.88rem;margin-bottom:2px}
+    .counter-reason{font-size:0.78rem;color:var(--muted);line-height:1.5}
+    /* TEAM COMP */
+    .comp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .comp-card{background:var(--dark2);border-radius:10px;padding:16px;border:1px solid rgba(255,255,255,0.04);transition:border-color 0.2s;display:flex;flex-direction:column}
+    .comp-card:hover{border-color:var(--border)}
+    .comp-role{font-size:0.72rem;text-transform:uppercase;letter-spacing:1px;font-weight:700;margin-bottom:10px}
+    .comp-role.tank{color:var(--blue-glow)}
+    .comp-role.support{color:var(--green)}
+    .comp-role.dps{color:var(--orange)}
+    .comp-hero{display:flex;align-items:flex-start;gap:8px;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04)}
+    .comp-hero:last-of-type{border-bottom:none}
+    .comp-hero-emoji{font-size:1.1rem;flex-shrink:0;margin-top:1px}
+    .comp-hero-name{font-size:0.85rem;font-weight:700}
+    .comp-hero-reason{font-size:0.75rem;color:var(--muted);line-height:1.4;margin-top:2px}
+    .comp-synergy{margin-top:12px;padding:10px 12px;background:rgba(255,255,255,0.03);border-radius:6px;border-left:2px solid var(--blue-glow);font-size:0.78rem;color:var(--muted);line-height:1.5}
+    .comp-synergy.support{border-left-color:var(--green)}
+    .comp-synergy.dps{border-left-color:var(--orange)}
+    /* COMBOS */
+    .difficulty-table{width:100%;border-collapse:collapse;margin:20px 0 8px}
+    .difficulty-table th{font-size:0.75rem;text-transform:uppercase;letter-spacing:1px;color:var(--muted);font-weight:700;padding:8px 12px;text-align:left;border-bottom:1px solid rgba(255,255,255,0.08)}
+    .difficulty-table td{padding:10px 12px;font-size:0.85rem;border-bottom:1px solid rgba(255,255,255,0.04);vertical-align:middle}
+    .difficulty-table tr:last-child td{border-bottom:none}
+    .difficulty-table tr:hover td{background:rgba(255,255,255,0.02)}
+    .diff-badge{display:inline-block;padding:2px 10px;border-radius:20px;font-size:0.75rem;font-weight:700}
+    .diff-easy{background:rgba(74,222,128,0.12);color:var(--green)}
+    .diff-med{background:rgba(255,214,10,0.12);color:var(--gold)}
+    .diff-hard{background:rgba(251,146,60,0.12);color:var(--orange)}
+    .diff-expert{background:rgba(96,165,250,0.12);color:var(--blue-glow)}
+    .combo-steps{list-style:none;display:flex;flex-direction:column;gap:0}
+    .combo-step{display:flex;gap:16px;padding:16px 0;border-bottom:1px solid rgba(255,255,255,0.04);align-items:flex-start}
+    .combo-step:last-child{border-bottom:none}
+    .step-num{width:32px;height:32px;min-width:32px;background:var(--blue);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:0.88rem;flex-shrink:0}
+    .step-body{flex:1}
+    .step-title{font-weight:700;font-size:0.95rem;margin-bottom:4px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+    .key-badge{background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.18);padding:1px 9px;border-radius:4px;font-size:0.75rem;font-family:monospace}
+    .time-badge{background:rgba(74,222,128,0.1);border:1px solid rgba(74,222,128,0.25);color:var(--green);padding:1px 9px;border-radius:4px;font-size:0.72rem;font-family:monospace}
+    .step-desc{color:var(--muted);font-size:0.88rem;line-height:1.6}
+    .combo-note{background:rgba(59,130,246,0.07);border:1px solid var(--border);border-radius:8px;padding:14px 16px;margin-top:16px;font-size:0.85rem;color:var(--text);line-height:1.6}
+    .combo-note strong{color:var(--blue-glow)}
+    .combo-section-divider{height:1px;background:rgba(255,255,255,0.06);margin:28px 0}
+    /* FAQ */
+    .faq-list{display:flex;flex-direction:column;gap:0}
+    .faq-item{border-bottom:1px solid rgba(255,255,255,0.05)}
+    .faq-item:last-child{border-bottom:none}
+    .faq-q{width:100%;background:transparent;border:none;color:var(--text);text-align:left;padding:18px 0;font-size:0.95rem;font-weight:700;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px}
+    .faq-q:hover{color:var(--blue-glow)}
+    .faq-arrow{color:var(--muted);font-size:0.8rem;transition:transform 0.2s;flex-shrink:0}
+    .faq-item.open .faq-arrow{transform:rotate(180deg)}
+    .faq-a{max-height:0;overflow:hidden;transition:max-height 0.35s ease}
+    .faq-item.open .faq-a{max-height:300px}
+    .faq-a p{padding-bottom:16px;font-size:0.88rem}
+    /* SIDEBAR */
+    .side-card{background:var(--card);border:1px solid rgba(255,255,255,0.05);border-radius:12px;padding:24px}
+    .side-card-title{font-size:0.72rem;text-transform:uppercase;letter-spacing:2px;color:var(--blue-glow);font-weight:700;margin-bottom:16px}
+    .quick-tip{display:flex;gap:10px;padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.04);align-items:flex-start}
+    .quick-tip:last-child{border-bottom:none}
+    .tip-icon{font-size:1.1rem;flex-shrink:0;margin-top:1px}
+    .tip-text{font-size:0.82rem;color:var(--muted);line-height:1.5}
+    .tier-badge{display:inline-flex;align-items:center;justify-content:center;width:56px;height:56px;border-radius:12px;font-size:2rem;font-weight:900;margin-bottom:12px}
+    .tier-a{background:linear-gradient(135deg,var(--blue),var(--blue-glow));color:#fff}
+    .rating-row{display:flex;justify-content:space-between;align-items:center;font-size:0.8rem;margin-bottom:8px}
+    .rating-row span{color:var(--muted)}
+    .dots{display:flex;gap:3px}
+    .dot{width:10px;height:10px;border-radius:2px}
+    .dot.on{background:var(--blue-glow)}
+    .dot.off{background:rgba(255,255,255,0.08)}
+    .teamup-pill{display:flex;align-items:center;gap:8px;background:rgba(168,85,247,0.06);border:1px solid rgba(168,85,247,0.18);border-radius:6px;padding:8px 10px;margin-bottom:8px}
+    .teamup-pill:last-child{margin-bottom:0}
+    .teamup-pill-name{font-size:0.82rem;font-weight:700;color:var(--text)}
+    .teamup-pill-sub{font-size:0.72rem;color:var(--muted)}
+    .ai-btn-side{display:block;text-align:center;padding:12px;background:rgba(59,130,246,0.08);border:1px solid var(--border);border-radius:8px;color:var(--muted);text-decoration:none;font-size:0.85rem;transition:all 0.2s}
+    .ai-btn-side:hover{background:rgba(59,130,246,0.18);color:var(--text)}
+    footer{background:var(--dark2);border-top:1px solid var(--border);padding:40px;text-align:center;color:var(--muted);font-size:0.85rem}
+    .footer-logo{font-size:1.2rem;font-weight:900;color:var(--blue-glow);margin-bottom:8px}
+    ::-webkit-scrollbar{width:6px}
+    ::-webkit-scrollbar-track{background:var(--dark)}
+    ::-webkit-scrollbar-thumb{background:var(--blue);border-radius:3px}
+    @media(max-width:900px){.page-body{grid-template-columns:1fr;padding:40px 20px 60px}.side-col{position:static}.counter-grid{grid-template-columns:1fr}.comp-grid{grid-template-columns:1fr 1fr}.hero-banner{padding:90px 20px 48px}nav{padding:0 20px}.sw-grid{grid-template-columns:1fr}}
+    @media(max-width:560px){.stats-grid{grid-template-columns:repeat(2,1fr)}.comp-grid{grid-template-columns:1fr}}
+  </style>
 </head>
 <body>
-<header><a class="back" href="/">← Back to RivalsGuide</a></header>
+
+<nav>
+  <a class="nav-logo" href="/">RIVALS<span>GUIDE</span></a>
+  <a class="nav-back" href="/">← Back to Home</a>
+</nav>
+
 <div class="hero-banner">
-  <span class="emoji">🦾</span>
-  <h1>Winter Soldier</h1>
-  <p class="subtitle">Bucky Barnes · HYDRA's Most Dangerous Asset</p>
-  <div style="margin-top:12px">
-    <span class="tag tag-dps">DPS</span>
-    <span class="tag tag-tier">A-Tier</span>
-  </div>
-</div>
-<div class="container">
-  <div class="section">
-    <h2>📊 Base Stats</h2>
-    <div class="stats-grid">
-      <div class="stat-card"><div class="val">300</div><div class="label">Health</div></div>
-      <div class="stat-card"><div class="val">70</div><div class="label">Damage (per hit)</div></div>
-      <div class="stat-card"><div class="val">20m</div><div class="label">Range</div></div>
-      <div class="stat-card"><div class="val">Very Fast</div><div class="label">Mobility</div></div>
-      <div class="stat-card"><div class="val">High</div><div class="label">Burst Potential</div></div>
+  <div class="banner-inner">
+    <div class="breadcrumb">
+      <a href="/">Home</a><span>›</span>
+      <a href="/">Heroes</a><span>›</span>
+      <span style="color:var(--text)">Winter Soldier</span>
+    </div>
+    <div class="banner-role">DPS · Duelist</div>
+    <h1 class="banner-title"><span class="accent">Winter Soldier</span><br>Complete Guide</h1>
+    <p class="banner-sub">Bucky Barnes — the bionic-armed assassin who pulls enemies out of position, chains ultimate resets, and deletes backlines before they can react.</p>
+    <p class="banner-hook">If you want a Duelist who can one-trick from Bronze to GM with explosive burst, team-wiping ultimates, and the single best displacement ability in the game — Winter Soldier is your answer.</p>
+    <div class="banner-tags">
+      <span class="tag blue">DPS</span>
+      <span class="tag gold">A-Tier</span>
+      <span class="tag">Bionic Hook</span>
+      <span class="tag">Ult Reset</span>
+      <span class="tag">Enemy Displacement</span>
     </div>
   </div>
-  <div class="section">
-    <h2>⚡ Abilities</h2>
-    <div class="ability-list">
-      <div class="ability"><div class="name"><span class="key">LMB</span>Bionic Strike</div><p>Fast 3-hit melee combo with the cybernetic arm. Each hit applies a stacking vulnerability debuff, increasing subsequent damage by 5%.</p></div>
-      <div class="ability"><div class="name"><span class="key">RMB</span>Pistol Burst</div><p>Fires a 3-round burst from his sidearm. Effective at close-to-mid range for mixed melee/ranged pressure.</p></div>
-      <div class="ability"><div class="name"><span class="key">SHIFT</span>Grapple Dash</div><p>Fires a grapple hook to dash rapidly to a target location. Can be used mid-air. Core engage and escape tool.</p></div>
-      <div class="ability"><div class="name"><span class="key">E</span>Arm Slam</div><p>Slams the bionic arm into the ground, creating a shockwave that knocks up nearby enemies for 0.8s.</p></div>
-      <div class="ability"><div class="name"><span class="key">Q</span>Assassinate (Ultimate)</div><p>Dashes to a target enemy and delivers a devastating combo strike, dealing massive single-target damage. Resets on kill.</p></div>
-    </div>
-  </div>
-  <div class="section">
-    <h2>🔴 Counters & Matchups</h2>
-    <h3>Hard Counters (Avoid These)</h3>
-    <table>
-      <thead><tr><th>Hero</th><th>Why It's Dangerous</th></tr></thead>
-      <tbody>
-        <tr><td>Captain America</td><td>Block & Counter completely negates Winter Soldier's melee combo</td></tr>
-        <tr><td>Hulk</td><td>High HP pool and CC abilities punish Winter Soldier's close-range playstyle</td></tr>
-        <tr><td>Scarlet Witch</td><td>Fear prevents Winter Soldier from executing his combo</td></tr>
-      </tbody>
-    </table>
-    <h3 style="margin-top:20px">Soft Counters (Manageable)</h3>
-    <table>
-      <thead><tr><th>Hero</th><th>How to Handle</th></tr></thead>
-      <tbody>
-        <tr><td>Thor</td><td>Dodge Thunder Charge with Grapple Dash, then punish the cooldown</td></tr>
-        <tr><td>Iron Man</td><td>Use Grapple Dash to close distance quickly before he can reposition</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <div class="section">
-    <h2>🤝 Best Team Compositions</h2>
-    <table>
-      <thead><tr><th>Role</th><th>Recommended Hero</th><th>Reason</th></tr></thead>
-      <tbody>
-        <tr><td>Tank</td><td>Thanos</td><td>Thanos's Reality Warp pulls enemies together for Winter Soldier to dive</td></tr>
-        <tr><td>Support</td><td>Loki</td><td>Clone distractions let Winter Soldier pick off isolated targets safely</td></tr>
-        <tr><td>DPS Partner</td><td>Spider-Man</td><td>Both are dive assassins — double dive overwhelms any backline</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <div class="section">
-    <h2>🎯 Combo Guide</h2>
-    <h3>Standard Assassination Combo</h3>
-    <div class="combo-step"><div class="step-num">1</div><div>Use <strong>Grapple Dash</strong> to close distance on the priority target</div></div>
-    <div class="combo-step"><div class="step-num">2</div><div>Immediately land <strong>Arm Slam</strong> to knock them up and interrupt abilities</div></div>
-    <div class="combo-step"><div class="step-num">3</div><div>Follow with full <strong>Bionic Strike</strong> combo (3 hits) to stack vulnerability</div></div>
-    <div class="combo-step"><div class="step-num">4</div><div>Mix in <strong>Pistol Burst</strong> between melee hits for extra damage</div></div>
-    <div class="combo-step"><div class="step-num">5</div><div>If target survives, use <strong>Assassinate</strong> ultimate to finish and reset for the next target</div></div>
-    <h3>Chain Kill Combo</h3>
-    <div class="combo-step"><div class="step-num">1</div><div>Activate <strong>Assassinate</strong> on a low-HP target to secure the kill</div></div>
-    <div class="combo-step"><div class="step-num">2</div><div>On reset, immediately <strong>Grapple Dash</strong> to the next target</div></div>
-    <div class="combo-step"><div class="step-num">3</div><div>Repeat — chain kills can wipe an entire backline in seconds</div></div>
-  </div>
-  <div class="section">
-    <h2>❓ FAQ</h2>
-    <div class="faq-item"><div class="q">Is Winter Soldier good for beginners?</div><p>Moderate — his kit is straightforward but timing the Arm Slam knockup into the full combo requires practice.</p></div>
-    <div class="faq-item"><div class="q">When should I use Assassinate?</div><p>Use it to finish targets below 40% HP to guarantee a kill and reset the cooldown for chain kills.</p></div>
-    <div class="faq-item"><div class="q">How do I deal with tanks?</div><p>Don't — Winter Soldier is a backline assassin. Focus on supports and DPS, let your tank handle the enemy tanks.</p></div>
-  </div>
 </div>
-<footer>© 2025 RivalsGuide.site · Fan-made guide · Not affiliated with Marvel or NetEase</footer>
-</body>
-</html>
+
+<div class="page-body">
+  <div class="main-col">
+
+    <!-- STATS -->
+    <div class="section">
+      <div class="section-label">Overview</div>
+      <h2>Base <span>Stats</span></h2>
+      <div class="stats-grid">
+        <div class="stat-box"><span class="stat-val">250</span><span class="stat-key">Health</span></div>
+        <div class="stat-box"><span class="stat-val">High</span><span class="stat-key">Burst</span></div>
+        <div class="stat-box"><span class="stat-val">Medium</span><span class="stat-key">Range</span></div>
+        <div class="stat-box"><span class="stat-val">Low</span><span class="stat-key">Mobility</span></div>
+        <div class="stat-box"><span class="stat-val">★★★☆☆</span><span class="stat-key">Difficulty</span></div>
+        <div class="stat-box"><span class="stat-val">∞</span><span class="stat-key">Ult Resets</span></div>
+      </div>
+
+      <!-- STRENGTHS / WEAKNESSES -->
+      <div class="sw-grid">
+        <div class="sw-col str">
+          <div class="sw-col-title">✅ Strengths</div>
+          <div class="sw-item"><span class="sw-icon">💥</span>High burst AND consistent damage — rare combination</div>
+          <div class="sw-item"><span class="sw-icon">🪝</span>Bionic Hook is one of the best abilities in the entire game</div>
+          <div class="sw-item"><span class="sw-icon">🔄</span>Ultimate reset potential — can wipe entire teams alone</div>
+          <div class="sw-item"><span class="sw-icon">🎯</span>Passive reload on every ability use — never caught empty</div>
+        </div>
+        <div class="sw-col wk">
+          <div class="sw-col-title">⛔ Weaknesses</div>
+          <div class="sw-item"><span class="sw-icon">🐢</span>Poor mobility — Trooper's Fist covers a very short distance</div>
+          <div class="sw-item"><span class="sw-icon">🛡</span>Needs strong Vanguard frontline to function properly</div>
+          <div class="sw-item"><span class="sw-icon">⚠️</span>Always in danger — 250 HP with no real escape tool</div>
+          <div class="sw-item"><span class="sw-icon">🎯</span>Reliance on ability accuracy — missed Hook is a death sentence</div>
+        </div>
+      </div>
+
+      <p class="stat-desc">Winter Soldier is a medium-range Duelist who excels at both burst and sustained damage — a combination most heroes can't offer. His passive reload mechanic means every ability use also refreshes his gun, so spreading cooldowns correctly keeps him firing constantly. The threat of Bionic Hook alone forces enemies to rethink how they position, making him one of the highest-impact Duelists in the roster even before a single shot is fired.</p>
+    </div>
+
+    <!-- ABILITIES -->
+    <div class="section">
+      <div class="section-label">Kit Breakdown</div>
+      <h2>Abilities <span>&amp; Skills</span></h2>
+      <div class="ability-list">
+
+        <div class="ability-item">
+          <div class="ability-key passive">PASSIVE</div>
+          <div class="ability-body">
+            <div class="ability-name">Tainted Voltage</div>
+            <div class="ability-desc">Every ability use — Bionic Hook, Trooper's Fist, or Cyro-Grenade — automatically reloads Winter Soldier's Roterstern pistol. This passive is the engine of his entire kit. It means he should never be caught with an empty gun if he manages his cooldowns correctly.</div>
+            <div class="ability-tip">💡 Spread your ability uses across the fight rather than dumping them all at once. Each one is a free reload — staggering them means you're almost always firing a full magazine.</div>
+          </div>
+        </div>
+
+        <div class="ability-item">
+          <div class="ability-key">LMB</div>
+          <div class="ability-body">
+            <div class="ability-name">Roterstern</div>
+            <div class="ability-desc">Fires explosive rounds from his bionic arm blaster. Each shot deals damage to the primary target and splashes to enemies within 5 meters behind them. Three-round magazine with a fast fire rate. The splash damage is not a bonus — it's a core part of his kit that punishes grouped enemies.</div>
+            <div class="ability-stats">
+              <span class="ability-stat-chip">Magazine: <b>3 rounds</b></span>
+              <span class="ability-stat-chip">Splash radius: <b>5m behind target</b></span>
+              <span class="ability-stat-chip">Type: <b>explosive projectile</b></span>
+            </div>
+            <div class="ability-tip">💡 Never stand directly behind an ally being shot at — his splash damage hits teammates too. Enemies should avoid clustering for the same reason.</div>
+          </div>
+        </div>
+
+        <div class="ability-item">
+          <div class="ability-key">SHIFT</div>
+          <div class="ability-body">
+            <div class="ability-name">Bionic Hook</div>
+            <div class="ability-desc">Charges up and launches a hook from his bionic arm, reeling in the first target hit plus any enemies lurking directly behind them. The pulled targets land right in front of Winter Soldier — perfectly positioned for a follow-up combo. This is the most impactful ability in his kit and one of the best displacement tools in all of Marvel Rivals.</div>
+            <div class="ability-stats">
+              <span class="ability-stat-chip">Type: <b>charge + projectile</b></span>
+              <span class="ability-stat-chip">Pull: <b>primary + enemies behind</b></span>
+              <span class="ability-stat-chip">Triggers: <b>passive reload</b></span>
+            </div>
+            <div class="ability-tip">💡 After landing Hook, immediately turn and uppercut with Trooper's Fist to launch the pulled enemy into your team. The combo is nearly a guaranteed kill on any Duelist or Strategist.</div>
+          </div>
+        </div>
+
+        <div class="ability-item">
+          <div class="ability-key">E</div>
+          <div class="ability-body">
+            <div class="ability-name">Trooper's Fist</div>
+            <div class="ability-desc">Dashes forward a short distance and delivers a powerful bionic uppercut, launching the target upward. Primary use is as a follow-up to Bionic Hook — the uppercut sends the pulled enemy airborne, giving your team an easy target. Also triggers the passive reload. Despite being labeled a mobility tool, the dash distance is very short.</div>
+            <div class="ability-stats">
+              <span class="ability-stat-chip">Type: <b>dash + melee</b></span>
+              <span class="ability-stat-chip">Effect: <b>launches target upward</b></span>
+              <span class="ability-stat-chip">Triggers: <b>passive reload</b></span>
+            </div>
+            <div class="ability-tip">💡 Don't rely on this as an escape tool — the distance is too short. Its only reliable use is as a follow-up to Hook or as a melee finisher on low-HP targets.</div>
+          </div>
+        </div>
+
+        <div class="ability-item">
+          <div class="ability-key">F</div>
+          <div class="ability-body">
+            <div class="ability-name">Cyro-Grenade</div>
+            <div class="ability-desc">Throws a cryo grenade that slows and briefly immobilizes enemies in its blast radius. Provides a third trigger for the passive reload. Best used to zone enemies away from cover, slow a fleeing target, or set up a Bionic Hook on a group of clustered enemies.</div>
+            <div class="ability-stats">
+              <span class="ability-stat-chip">Type: <b>AoE projectile</b></span>
+              <span class="ability-stat-chip">Effect: <b>slow + immobilize</b></span>
+              <span class="ability-stat-chip">Triggers: <b>passive reload</b></span>
+            </div>
+            <div class="ability-tip">💡 Throw it at the feet of a fleeing support to slow them before launching Bionic Hook. The slow makes the hook almost impossible to dodge.</div>
+          </div>
+        </div>
+
+        <div class="ability-item">
+          <div class="ability-key ult">Q — ULT</div>
+          <div class="ability-body">
+            <div class="ability-name">Kraken Impact</div>
+            <div class="ability-desc">Winter Soldier leaps high into the air, then dashes forward and slams down with his bionic arm, dealing heavy damage to all enemies in range and marking them for culling. Any marked enemy whose HP drops below a threshold is instantly eliminated — and each kill recharges the bionic arm for another Kraken Impact within a short window. Chain kills correctly and this ultimate never ends.</div>
+            <div class="ability-stats">
+              <span class="ability-stat-chip">Type: <b>leap + slam AoE</b></span>
+              <span class="ability-stat-chip">Mark: <b>execute below threshold</b></span>
+              <span class="ability-stat-chip">Reset: <b>each kill = new charge</b></span>
+            </div>
+            <div class="ability-tip">💡 Don't activate Kraken Impact into a full-health team — combo it with Thor's or Venom's ult first to chunk everyone down, then slam in for the execute chain. The 8-second reset window is long — take your time picking the next target.</div>
+          </div>
+        </div>
+
+        <div class="ability-item">
+          <div class="ability-key teamup">TEAM-UP</div>
+          <div class="ability-body">
+            <div class="ability-name">Supersoldier Tactics — with Captain America</div>
+            <div class="ability-desc">When paired with Captain America, Winter Soldier gains enhanced combat synergy — Cap's shield throw can set up perfect Bionic Hook angles, and the two supersoldiers' coordinated aggression creates a dual frontline threat that is extremely difficult for enemies to manage simultaneously.</div>
+            <div class="ability-tip">💡 Cap charges in and draws attention; Winter Soldier hooks the distracted support from the side. The enemy team is forced to split focus between two high-pressure threats at once.</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- COUNTERS -->
+    <div class="section">
+      <div class="section-label">Matchup Analysis</div>
+      <h2>Counters <span>&amp; Matchups</span></h2>
+      <div class="counter-grid">
+        <div class="counter-col good">
+          <div class="counter-col-title">✅ Winter Soldier Counters</div>
+          <div class="counter-entry">
+            <div class="counter-emoji">🌸</div>
+            <div>
+              <div class="counter-name">Mantis</div>
+              <div class="counter-reason">Low HP support with no escape. Hook pulls her directly into kill range — instant elimination.</div>
+            </div>
+          </div>
+          <div class="counter-entry">
+            <div class="counter-emoji">🃏</div>
+            <div>
+              <div class="counter-name">Loki</div>
+              <div class="counter-reason">Clones don't fool Bionic Hook — it pulls the real target. His displacement ignores Loki's trickery.</div>
+            </div>
+          </div>
+          <div class="counter-entry">
+            <div class="counter-emoji">🥇</div>
+            <div>
+              <div class="counter-name">Iron Man</div>
+              <div class="counter-reason">Roterstern splash punishes his hovering. Hook pulls him out of the sky mid-ability.</div>
+            </div>
+          </div>
+          <div class="counter-entry">
+            <div class="counter-emoji">🟢</div>
+            <div>
+              <div class="counter-name">Grouped Enemies (General)</div>
+              <div class="counter-reason">Roterstern's 5m splash and Kraken Impact's AoE punish any team that clusters together.</div>
+            </div>
+          </div>
+        </div>
+        <div class="counter-col bad">
+          <div class="counter-col-title">❌ Hard Counters Winter Soldier</div>
+          <div class="counter-entry">
+            <div class="counter-emoji">🕷</div>
+            <div>
+              <div class="counter-name">Spider-Man</div>
+              <div class="counter-reason">Extreme mobility makes Hook almost impossible to land. Spider-Man dives and escapes before Bucky can respond.</div>
+            </div>
+          </div>
+          <div class="counter-entry">
+            <div class="counter-emoji">⚡</div>
+            <div>
+              <div class="counter-name">Thor</div>
+              <div class="counter-reason">High HP absorbs Bucky's burst. Storm Dash closes distance instantly and punishes his low mobility.</div>
+            </div>
+          </div>
+          <div class="counter-entry">
+            <div class="counter-emoji">🐺</div>
+            <div>
+              <div class="counter-name">Wolverine</div>
+              <div class="counter-reason">Regeneration outlasts Winter Soldier's burst. Melee dive bypasses his medium-range kit entirely.</div>
+            </div>
+          </div>
+          <div class="counter-entry">
+            <div class="counter-emoji">🔴</div>
+            <div>
+              <div class="counter-name">Scarlet Witch</div>
+              <div class="counter-reason">AoE chaos magic punishes Bucky's need to stay at close-medium range with no escape option.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TEAM COMP -->
+    <div class="section">
+      <div class="section-label">Team Strategy</div>
+      <h2>Best Team <span>Compositions</span></h2>
+      <div class="comp-grid">
+        <div class="comp-card">
+          <div class="comp-role tank">Vanguard</div>
+          <div class="comp-hero">
+            <div class="comp-hero-emoji">🛡</div>
+            <div>
+              <div class="comp-hero-name">Captain America</div>
+              <div class="comp-hero-reason">Team-up synergy; Cap charges in while Bucky hooks from the side</div>
+            </div>
+          </div>
+          <div class="comp-hero">
+            <div class="comp-hero-emoji">💚</div>
+            <div>
+              <div class="comp-hero-name">Hulk</div>
+              <div class="comp-hero-reason">Absorbs all frontline aggro so Bucky can freely hook backline targets</div>
+            </div>
+          </div>
+          <div class="comp-synergy">Cap and Hulk create a two-tank frontline that forces enemies to commit — Winter Soldier hooks anyone who peeks out of position.</div>
+        </div>
+        <div class="comp-card">
+          <div class="comp-role support">Support</div>
+          <div class="comp-hero">
+            <div class="comp-hero-emoji">🌸</div>
+            <div>
+              <div class="comp-hero-name">Mantis</div>
+              <div class="comp-hero-reason">Damage amp turns Kraken Impact into a guaranteed team-wipe execute chain</div>
+            </div>
+          </div>
+          <div class="comp-hero">
+            <div class="comp-hero-emoji">🔮</div>
+            <div>
+              <div class="comp-hero-name">Luna Snow</div>
+              <div class="comp-hero-reason">Sustained healing keeps Bucky alive during his close-range engagements</div>
+            </div>
+          </div>
+          <div class="comp-synergy support">Mantis's damage amp on a full Kraken Impact chain is one of the most devastating ultimate combinations in the game — enemies simply can't survive it.</div>
+        </div>
+        <div class="comp-card">
+          <div class="comp-role dps">DPS Partner</div>
+          <div class="comp-hero">
+            <div class="comp-hero-emoji">⚡</div>
+            <div>
+              <div class="comp-hero-name">Thor</div>
+              <div class="comp-hero-reason">Thor's ult chunks enemies; Bucky's Kraken Impact executes the survivors instantly</div>
+            </div>
+          </div>
+          <div class="comp-hero">
+            <div class="comp-hero-emoji">🕸</div>
+            <div>
+              <div class="comp-hero-name">Venom</div>
+              <div class="comp-hero-reason">Venom ult damages without killing — perfect setup for Bucky's execute threshold</div>
+            </div>
+          </div>
+          <div class="comp-synergy dps">Thor or Venom ult → Kraken Impact is the most reliable execute combo in the game. Both abilities damage without eliminating, leaving enemies in Bucky's execute threshold.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- COMBOS -->
+    <div class="section">
+      <div class="section-label">Advanced Techniques</div>
+      <h2>Combo <span>Guide</span></h2>
+
+      <p style="margin-bottom:8px;font-size:0.88rem;">Choose your starting point based on your current skill level:</p>
+      <table class="difficulty-table">
+        <thead>
+          <tr>
+            <th>Combo</th>
+            <th>Difficulty</th>
+            <th>Best For</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="font-weight:700">Hook → Uppercut Combo</td>
+            <td><span class="diff-badge diff-easy">⭐ Easy</span></td>
+            <td style="color:var(--muted)">New Winter Soldier players</td>
+          </tr>
+          <tr>
+            <td style="font-weight:700">Cryo Slow → Hook Confirm</td>
+            <td><span class="diff-badge diff-med">⭐⭐ Medium</span></td>
+            <td style="color:var(--muted)">Players with Hook timing down</td>
+          </tr>
+          <tr>
+            <td style="font-weight:700">Kraken Impact Execute Chain</td>
+            <td><span class="diff-badge diff-hard">⭐⭐⭐ Hard</span></td>
+            <td style="color:var(--muted)">Players ready for ranked carry</td>
+          </tr>
+          <tr>
+            <td style="font-weight:700">Passive Reload Weave</td>
+            <td><span class="diff-badge diff-expert">⭐⭐⭐⭐⭐ Expert</span></td>
+            <td style="color:var(--muted)">High-rank / competitive play</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="combo-section-divider"></div>
+      <h3 style="margin-bottom:16px;color:var(--gold)">Hook → Uppercut Combo</h3>
+      <ul class="combo-steps">
+        <li class="combo-step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <div class="step-title">Identify an isolated target <span class="time-badge">pre-engage</span></div>
+            <div class="step-desc">Look for a support or Duelist separated from their tank. Never Hook into a clustered group — you'll pull multiple enemies and get overwhelmed.</div>
+          </div>
+        </li>
+        <li class="combo-step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <div class="step-title">Launch Bionic Hook <span class="key-badge">SHIFT</span> <span class="time-badge">0.0s</span></div>
+            <div class="step-desc">Charge briefly for better accuracy, then release. The hook pulls the target directly in front of you — and anyone standing behind them.</div>
+          </div>
+        </li>
+        <li class="combo-step">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <div class="step-title">Immediately Trooper's Fist <span class="key-badge">E</span> <span class="time-badge">~0.3s</span></div>
+            <div class="step-desc">The moment the target lands in front of you, uppercut them into the air. This launches them toward your team and triggers your passive reload simultaneously.</div>
+          </div>
+        </li>
+        <li class="combo-step">
+          <div class="step-num">4</div>
+          <div class="step-body">
+            <div class="step-title">Burst with Roterstern <span class="key-badge">LMB</span> <span class="time-badge">0.3–1.5s</span></div>
+            <div class="step-desc">Unload your freshly reloaded magazine into the airborne target. Three explosive rounds into a Duelist or Strategist is almost always a kill.</div>
+          </div>
+        </li>
+      </ul>
+      <div class="combo-note"><strong>Pro tip:</strong> After the uppercut, turn slightly toward your team before firing — the launched enemy is flying toward them, and your splash damage will hit them from behind for bonus damage.</div>
+
+      <div class="combo-section-divider"></div>
+      <h3 style="margin-bottom:16px;color:var(--gold)">Cryo Slow → Hook Confirm</h3>
+      <ul class="combo-steps">
+        <li class="combo-step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <div class="step-title">Throw Cyro-Grenade at target's feet <span class="key-badge">F</span> <span class="time-badge">0.0s</span></div>
+            <div class="step-desc">Aim at the ground directly under a mobile target — supports or Duelists who would normally dodge your Hook. The slow makes them nearly stationary.</div>
+          </div>
+        </li>
+        <li class="combo-step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <div class="step-title">Launch Bionic Hook into the slow <span class="key-badge">SHIFT</span> <span class="time-badge">~0.5s</span></div>
+            <div class="step-desc">The slowed target cannot dodge. This is a near-guaranteed Hook hit on any hero in the game, including high-mobility targets like Spider-Man.</div>
+          </div>
+        </li>
+        <li class="combo-step">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <div class="step-title">Uppercut → burst as normal <span class="key-badge">E</span> → <span class="key-badge">LMB</span></div>
+            <div class="step-desc">Complete the standard Hook → Uppercut → burst sequence. Two passive reloads triggered in quick succession means you have a full magazine for the burst.</div>
+          </div>
+        </li>
+      </ul>
+      <div class="combo-note"><strong>Why it works:</strong> Bionic Hook's only real weakness is that mobile heroes can sidestep it. Cyro-Grenade removes that weakness entirely — the slow window is long enough to land the Hook at any reasonable range.</div>
+
+      <div class="combo-section-divider"></div>
+      <h3 style="margin-bottom:4px;color:var(--blue-glow)">Kraken Impact Execute Chain <span class="diff-badge diff-hard" style="font-size:0.72rem;vertical-align:middle">Hard</span></h3>
+      <p style="font-size:0.83rem;margin-bottom:16px;">Combine Kraken Impact with a teammate's chunking ultimate to chain-execute the entire enemy team within the reset window.</p>
+      <ul class="combo-steps">
+        <li class="combo-step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <div class="step-title">Wait for Thor or Venom to pop their ult first</div>
+            <div class="step-desc">Thor's Lightning Strike and Venom's ult deal massive damage without eliminating. This is the setup — enemies are chunked to low HP but still alive.</div>
+          </div>
+        </li>
+        <li class="combo-step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <div class="step-title">Activate Kraken Impact <span class="key-badge">Q</span></div>
+            <div class="step-desc">Leap up and slam into the largest cluster of chunked enemies. The execute threshold activates on anyone below the HP mark — multiple kills trigger immediately.</div>
+          </div>
+        </li>
+        <li class="combo-step">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <div class="step-title">Take 8 seconds to select your next target carefully</div>
+            <div class="step-desc">The reset window is 8 full seconds — much longer than it feels. Don't panic-activate the next charge. Look for the lowest-HP enemy and dive precisely.</div>
+          </div>
+        </li>
+        <li class="combo-step">
+          <div class="step-num">4</div>
+          <div class="step-body">
+            <div class="step-title">Chain until the team is wiped or the window expires</div>
+            <div class="step-desc">Each kill resets the charge. A clean execution on a 5-player team is entirely possible — and it happens regularly at high rank.</div>
+          </div>
+        </li>
+      </ul>
+      <div class="combo-note"><strong>Why it works:</strong> Most players activate Kraken Impact too early into full-HP enemies and get zero resets. The combo only works when enemies are already chunked. Patience before activation is the entire skill expression of this technique.</div>
+
+      <div class="combo-section-divider"></div>
+      <h3 style="margin-bottom:4px;color:var(--steel)">Passive Reload Weave <span class="diff-badge diff-expert" style="font-size:0.72rem;vertical-align:middle">Expert</span></h3>
+      <p style="font-size:0.83rem;margin-bottom:16px;">Stagger all three ability cooldowns so that a passive reload triggers every time your magazine empties — achieving near-zero downtime.</p>
+      <ul class="combo-steps">
+        <li class="combo-step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <div class="step-title">Fire 3 rounds → use Cyro-Grenade <span class="key-badge">LMB ×3</span> → <span class="key-badge">F</span></div>
+            <div class="step-desc">Empty the magazine, then immediately throw the grenade. The passive reload triggers — full magazine again instantly.</div>
+          </div>
+        </li>
+        <li class="combo-step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <div class="step-title">Fire 3 rounds → use Trooper's Fist <span class="key-badge">LMB ×3</span> → <span class="key-badge">E</span></div>
+            <div class="step-desc">Empty again, then dash-uppercut. Second passive reload. You've fired 6 rounds with zero manual reload time.</div>
+          </div>
+        </li>
+        <li class="combo-step">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <div class="step-title">Fire 3 rounds → use Bionic Hook <span class="key-badge">LMB ×3</span> → <span class="key-badge">SHIFT</span></div>
+            <div class="step-desc">Third passive reload. You've now fired 9 rounds across the full cooldown cycle with zero manual reload animations.</div>
+          </div>
+        </li>
+      </ul>
+      <div class="combo-note"><strong>Why it matters:</strong> A Winter Soldier who manually reloads is losing roughly 1.5 seconds of DPS per reload. Over a full fight, the passive weave adds up to several extra magazines of damage — the difference between a kill and a near-miss.</div>
+    </div>
+
+    <!-- FAQ -->
+    <div class="section">
+      <div class="section-label">Common Questions</div>
+      <h2>FAQ</h2>
+      <div class="faq-list">
+        <div class="faq-item open">
+          <button class="faq-q" onclick="toggleFaq(this)">Is Winter Soldier good for beginners? <span class="faq-arrow">▼</span></button>
+          <div class="faq-a"><p>He's one of the better Duelists for players who want to one-trick from day one. His kit is straightforward — Hook, uppercut, burst — and his passive reload is forgiving enough that mistakes don't cost you as much as they would on Spider-Man. The main skill curve is Hook accuracy and knowing when to activate Kraken Impact. Spend 15 minutes in the Practice Range landing Hooks on moving targets before your first ranked game.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">When should I use Bionic Hook? <span class="faq-arrow">▼</span></button>
+          <div class="faq-a"><p>Hook is best used on isolated Duelists or Strategists — anyone with low HP and no escape tool. The threat of Hook is also a weapon: enemies will back away from good angles just to avoid being pulled, which gives your team free space. Never Hook into a clustered group of 3+ enemies unless you want to pull all of them into your face at once.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">How do I survive without a mobility tool? <span class="faq-arrow">▼</span></button>
+          <div class="faq-a"><p>Stay close to your Vanguards at all times. Winter Soldier is not a flanker — he's a frontline Duelist who needs a tank to play around. If your tanks are dead or flanking, fall back to cover immediately. Trooper's Fist covers a very short distance, so don't rely on it to escape. Your survival comes from positioning, not movement.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">How do I maximize Kraken Impact resets? <span class="faq-arrow">▼</span></button>
+          <div class="faq-a"><p>Never activate Kraken Impact into full-HP enemies. Always wait for a teammate's chunking ultimate first — Thor, Venom, or even Scarlet Witch. The execute threshold only triggers when enemies are already low. The 8-second reset window feels short but is actually very generous — take your time selecting the next target instead of panic-activating the next charge.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">What's the best counter to Winter Soldier? <span class="faq-arrow">▼</span></button>
+          <div class="faq-a"><p>High-mobility melee divers like Spider-Man and Wolverine are his hardest counters. Spider-Man can dodge Hook almost every time and dives faster than Bucky can respond. Wolverine's regeneration outlasts his burst. If you're facing these heroes, ask your support to peel for you and try to use Cyro-Grenade to slow them before attempting a Hook.</p></div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- end main-col -->
+
+  <!-- SIDEBAR -->
+  <div class="side-col">
+    <div class="side-card">
+      <div class="side-card-title">Tier Rating</div>
+      <div class="tier-badge tier-a">A</div>
+      <p style="font-size:0.85rem;color:var(--muted);line-height:1.6">Winter Soldier is A-Tier in the current meta. His Bionic Hook displacement and Kraken Impact reset potential make him one of the highest-carry Duelists in the roster.</p>
+    </div>
+
+    <div class="side-card">
+      <div class="side-card-title">Role Ratings</div>
+      <div class="rating-row"><span>Burst Damage</span><div class="dots"><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div></div></div>
+      <div class="rating-row"><span>Displacement</span><div class="dots"><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div></div></div>
+      <div class="rating-row"><span>Mobility</span><div class="dots"><div class="dot on"></div><div class="dot off"></div><div class="dot off"></div><div class="dot off"></div><div class="dot off"></div></div></div>
+      <div class="rating-row"><span>Survivability</span><div class="dots"><div class="dot on"></div><div class="dot on"></div><div class="dot off"></div><div class="dot off"></div><div class="dot off"></div></div></div>
+      <div class="rating-row"><span>Ult Impact</span><div class="dots"><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div></div></div>
+    </div>
+
+    <div class="side-card">
+      <div class="side-card-title">Team-Up Heroes</div>
+      <div class="teamup-pill">
+        <span style="font-size:1.1rem">🛡</span>
+        <div>
+          <div class="teamup-pill-name">Captain America</div>
+          <div class="teamup-pill-sub">Supersoldier Tactics — coordinated frontline aggression</div>
+        </div>
+      </div>
+      <div class="teamup-pill">
+        <span style="font-size:1.1rem">⚡</span>
+        <div>
+          <div class="teamup-pill-name">Thor</div>
+          <div class="teamup-pill-sub">Ult combo — Thor chunks, Bucky executes the chain</div>
+        </div>
+      </div>
+      <div class="teamup-pill">
+        <span style="font-size:1.1rem">🕸</span>
+        <div>
+          <div class="teamup-pill-name">Venom</div>
+          <div class="teamup-pill-sub">Ult combo — Venom damages without killing, Bucky finishes</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-card">
+      <div class="side-card-title">Quick Tips</div>
+      <div class="quick-tip"><div class="tip-icon">🪝</div><div class="tip-text">Hook isolated targets only — pulling grouped enemies into your face is a death sentence.</div></div>
+      <div class="quick-tip"><div class="tip-icon">❄️</div><div class="tip-text">Cryo-Grenade before Hook on mobile targets. The slow makes it nearly impossible to dodge.</div></div>
+      <div class="quick-tip"><div class="tip-icon">🔄</div><div class="tip-text">Stagger your 3 ability cooldowns — each one is a free reload. Never manually reload if you can help it.</div></div>
+      <div class="quick-tip"><div class="tip-icon">⏱</div><div class="tip-text">The Kraken Impact reset window is 8 seconds. Take your time — don't panic-activate the next charge.</div></div>
+      <div class="quick-tip"><div class="tip-icon">🛡</div><div class="tip-text">Stay glued to your Vanguards. You have no escape tool — positioning is your only defense.</div></div>
